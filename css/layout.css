@@ -798,11 +798,50 @@ h4{
 
 		.b-client-list{
 			position: relative;
+			width: calc(100% - 60px);
+   			margin: 0 auto;
 		}
 
 			.b-client-item{
 				display: inline-block;
 			}
+
+	.b-client-arrows{
+		padding: 10px;
+	}
+
+	.b-client-arrows:hover.icon-arrow-right,
+	.b-client-arrows:hover.icon-arrow-left{
+		color: #1b81c5;
+	}
+
+	.b-client-arrows.icon-arrow-right{
+		position: absolute;
+	    right: -43px;
+	    top: 42px;
+	    cursor: pointer;
+	    z-index: 1;
+	    color: #adadad;
+	}
+
+		.b-client-arrows.icon-arrow-right:before{
+			content: "\e901";
+			font-size: 18px;
+		}
+
+	.b-client-arrows.icon-arrow-left{
+		position: absolute;
+	    left: -43px;
+	    top: 42px;
+	    cursor: pointer;
+	    z-index: 1;
+	    color: #adadad;
+	}
+
+		.b-client-arrows.icon-arrow-left:before{
+			content: "\e900";
+			font-size: 18px;
+		}
 
 .b-bottom{
 	margin-bottom: 34px;

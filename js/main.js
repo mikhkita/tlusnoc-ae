@@ -55,8 +55,8 @@ $(document).ready(function(){
      $('.b-client-slider').slick({
         dots: false,
         arrows: true,
-        nextArrow: '<div class="icon-arrow-right b-rewiews-arrows" aria-hidden="true"></div>',
-        prevArrow: '<div class="icon-arrow-left b-rewiews-arrows" aria-hidden="true"></div>',
+        nextArrow: '<div class="icon-arrow-right b-client-arrows" aria-hidden="true"></div>',
+        prevArrow: '<div class="icon-arrow-left b-client-arrows" aria-hidden="true"></div>',
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
