@@ -256,6 +256,13 @@ h4{
 	font-family: "UbuntuRegular", Sans-Serif;
 }
 
+.b-text{
+	
+}
+	.b-text a{
+		border-bottom: 1px solid #aecde2;
+	}
+
 .b-center-content{
 	text-align: center;
 }
@@ -282,7 +289,7 @@ h4{
 
 	.b-top .b-wide-block {
 	    background-color: #e1e1e1;
-	    padding: 10px 0;
+	    padding: 5px 0;
 	}
 
 		.b-top-content{
@@ -290,8 +297,9 @@ h4{
 		}
 
 			ul.b-top-content li{
+				float: left;
 				display: inline-block;
-				margin-right: 40px;
+				margin-right: 48px;
 			}
 
 			ul.b-top-content li:last-child{
@@ -299,6 +307,8 @@ h4{
 			}
 
 			.b-top-content .contact-info{
+				display: inline-block;
+				padding-top: 5px;
 				color: #000;
 				font-family: 'SFUIDisplayRegular';
 				border-bottom: 1px solid #bbbbbb;
@@ -314,38 +324,50 @@ h4{
 			}
 
 				.social-icons a{
+					float: left;
 					display: inline-block;
 					width: 30px;
 					height: 30px;
-					margin-right: 10px;
+					margin-right: 8px;
 				}
 
 				.icon-facebook:before {
-				    content: "\e900";
-				    font-size: 16px;
-				    color: #9b9b9b;
-				    line-height: 18px;
-				}
-
-				.icon-vk:before {
-				    content: "\e901";
-				    font-size: 16px;
-				    color: #9b9b9b;
-				    line-height: 18px;
-				}
-
-				.icon-instagram:before {
 				    content: "\e902";
 				    font-size: 16px;
 				    color: #9b9b9b;
-				    line-height: 18px;
+				    line-height: 28px;
+				}
+
+				.icon-vk:before {
+				    content: "\e905";
+				    font-size: 21px;
+				    color: #9b9b9b;
+				    line-height: 27px;
+				}
+
+				.icon-instagram:before {
+				    content: "\e903";
+				    font-size: 14px;
+				    color: #9b9b9b;
+				    line-height: 28px;
+				}
+
+				.icon-cabinet{
+					float: left;
 				}
 
 				.icon-cabinet:before {
-				    content: "\e903";
+				    content: "\e904";
 				    font-size: 16px;
 				    color: #183d6c;
 				    line-height: 18px;
+				    margin-right: 5px;
+				}
+
+				.icon-facebook:hover:before,
+				.icon-vk:hover:before,
+				.icon-instagram:hover:before{
+					color: #08579a;
 				}
 
 				.social-icons a:last-child{
@@ -353,6 +375,7 @@ h4{
 				}
 
 			.b-top-content .phone{
+				padding-top: 5px;
 				font-family: 'SFUIDisplayBold';
 				font-size: 17px;
 			}
@@ -362,6 +385,8 @@ h4{
 			}
 
 			.b-top-content li .cabinet{
+				display: inline-block;
+				padding-top: 5px;
 				font-family: 'SFUIDisplayMedium';
 				color: #183d6c;
 			}
@@ -599,11 +624,12 @@ h4{
 				margin-bottom: 18px;
 			}
 
-			.read-more{
+			.b-services-item .read-more{
 				display: inline-block;
 				position: relative;
 				font-size: 16px;
 				color: #013c6e;
+				border-bottom: none;
 			}
 
 				.read-more:after {
