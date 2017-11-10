@@ -1,14 +1,72 @@
 @charset "utf-8";
 
 @font-face {
-	font-family: 'PTSans-Bold';
-	src: url('../fonts/PTSans-Bold.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/PTSans-Bold.woff') format('woff'),
-		 url('../fonts/PTSans-Bold.ttf')  format('truetype'),
-		 url('../fonts/PTSans-Bold.svg#PTSans-Bold') format('svg');
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),  
+		 url('../fonts/icomoon.woff') format('woff'),
+		 url('../fonts/icomoon.ttf')  format('truetype'),
+		 url('../fonts/icomoon.svg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'UbuntuBold';
+	src: url('../fonts/UbuntuBold.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UbuntuMedium';
+	src: url('../fonts/UbuntuMedium.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UbuntuRegular';
+	src: url('../fonts/UbuntuRegular.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SFUIDisplayRegular';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/SFUIDisplayRegular.otf') format('otf'),
+		 url('../fonts/SFUIDisplayRegular.ttf') format('truetype'),
+		 url('../fonts/SFUIDisplayRegular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'SFUIDisplayMedium';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/SFUIDisplayMedium.otf') format('otf'),
+		 url('../fonts/SFUIDisplayMedium.ttf') format('truetype'),
+		 url('../fonts/SFUIDisplayMedium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'SFUIDisplayBold';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/SFUIDisplayBold.otf') format('otf'),
+		 url('../fonts/SFUIDisplayBold.ttf') format('truetype'),
+		 url('../fonts/SFUIDisplayBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'SFUIDisplayLight';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/SFUIDisplayLight.otf') format('otf'),
+		 url('../fonts/SFUIDisplayLight.ttf') format('truetype'),
+		 url('../fonts/SFUIDisplayLight.woff') format('woff');
+}
+
 
 html,
 body {
@@ -16,15 +74,17 @@ body {
 }
 body {
 	min-width: 1000px;
-	text-align: center;
-	font-family: 'PTSans-Bold';
+	font-size: 14px;
+	text-align: left;
+	font-family: 'UbuntuRegular', Sans-Serif;
 	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
-	color: #472275;
+	color: #000;
+	line-height: 18px;
 }
 a{
 	text-decoration: none;
-	color: #472275;
+	color: #1b82c7;
 }
 li{
 	list-style: none;
@@ -78,8 +138,15 @@ input.error,textarea.error{
 }
 .b-block{
 	position: relative;
-	width: 1000px;
+	width: 1110px;
 	margin: 0px auto;
+}
+.b-wide-block {
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    min-width: 1110px;
+    margin: 0px auto;
 }
 .b-absolute{
 	position: absolute;
@@ -88,10 +155,10 @@ input.error,textarea.error{
 	margin-left: -500px;
 }
 input::-webkit-input-placeholder {
-	color: #777;
+	color: #1b82c7;
 }
 input:-moz-placeholder {
-	color: #777;
+	color: #1b82c7;
 }
 [class^="icon-"]:before, 
 [class*=" icon-"]:before  {
@@ -106,18 +173,539 @@ input:-moz-placeholder {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
 .b-btn{
-
+	text-align: center;
+	padding: 14px 0;
+	font-family: 'UbuntuMedium';
+	font-size: 16px;
+	text-transform: uppercase;
+	border-radius: 5px;
+    display: inline-block;
+    line-height: 18px;
+    min-width: 260px;
+    letter-spacing: 0.5px;
 }
-.b-orange-btn{
 
+/*.b-btn-white{
+	background-color: #fff;
+	color: #1b82c7;
+	border: 3px solid #1b82c7;
+	padding: 11px 0;
 }
-	.b-orange-btn:hover{
-		
+	.b-btn-white:hover{
+		background-color: #136aa4;
+		color: #fff;
+	}*/
+
+.b-btn-blue{
+	background-color: #1b82c7;
+	color: #fff;
+}
+	.b-btn-blue:hover{
+		background-color: #136aa4;
 	}
-.b-1{
-	
+
+.b-btn-transparent{
+	border: 2px solid #1b82c7;
+	background-color: transparent;
+	padding: 12px 0;
 }
+
+	.b-btn-transparent:hover{
+		background-color: #136aa4;
+		color: #fff;
+		border: 2px solid #136aa4;
+	}
+
+h1.b-title{
+
+}
+
+h2.b-title{
+	text-transform: uppercase;
+	font-size: 24px;
+	font-family: "UbuntuBold", Sans-Serif;
+	padding-top: 40px;
+	margin-bottom: 25px;
+	color: #000;
+	letter-spacing: 1px;
+}
+
+h2.b-title-head{
+	text-transform: uppercase;
+	font-size: 46px;
+	font-family: "UbuntuMedium", Sans-Serif;
+	margin-bottom: 25px;
+	line-height: 50px;
+	color: #FFF;
+	letter-spacing: 0.6px;
+}
+
+h3.b-title{
+	font-size: 20px;
+	font-family: "UbuntuMedium", Sans-Serif;
+	margin-bottom: 14px;
+	color: #000;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+}
+
+h4{
+	font-size: 16px;
+	font-family: "UbuntuRegular", Sans-Serif;
+}
+
+.b-center-content{
+	text-align: center;
+}
+
+.b-table{
+	display: table;
+}
+
+.b-table-cell{
+	display: table-cell;
+	vertical-align: top;
+}
+
+.b-table-cell-middle{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*--------Главная--------*/
+
+.b-top{
+	background-color: #e1e1e1;
+}
+
+	.b-top .b-wide-block {
+	    background-color: #e1e1e1;
+	    padding: 10px 0;
+	}
+
+		.b-top-content{
+			float: right;
+		}
+
+			ul.b-top-content li{
+				display: inline-block;
+				margin-right: 40px;
+			}
+
+			ul.b-top-content li:last-child{
+				margin-right: 0;
+			}
+
+			.b-top-content li > a{
+				font-family: 'SFUIDisplayRegular';
+				border-bottom: 1px solid #bbbbbb;
+			}
+
+			.social-icons{
+				text-align: center;
+			}
+
+				.social-icons a{
+					display: inline-block;
+					width: 30px;
+					height: 30px;
+					margin-right: 10px;
+				}
+
+				.icon-facebook:before {
+				    content: "\e900";
+				    font-size: 16px;
+				    color: #9b9b9b;
+				    line-height: 18px;
+				}
+
+				.icon-vk:before {
+				    content: "\e901";
+				    font-size: 16px;
+				    color: #9b9b9b;
+				    line-height: 18px;
+				}
+
+				.icon-instagram:before {
+				    content: "\e902";
+				    font-size: 16px;
+				    color: #9b9b9b;
+				    line-height: 18px;
+				}
+
+				.icon-cabinet:before {
+				    content: "\e903";
+				    font-size: 16px;
+				    color: #183d6c;
+				    line-height: 18px;
+				}
+
+				.social-icons a:last-child{
+					margin-right: 0;
+				}
+
+			.b-top-content .phone{
+				font-family: 'SFUIDisplayBold';
+				font-size: 17px;
+			}
+
+			.cabinet-cont{
+				position: relative;
+			}
+
+				.cabinet-bubble{
+					position: absolute;
+					right: 0;
+   					top: 58px;
+   					padding: 25px;
+   					background-color: #ccc;
+   					z-index: 5;
+				}
+
+				.cabinet-bubble .b-btn{
+					margin-bottom: 14px;
+				}
+
+				.restore-password{
+					border-bottom: 1px solid #1b82c7;
+				}
+
+					.cabinet-bubble:before {
+					    position: absolute;
+					    content: "s";
+					    font-size: 0px;
+					    width: 0px;
+					    height: 0px;
+					    right: 0;
+					    top: -14px;
+					    border-top: 0px solid transparent;
+					    border-right: 23px solid transparent;
+					    border-bottom: 14px solid #ccc;
+					    border-left: 23px solid transparent;
+					}
+
+					.cabinet-bubble:after {
+						content: "s";
+						font-size: 0px;
+			    		width: 0px;
+			    		height: 0px;
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						border: 15px solid transparent;
+						border-right: 15px solid #dcdcdc;
+						border-bottom: 15px solid #dcdcdc;
+					}
+
+				.cabinet-bubble input{
+					border: none;
+					width: 100%;
+					color: #1b82c7;
+					font-family: 'UbuntuRegular';
+					background-color: transparent;
+					font-size: 16px;
+				    vertical-align: top;
+				    margin-bottom: 34px;
+				    border-bottom: 2px solid #1b82c7;
+				    padding-bottom: 4px;
+				}
+
+.b-menu{
+
+}
+
+	.b-logo{
+		float: left;
+	}
+
+		.b-logo img{
+			margin-top: 20px;
+			margin-bottom: 14px;
+		}
+
+	ul.b-menu-items{
+		float: right;
+		text-transform: uppercase;
+		margin-top: 42px;
+	}
+
+		ul.b-menu-items li{
+			display: inline-block;
+		}
+
+			ul.b-menu-items li a{
+				font-family: 'UbuntuMedium';
+				font-size: 18px;
+				color: #000;
+				padding: 10px 17px;
+			}
+
+			ul.b-menu-items li:last-child a{
+				padding-right: 0;
+			}
+
+			ul.b-menu-items li:hover > a{
+				color: #136aa4;
+			}
+
+.b-banner{
+	height: 505px;
+	background-image: url(../i/banner.jpg);
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+		.b-banner-content{
+			width: 475px;
+			background-color: transparent;
+			padding-top: 96px;
+		}
+
+			.b-banner-content p{
+				font-family: 'SFUIDisplayRegular';
+				font-size: 16px;
+				color: #FFF;
+				line-height: 26px;
+				margin-bottom: 54px;
+			}
+
+.bg{
+	background-image: url(../i/bg.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+}
+
+.b-services{
+	margin-bottom: 33px;
+}
+
+	.b-services-list{
+		margin-bottom: 32px;
+	}
+
+		.b-services-item{
+			position: relative;
+			display: inline-block;
+			padding: 30px;
+			width: calc(100%/3 - 20px);
+			margin-right: 25px;
+			background-color: #FFF;
+		}
+
+			.b-services-item:before{
+				content: "s";
+				font-size: 0px;
+	    		width: 0px;
+	    		height: 0px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border: 15px solid transparent;
+				border-left: 15px solid #013c6e;
+				border-top: 15px solid #013c6e;
+
+			}
+
+			.b-services-item:after{
+				content: "s";
+				font-size: 0px;
+	    		width: 0px;
+	    		height: 0px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				border: 15px solid transparent;
+				border-right: 15px solid #dcdcdc;
+				border-bottom: 15px solid #dcdcdc;
+			}
+
+			.b-services-item:hover:after{
+				border-right: 15px solid #013c6e;
+				border-bottom: 15px solid #013c6e;
+			}
+
+		.b-services-item:last-child{
+			margin-right: 0;
+		}
+
+			.b-services-item p{
+				margin-bottom: 18px;
+			}
+
+			.read-more{
+				display: inline-block;
+				position: relative;
+				font-size: 16px;
+				color: #013c6e;
+			}
+
+				.read-more:after {
+					font-size: 18px;
+				    text-decoration: none;
+				    content: "→";
+				    margin-left: 4px;
+				}
+
+.b-calc{
+	margin-bottom: 26px;
+}
+
+	.inputs-cont{
+		padding-top: 40px;
+		padding-bottom: 36px;
+	}
+
+		.before-input{
+			position: relative;
+			display: inline-block;
+			width: calc(100%/3 - 20px);
+			margin-right: 25px;
+		}
+
+		.before-input:nth-child(3n){
+			margin-right: 0;
+		}
+
+		.before-input:before{
+			content: attr(data-placeholder);
+			font-size: 16px;
+			position: absolute;
+			top: -37px;
+			left: 0;
+		}
+
+		.period-items{
+			position: absolute;
+			right: 0;
+			top: -37px;
+		}
+
+			.period-items a{
+				color: #8d8d8d;
+				display: inline-block;
+				margin-right: 20px;
+			}
+
+			.period-items a:last-child{
+				margin-right: 0;
+			}
+
+		.period-items a.period-active{
+			font-family: 'UbuntuMedium', Sans-Serif;
+			color: #013c6e;
+		}
+
+		.b-calc input, .b-calc select{
+			border: none;
+			width: 100%;
+			color: #000;
+			font-family: 'UbuntuMedium';
+			background-color: transparent;
+			font-size: 19px;
+		    vertical-align: top;
+		    border-bottom: 3px solid #e0e0e0;
+		    padding-bottom: 11px;
+		}
+
+	.notation-wrap{
+		position: relative;
+		float: right;
+		width: calc(100% - 15px);
+		margin-top: -14px;
+	}
+
+		.notation{
+			color: #8d8d8d;
+		}
+
+		.notation-wrap:before{
+			font-size: 18px;
+		    content: "*";
+		    position: absolute;
+		    top: 0;
+			left: -14px;
+			color: #8d8d8d;
+		}
+
+	.cost-result{
+		font-family: 'UbuntuMedium', Sans-Serif;
+		font-size: 19px;
+	}
+
+	.cost-title{
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+
+	.b-calc-item{
+		display: inline-block;
+		width: calc(100%/3 - 18px);
+		margin-right: 25px;
+	}
+
+	.b-calc-item:last-child{
+		margin-right: 0;
+	}
+
+.b-about{
+
+}
+
+	.b-about-column{
+		display: inline-block;
+		width: calc(100%/3 - 32px);
+		margin-right: 40px;
+	}
+
+	.b-about-text{
+		line-height: 19px;
+	}
+
+	.b-about-column:last-child{
+		margin-right: 0;
+		margin-bottom: 4px;
+	}
+
+		.b-about-item{
+			margin-bottom: 27px;
+		}
+
+		.b-about-item:nth-child(3n){
+			margin-bottom: 0;
+		}
+
+			.b-about-img{
+			}
+
+			.b-about-img{
+				width: 34px;
+				height: auto;
+				text-align: center;
+			}
+
+			.b-about-item-text{
+				font-size: 16px;
+				line-height: 18px;
+				font-family: 'UbuntuMedium', Sans-Serif;
+				display: inline-block;
+				margin-left: 10px;
+			}
+
+.b-client{
+
+}
+
+	.b-client-item{
+		display: inline-block;
+	}
+
+.b-bottom{
+
+}
+
+/*-----------------------*/
 
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {

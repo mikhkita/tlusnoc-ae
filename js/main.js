@@ -40,6 +40,28 @@ $(document).ready(function(){
         }
     }
     $.fn.placeholder();
+
+     $('.b-client-slider').slick({
+        dots: false,
+        arrows: true,
+        nextArrow: '<div class="icon-arrow-right b-rewiews-arrows" aria-hidden="true"></div>',
+        prevArrow: '<div class="icon-arrow-left b-rewiews-arrows" aria-hidden="true"></div>',
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        speed: 600,
+        //autoplay: true,
+        //autoplaySpeed: 3000,
+        /*responsive: [
+            {
+              breakpoint: 900,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]*/
+    });
     
 	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
  //    var myOptions = {
