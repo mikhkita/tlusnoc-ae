@@ -298,9 +298,15 @@ h4{
 				margin-right: 0;
 			}
 
-			.b-top-content li > a{
+			.b-top-content .contact-info{
+				color: #000;
 				font-family: 'SFUIDisplayRegular';
 				border-bottom: 1px solid #bbbbbb;
+			}
+
+			.b-top-content .contact-info:hover{
+				color: #08579a;
+				border-bottom: 1px solid #8194a5;
 			}
 
 			.social-icons{
@@ -355,14 +361,28 @@ h4{
 				position: relative;
 			}
 
+			.b-top-content li .cabinet{
+				font-family: 'SFUIDisplayMedium';
+				color: #183d6c;
+			}
+
 				.cabinet-bubble{
 					position: absolute;
 					right: 0;
-   					top: 58px;
-   					padding: 25px;
-   					background-color: #ccc;
+   					top: 50px;
+   					padding: 22px 26px 30px 26px;
    					z-index: 5;
+   					background-color: #FFF;
+   					-webkit-box-shadow: 0 0 1px #ccc;
+					-moz-box-shadow: 0 0 1px #ccc;
+					box-shadow: 0 0 1px #ccc;
 				}
+
+					.cabinet-bubble h3{
+						font-size: 18px;
+						text-transform: uppercase;
+						margin-bottom: 27px;
+					}
 
 				.cabinet-bubble .b-btn{
 					margin-bottom: 14px;
@@ -370,9 +390,11 @@ h4{
 
 				.restore-password{
 					border-bottom: 1px solid #1b82c7;
+					display: inline-block;
+    				margin-top: 5px;
 				}
 
-					.cabinet-bubble:before {
+					.cabinet-bubble:after {
 					    position: absolute;
 					    content: "s";
 					    font-size: 0px;
@@ -382,11 +404,25 @@ h4{
 					    top: -14px;
 					    border-top: 0px solid transparent;
 					    border-right: 23px solid transparent;
-					    border-bottom: 14px solid #ccc;
+					    border-bottom: 14px solid #FFF;
 					    border-left: 23px solid transparent;
 					}
 
-					.cabinet-bubble:after {
+					.cabinet-bubble:before {
+						position: absolute;
+					    content: "s";
+					    font-size: 0px;
+					    width: 0px;
+					    height: 0px;
+					    right: 0;
+					    top: -15px;
+					    border-top: 0px solid transparent;
+					    border-right: 23px solid transparent;
+					    border-bottom: 15px solid #ccc;
+					    border-left: 23px solid transparent;
+					}
+
+					.cabinet-bubble-wrap:after {
 						content: "s";
 						font-size: 0px;
 			    		width: 0px;
@@ -407,10 +443,39 @@ h4{
 					background-color: transparent;
 					font-size: 16px;
 				    vertical-align: top;
-				    margin-bottom: 34px;
+				    margin-bottom: 37px;
 				    border-bottom: 2px solid #1b82c7;
-				    padding-bottom: 4px;
+				    padding-bottom: 7px;
 				}
+
+				.cabinet-bubble input[name="password"]{
+					margin-bottom: 20px;
+				}
+
+	.cabinet-bubble.bubble-active {
+	    visibility: visible;
+	    opacity: 1;
+	    -webkit-transform: translateY(0px);
+	    -moz-transform: translateY(0px);
+	    -ms-transform: translateY(0px);
+	    -o-transform: translateY(0px);
+	    transform: translateY(0px);
+	}
+
+	.cabinet-bubble{
+		visibility: hidden;
+	    opacity: 0;
+		-webkit-transition: all 300ms ease-out;
+	    -moz-transition: all 300ms ease-out;
+	    -ms-transition: all 300ms ease-out;
+	    -o-transition: all 300ms ease-out;
+	    transition: all 300ms ease-out;
+	    -webkit-transform: translateY(20px);
+	    -moz-transform: translateY(20px);
+	    -ms-transform: translateY(20px);
+	    -o-transform: translateY(20px);
+	    transform: translateY(20px);
+	}
 
 .b-menu{
 
@@ -548,6 +613,10 @@ h4{
 				    margin-left: 4px;
 				}
 
+				.read-more:hover{
+					color: #136aa4;
+				}
+
 .b-calc{
 	margin-bottom: 26px;
 }
@@ -650,7 +719,7 @@ h4{
 	}
 
 .b-about{
-
+	margin-bottom: 10px;
 }
 
 	.b-about-column{
@@ -694,15 +763,23 @@ h4{
 			}
 
 .b-client{
-
+	margin-bottom: 20px;
 }
 
-	.b-client-item{
-		display: inline-block;
+	.b-client h2{
+		margin-bottom: 0;
 	}
 
-.b-bottom{
+		.b-client-list{
+			position: relative;
+		}
 
+			.b-client-item{
+				display: inline-block;
+			}
+
+.b-bottom{
+	margin-bottom: 34px;
 }
 
 /*-----------------------*/

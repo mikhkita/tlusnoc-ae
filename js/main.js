@@ -41,6 +41,17 @@ $(document).ready(function(){
     }
     $.fn.placeholder();
 
+    $('.cabinet').on('click', function(){
+        $('.cabinet-bubble').toggleClass("bubble-active");
+    });
+
+    /*$(document).on('click', function(e){
+        var container = $('.cabinet-bubble');
+        if (container.has(e.target).length === 0){
+            container.removeClass("bubble-active");
+        }
+    });*/
+
      $('.b-client-slider').slick({
         dots: false,
         arrows: true,
