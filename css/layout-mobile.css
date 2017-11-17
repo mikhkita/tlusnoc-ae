@@ -27,7 +27,7 @@ body {
 
 /*------------------*/
 
-/*.b-banner{
+/*.b-slider{
 	background-position: 35% 50%;
 }*/
 
@@ -151,7 +151,7 @@ ul.b-top-content li:nth-child(2){
 
 @media screen and (max-width: 385px){
 
-	.b-banner-content h2.b-title-head{
+	.b-slider-content h2.b-title-head{
 		font-size: 40px;
 	}
 
