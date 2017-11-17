@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+html,
+body {
+	position: relative;
+}
+body {
+	min-width: 370px;
+	font-size: 14px;
+	text-align: left;
+	font-family: 'UbuntuRegular', Sans-Serif;
+	overflow-x: hidden;
+	-webkit-text-size-adjust: none;
+	color: #000;
+	line-height: 18px;
+}
+
+.b-block{
+	width: 100%;
+	max-width: calc(100% - 48px);
+	margin: 0 auto;
+}
+
+.b-wide-block{
+	min-width: 370px;
+}
+
+/*------------------*/
+
+/*.b-banner{
+	background-position: 35% 50%;
+}*/
+
+ul.b-top-content li:nth-child(1),
+ul.b-top-content li:nth-child(2){
+	display: none;
+}
+
+.b-top .b-wide-block{
+	padding: 5px 0 9px 0;
+}
+
+.b-top .social-icons, .b-top .contact-info{
+	display: none;
+}
+
+.b-menu-items{
+	display: none;
+}
+
+.burger-menu{
+	display: inline-block;
+}
+
+.b-services-list {
+    text-align: center;
+}
+
+	.b-services-item {
+	    width: calc(100%/2 - 16px);
+	    margin-right: 25px;
+	    margin-bottom: 20px;
+	    text-align: left;
+	}
+
+	.b-services-item:nth-child(2){
+		margin-right: 0;
+	}
+
+	.b-services-item:last-child{
+		margin-bottom: 0;
+	}
+
+.b-services-item {
+    width: 100%;
+}
+
+.before-input, .b-calc-item{
+	width: calc(100%/2 - 16px);
+}
+
+	.before-input:nth-of-type(3n), .b-calc-item:nth-of-type(3n){
+		margin-right: 25px;
+	}
+
+	.before-input:nth-of-type(2n), .b-calc-item:nth-of-type(2n){
+		margin-right: 0;
+	}
+
+.cost-block{
+	margin-top: 7px;
+}
+
+.notation-wrap{
+	margin-top: -4px;
+}
+
+.b-calc .b-btn{
+	width: 100%;
+	min-width: auto;
+}
+
+.b-about-column{
+	width: calc(100%/2 - 23px);
+    margin-right: 40px;
+}
+
+	.b-about-column:first-child{
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+.period-items a {
+    margin-right: 14px;
+}
+
+@media screen and (max-width: 540px){
+
+	.before-input, .b-calc-item{
+		width: 100%;
+		display: block;
+		margin-top: 50px;
+	}
+
+	.cost-block{
+		margin-top: 0;
+	}
+
+	.before-input:before, .period-items{
+		top: -26px;
+	}
+
+	.b-calc-item{
+		margin-top: 30px;
+	}
+
+	.b-about-column{
+		width: 100%;
+	}
+
+	.b-about-item:nth-child(3n) {
+	    margin-bottom: 27px;
+	}
+
+	.b-about-column:last-child .b-about-item:last-child{
+	    margin-bottom: 0;
+	}
+
+}
+
+@media screen and (max-width: 385px){
+
+	.b-banner-content h2.b-title-head{
+		font-size: 40px;
+	}
+
+	.b-logo img{
+		width: 200px;
+	}
+
+	.burger-menu{
+		margin: 34px 0 0 30px;
+	}
+}

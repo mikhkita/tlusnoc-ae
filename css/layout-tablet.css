@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+html,
+body {
+	position: relative;
+}
+body {
+	min-width: 750px;
+	font-size: 14px;
+	text-align: left;
+	font-family: 'UbuntuRegular', Sans-Serif;
+	overflow-x: hidden;
+	-webkit-text-size-adjust: none;
+	color: #000;
+	line-height: 18px;
+}
+
+.b-block{
+	width: 100%;
+	max-width: calc(100% - 48px);
+	margin: 0 auto;
+}
+
+.b-wide-block{
+	min-width: 750px;
+}
+
+/*------------------*/
+
+@media screen and (max-width: 1100px){
+	ul.b-menu-items {
+	    margin-top: 45px;
+	}
+
+		ul.b-menu-items li a {
+			font-size: 16px;
+		    padding: 10px 10px;
+		}
+
+	.b-client-item{
+		margin: 0 15px;
+	}
+}
+
+@media screen and (max-width: 1000px){
+
+	.b-menu-items{
+		display: none;
+	}
+
+	.burger-menu{
+		display: inline-block;
+	}
+
+	.b-services-item{
+		width: calc(100%/3 - 12px);
+    	margin-right: 14px;
+	}
+
+}
+
+
+@media screen and (max-width: 945px){
+
+	.b-services-list{
+		text-align: center;
+	}
+
+	.b-services-item{
+		width: calc(100%/2 - 16px);
+    	margin-right: 25px;
+    	margin-bottom: 20px;
+    	text-align: left;
+	}
+
+	.b-services-item:nth-child(2){
+		margin-right: 0;
+	}
+
+	.b-services-item:last-child{
+		margin-bottom: 0;
+	}
+
+	.period-items a{
+		margin-right: 10px;
+	}
+
+	.b-calc .b-btn{
+		width: 100%;
+		min-width: auto;
+	}
+
+}
