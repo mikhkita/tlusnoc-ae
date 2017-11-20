@@ -48,6 +48,14 @@ body {
 		display: none;
 	}
 
+	.b-top-content .contact-info{
+		display: none;
+	}
+
+	ul.b-top-content li:nth-child(1){
+		display: none;
+	}
+
 	.burger-menu{
 		display: inline-block;
 	}

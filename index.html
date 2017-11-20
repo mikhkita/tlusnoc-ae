@@ -12,7 +12,8 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
-	<link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+	<link rel="stylesheet" href="css/slick-theme.css" type="text/css">	
+	<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 
 	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1179px)" href="css/layout-tablet.css">
@@ -31,7 +32,7 @@
 			<li><a href="#">О компании</a></li>
 			<li><a href="#">Сотрудничество</a></li>
 			<li><a href="#">Документация</a></li>
-			<li><a href="#" class="contact-info">Контактная информация</a></li>
+			<li><a href="#" class="contact-info">Контакты</a></li>
 		</ul>
 		<div class="social-icons">
 			<a href="#" class="icon-facebook"></a>
@@ -57,7 +58,7 @@
 							</div>
 						</li>
 						<li>
-							<p class="phone">+7 499 110 00 46</p>
+							<a href="tel:+74991100046" class="phone">+7 499 110 00 46</a>
 						</li>
 						<li class="cabinet-cont">
 							<a href="#" class="cabinet"><span class="icon-cabinet"></span>Кабинет</a>
@@ -141,7 +142,7 @@
 
 					<div class="b b-calc clearfix">
 						<h2 class="b-title">РАССЧИТАЙТЕ СТОИМОСТЬ БАНКОВСКОЙ ГАРАНТИИ</h2>
-						<div class="before-input" data-placeholder="Тип">
+						<div class="before-input select-wrapper" data-placeholder="Тип">
 							<select name="type">
 								<option value="val1">Возврат аванса</option>
 								<option value="val2">Возврат аванса2</option>
@@ -149,14 +150,20 @@
 							</select>
 						</div>
 						<div class="before-input" data-placeholder="Сумма">
-							<input type="text" name="sum">
+							<input type="text" name="sum" oninput="this.value = this.value.replace(/\D/g, '')">
+							<div class="sum-slider input-slider"></div>
 						</div>
 						<div class="before-input" data-placeholder="Срок">
 							<input type="text" name="period">
+							<div class="period-slider input-slider"></div>
 							<div class="period-items">
-								<a href="#" class="period-active" onclick="return false;">дней</a>
-								<a href="#" onclick="return false;">месяцев</a>
-								<a href="#" onclick="return false;">период</a>
+								<a href="#" class="days period-active" onclick="return false;">дней</a>
+								<a href="#" class="month" onclick="return false;">месяцев</a>
+								<a href="#" class="period" onclick="return false;">период</a>
+							</div>
+							<div class="period-datepicker hide">
+								<input type="text" class="period-start" required name="period-start">
+								<input type="text" class="period-finish" required name="period-finish">
 							</div>
 						</div>
 						<div class="b-calc-item cost-block">
@@ -290,6 +297,7 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
 	<!--<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script>-->
 	<script type="text/javascript" src="js/jssor.js"></script>

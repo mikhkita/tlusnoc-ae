@@ -132,6 +132,9 @@ input.error,textarea.error{
 .white{
 	color: #FFF;
 }
+.hide{
+	display: none;
+}
 .b{
 	position: relative;
 }
@@ -160,7 +163,8 @@ input:-moz-placeholder {
 	color: #1b82c7;
 }
 [class^="icon-"]:before, 
-[class*=" icon-"]:before  {
+[class*=" icon-"]:before,
+.select-wrapper:after{
 	font-family: 'icomoon' !important;
 	speak: none;
 	font-style: normal;
@@ -375,9 +379,11 @@ h4{
 				}
 
 			.b-top-content .phone{
+				display: block;
 				padding-top: 5px;
 				font-family: 'SFUIDisplayBold';
 				font-size: 17px;
+				color: #000;
 			}
 
 			.cabinet-cont{
@@ -388,19 +394,23 @@ h4{
 				display: inline-block;
 				padding-top: 5px;
 				font-family: 'SFUIDisplayMedium';
+				color: #000;
+			}
+
+			.b-top-content li:hover .cabinet{
 				color: #183d6c;
 			}
 
 				.cabinet-bubble{
 					position: absolute;
 					right: 0;
-   					top: 50px;
+   					top: 44px;
    					padding: 22px 26px 30px 26px;
    					z-index: 5;
    					background-color: #FFF;
-   					-webkit-box-shadow: 0 0 1px #ccc;
-					-moz-box-shadow: 0 0 1px #ccc;
-					box-shadow: 0 0 1px #ccc;
+   					-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+					-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+					box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 				}
 
 					.cabinet-bubble h3{
@@ -522,8 +532,8 @@ h4{
 			}
 
 	.burger-menu{
-		float: left;
-		margin: 41px 0 0 30px;
+		float: right;
+		margin-top: 41px;
 		cursor: pointer;
 	}
 
@@ -543,12 +553,12 @@ h4{
 
 	.mobile-menu{
 		padding: 0 20px;
-		background-color: #e1e1e1;
+		background-color: #FFF;
 		text-transform: uppercase;
 	}
 
 		.mobile-menu ul{
-			margin-bottom: 10px;
+			margin-bottom: 16px;
 		}
 
 		.mobile-menu ul li a, ul.mobile-menu .contact-info{
@@ -772,6 +782,29 @@ h4{
 		    padding-bottom: 11px;
 		}
 
+		.b-calc select{
+			cursor: pointer;
+			-webkit-appearance: none;
+		    -moz-appearance: none;
+		    appearance: none;
+		}
+
+		.select-wrapper:after{
+			content: '\e907';
+		    display: block;
+		    position: absolute;
+		    right: 0;
+		    top: 9px;
+		    font-size: 10px;
+		    color: #ccc;
+		    cursor: pointer;
+		    pointer-events: none;
+		}
+
+		.select-wrapper:hover:after{
+			color: #000;
+		}
+
 	.notation-wrap{
 		position: relative;
 		float: right;
@@ -811,6 +844,11 @@ h4{
 
 	.b-calc-item:last-child{
 		margin-right: 0;
+	}
+
+	.period-datepicker input{
+		display: inline-block;
+		width: calc(100%/2 - 60px);
 	}
 
 .b-about{
@@ -915,13 +953,57 @@ h4{
 	margin-bottom: 34px;
 }
 
-/*-----------Skick------------*/
+/*-----------Slick------------*/
 
 .slick-slide img{
 	margin: 0 auto;
 }
 
+/*----------jquery ui slider----------*/
+
+.ui-widget.ui-widget-content {
+    border: 0;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+.ui-slider-horizontal {
+    height: 3px;
+}
+
+.ui-slider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.input-slider .ui-slider-range{ 
+	border-bottom: 3px solid #1b82c7;
+}
+.input-slider .ui-slider-handle{
+	position: relative;
+	border: 1px solid transparent;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+}
+.input-slider .ui-slider-handle:before{ 
+	position: absolute;
+    content: "s";
+    font-size: 0px;
+    width: 0px;
+    height: 0px;
+    left: 0;
+    top: 9px;
+    border-top: 0px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 14px solid #1b82c7;
+    border-left: 8px solid transparent;}
+
 /*-----------Slideout-----------*/
+
+/*#mobile-menu{
+	display: none;
+}*/
 
 .slideout-menu {
   position: fixed;
