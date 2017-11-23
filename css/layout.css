@@ -1273,18 +1273,19 @@ input.period-finish:-moz-placeholder
 		.b-scheme-item{
 			float: left;
 			display: inline-block;
-			width: 22%;
+			width: 20%;
 		}
 
-			.b-scheme-img,
-			.b-scheme-text{
+			.b-scheme-img{
 				float: left;
 				display: inline-block;
 			}
 
 			.b-scheme-text{
-				width: calc(100% - 35px);
-				margin-left: 10px;
+				float: right;
+				display: inline-block;
+				width: calc(100% - 42px);
+				margin-left: 8px;
 			}
 
 		.arrow-next{
