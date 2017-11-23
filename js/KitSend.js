@@ -44,10 +44,16 @@ var customHandlers = [];
 
 $(document).ready(function(){	
 	var rePhone = /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
+		reDates = /^\(\d{2}\)\.\d{2}.\d{4}$/,
+		teDates = '99.99.2099';
 		tePhone = '+7 (999) 999-99-99';
 
 	$.validator.addMethod('customPhone', function (value) {
 		return rePhone.test(value);
+	});
+
+	$.validator.addMethod('customDates', function (value) {
+		return reDates.test(value);
 	});
 
 	$(".ajax").parents("form").each(function(){
@@ -59,6 +65,9 @@ $(document).ready(function(){
 		});
 		if( $(this).find("input[name=phone]").length ){
 			$(this).find("input[name=phone]").mask(tePhone,{placeholder:" "});
+		}
+		if( $(this).find(".period-datepicker input").length ){
+			$(this).find(".period-datepicker input").mask(teDates,{placeholder:"x"});
 		}
 	});
 

@@ -24,7 +24,7 @@
 </head>
 <body>
 
-	<div id="mobile-menu" class="mobile-menu">
+	<div id="mobile-menu" class="mobile-menu hide">
 		<ul>
 			<h2 class="b-title">Меню</h2>
 			<li><a href="index.html">Главная</a></li>
@@ -106,7 +106,7 @@
 					<div class="b-slider-content">
 						<h2 class="b-title-head">Банковские гарантии</h2>
 						<p>Создаем возможности для бизнеса и частных лиц получить банковскую гарантию быстро, удобно и не дорого</p>
-						<a href="#" class="b-btn b-btn-blue">Отправить заявку</a>
+						<a href="#b-popup-app" class="b-btn b-btn-blue fancy">Отправить заявку</a>
 					</div>
 				</div>
 			</div>
@@ -142,44 +142,47 @@
 
 					<div class="b b-calc clearfix">
 						<h2 class="b-title">РАССЧИТАЙТЕ СТОИМОСТЬ БАНКОВСКОЙ ГАРАНТИИ</h2>
-						<div class="before-input select-wrapper" data-placeholder="Тип">
-							<select name="type">
-								<option value="val1">Возврат аванса</option>
-								<option value="val2">Возврат аванса2</option>
-								<option value="val3">Возврат аванса3</option>
-							</select>
-						</div>
-						<div class="before-input" data-placeholder="Сумма">
-							<input type="text" name="sum" oninput="this.value = this.value.replace(/\D/g, '')">
-							<div class="sum-slider input-slider"></div>
-						</div>
-						<div class="before-input" data-placeholder="Срок">
-							<input type="text" name="period">
-							<div class="period-slider input-slider"></div>
-							<div class="period-items">
-								<a href="#" class="days period-active" onclick="return false;">дней</a>
-								<a href="#" class="month" onclick="return false;">месяцев</a>
-								<a href="#" class="period" onclick="return false;">период</a>
+						<form id="b-calc-form" class="b-calc-form" method="post" action="action.php">
+							<div class="before-input select-wrapper" data-placeholder="Тип">
+								<select name="type">
+									<option value="val1">Возврат аванса</option>
+									<option value="val2">Возврат аванса2</option>
+									<option value="val3">Возврат аванса3</option>
+								</select>
 							</div>
-							<div class="period-datepicker hide">
-								<input type="text" class="period-start" required name="period-start">
-								<input type="text" class="period-finish" required name="period-finish">
+							<div class="before-input" data-placeholder="Сумма">
+								<input type="text" name="sum" oninput="this.value = this.value.replace(/\D/g, '')">
+								<div class="sum-slider input-slider"></div>
 							</div>
-						</div>
-						<div class="b-calc-item cost-block">
-							<p class="cost-title">Стоимость*</p>
-							<p class="cost-result">15000 Р — 21986 Р</p>
-						</div>
-						<div class="b-calc-item">
-							<div class="b-center-content">
-								<a href="#" class="b-btn b-btn-blue">Отправить заявку</a>
+							<div class="before-input" data-placeholder="Срок">
+								<input type="text" name="period">
+								<div class="period-slider input-slider"></div>
+								<div class="period-items">
+									<a href="#" class="days period-active" onclick="return false;">дней</a>
+									<a href="#" class="months" onclick="return false;">месяцев</a>
+									<a href="#" class="period" onclick="return false;">период</a>
+								</div>
+								<div class="period-datepicker hide">
+									<input type="text" class="period-start" pattern="[0-9]*" placeholder="xx.xx.20xx" required name="period-start">
+									<div class="dash">—</div>
+									<input type="text" class="period-finish" pattern="[0-9]*" placeholder="xx.xx.20xx" required name="period-finish">
+								</div>
 							</div>
-						</div>
-						<div class="b-calc-item">
-							<div class="notation-wrap">
-								<p class="notation">Точную сумму сделки просчитывает менеджер, её формирование зависит от финансового положения компании, требований заказчика к банку, условий заключаемого контракта и прочее</p>
+							<div class="b-calc-item cost-block">
+								<p class="cost-title">Стоимость*</p>
+								<p class="cost-result">0&nbsp</p><div class="icon-rub"></div>
 							</div>
-						</div>
+							<div class="b-calc-item">
+								<div class="b-center-content">
+									<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-calc-form').submit(); return false;">Отправить заявку</a>
+								</div>
+							</div>
+							<div class="b-calc-item">
+								<div class="notation-wrap">
+									<p class="notation">Точную сумму сделки просчитывает менеджер, её формирование зависит от финансового положения компании, требований заказчика к банку, условий заключаемого контракта и прочее</p>
+								</div>
+							</div>
+						</form>
 					</div>
 
 					<div class="b b-about">
@@ -254,9 +257,39 @@
 						</div>
 					</div>
 
+					<div class="b-footer clearfix">
+						<div class="b-footer-column">
+							<ul>
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Сотрудничество</a></li>
+								<li><a href="#">Карьера</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-column">
+							<ul>
+								<li><a href="#">Тендерное сопровождение</a></li>
+								<li><a href="#">Банковские гарантии и тендерный кредит</a></li>
+								<li><a href="#">Обучение и сертификация</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-column">
+							<ul>
+								<li><a href="#">44-ФЗ</a></li>
+								<li><a href="#">223-ФЗ</a></li>
+								<li><a href="#">Список электронных торговых&nbspплощадок</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-column">
+							<a href="tel:+74991100046" class="phone">+7 499 110 00 46</a>
+							<p>Москва, Боткинский 1-й проезд, офис А 224 </p>
+							<p><a href="mailto:***@mail.ru">eaconsult@.ru</a></p>
+						</div>
+					</div>
+
 					<div class="b-bottom">
 						<h4>© 2012 — 2017 «EA CONSULT»</h4>
 					</div>
+
 					<div class="clearfix"></div>
 				</div>
 			</div>
@@ -295,6 +328,17 @@
 			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
 			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
 		</div>
+
+		<div class="b-popup" id="b-popup-app">
+			<h2 class="b-title">Отправить заявку</h2>
+			<form id="b-popup-app-form" class="b-popup-app-form" method="post" action="kitsend.php">
+				<input type="text" name="name" placeholder="Ваше имя" required>
+				<input type="text" name="e-mail" placeholder="Ваш E-mail" required>
+				<textarea name="message" required rows="1" placeholder="Ваше сообщение"></textarea>
+				<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-popup-app-form').submit(); return false;">Отправить</a>
+			</form>
+		</div>
+
 	</div>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -314,6 +358,7 @@
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/slick.js"></script>
 	<script type="text/javascript" src="js/slideout.min.js"></script>
+	<script type="text/javascript" src="js/autosize.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

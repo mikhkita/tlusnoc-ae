@@ -70,6 +70,9 @@ $(document).ready(function(){
         event.stopPropagation();
     });
 
+    if( typeof autosize == "function" )
+        autosize(document.querySelectorAll('textarea'));
+
     $("img").each(function(){
         if( $(this).attr("data-retina-src") && isRetina){
             var img = new Image(),
@@ -126,6 +129,8 @@ $(document).ready(function(){
         'padding': 256,
         'tolerance': 70
     });
+
+    $('mobile-menu').removeClass("hide")
 
     $('.burger-menu').click(function() {
         slideout.open();
@@ -226,10 +231,13 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
 [1,1.5,2.5,3,3.1,3.3,3.5,3.7,3.9,4.1,4.34,4.9,5.2,5.4,5.6,5.8,7.14,7.55,7.96,8.37,8.78,9.19,9.6,10],
 [1,1.5,2.50,3,3.1,3.3,3.5,3.7,3.9,4.1,4.34,4.9,5.2,5.4,5.6,5.8,7.14,7.55,7.96,8.37,8.78,9.19,9.6,10]];
 
-    function calcPrice(sum, period){
+    var periodInDays = 0;
+
+    function calcPrice(){
         var row,
             column,
-            res = 0;
+            res = 0,
+            sum = $('input[name="sum"]').val();
         //найти столбец (сумма)
         dataSum.forEach(function(item, i, arr){
             if(item[0] <= sum && item[1] >= sum){
@@ -238,7 +246,7 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
         });
         //найти столбец (дни)
         dataPeriod.forEach(function(item, i, arr){
-            if(item[0] <= period && item[1] >= period){
+            if(item[0] <= periodInDays && item[1] >= periodInDays){
                 column = i;
             }
         });
@@ -251,7 +259,19 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
             else
                 res = data[row][column];
         }
+        console.log(res);
         $('.cost-result').text(res.toFixed(0));
+    }
+
+    function calcDays (value) {
+        if($('.period-active').hasClass("days")){
+            periodInDays = value;
+        }else if($('.period-active').hasClass("months")){
+            periodInDays = value * 30;
+        }else{
+            periodInDays = value;
+        }
+        console.log(periodInDays);
     }
 
     $(function() {
@@ -272,7 +292,8 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
             }
           },
           change: function(e, ui){
-            calcPrice($('input[name="sum"]').val(), $('input[name="period"]').val());
+            calcDays($('input[name="period"]').val());
+            calcPrice();
           },
         });
 
@@ -283,23 +304,27 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
         var $slidePeriod = $('.period-slider').slider({
           range: "min",
           value: 0,
-          min: 0,
+          min: 1,
           step: 1,
           max: 365,
           slide: function(e, ui){
             $('input[name="period"]').val(ui.value);
           },
           change: function(e, ui){
-            calcPrice($('input[name="sum"]').val(), $('input[name="period"]').val());
+            calcDays($('input[name="period"]').val());
+            calcPrice();
           },
         });
 
         $('input[name="period"]').on('change input', function(){
-            $slidePeriod.slider("value", $(this).val());
+            var value = parseInt($(this).val());
+            $slidePeriod.slider("value", value);
+            calcDays(value);
         });
 
         $('input[name="sum"]').val(200000).change();
         $('input[name="period"]').val(30).change();
+        periodInDays = 30;
 
         $('.period-items a').on('click', function(event){
             $('.period-items a').each(function() {
@@ -308,29 +333,33 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
             $(this).addClass("period-active");
             if($(this).hasClass("days")){
                 $slidePeriod.slider({"value": 1, "min": 1, "max": 365});
-                $('input[name="period"]').val(1);
-                $('input[name="period"]').removeClass("hide");
+                $('input[name="period"]').val(1).removeClass("hide");
                 $('.period-slider').removeClass("hide");
                 $('.period-datepicker').addClass("hide");
-            }else if($(this).hasClass("month")){
+                $('.period-start').val("");
+                $('.period-finish').val("");
+                calcDays(1);
+                calcPrice();
+            }else if($(this).hasClass("months")){
                 $slidePeriod.slider({"value": 1, "min": 1, "max": 24});
-                $('input[name="period"]').val(1);
-                $('input[name="period"]').removeClass("hide");
+                $('input[name="period"]').val(1).removeClass("hide");
                 $('.period-slider').removeClass("hide");
                 $('.period-datepicker').addClass("hide");
+                $('.period-start').val("");
+                $('.period-finish').val("");
+                calcDays(1);
+                calcPrice();
             }else{
                 //скрыть инпкут и слайдер
-                $('input[name="period"]').addClass("hide");
+                $('input[name="period"]').val("1").addClass("hide");
                 $('.period-slider').addClass("hide");
                 $('.period-datepicker').removeClass("hide");
+
+                calcDays(0);
+                calcPrice();
             }
         });
     });
-
-/*var end_day=$('#calendar-end').datepicker('getDate').getTime();
-var day=24*60*60*1000;
-$('.all-count').text(Math.round(Math.abs(start_day-end_day)/day)+' дней');
-}},altFormat:"yy-mm-dd",dateFormat:'dd MM yy'});}*/
 
     $.datepicker.regional['ru'] = {
             closeText: 'Готово', // set a close button text
@@ -346,36 +375,44 @@ $('.all-count').text(Math.round(Math.abs(start_day-end_day)/day)+' дней');
 
     var dayStart,
         dayFinish,
-        dayInterval = 0;
+        dayInterval = 0,
+        from, to;
     var day = 24*60*60*1000;
     $( function() {
-        var dateFormat = "dd.mm.yy",
+        var dateFormat = "dd.mm.yy";
           from = $( ".period-start" )
             .datepicker({
               defaultDate: "+1w",
               changeMonth: true,
+              minDate: 0
             })
             .on( "change", function() {
               to.datepicker( "option", "minDate", getDate( this ) );
-              if(!!from.val()){
-                dayStart = getDate( this ).getTime();
+              dayStart = getDate( this ).getTime();
+              if(!!to.val()){
                 dayInterval = Math.round(Math.abs(dayStart - dayFinish)/day);
               }else{
                 dayInterval = 0;
               }
-            }),
+              calcDays(dayInterval);
+              calcPrice();
+              console.log("periodInDays = "+periodInDays, "dayInterval = "+dayInterval, "dayStart = "+dayStart, "dayFinish = "+dayFinish);
+            });
           to = $( ".period-finish" ).datepicker({
             defaultDate: "+1w",
             changeMonth: true
           })
           .on( "change", function() {
             from.datepicker( "option", "maxDate", getDate( this ) );
+            dayFinish = getDate( this ).getTime();
             if(!!to.val()){
-              dayFinish = getDate( this ).getTime();
               dayInterval = Math.round(Math.abs(dayStart - dayFinish)/day);
             }else{
               dayInterval = 0;
             }
+            calcDays(dayInterval);
+            calcPrice();
+            console.log("periodInDays = "+periodInDays,"dayInterval = "+dayInterval, "dayStart = "+dayStart, "dayFinish = "+dayFinish);
           });
      
         function getDate( element ) {

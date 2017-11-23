@@ -115,6 +115,15 @@ ul.b-top-content li:nth-child(2){
     margin-right: 14px;
 }
 
+.b-footer-column{
+	width: 50%;
+}
+
+.b-footer-column:nth-child(2),
+.b-footer-column:nth-child(3){
+	display: none;
+}
+
 @media screen and (max-width: 540px){
 
 	.before-input, .b-calc-item{

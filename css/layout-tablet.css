@@ -99,3 +99,14 @@ body {
 	}
 
 }
+
+@media screen and (max-width: 840px){
+	.b-footer-column{
+		width: 50%;
+	}
+
+	.b-footer-column:nth-child(2),
+	.b-footer-column:nth-child(3){
+		display: none;
+	}
+}

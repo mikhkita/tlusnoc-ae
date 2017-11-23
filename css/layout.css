@@ -79,7 +79,7 @@ body {
 	font-family: 'UbuntuRegular', Sans-Serif;
 	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
-	color: #000;
+	color: #1b1b1b;
 	line-height: 18px;
 }
 a{
@@ -156,15 +156,18 @@ input.error,textarea.error{
 	left: 50%;
 	margin-left: -500px;
 }
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
 	color: #1b82c7;
 }
-input:-moz-placeholder {
+input:-moz-placeholder,
+textarea:-moz-placeholder{
 	color: #1b82c7;
 }
 [class^="icon-"]:before, 
-[class*=" icon-"]:before,
-.select-wrapper:after{
+[class*="icon-"]:before,
+.select-wrapper:after,
+.fancybox-close-small:after{
 	font-family: 'icomoon' !important;
 	speak: none;
 	font-style: normal;
@@ -231,7 +234,7 @@ h2.b-title{
 	font-family: "UbuntuBold", Sans-Serif;
 	padding-top: 36px;
 	margin-bottom: 16px;
-	color: #000;
+	color: #1b1b1b;
 	letter-spacing: 1.15px;
 	line-height: 30px;
 }
@@ -250,7 +253,7 @@ h3.b-title{
 	font-size: 20px;
 	font-family: "UbuntuMedium", Sans-Serif;
 	margin-bottom: 14px;
-	color: #000;
+	color: #1b1b1b;
 	line-height: 16px;
 	letter-spacing: 0.25px;
 }
@@ -313,7 +316,7 @@ h4{
 			.b-top-content .contact-info{
 				display: inline-block;
 				padding-top: 5px;
-				color: #000;
+				color: #1b1b1b;
 				font-family: 'SFUIDisplayRegular';
 				border-bottom: 1px solid #bbbbbb;
 			}
@@ -378,12 +381,16 @@ h4{
 					margin-right: 0;
 				}
 
-			.b-top-content .phone{
+			.phone{
 				display: block;
 				padding-top: 5px;
 				font-family: 'SFUIDisplayBold';
 				font-size: 17px;
-				color: #000;
+				color: #1b1b1b;
+			}
+
+			.b-footer .phone{
+				padding-top: 0;
 			}
 
 			.cabinet-cont{
@@ -394,7 +401,7 @@ h4{
 				display: inline-block;
 				padding-top: 5px;
 				font-family: 'SFUIDisplayMedium';
-				color: #000;
+				color: #1b1b1b;
 			}
 
 			.b-top-content li:hover .cabinet{
@@ -470,7 +477,9 @@ h4{
 						border-bottom: 15px solid #dcdcdc;
 					}
 
-				.cabinet-bubble input{
+				.cabinet-bubble input,
+				.b-popup input,
+				.b-popup textarea{
 					border: none;
 					width: 100%;
 					color: #1b82c7;
@@ -481,6 +490,10 @@ h4{
 				    margin-bottom: 37px;
 				    border-bottom: 2px solid #1b82c7;
 				    padding-bottom: 7px;
+				}
+
+				.b-popup textarea{
+					resize: none;
 				}
 
 				.cabinet-bubble input[name="password"]{
@@ -587,7 +600,7 @@ h4{
 		}
 
 	.mobile-menu ul li:hover a{
-		color: #000;
+		color: #1b1b1b;
 	}
 
 	ul.b-menu-items{
@@ -603,7 +616,7 @@ h4{
 			ul.b-menu-items li a{
 				font-family: 'UbuntuMedium';
 				font-size: 18px;
-				color: #000;
+				color: #1b1b1b;
 				padding: 10px 14px;
     			letter-spacing: 0.55px;
 			}
@@ -618,9 +631,10 @@ h4{
 
 .b-slider{
 	height: 505px;
-	background-image: url(../i/banner.jpg);
-	background-position: 50% 50%;
+	background-image: url(../i/header-back.jpg);
+	background-position: 50% 0;
 	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 		.b-slider-content{
@@ -761,6 +775,14 @@ h4{
 				margin-right: 20px;
 			}
 
+			.period-items a:hover{
+				color: #1b82c7;
+			}
+
+			.period-items a.period-active:hover{
+				color: #013c6e;
+			}
+
 			.period-items a:last-child{
 				margin-right: 0;
 			}
@@ -773,7 +795,7 @@ h4{
 		.b-calc input, .b-calc select{
 			border: none;
 			width: 100%;
-			color: #000;
+			color: #1b1b1b;
 			font-family: 'UbuntuMedium';
 			background-color: transparent;
 			font-size: 19px;
@@ -802,7 +824,7 @@ h4{
 		}
 
 		.select-wrapper:hover:after{
-			color: #000;
+			color: #1b1b1b;
 		}
 
 	.notation-wrap{
@@ -826,8 +848,20 @@ h4{
 		}
 
 	.cost-result{
+		display: inline-block;
 		font-family: 'UbuntuMedium', Sans-Serif;
 		font-size: 19px;
+	}
+
+	.icon-rub{
+		display: inline-block;
+		padding-left: 5px;
+	}
+	.icon-rub:before{
+		content: "\e908";
+	    font-size: 14px;
+	    color: #1b1b1b;
+	    line-height: 27px;
 	}
 
 	.cost-title{
@@ -848,7 +882,7 @@ h4{
 
 	.period-datepicker input{
 		display: inline-block;
-		width: calc(100%/2 - 60px);
+		width: 100px;
 	}
 
 .b-about{
@@ -894,7 +928,7 @@ h4{
 			}
 
 .b-client{
-	margin-bottom: 20px;
+	margin-bottom: 6px;
 }
 
 	.b-client h2{
@@ -949,9 +983,127 @@ h4{
 			font-size: 18px;
 		}
 
+.b-footer{
+	padding-top: 35px;
+	border-top: 3px solid #e0e0e0;
+	margin-bottom: 18px;
+}
+
+	.b-footer-column p{
+		font-size: 16px;
+		margin-top: 5px;
+	}
+
+	.b-footer li a{
+		text-decoration: underline;
+		font-size: 16px;
+		color: #1b1b1b;
+		line-height: 16px;
+	}
+
+	.b-footer-column:last-child a{
+		color: #1b1b1b;
+		text-decoration: none;
+	}
+
+	.b-footer-column ul{
+		margin-right: 25px;
+	}
+
+	.b-footer-column:last-child ul{
+		margin-right: 0;
+	}
+
+		.b-footer-column ul li{
+			margin-bottom: 6px;
+		}
+
+	.b-footer-column{
+		float: left;
+		width: 25%;
+	}
+
+	.b-footer-column:last-child{
+		float: right;
+	}
+
 .b-bottom{
 	margin-bottom: 34px;
 }
+
+.period-start{
+	padding-right: 10px;
+	box-sizing: content-box;
+}
+
+.dash{
+	display: inline-block;
+	border-bottom: 3px solid #e0e0e0;
+	padding-bottom: 16px;
+	margin-left: -.36em;
+}
+
+.period-finish{
+	margin-left: -.36em;
+	padding-left: 16px;
+	box-sizing: content-box;
+}
+
+input.period-start::-webkit-input-placeholder,
+input.period-finish::-webkit-input-placeholder
+{
+	font-size: 19px;
+	color: #e0e0e0;
+}
+input.period-start:-moz-placeholder,
+input.period-finish:-moz-placeholder
+{
+	font-size: 19px;
+	color: #e0e0e0;
+}
+
+/*--------Popup---------*/
+
+.b-popup{
+	width: 100%;
+	max-width: 290px;
+	padding: 25px 35px 40px;
+}
+
+	.b-popup h2{
+		font-family: 'UbuntuMedium';
+		letter-spacing: 0;
+		font-size: 18px;
+		padding-top: 0;
+		margin-bottom: 20px;
+	}
+
+	.b-popup .b-btn{
+		min-width: 0;
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	.b-popup input, .b-popup textarea{
+		margin-bottom: 22px;
+	}
+
+	.fancybox-close-small:after {
+	    content: "\e909";
+	    position: absolute;
+	    left: 8px;
+	    top: 13px;
+	    color: #d7d7d7;
+	    font-size: 16px;
+	    width: auto;
+	    height: auto;
+	    background-color: transparent;
+	}
+
+	.fancybox-close-small:hover:after{
+		color: #1b1b1b;
+		background-color: transparent;
+	}
 
 /*-----------Slick------------*/
 
@@ -997,13 +1149,10 @@ h4{
     border-top: 0px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 14px solid #1b82c7;
-    border-left: 8px solid transparent;}
+    border-left: 8px solid transparent;
+}
 
 /*-----------Slideout-----------*/
-
-/*#mobile-menu{
-	display: none;
-}*/
 
 .slideout-menu {
   position: fixed;
