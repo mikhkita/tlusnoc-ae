@@ -124,7 +124,7 @@ input.error,textarea.error{
 	overflow: visible !important;
 }
 .bold{
-	font-family: 'PFM';
+	font-family: 'UbuntuBold';
 }
 .underline{
 	text-decoration: underline;
@@ -225,7 +225,13 @@ textarea:-moz-placeholder{
 	}
 
 h1.b-title{
-
+	text-transform: uppercase;
+	font-size: 46px;
+	font-family: "UbuntuMedium", Sans-Serif;
+	margin-bottom: 25px;
+	line-height: 50px;
+	color: #FFF;
+	letter-spacing: 0.6px;
 }
 
 h2.b-title{
@@ -237,16 +243,6 @@ h2.b-title{
 	color: #1b1b1b;
 	letter-spacing: 1.15px;
 	line-height: 30px;
-}
-
-h2.b-title-head{
-	text-transform: uppercase;
-	font-size: 46px;
-	font-family: "UbuntuMedium", Sans-Serif;
-	margin-bottom: 25px;
-	line-height: 50px;
-	color: #FFF;
-	letter-spacing: 0.6px;
 }
 
 h3.b-title{
@@ -264,10 +260,35 @@ h4{
 }
 
 .b-text{
-	
+	margin-bottom: 20px;
 }
 	.b-text a{
 		border-bottom: 1px solid #aecde2;
+	}
+
+	.b-text ul {
+	    list-style: none;
+	    margin-bottom: 15px;
+	}
+
+	.b-text ul li{
+    	margin-left: 26px;
+	}
+
+	.b-text ul li:before {
+	    content:  "—";
+	    position: relative;
+	    left:     -5px;
+	}
+
+	.b-text h4{
+		font-size: 14px;
+		font-family: 'UbuntuBold';
+		margin-bottom: 8px;
+	}
+
+	.b-text b{
+		font-family: 'UbuntuBold';
 	}
 
 .b-center-content{
@@ -1209,6 +1230,68 @@ input.period-finish:-moz-placeholder
 }
 
 /*-----------------------*/
+
+/*-------О команде-------*/
+
+.b-slider-inner{
+	height: 290px;
+    background-image: url(../i/header-back-inner.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+	.b-slider-inner .b-slider-content{
+		max-width: 500px;
+    	width: 100%;
+		background-color: transparent;
+		padding-top: 80px;
+	}
+
+.b-about-inner{
+	margin-bottom: 20px;
+}
+	.b-about-inner .b-text > img{
+		float: right;
+		margin-left: 35px;
+	}
+
+	.download-presentation span{
+		font-size: 16px;
+		text-decoration: underline;
+		padding-left: 10px;
+	}
+
+.b-scheme{
+
+}
+
+	.b-scheme-list{
+
+	}
+
+		.b-scheme-item{
+			float: left;
+			display: inline-block;
+			width: 22%;
+		}
+
+			.b-scheme-img,
+			.b-scheme-text{
+				float: left;
+				display: inline-block;
+			}
+
+			.b-scheme-text{
+				width: calc(100% - 35px);
+				margin-left: 10px;
+			}
+
+		.arrow-next{
+			float: left;
+			margin-right: 30px;
+			display: inline-block;
+		}
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	.b-about-img img{
