@@ -272,15 +272,27 @@ h4{
 	    margin-bottom: 15px;
 	}
 
-	.b-text ul li{
-    	margin-left: 26px;
-	}
+		.b-text ul li{
+	    	padding-left: 26px;
+		}
 
-	.b-text ul li:before {
-	    content:  "—";
-	    position: relative;
-	    left:     -5px;
-	}
+		.b-text ul li:before {
+		    content:  "—";
+		    position: relative;
+		    left:     -5px;
+		}
+
+		.b-text ul.mark-img li{
+			background-image: url(../i/mark.png);
+			background-repeat: no-repeat;
+			background-position: 0 2px;
+			background-size: 15px;
+			margin-bottom: 5px;
+		}
+
+		.b-text ul.mark-img li:before{
+			display: none;
+		}
 
 	.b-text h4{
 		font-size: 14px;
@@ -767,8 +779,10 @@ textarea{
 		}
 
 .b-case.b-services-block .b-case-item{
-	width: calc(100%/2 - 30px);
+	float: left;
+	width: calc(100%/2 - 15px);
 	margin-right: 30px;
+	margin-bottom: 30px;
 }
 
 .b-case.b-services-block .b-case-item:last-child{
@@ -1586,6 +1600,10 @@ input.period-finish:-moz-placeholder
 	    background-image: -ms-repeating-linear-gradient(right,rgb(225, 225, 225) 0%,rgb(185, 185, 185) 100%);
 	}
 
+	.b-services-block .b-case-item:nth-child(2n){
+		margin-right: 0;
+	}
+
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	.b-about-img img{
 		max-width: 34px;
@@ -1598,6 +1616,10 @@ input.period-finish:-moz-placeholder
 
 	.woman-photo{
 		background-image: url(../i/team-woman@2x.png);
+	}
+
+	.b-text ul.mark-img li{
+		background-image: url(../i/mark@2x.png);
 	}
 }	
 @media screen and (max-width: 1250px){
