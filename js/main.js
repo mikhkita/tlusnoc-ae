@@ -84,6 +84,33 @@ $(document).ready(function(){
         }
     });
 
+    //скрывать кнопку "Читать полностью"
+    if($('.b-reviews').length){
+        readMoreShow();
+    }
+
+    function readMoreShow(){
+        $('.b-reviews-item').each(function() {
+            var wrapHeight = $(this).find(".b-reviews-text-wrap").height();
+            var textHeight = $(this).find(".b-reviews-item-text").height();
+            if(wrapHeight < textHeight){
+                $(this).find(".expand-review").removeClass("hide");
+            }else{
+                $(this).find("br").remove();
+            }
+        });
+    }
+
+    $('.expand-review').on('click', function(){
+        $target = $(this).siblings(".b-reviews-text-wrap");
+        $target.toggleClass("height-none");
+        if($target.hasClass("height-none")){
+            $(this).html("Свернуть отзыв"+"<div class=\"icon-arrow-down icon-arrow-down-rotate\"></div>");
+        }else{
+            $(this).html("Развернуть отзыв"+"<div class=\"icon-arrow-down\"></div>");
+        }
+    });
+
      $('.b-client-slider').slick({
         dots: false,
         arrows: true,
