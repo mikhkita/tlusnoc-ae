@@ -73,18 +73,20 @@ $(document).ready(function(){
     if( typeof autosize == "function" )
         autosize(document.querySelectorAll('textarea'));
 
-    $("img").each(function(){
-        if( $(this).attr("data-retina-src") && isRetina){
-            var img = new Image(),
-                $this = $(this);
-            img.src = $(this).attr("data-retina-src");
+    if(isRetina){
+        $("*[data-retina-src]").each(function(){
+            var $this = $(this),
+                img = new Image(),
+                src = $this.attr("data-retina-src");
+
             img.onload = function(){
                 $this.attr("src", $this.attr("data-retina-src"));
-            }
-        }
-    });
+            };
+            img.src = src;
+        });
+    }
 
-    //скрывать кнопку "Читать полностью"
+    //скрывать кнопку "Развернуть отзыв"
     if($('.b-reviews').length){
         readMoreShow();
     }

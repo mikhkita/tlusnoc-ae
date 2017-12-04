@@ -264,7 +264,7 @@ h4{
 
 }
 	.b-text a{
-		border-bottom: 1px solid #aecde2;
+		border-bottom: 1px solid #1b82c7;
 	}
 
 	.b-text ul {
@@ -774,18 +774,26 @@ textarea{
 				border-bottom: 15px solid #013c6e;
 			}
 
+			.b-case-item .read-more{
+				display: inline-block;
+				position: relative;
+				font-size: 16px;
+				color: #013c6e;
+				border-bottom: none;
+			}
+
 		.b-case-item:last-child{
 			margin-right: 0;
 		}
 
-.b-case.b-services-block .b-case-item{
+.b-case.b-services-items .b-case-item{
 	float: left;
 	width: calc(100%/2 - 15px);
 	margin-right: 30px;
 	margin-bottom: 30px;
 }
 
-.b-case.b-services-block .b-case-item:last-child{
+.b-case.b-services-items .b-case-item:last-child{
 	margin-right: 0;
 }
 
@@ -799,14 +807,6 @@ textarea{
 
 				.b-services-item p{
 					margin-bottom: 18px;
-				}
-
-				.b-services-item .read-more{
-					display: inline-block;
-					position: relative;
-					font-size: 16px;
-					color: #013c6e;
-					border-bottom: none;
 				}
 
 					.read-more:after {
@@ -1297,6 +1297,13 @@ input.period-finish:-moz-placeholder
     background-repeat: no-repeat;
 }
 
+	.b-slider-inner .b-slider-content{
+		max-width: 500px;
+    	width: 100%;
+		background-color: transparent;
+		padding-top: 73px;
+	}
+
 .b-slider-inner.b-page-about{
 	background-image: url(../i/inner-about.jpg);
 }
@@ -1304,6 +1311,10 @@ input.period-finish:-moz-placeholder
 .b-slider-inner.b-page-services{
 	background-image: url(../i/inner-services.jpg);
 }
+
+	.b-slider-inner.b-page-services .b-slider-content{
+		padding-top: 59px;
+	}
 
 .b-slider-inner.b-page-cooperation{
 	background-image: url(../i/inner-cooperation.jpg);
@@ -1314,13 +1325,6 @@ input.period-finish:-moz-placeholder
 }
 
 /*-------О команде-------*/
-
-	.b-slider-inner .b-slider-content{
-		max-width: 500px;
-    	width: 100%;
-		background-color: transparent;
-		padding-top: 73px;
-	}
 
 .b-about-inner{
 	
@@ -1584,14 +1588,19 @@ input.period-finish:-moz-placeholder
 
 /*-------Услуги и продукты-------*/
 
-.b-services-list{
 
+.b-services-block{
+	margin-bottom: 40px;
 }
+	.b-page-services-list{
+
+	}
+
 	.b-services-app{
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		padding: 12px 22px;
+		padding: 8px 22px;
 		background-color: #c6c6c6;
 		z-index: 5;
 		background-image: -webkit-gradient(linear, 100% 0%, 0% 0%,color-stop(0, rgb(225, 225, 225)),color-stop(1, rgb(185, 185, 185)));
@@ -1600,8 +1609,18 @@ input.period-finish:-moz-placeholder
 	    background-image: -ms-repeating-linear-gradient(right,rgb(225, 225, 225) 0%,rgb(185, 185, 185) 100%);
 	}
 
-	.b-services-block .b-case-item:nth-child(2n){
+		.b-services-app a{
+			color: #013c6e;
+			border-bottom: 1px solid #013c6e;
+		}
+
+	.b-services-items .b-case-item:nth-child(2n){
 		margin-right: 0;
+	}
+
+	.b-services-items .b-case-item h3,
+	.b-services-items .b-case-item p{
+		margin-bottom: 10px;
 	}
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
