@@ -775,6 +775,10 @@ textarea{
 				border-bottom: 15px solid #013c6e;
 			}
 
+			.b-case-item ul li{
+				padding-left: 0;
+			}
+
 			.b-case-item .read-more{
 				display: inline-block;
 				position: relative;
@@ -1388,10 +1392,6 @@ ul.b-breadcrumbs{
 			padding-left: 10px;
 		}
 
-		.after-text-link img{
-			max-width: 28px;
-		}
-
 .b-scheme{
 	margin-bottom: 22px;
 }
@@ -1410,10 +1410,6 @@ ul.b-breadcrumbs{
 				float: left;
 				display: inline-block;
 			}
-
-				.b-scheme-img img{
-					max-width: 34px;
-				}
 
 			.b-scheme-text{
 				float: right;
@@ -1701,6 +1697,60 @@ ul.b-breadcrumbs{
 		border-bottom: 3px solid #1b82c7;
 	}
 
+.b-chart{
+	margin-bottom: 25px;
+}
+
+	.b-chart h3{
+		font-size: 16px;
+	}
+
+	.b-chart-block{
+		padding: 30px 22px;
+		background-color: #FFF;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.b-chart-margin{
+		margin-bottom: 20px;
+	}
+
+	.chart-legend{
+		font-size: 16px;
+		margin-left: 12px;
+		font-family: 'UbuntuMedium';
+	}
+
+	.chart-buttons{
+		margin-right: 12px;
+	}
+
+		.chart-buttons a.active{
+			color: #1b82c7;
+			border-bottom: 2px solid #1b82c7;
+		}
+
+		.chart-buttons a{
+			color: #1b1b1b;
+			font-family: 'UbuntuMedium', Sans-Serif;
+			font-size: 16px;
+		}
+
+			.chart-buttons a:last-child{
+				margin-left: 12px;
+			}
+
+		.circle-legend{
+			display: inline-block;
+			width: 9px;
+			height: 9px;
+			border-radius: 100px;
+			background-color: #1b82c7;
+			margin-bottom: 1px;
+			margin-right: 8px;
+		}
+
 .b-application{
 	padding: 28px 30px;
 	margin-bottom: 30px;
@@ -1762,6 +1812,34 @@ ul.b-breadcrumbs{
 		margin-bottom: 10px;
 	}
 
+/*-------Chartist.js--------*/
+
+.ct-perfect-fourth {
+    height: 250px;
+}
+
+.ct-perfect-fourth:before{
+    padding-bottom: 0;
+}
+
+.ct-series-a .ct-area, .ct-series-a .ct-slice-donut-solid, .ct-series-a .ct-slice-pie {
+    fill: #d9eaf6;
+}
+
+.ct-area {
+    fill-opacity: 1;
+}
+
+.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut{
+	stroke: #1b82c7;
+}
+
+.ct-label {
+    color: #1b1b1b;
+    font-family: 'UbuntuMedium';
+    font-size: .75rem;
+}
+
 /*------------------------------*/
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
@@ -1780,6 +1858,16 @@ ul.b-breadcrumbs{
 
 	.b-text ul.mark-img li{
 		background-image: url(../i/mark@2x.png);
+	}
+
+	.after-text-link img{
+		max-width: 28px;
+		max-height: 40px;
+	}
+
+	.b-scheme-img img{
+		max-width: 40px;
+		max-height: 40px;
 	}
 }	
 @media screen and (max-width: 1250px){

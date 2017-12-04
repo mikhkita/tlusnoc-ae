@@ -456,6 +456,22 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
         }
     });
 
+    if($('.ct-chart').length){
+        new Chartist.Line('.ct-chart', {
+            labels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+            series: [
+                [2000, 3000, 4000, 3500, 5000, 5500, 5000, 6000, 7500, 6500, 8500, 9000]
+            ],
+        },{
+            height: '250px',
+            low: 0,
+            showArea: true,
+            lineSmooth: Chartist.Interpolation.none({
+                fillHoles: false
+            })
+        });
+    }
+
     /*bindCloseMenu("menu");
     bindCloseMenu("b-menu-overlay");
 
