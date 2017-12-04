@@ -168,7 +168,8 @@ textarea:-moz-placeholder{
 [class*="icon-"]:before,
 [class^="icon-"]:after, 
 [class*="icon-"]:after,
-.fancybox-close-small:after{
+.fancybox-close-small:after,
+ul.b-breadcrumbs li:after{
 	font-family: 'icomoon' !important;
 	speak: none;
 	font-style: normal;
@@ -354,7 +355,7 @@ h4{
 input, textarea{
 	border: none;
 	width: 100%;
-	color: #1b82c7;
+	color: #1b1b1b;
 	font-family: 'UbuntuRegular';
 	background-color: transparent;
 	font-size: 16px;
@@ -1032,6 +1033,13 @@ textarea{
 		padding: 10px;
 	}
 
+	.icon-arrow-left{
+		content: "\e900";
+	}
+	.icon-arrow-right{
+		content: "\e901";
+	}
+
 	.b-client-arrows:hover.icon-arrow-right,
 	.b-client-arrows:hover.icon-arrow-left{
 		color: #1b81c5;
@@ -1047,7 +1055,6 @@ textarea{
 	}
 
 		.b-client-arrows.icon-arrow-right:before{
-			content: "\e901";
 			font-size: 18px;
 		}
 
@@ -1061,7 +1068,6 @@ textarea{
 	}
 
 		.b-client-arrows.icon-arrow-left:before{
-			content: "\e900";
 			font-size: 18px;
 		}
 
@@ -1320,9 +1326,42 @@ input.period-finish:-moz-placeholder
 	background-image: url(../i/inner-cooperation.jpg);
 }
 
+	.b-slider-inner.b-page-services .b-slider-cooperation{
+		
+	}
+
 .b-slider-inner.b-page-documents{
 	background-image: url(../i/inner-documents.jpg);
 }
+
+ul.b-breadcrumbs{
+	padding-top: 20px;
+	margin-bottom: 27px;
+}
+
+	ul.b-breadcrumbs li{
+		display: inline-block;
+	}
+
+		ul.b-breadcrumbs li a,
+		ul.b-breadcrumbs li span{
+			font-family: 'UbuntuRegular', Sans-Serif;
+			font-size: 14px;
+			color: #9c9d9e;
+		}
+
+			ul.b-breadcrumbs li:after {
+			    position: relative;
+			    content: "\e901";
+			    font-size: 10px;
+			    line-height: 16px;
+			    color: #9c9d9e;
+			    margin: 0 6px 0 12px;
+			}
+
+			ul.b-breadcrumbs li:last-child:after {
+			    display: none;
+			}
 
 /*-------О команде-------*/
 
@@ -1331,7 +1370,7 @@ input.period-finish:-moz-placeholder
 }
 
 	.b-about-inner .b-text{
-		margin-bottom: 20px;
+		
 	}
 
 	.b-about-inner .b-text > img{
@@ -1339,11 +1378,19 @@ input.period-finish:-moz-placeholder
 		margin-left: 35px;
 	}
 
-	.download-presentation span{
-		font-size: 16px;
-		text-decoration: underline;
-		padding-left: 10px;
+	.after-text-link{
+		margin-top: 20px;
 	}
+
+		.after-text-link span{
+			font-size: 16px;
+			text-decoration: underline;
+			padding-left: 10px;
+		}
+
+		.after-text-link img{
+			max-width: 28px;
+		}
 
 .b-scheme{
 	margin-bottom: 22px;
@@ -1363,6 +1410,10 @@ input.period-finish:-moz-placeholder
 				float: left;
 				display: inline-block;
 			}
+
+				.b-scheme-img img{
+					max-width: 34px;
+				}
 
 			.b-scheme-text{
 				float: right;
@@ -1622,6 +1673,96 @@ input.period-finish:-moz-placeholder
 	.b-services-items .b-case-item p{
 		margin-bottom: 10px;
 	}
+
+/*-------Сотрудничество-------*/
+
+.choice-block{
+	text-align: center;
+	margin-bottom: 27px;
+}
+
+	.choice-block a{
+		width: 32%;
+		display: inline-block;
+		text-transform: uppercase;
+		padding: 15px 0;
+		font-size: 24px;
+		font-family: 'UbuntuBold';
+		color: #1b1b1b;
+		border-bottom: 3px solid #1b1b1b;
+	}
+
+	.choice-block a:last-child{
+		margin-left: 30px;
+	}
+
+	.choice-block a.active{
+		color: #1b82c7;
+		border-bottom: 3px solid #1b82c7;
+	}
+
+.b-application{
+	padding: 28px 30px;
+	margin-bottom: 30px;
+	background-color: #013c6e;
+}
+
+	.b-application h3.b-title{
+		color: #FFF;
+		padding-top: 0;
+		font-family: 'UbuntuMedium';
+		text-transform: none;
+		margin-bottom: 25px;
+	}
+
+	.b-application input{
+		float: left;
+		width: calc(100%/3 - 20px);
+		margin-right: 30px;
+		color: #FFF;
+		border-bottom: 1px solid #FFF;
+	}
+
+	.b-application input:last-child{
+		margin-right: 0;
+	}
+
+	.b-application .b-btn{
+		float: right;
+	}
+
+	.inputs-block{
+		margin-bottom: 30px;
+	}
+
+.b-scheme-cooperation{
+	margin-top: 24px;
+}
+
+	.b-scheme.b-scheme-cooperation .b-scheme-text{
+		float: left;
+	    width: calc(100% - 56px);
+	    margin-left: 12px;
+	}
+
+		.b-scheme.b-scheme-cooperation .b-scheme-text h3.b-title{
+			font-size: 16px;
+			line-height: 16px;
+		}
+
+	.b-scheme.b-scheme-cooperation .arrow-next{
+		margin-top: 9px;
+	}
+
+.b-region{
+	margin-bottom: 45px;
+}
+
+	.b-region p{
+		margin-bottom: 10px;
+	}
+
+/*------------------------------*/
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	.b-about-img img{
