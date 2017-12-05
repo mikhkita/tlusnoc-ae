@@ -159,7 +159,7 @@ $(document).ready(function(){
         'tolerance': 70
     });
 
-    $('mobile-menu').removeClass("hide")
+    $('.mobile-menu').removeClass("hide")
 
     $('.burger-menu').click(function() {
         slideout.open();
