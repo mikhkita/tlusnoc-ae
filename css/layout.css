@@ -261,6 +261,10 @@ h4{
 	font-family: "UbuntuRegular", Sans-Serif;
 }
 
+.b-center{
+	text-align: center;
+}
+
 .b-text{
 
 }
@@ -289,7 +293,7 @@ h4{
 			background-position: 0 2px;
 			background-size: 15px;
 			margin-bottom: 5px;
-			padding-left: 20px;
+			padding-left: 22px;
 		}
 
 		.b-text ul.mark-img li:before{
@@ -368,6 +372,34 @@ input, textarea{
 textarea{
 	resize: none;
 }
+
+ul.mark-numbers li{
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+	ul.mark-numbers li span,
+	.question-block .question-icon{
+		display: inline-block;
+		text-align: center;
+		width: 14px;
+		height: 14px;
+		border-radius: 100px;
+		border: 1px solid #FFF;
+		color: #FFF;
+		font-size: 8px;
+	    line-height: 14px;
+	    vertical-align: middle;
+	    padding-left: 1px;
+	}
+
+	ul.mark-numbers li a{
+		color: #FFF;
+		border-bottom: 1px solid #FFF;
+		margin-left: 10px;
+		font-size: 16px;
+		font-family: 'UbuntuBold', Sans-Serif;
+	}
 
 /*--------Главная--------*/
 
@@ -1038,10 +1070,10 @@ textarea{
 		padding: 10px;
 	}
 
-	.icon-arrow-left{
+	.icon-arrow-left:before{
 		content: "\e900";
 	}
-	.icon-arrow-right{
+	.icon-arrow-right:before{
 		content: "\e901";
 	}
 
@@ -1685,24 +1717,56 @@ ul.b-breadcrumbs{
 	margin: 27px 0;
 }
 
-	.choice-block a{
+	.choice-block .choice-item{
 		width: 32%;
+		display: inline-block;
+		border-bottom: 3px solid #1b1b1b;
+		text-align: center;
+	}
+
+	.choice-block .choice-item a{
 		display: inline-block;
 		text-transform: uppercase;
 		padding: 15px 0;
 		font-size: 24px;
 		font-family: 'UbuntuBold';
 		color: #1b1b1b;
-		border-bottom: 3px solid #1b1b1b;
 	}
 
-	.choice-block a:last-child{
+	.choice-block .choice-item:last-child{
 		margin-left: 30px;
 	}
 
-	.choice-block a.active{
-		color: #1b82c7;
+	.choice-block .choice-item.active,
+	.choice-block.choice-block-three .choice-item.active{
 		border-bottom: 3px solid #1b82c7;
+	}
+
+	.choice-block .choice-item.active a{
+		color: #1b82c7;
+	}
+
+	.choice-block.choice-block-three .choice-item{
+		width: calc(100%/3 - 40px);
+		margin-right: 50px;
+		border-bottom: 3px solid #b7b7b7;
+	}
+
+	.choice-block.choice-block-three .choice-item:last-child{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.choice-block.choice-block-three .choice-item a{
+		text-transform: none;
+		font-size: 16px;
+	}
+
+	.choice-block.choice-block-three img{
+	    display: inline-block;
+	    margin-right: 5px;
+	    vertical-align: middle;
+   		margin-bottom: 4px;
 	}
 
 .b-chart{
@@ -1822,32 +1886,108 @@ ul.b-breadcrumbs{
 
 /*------Работа с ЭТП------*/
 
-.b-page-marketplace ul li{
-	text-transform: uppercase;
-	margin-bottom: 10px;
+.b-margin-up{
+	margin-top: 27px;
 }
 
-	.b-page-marketplace ul li span{
-		display: inline-block;
-		text-align: center;
-		width: 14px;
-		height: 14px;
-		border-radius: 100px;
-		border: 1px solid #FFF;
-		color: #FFF;
-		font-size: 8px;
-	    line-height: 14px;
-	    vertical-align: middle;
-	    padding-left: 1px;
+.b-federal{
+	margin-bottom: 27px;
+}
+
+	.b-federal-list{
+
 	}
 
-	.b-page-marketplace ul li a{
-		color: #FFF;
-		border-bottom: 1px solid #FFF;
-		margin-left: 10px;
-		font-size: 16px;
-		font-family: 'UbuntuBold', Sans-Serif;
+		.b-federal-item{
+			float: left;
+			width: calc(100%/6 - 17px);
+			margin-right: 20px;
+		}
+
+		.b-federal-item:last-child{
+			margin-right: 0;
+		}
+
+		.b-federal-item:hover{
+			cursor: pointer;
+		}
+
+		.b-federal-item:hover .federal-img{
+
+		}
+
+		.b-federal-item:hover p{
+			color: #1b82c7;
+		}
+
+			.b-federal-item .federal-img{
+				display: block;
+				height: 56px;
+				margin-bottom: 10px;
+			}
+
+			.b-federal-item p{
+				text-decoration: underline;
+			}
+
+.b-white-block{
+	background-color: #FFF;
+	padding: 30px;
+}
+
+	.b-white-block h2{
+		padding-top: 0;
 	}
+
+	.b-work-marketplace img{
+		display: inline-block;
+		margin-right: 5px;
+	}
+
+	.b-work-marketplace h2{
+		display: inline-block;
+	}
+
+	.question-block .question-icon{
+		color: #1b82c7;
+		border: 2px solid #1b82c7;
+		width: 20px;
+		height: 20px;
+		font-size: 14px;
+		line-height: 16px;
+		margin-right: 4px;
+	}
+
+	.important-block{
+		font-family: 'UbuntuBold';
+		color: #FFF;
+		display: inline-block;
+		padding: 8px 20px;
+		background-color: #1b82c7;
+		margin-bottom: 10px;
+	}
+
+	.question-block .question-text{
+		color: #1b82c7;
+		text-decoration: underline;
+	}
+
+	.important-text{
+		padding-left: 12px;
+		border-left: 2px solid #1b82c7;
+		margin-bottom: 27px;
+	}
+
+	.b-gray-block{
+		padding: 30px;
+		background-color: #f3f3f3;
+	}
+
+.b-wrap-input{
+	display: inline-block;
+	width: calc(100%/3 - 23px);
+	margin-right: 30px;
+}
 
 /*-------Chartist.js--------*/
 
