@@ -107,9 +107,9 @@
 					<div class="b-slider-content">
 						<h1 class="b-title">Работа с ЭТП</h1>
 						<ul class="mark-numbers">
-							<li><span>1</span><a href="#">Заказать ЭТП</a></li>
-							<li><span>2</span><a href="#">Аккредитация на ЭТП</a></li>
-							<li><span>3</span><a href="#">Настройка ПК для работы с ЭТП</a></li>
+							<li><span>1</span><p>Заказать ЭТП</p></li>
+							<li><span>2</span><p>Аккредитация на ЭТП</p></li>
+							<li><span>3</span><p>Настройка ПК для работы с ЭТП</p></li>
 						</ul>
 					</div>
 				</div>
@@ -202,25 +202,93 @@
 								<div class="b-text important-text">
 									Цена выпуска ЭЦП зависит от количества торговых площадок, с которыми смогут работать ваши средства электронно-цифровой подписи. Заказывая услугу выпуска ЭЦП, заранее определите список площадок, с которыми вы хотите работать. Рекомендации по выбору площадок  вы можете получить у своего <a href="#">персонального менеджера</a>, <a href="#">пишите нам</a>!
 								</div>
-								<div class="b-gray-block">
+								<div class="b-gray-block clearfix">
 									<h2 class="b-title">Отправить заявку</h2>
 									<form id="b-send-app-form" class="b-send-app-form" method="post" action="action.php">
-										<div class="b-wrap-input">
-											<h4>Услуга</h4>
-											<select>
-												<option value="1">Заказать ЭЦП 1</option>
-												<option value="2">Заказать ЭЦП 2</option>
-												<option value="3">Заказать ЭЦП 3</option>
-											</select>
+										<div class="clearfix">
+											<div class="b-wrap-input">
+												<h3>Услуга</h3>
+												<div class="select-wrapper icon-arrow-down">
+													<select>
+														<option value="1">Заказать ЭЦП 1</option>
+														<option value="2">Заказать ЭЦП 2</option>
+														<option value="3">Заказать ЭЦП 3</option>
+													</select>
+												</div>
+											</div>
+											<div class="b-wrap-input">
+												<h3>Площадка</h3>
+												<input type="text" name="area" placeholder="Введите площадку">
+											</div>
 										</div>
-										<div class="b-wrap-input">
-											<input type="text" name="area">
+										<div class="clearfix">
+											<div class="b-wrap-input">
+												<input id="urgently-app" type="checkbox" name="urgently-app">
+												<label for="urgently-app">Срочный заказ</label>
+											</div>
+											<div class="b-wrap-input">
+												<input id="need-install" type="checkbox" name="need-install">
+												<label for="need-install">Требуется настройка ПК</label>
+											</div>
+										</div>
+										<div class="clearfix">
+											<div class="b-wrap-input">
+												<input id="need-training" type="checkbox" name="need-training">
+												<label for="need-training">Требуется обучение пользователей</label>
+											</div>
 										</div>
 
-										<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-send-app-form').submit(); return false;">Отправить</a>
+										<div class="clearfix">
+											<div class="b-wrap-input">
+												<input type="text" name="company" placeholder="Компания*" required>
+											</div>
+											<div class="b-wrap-input">
+												<input type="text" name="fio" placeholder="ФИО контактного лица*" required>
+											</div>
+											<div class="b-wrap-input">
+												<input type="text" name="e-mail" placeholder="Электронная почта*"required>
+											</div>
+										</div>
+
+										<div class="clearfix">
+											<div class="b-wrap-input">
+												<input type="text" name="phone" placeholder="Телефон*" required>
+											</div>
+											<div class="b-wrap-input b-wrap-input-2x">
+												<textarea name="comment" rows="1" placeholder="Комментарий*" required></textarea>
+											</div>
+										</div>
+
+										<a href="#" class="b-btn b-btn-blue ajax right" onclick="$('#b-send-app-form').submit(); return false;">Отправить</a>
 									</form>
 								</div>
+
+								<h2 class="b-title">Справка</h2>
+								<p>Список документов, необходимый для подачи заявки на получение ЭЦП</p>
+								<div class="choice-block choice-block-three">
+									<div class="choice-item choice-legal active">
+										<a href="#">Для юридического лица</a>
+									</div>
+									<div class="choice-item choice-individual">
+										<a href="#">Для ИП</a>
+									</div>
+									<div class="choice-item choice-physical">
+										<a href="#">Для физического лица</a>
+									</div>
+								</div>
+
+								
 							</div>
+
+							<ul class="mark-numbers mark-numbers-blue">
+									<li><span>1</span><p>Копия Свидетельства о государственной регистрации юридического лица</p></li>
+									<li><span>2</span><p>Копия Свидетельства о постановке на учет в налоговом органе</p></li>
+									<li><span>3</span><p>Если ЭЦП для торговых площадок изготавливается на имя руководителя организации: копию документа о назначении руководителя, заверенную подписью руководителя и печатью организации</p></li>
+									<li><span>4</span><p>Если получать ЭЦП для торгов будет не ее владелец, то на имя уполномоченного представителя организации нужна доверенность, подтверждающая полномочия владельца сертификата ключа ЭЦП, заверенная подписью руководителя и печатью организации</p></li>
+									<li><span>5</span><p>Копия паспорта гражданина Российской Федерации, на чье имя изготавливается ключ для участия в торгах (владелец сертификата)</p></li>
+									<li><span>6</span><p>Согласие на обработку персональных данных пользователя</p></li>
+									<li><span>7</span><p>СНИЛС (для торгов по 223-ФЗ и коммерческих закупок)</p></li>
+								</ul>
 						</div>
 					</div>
 
