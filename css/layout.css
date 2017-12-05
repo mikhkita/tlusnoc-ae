@@ -168,7 +168,8 @@ textarea:-moz-placeholder{
 [class*="icon-"]:before,
 [class^="icon-"]:after, 
 [class*="icon-"]:after,
-.fancybox-close-small:after{
+.fancybox-close-small:after,
+ul.b-breadcrumbs li:after{
 	font-family: 'icomoon' !important;
 	speak: none;
 	font-style: normal;
@@ -288,6 +289,7 @@ h4{
 			background-position: 0 2px;
 			background-size: 15px;
 			margin-bottom: 5px;
+			padding-left: 20px;
 		}
 
 		.b-text ul.mark-img li:before{
@@ -354,7 +356,7 @@ h4{
 input, textarea{
 	border: none;
 	width: 100%;
-	color: #1b82c7;
+	color: #1b1b1b;
 	font-family: 'UbuntuRegular';
 	background-color: transparent;
 	font-size: 16px;
@@ -774,6 +776,10 @@ textarea{
 				border-bottom: 15px solid #013c6e;
 			}
 
+			.b-case-item ul li{
+				padding-left: 0;
+			}
+
 			.b-case-item .read-more{
 				display: inline-block;
 				position: relative;
@@ -1032,6 +1038,13 @@ textarea{
 		padding: 10px;
 	}
 
+	.icon-arrow-left{
+		content: "\e900";
+	}
+	.icon-arrow-right{
+		content: "\e901";
+	}
+
 	.b-client-arrows:hover.icon-arrow-right,
 	.b-client-arrows:hover.icon-arrow-left{
 		color: #1b81c5;
@@ -1047,7 +1060,6 @@ textarea{
 	}
 
 		.b-client-arrows.icon-arrow-right:before{
-			content: "\e901";
 			font-size: 18px;
 		}
 
@@ -1061,7 +1073,6 @@ textarea{
 	}
 
 		.b-client-arrows.icon-arrow-left:before{
-			content: "\e900";
 			font-size: 18px;
 		}
 
@@ -1320,9 +1331,49 @@ input.period-finish:-moz-placeholder
 	background-image: url(../i/inner-cooperation.jpg);
 }
 
+	.b-slider-inner.b-page-services .b-slider-cooperation{
+		
+	}
+
+.b-slider-inner.b-page-marketplace{
+	background-image: url(../i/inner-marketplace.jpg);
+}
+
+	.b-slider-inner.b-page-services .b-slider-marketplace{
+		
+	}
+
 .b-slider-inner.b-page-documents{
 	background-image: url(../i/inner-documents.jpg);
 }
+
+ul.b-breadcrumbs{
+	padding-top: 20px;
+}
+
+	ul.b-breadcrumbs li{
+		display: inline-block;
+	}
+
+		ul.b-breadcrumbs li a,
+		ul.b-breadcrumbs li span{
+			font-family: 'UbuntuRegular', Sans-Serif;
+			font-size: 14px;
+			color: #8c8c8c;
+		}
+
+			ul.b-breadcrumbs li:after {
+			    position: relative;
+			    content: "\e901";
+			    font-size: 10px;
+			    line-height: 16px;
+			    color: #9c9d9e;
+			    margin: 0 6px 0 12px;
+			}
+
+			ul.b-breadcrumbs li:last-child:after {
+			    display: none;
+			}
 
 /*-------О команде-------*/
 
@@ -1331,7 +1382,7 @@ input.period-finish:-moz-placeholder
 }
 
 	.b-about-inner .b-text{
-		margin-bottom: 20px;
+		
 	}
 
 	.b-about-inner .b-text > img{
@@ -1339,11 +1390,15 @@ input.period-finish:-moz-placeholder
 		margin-left: 35px;
 	}
 
-	.download-presentation span{
-		font-size: 16px;
-		text-decoration: underline;
-		padding-left: 10px;
+	.after-text-link{
+		margin-top: 20px;
 	}
+
+		.after-text-link span{
+			font-size: 16px;
+			text-decoration: underline;
+			padding-left: 10px;
+		}
 
 .b-scheme{
 	margin-bottom: 22px;
@@ -1623,6 +1678,224 @@ input.period-finish:-moz-placeholder
 		margin-bottom: 10px;
 	}
 
+/*-------Сотрудничество-------*/
+
+.choice-block{
+	text-align: center;
+	margin: 27px 0;
+}
+
+	.choice-block a{
+		width: 32%;
+		display: inline-block;
+		text-transform: uppercase;
+		padding: 15px 0;
+		font-size: 24px;
+		font-family: 'UbuntuBold';
+		color: #1b1b1b;
+		border-bottom: 3px solid #1b1b1b;
+	}
+
+	.choice-block a:last-child{
+		margin-left: 30px;
+	}
+
+	.choice-block a.active{
+		color: #1b82c7;
+		border-bottom: 3px solid #1b82c7;
+	}
+
+.b-chart{
+	margin-bottom: 25px;
+}
+
+	.b-chart h3{
+		font-size: 16px;
+	}
+
+	.b-chart-block{
+		padding: 30px 22px;
+		background-color: #FFF;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.b-chart-margin{
+		margin-bottom: 20px;
+	}
+
+	.chart-legend{
+		font-size: 16px;
+		margin-left: 12px;
+		font-family: 'UbuntuMedium';
+	}
+
+	.chart-buttons{
+		margin-right: 12px;
+	}
+
+		.chart-buttons a.active{
+			color: #1b82c7;
+			border-bottom: 2px solid #1b82c7;
+		}
+
+		.chart-buttons a{
+			color: #1b1b1b;
+			font-family: 'UbuntuMedium', Sans-Serif;
+			font-size: 16px;
+		}
+
+			.chart-buttons a:last-child{
+				margin-left: 12px;
+			}
+
+		.circle-legend{
+			display: inline-block;
+			width: 9px;
+			height: 9px;
+			border-radius: 100px;
+			background-color: #1b82c7;
+			margin-bottom: 1px;
+			margin-right: 8px;
+		}
+
+.b-application{
+	padding: 28px 30px;
+	margin-bottom: 30px;
+	background-color: #013c6e;
+}
+
+	.b-application h3.b-title{
+		color: #FFF;
+		padding-top: 0;
+		font-family: 'UbuntuMedium';
+		text-transform: none;
+		margin-bottom: 25px;
+	}
+
+	.b-application input{
+		float: left;
+		width: calc(100%/3 - 20px);
+		margin-right: 30px;
+		color: #FFF;
+		border-bottom: 1px solid #FFF;
+	}
+
+	.b-application input:last-child{
+		margin-right: 0;
+	}
+
+	.b-application .b-btn{
+		float: right;
+	}
+
+	.inputs-block{
+		margin-bottom: 30px;
+	}
+
+.b-scheme-cooperation{
+	margin-top: 24px;
+}
+
+	.b-scheme.b-scheme-cooperation .b-scheme-text{
+		float: left;
+	    width: calc(100% - 56px);
+	    margin-left: 12px;
+	}
+
+		.b-scheme.b-scheme-cooperation .b-scheme-text h3.b-title{
+			font-size: 16px;
+			line-height: 16px;
+		}
+
+	.b-scheme.b-scheme-cooperation .arrow-next{
+		margin-top: 9px;
+	}
+
+.b-region{
+	margin-bottom: 45px;
+}
+
+	.b-region p{
+		margin-bottom: 10px;
+	}
+
+/*------Работа с ЭТП------*/
+
+.b-page-marketplace ul li{
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+	.b-page-marketplace ul li span{
+		display: inline-block;
+		text-align: center;
+		width: 14px;
+		height: 14px;
+		border-radius: 100px;
+		border: 1px solid #FFF;
+		color: #FFF;
+		font-size: 8px;
+	    line-height: 14px;
+	    vertical-align: middle;
+	    padding-left: 1px;
+	}
+
+	.b-page-marketplace ul li a{
+		color: #FFF;
+		border-bottom: 1px solid #FFF;
+		margin-left: 10px;
+		font-size: 16px;
+		font-family: 'UbuntuBold', Sans-Serif;
+	}
+
+/*-------Chartist.js--------*/
+
+.ct-perfect-fourth {
+    height: 250px;
+}
+
+.ct-perfect-fourth:before{
+    padding-bottom: 0;
+}
+
+.ct-series-a .ct-area, .ct-series-a .ct-slice-donut-solid, .ct-series-a .ct-slice-pie {
+    fill: #d9eaf6;
+}
+
+.ct-area {
+    fill-opacity: 1;
+}
+
+.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut{
+	stroke: #1b82c7;
+}
+
+.ct-label {
+    color: #1b1b1b;
+    font-family: 'UbuntuMedium';
+    font-size: .75rem;
+}
+
+.b-chart-wrap{
+	height: 250px;
+}
+
+	.ct-chart{
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.ct-chart.active{
+		opacity: 1;
+		visibility: visible;
+	}
+
+/*------------------------------*/
+
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	.b-about-img img{
 		max-width: 34px;
@@ -1639,6 +1912,16 @@ input.period-finish:-moz-placeholder
 
 	.b-text ul.mark-img li{
 		background-image: url(../i/mark@2x.png);
+	}
+
+	.after-text-link img{
+		max-width: 28px;
+		max-height: 40px;
+	}
+
+	.b-scheme-img img{
+		max-width: 40px;
+		max-height: 40px;
 	}
 }	
 @media screen and (max-width: 1250px){
