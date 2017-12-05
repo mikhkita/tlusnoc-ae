@@ -289,6 +289,7 @@ h4{
 			background-position: 0 2px;
 			background-size: 15px;
 			margin-bottom: 5px;
+			padding-left: 20px;
 		}
 
 		.b-text ul.mark-img li:before{
@@ -1334,13 +1335,20 @@ input.period-finish:-moz-placeholder
 		
 	}
 
+.b-slider-inner.b-page-marketplace{
+	background-image: url(../i/inner-marketplace.jpg);
+}
+
+	.b-slider-inner.b-page-services .b-slider-marketplace{
+		
+	}
+
 .b-slider-inner.b-page-documents{
 	background-image: url(../i/inner-documents.jpg);
 }
 
 ul.b-breadcrumbs{
 	padding-top: 20px;
-	margin-bottom: 27px;
 }
 
 	ul.b-breadcrumbs li{
@@ -1351,7 +1359,7 @@ ul.b-breadcrumbs{
 		ul.b-breadcrumbs li span{
 			font-family: 'UbuntuRegular', Sans-Serif;
 			font-size: 14px;
-			color: #9c9d9e;
+			color: #8c8c8c;
 		}
 
 			ul.b-breadcrumbs li:after {
@@ -1674,7 +1682,7 @@ ul.b-breadcrumbs{
 
 .choice-block{
 	text-align: center;
-	margin-bottom: 27px;
+	margin: 27px 0;
 }
 
 	.choice-block a{
@@ -1812,6 +1820,35 @@ ul.b-breadcrumbs{
 		margin-bottom: 10px;
 	}
 
+/*------Работа с ЭТП------*/
+
+.b-page-marketplace ul li{
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+	.b-page-marketplace ul li span{
+		display: inline-block;
+		text-align: center;
+		width: 14px;
+		height: 14px;
+		border-radius: 100px;
+		border: 1px solid #FFF;
+		color: #FFF;
+		font-size: 8px;
+	    line-height: 14px;
+	    vertical-align: middle;
+	    padding-left: 1px;
+	}
+
+	.b-page-marketplace ul li a{
+		color: #FFF;
+		border-bottom: 1px solid #FFF;
+		margin-left: 10px;
+		font-size: 16px;
+		font-family: 'UbuntuBold', Sans-Serif;
+	}
+
 /*-------Chartist.js--------*/
 
 .ct-perfect-fourth {
@@ -1839,6 +1876,23 @@ ul.b-breadcrumbs{
     font-family: 'UbuntuMedium';
     font-size: .75rem;
 }
+
+.b-chart-wrap{
+	height: 250px;
+}
+
+	.ct-chart{
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.ct-chart.active{
+		opacity: 1;
+		visibility: visible;
+	}
 
 /*------------------------------*/
 

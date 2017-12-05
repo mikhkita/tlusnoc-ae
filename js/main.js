@@ -457,7 +457,8 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
     });
 
     if($('.ct-chart').length){
-        new Chartist.Line('.ct-chart', {
+        //Посещения
+        new Chartist.Line('.ct-chart-visits', {
             labels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
             series: [
                 [2000, 3000, 4000, 3500, 5000, 5500, 5000, 6000, 7500, 6500, 8500, 9000]
@@ -470,7 +471,36 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
                 fillHoles: false
             })
         });
+
+        //Заявки
+        new Chartist.Line('.ct-chart-app', {
+            labels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+            series: [
+                [22, 40, 48, 35, 60, 35, 70, 79, 88, 67, 85, 95]
+            ],
+        },{
+            height: '250px',
+            low: 0,
+            showArea: true,
+            lineSmooth: Chartist.Interpolation.none({
+                fillHoles: false
+            })
+        });
     }
+
+    $('.chart-buttons a').on('click', function(event){
+        $('.chart-buttons a').each(function() {
+            $(this).removeClass("active");
+        });
+        $(this).addClass("active");
+        $('.ct-chart').each(function() {
+            $(this).removeClass("active");
+        });
+        var target = $(this).attr("data-chart");
+        $('.'+target).addClass("active");
+        var legend = $(this).attr("data-legend");
+        $('.chart-legend span').text(legend);
+    });
 
     /*bindCloseMenu("menu");
     bindCloseMenu("b-menu-overlay");
