@@ -120,7 +120,7 @@
 			</div>
 		</div>
 
-		<div class="bg">
+		<div class="bg-inner">
 			<div class="b-wide-block">
 				<div class="b-block">
 
@@ -135,9 +135,9 @@
 						Работа с электронно-торговыми площадками ― отдельное направление в рамках работ по тендерному сопровождению компаний-участников закупок. Сегодня в России более 120 000 активных закупок на общую сумму более 1,1 трлн рублей и все эти закупки проходят через Электронные торговые площадки, из которых 6 площадок являются федеральными, и более 1000 коммерческими.
 					</div>
 
-					<div class="b b-federal clearfix">
+					<div class="b b-federal">
 						<h2 class="b-title">Федеральные электронные<br>торговые площадки (44-ФЗ)</h2>
-						<div class="b-federal-list">
+						<div class="b-federal-list clearfix">
 							<div class="b-federal-item">
 								<div class="federal-img"><img src="i/marketplace-1.png"></div>
 								<p>ЗАО «Сбербанк – АСТ»</p>
@@ -188,10 +188,10 @@
 							</div>
 						</div>
 
-						<div class="b b-work-marketplace">
+						<div class="b b-work-marketplace-middle">
 							<h2 class="b-title">Заказ ЭЦП</h2>
 							<div class="b-text">
-								<p>Заказ электронно-цифровой подписи ― первый шаг на пути участия в электронных торговых процедурах.<br>ЭЦП используется практически во всех операциях на торговых площадках:</p><br>
+								<p>Заказ электронно-цифровой подписи ― первый шаг на пути участия в электронных торговых процедурах.<br><b>ЭЦП используется практически во всех операциях на торговых площадках:</b> </p><br>
 								<ul class="mark-img">
 									<li>Аккредитация компании на площадке</li>
 									<li>Подписание электронных документов</li>
@@ -209,7 +209,7 @@
 								<div class="b-gray-block clearfix">
 									<h2 class="b-title">Отправить заявку</h2>
 									<form id="b-send-app-form" class="b-send-app-form" method="post" action="action.php">
-										<div class="clearfix">
+										<div class="clearfix input-margin">
 											<div class="b-wrap-input">
 												<h3>Услуга</h3>
 												<div class="select-wrapper icon-arrow-down">
@@ -225,7 +225,7 @@
 												<input type="text" name="area" placeholder="Введите площадку">
 											</div>
 										</div>
-										<div class="clearfix">
+										<div class="clearfix input-margin">
 											<div class="b-wrap-input">
 												<input id="urgently-app" type="checkbox" name="urgently-app">
 												<label for="urgently-app">Срочный заказ</label>
@@ -235,10 +235,14 @@
 												<label for="need-install">Требуется настройка ПК</label>
 											</div>
 										</div>
-										<div class="clearfix">
-											<div class="b-wrap-input">
+										<div class="clearfix input-margin">
+											<div class="b-wrap-input b-wrap-input-2x">
 												<input id="need-training" type="checkbox" name="need-training">
-												<label for="need-training">Требуется обучение пользователей</label>
+												<label for="need-training">Требуется обучение пользователей<span class="dot-end hide">.</span></label>
+												<div class="training-block hide">
+													<span>Количество человек подлежащих обучению</span>
+													<input id="count-training" maxlength="3" type="text" name="count-training">
+												</div>
 											</div>
 										</div>
 
@@ -254,7 +258,7 @@
 											</div>
 										</div>
 
-										<div class="clearfix">
+										<div class="clearfix input-margin">
 											<div class="b-wrap-input">
 												<input type="text" name="phone" placeholder="Телефон*" required>
 											</div>
@@ -266,9 +270,12 @@
 										<a href="#" class="b-btn b-btn-blue ajax right" onclick="$('#b-send-app-form').submit(); return false;">Отправить</a>
 									</form>
 								</div>
+							</div>
 
+							<div class="b-work-marketplace-bottom">
 								<h2 class="b-title">Справка</h2>
 								<p>Список документов, необходимый для подачи заявки на получение ЭЦП</p>
+
 								<div class="choice-block choice-block-three">
 									<div class="choice-item choice-legal active">
 										<a href="#">Для юридического лица</a>
@@ -281,10 +288,7 @@
 									</div>
 								</div>
 
-								
-							</div>
-
-							<ul class="mark-numbers mark-numbers-blue">
+								<ul class="mark-numbers mark-numbers-blue">
 									<li><span>1</span><p>Копия Свидетельства о государственной регистрации юридического лица</p></li>
 									<li><span>2</span><p>Копия Свидетельства о постановке на учет в налоговом органе</p></li>
 									<li><span>3</span><p>Если ЭЦП для торговых площадок изготавливается на имя руководителя организации: копию документа о назначении руководителя, заверенную подписью руководителя и печатью организации</p></li>
@@ -293,11 +297,102 @@
 									<li><span>6</span><p>Согласие на обработку персональных данных пользователя</p></li>
 									<li><span>7</span><p>СНИЛС (для торгов по 223-ФЗ и коммерческих закупок)</p></li>
 								</ul>
+
+								<div class="term-block">
+									<p>Срок изготовления ЭЦП — <b>от 1 дня.</b></p>
+									<p>Срочное изготовление <b>за 1 час!</b></p>
+									<a href="#">Отправить заявку</a>
+								</div>
+							</div>
+
 						</div>
 					</div>
 
-					<div class="b b-">
-						<h2 class="b-title"></h2>
+					<div class="b-marketplace-case-list">
+						<div class="b-marketplace-case">
+							<h2 class="b-title">Электронные торговые площадки (223-ФЗ)</h2>
+							<ul>
+								<li>Универсальная торговая платформа Сбербанк АСТ <span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru</a></li>
+								<li>Единая электронная торговая площадка ЕЭТП коммерческие закупки <span class="icon-loupe"></span><a href="#">com.roseltorg.ru</a></li>
+								<li>РТС тендер, секция 223-ФЗ <span class="icon-loupe"></span><a href="#">rts-tender.ru/zakupki-223</a></li>
+								<li>Национальная электронная площадка ММВБ каталог 223-ФЗ <span class="icon-loupe"></span><a href="#">etp-micex.ru/auction/catalog/all223</a></li>
+							</ul>
+							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+						</div>
+
+						<div class="b-marketplace-case">
+							<h2 class="b-title">Коммерческие электронные<br>торговые площадки</h2>
+							<ul>
+								<li>Тендеры ПАО Газпром<span class="icon-loupe"></span><a href="#">gazprom.ru/tenders</a></li>
+								<li>Электронная торговая площадка Газпром бурение </a></li>       
+								<li>Закупки ПАО Роснефть и дочерних обществ<span class="icon-loupe"></span><a href="#">zakupki.rosneft.ru</a></li>
+								<li>Закупки ПАО Сбербанк<span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru/SB</a></li>
+							</ul>
+							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+						</div>
+
+						<div class="b-marketplace-case">
+							<h2 class="b-title">Электронные торговые площадки<br>для малого предпринимательства</h2>
+							<ul>
+								<li>Портал поставщиков Сверхмаркет B2B<span class="icon-loupe"></span><a href="#">sverhmarket-b2b.ru</a></li>
+								<li>Корпоративный интернет-магазин (КИМ)<span class="icon-loupe"></span><a href="#">roseltorg.ru/kim</a></li>
+								<li><ul class="marketplace-small">
+									<li>Закупки Росатом до 1 млн. рублей<span class="icon-loupe"></span><a href="#">roseltorg.ru/kim/atom</a></li>
+									<li>Закупки Интер РАО до 500 тыс. рублей<span class="icon-loupe"></span><a href="#">roseltorg.ru/kim/interrao</a></li>
+								</ul></li>
+								<li>Электронный магазин РТС-МАРКЕТ<span class="icon-loupe"></span><a href="#">zmo-mall.rts-tender.ru</a></li>
+								<li>Каталог товаров и услуги B2B-Center<span class="icon-loupe"></span><a href="#">b2b-center.ru/catalog</a></li>
+
+
+	 
+
+							</ul>
+							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+						</div>
+
+						<div class="b-marketplace-case">
+							<h2 class="b-title">Электронные торговые площадки по аренде,<br>реализации имущества и банкротству (127-ФЗ)</h2>
+							<ul>
+								<li>Единый Федеральный реестр сведений о банкротстве<span class="icon-loupe"></span><a href="#">fedresurs.ru</a></li>
+								<li>Сбербанк-АСТ. Продажа имущества банкротов<span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru/Bankruptcy</a></li>
+								<li>Система электронных торгов имуществом ЕЭТП<span class="icon-loupe"></span><a href="#">sale.roseltorg.ru</a></li>
+								<li>Торги по приватизации, продаже и аренде имущества РТС-Тендер<span class="icon-loupe"></span><a href="#">i.rts-tender.ru</a></li>
+							</ul>
+							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+						</div>
+
+						<div class="b-marketplace-case">
+							<h2 class="b-title">Региональные электронные<br>торговые площадки</h2>
+							<ul>
+								<li>Портал поставщиков города Москвы<span class="icon-loupe"></span><a href="#">market.zakupki.mos.ru</a></li>
+								<li>Инвестиционный портал города Москвы<span class="icon-loupe"></span><a href="#">investmoscow.ru/tenders</a></li>
+								<li>Земельно-имущественные торги города Москвы<span class="icon-loupe"></span><a href="#">tender.mos.ru/directions-of-activities/investments</a></li>
+								<li>Департамент по конкурентной политике города Москвы<span class="icon-loupe"></span><a href="#">tender.mos.ru</a></li>
+							</ul>
+							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+						</div>
+
+						<div class="b-marketplace-case">
+							<h2 class="b-title">Электронные торговые<br>площадки стран СНГ</h2>
+							<ul>
+								<li>Официальный сайт госзакупок республики Беларусь<span class="icon-loupe"></span><a href="#">icetrade.by</a></li>
+								<li>Белорусская универсальная товарная биржа<span class="icon-loupe"></span><a href="#">butb.by</a></li>
+								<li>Госзакупки республики Беларусь<span class="icon-loupe"></span><a href="#">etp-micex.ru/procedure</a></li>
+								<li>B2B-Украина<span class="icon-loupe"></span><a href="#">b2b-center.ua</a></li>
+							</ul>
+							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+						</div>
+
+						<div class="b-marketplace-case">
+							<h2 class="b-title">Международные закупки</h2>
+							<ul>
+								<li>B2B-marketplace Alibaba<span class="icon-loupe"></span><a href="#">alibaba.com</a></li>
+								<li>Тендеры правительства Индии<span class="icon-loupe"></span><a href="#">tenders.gov.in</a></li>
+								<li>Госзакупки США<span class="icon-loupe"></span><a href="#">gsa.gov</a></li>
+								<li>Госзакупки Швейцарии<span class="icon-loupe"></span><a href="#">simap.ch</a></li>
+							</ul>
+							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+						</div>
 					</div>
 
 					<div class="b-footer b-footer-border clearfix">

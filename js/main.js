@@ -103,6 +103,18 @@ $(document).ready(function(){
         });
     }
 
+    /*function readMoreShow(readMoreClass){
+        $('.'+readMoreClass).each(function() {
+            var wrapHeight = $(this).find(".read-text-wrap").height();
+            var textHeight = $(this).find(".read-text").height();
+            if(wrapHeight < textHeight){
+                $(this).find(".btn-show").removeClass("hide");
+            }else{
+                $(this).find("br").remove();
+            }
+        });
+    }*/
+
     $('.expand-review').on('click', function(){
         $target = $(this).siblings(".b-reviews-text-wrap");
         $target.toggleClass("height-none");
@@ -110,6 +122,16 @@ $(document).ready(function(){
             $(this).html("Свернуть отзыв"+"<div class=\"icon-arrow-down icon-arrow-down-rotate\"></div>");
         }else{
             $(this).html("Развернуть отзыв"+"<div class=\"icon-arrow-down\"></div>");
+        }
+    });
+
+    $('#need-training').on('change', function(){
+        if($(this).prop('checked')){
+            $('.training-block').removeClass("hide");
+            $('.dot-end').removeClass("hide");
+        }else{
+            $('.training-block').addClass("hide");
+            $('.dot-end').addClass("hide");
         }
     });
 
