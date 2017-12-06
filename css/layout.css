@@ -1419,51 +1419,42 @@ input.period-finish:-moz-placeholder
 
 /*--------Изображения в хедере--------*/
 
-.b-slider-inner{
+.b-slider-wrap{
 	height: 295px;
-    background-position: 50% 0;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
-
-	.b-slider-inner .b-slider-content{
-		max-width: 500px;
-    	width: 100%;
-		background-color: transparent;
-		padding-top: 73px;
+	.b-slider-inner{
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 295px;
+		background-position: 50% 0;
+	    background-size: cover;
+	    background-repeat: no-repeat;
 	}
 
-.b-slider-inner.b-page-about{
-	background-image: url(../i/inner-about.jpg);
-}
+	.b-slider-back{
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 295px;
+		/*background-image: url(../i/bg2.png);*/
+		background-position: 50% 0;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	}
 
-.b-slider-inner.b-page-services{
-	background-image: url(../i/inner-services.jpg);
-}
+		.b-slider-inner .b-slider-content{
+			max-width: 500px;
+	    	width: 100%;
+			background-color: transparent;
+			padding-top: 73px;
+		}
 
 	.b-slider-inner.b-page-services .b-slider-content{
 		padding-top: 59px;
 	}
-
-.b-slider-inner.b-page-cooperation{
-	background-image: url(../i/inner-cooperation.jpg);
-}
-
-	.b-slider-inner.b-page-services .b-slider-cooperation{
-		
-	}
-
-.b-slider-inner.b-page-marketplace{
-	background-image: url(../i/inner-marketplace.jpg);
-}
-
-	.b-slider-inner.b-page-services .b-slider-marketplace{
-		
-	}
-
-.b-slider-inner.b-page-documents{
-	background-image: url(../i/inner-documents.jpg);
-}
 
 ul.b-breadcrumbs{
 	padding-top: 20px;
@@ -1976,7 +1967,7 @@ ul.b-breadcrumbs{
 	margin-top: 27px;
 }
 
-.b-slider-content ul.mark-numbers li{
+.b-slider-content ul.mark-numbers li p{
 	text-transform: uppercase;
 	font-family: 'UbuntuBold', Sans-Serif;
 }
@@ -2039,15 +2030,18 @@ ul.b-breadcrumbs{
 		display: inline-block;
 	}
 
-	.question-block .question-icon{
-		color: #1b82c7;
-		border: 2px solid #1b82c7;
-		width: 20px;
-		height: 20px;
-		font-size: 14px;
-		line-height: 16px;
-		margin-right: 4px;
+	.question-block{
+		margin-bottom: 25px;
 	}
+
+		.question-block .question-icon{
+			color: #1b82c7;
+		    border: 1px solid #1b82c7;
+		    width: 20px;
+		    height: 20px;
+		    font-size: 13px;
+		    margin-right: 4px;
+		}
 
 	.important-block{
 		font-family: 'UbuntuBold';
@@ -2078,18 +2072,18 @@ ul.b-breadcrumbs{
 
 		}
 			.b-send-app-form h3{
-				margin-bottom: 12px;
+				margin-bottom: 14px;
 			}
 
 			.b-send-app-form input::-webkit-input-placeholder,
 			.b-send-app-form textarea::-webkit-input-placeholder{
 				font-size: 16px;
-				color: #1b1b1b;
+				color: #a7a7a7;
 			}
 			.b-send-app-form input:-moz-placeholder,
 			.b-send-app-form textarea:-moz-placeholder{
 				font-size: 16px;
-				color: #1b1b1b;
+				color: #a7a7a7;
 			}
 
 			.b-send-app-form input, .b-send-app-form textarea{
