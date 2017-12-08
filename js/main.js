@@ -88,10 +88,14 @@ $(document).ready(function(){
 
     //скрывать кнопку "Развернуть отзыв"
     if($('.b-reviews').length){
-        readMoreShow();
+        readMoreShow("b-reviews-item");
     }
 
-    function readMoreShow(){
+    if($('.b-marketplace-case').length){
+        readMoreShow("b-marketplace-case");
+    }
+
+    /*function readMoreShow(){
         $('.b-reviews-item').each(function() {
             var wrapHeight = $(this).find(".b-reviews-text-wrap").height();
             var textHeight = $(this).find(".b-reviews-item-text").height();
@@ -101,27 +105,28 @@ $(document).ready(function(){
                 $(this).find("br").remove();
             }
         });
-    }
+    }*/
 
-    /*function readMoreShow(readMoreClass){
+    function readMoreShow(readMoreClass){
         $('.'+readMoreClass).each(function() {
-            var wrapHeight = $(this).find(".read-text-wrap").height();
-            var textHeight = $(this).find(".read-text").height();
+            var wrapHeight = $(this).find(".extend-text-wrap").height();
+            var textHeight = $(this).find(".extend-text").height();
+            console.log($(this).find(".extend-text-wrap"));
             if(wrapHeight < textHeight){
                 $(this).find(".btn-show").removeClass("hide");
             }else{
                 $(this).find("br").remove();
             }
         });
-    }*/
+    }
 
-    $('.expand-review').on('click', function(){
-        $target = $(this).siblings(".b-reviews-text-wrap");
+    $('.btn-show').on('click', function(){
+        $target = $(this).siblings(".extend-text-wrap");
         $target.toggleClass("height-none");
         if($target.hasClass("height-none")){
-            $(this).html("Свернуть отзыв"+"<div class=\"icon-arrow-down icon-arrow-down-rotate\"></div>");
+            $(this).html($(this).attr("data-hide")+"<div class=\"icon-arrow-down icon-arrow-down-rotate\"></div>");
         }else{
-            $(this).html("Развернуть отзыв"+"<div class=\"icon-arrow-down\"></div>");
+            $(this).html($(this).attr("data-show")+"<div class=\"icon-arrow-down\"></div>");
         }
     });
 

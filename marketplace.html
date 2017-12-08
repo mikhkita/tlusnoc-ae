@@ -208,7 +208,7 @@
 								</div>
 								<div class="b-gray-block clearfix">
 									<h2 class="b-title">Отправить заявку</h2>
-									<form id="b-send-app-form" class="b-send-app-form" method="post" action="action.php">
+									<form id="b-send-app-form" class="b-send-app-form gray-inputs" method="post" action="action.php">
 										<div class="clearfix input-margin">
 											<div class="b-wrap-input">
 												<h3>Услуга</h3>
@@ -236,7 +236,7 @@
 											</div>
 										</div>
 										<div class="clearfix input-margin">
-											<div class="b-wrap-input b-wrap-input-2x">
+											<div class="b-wrap-input b-wrap-input-2-3">
 												<input id="need-training" type="checkbox" name="need-training">
 												<label for="need-training">Требуется обучение пользователей<span class="dot-end hide">.</span></label>
 												<div class="training-block hide">
@@ -262,8 +262,8 @@
 											<div class="b-wrap-input">
 												<input type="text" name="phone" placeholder="Телефон*" required>
 											</div>
-											<div class="b-wrap-input b-wrap-input-2x">
-												<textarea name="comment" rows="1" placeholder="Комментарий*" required></textarea>
+											<div class="b-wrap-input b-wrap-input-2-3">
+												<textarea name="comment" rows="1" placeholder="Комментарий"></textarea>
 											</div>
 										</div>
 
@@ -311,87 +311,117 @@
 					<div class="b-marketplace-case-list">
 						<div class="b-marketplace-case">
 							<h2 class="b-title">Электронные торговые площадки (223-ФЗ)</h2>
-							<ul>
-								<li>Универсальная торговая платформа Сбербанк АСТ <span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru</a></li>
-								<li>Единая электронная торговая площадка ЕЭТП коммерческие закупки <span class="icon-loupe"></span><a href="#">com.roseltorg.ru</a></li>
-								<li>РТС тендер, секция 223-ФЗ <span class="icon-loupe"></span><a href="#">rts-tender.ru/zakupki-223</a></li>
-								<li>Национальная электронная площадка ММВБ каталог 223-ФЗ <span class="icon-loupe"></span><a href="#">etp-micex.ru/auction/catalog/all223</a></li>
-							</ul>
-							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+							<div class="extend-text-wrap">
+								<ul class="extend-text">
+									<li>Универсальная торговая платформа Сбербанк АСТ <span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru</a></li>
+									<li>Единая электронная торговая площадка ЕЭТП коммерческие закупки <span class="icon-loupe"></span><a href="#">com.roseltorg.ru</a></li>
+									<li>РТС тендер, секция 223-ФЗ <span class="icon-loupe"></span><a href="#">rts-tender.ru/zakupki-223</a></li>
+									<li>Национальная электронная площадка ММВБ каталог 223-ФЗ <span class="icon-loupe"></span><a href="#">etp-micex.ru/auction/catalog/all223</a></li>
+									<li>Универсальная торговая платформа Сбербанк АСТ <span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru</a></li>
+									<li>Единая электронная торговая площадка ЕЭТП коммерческие закупки <span class="icon-loupe"></span><a href="#">com.roseltorg.ru</a></li>
+									<li>РТС тендер, секция 223-ФЗ <span class="icon-loupe"></span><a href="#">rts-tender.ru/zakupki-223</a></li>
+									<li>Национальная электронная площадка ММВБ каталог 223-ФЗ <span class="icon-loupe"></span><a href="#">etp-micex.ru/auction/catalog/all223</a></li>
+								</ul>
+							</div>
+							<a href="#" onclick="return false;" data-hide="Свернуть список" data-show="Показать весь список" class="show-list btn-show hide">Показать весь список<div class="icon-arrow-down"></div></a>					
 						</div>
 
 						<div class="b-marketplace-case">
 							<h2 class="b-title">Коммерческие электронные<br>торговые площадки</h2>
-							<ul>
-								<li>Тендеры ПАО Газпром<span class="icon-loupe"></span><a href="#">gazprom.ru/tenders</a></li>
-								<li>Электронная торговая площадка Газпром бурение </a></li>       
-								<li>Закупки ПАО Роснефть и дочерних обществ<span class="icon-loupe"></span><a href="#">zakupki.rosneft.ru</a></li>
-								<li>Закупки ПАО Сбербанк<span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru/SB</a></li>
-							</ul>
-							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+							<div class="extend-text-wrap">
+								<ul class="extend-text">
+									<li>Тендеры ПАО Газпром<span class="icon-loupe"></span><a href="#">gazprom.ru/tenders</a></li>
+									<li>Электронная торговая площадка Газпром бурение </a></li>       
+									<li>Закупки ПАО Роснефть и дочерних обществ<span class="icon-loupe"></span><a href="#">zakupki.rosneft.ru</a></li>
+									<li>Закупки ПАО Сбербанк<span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru/SB</a></li>
+									<li>Тендеры ПАО Газпром<span class="icon-loupe"></span><a href="#">gazprom.ru/tenders</a></li>
+									<li>Электронная торговая площадка Газпром бурение </a></li>       
+									<li>Закупки ПАО Роснефть и дочерних обществ<span class="icon-loupe"></span><a href="#">zakupki.rosneft.ru</a></li>
+									<li>Закупки ПАО Сбербанк<span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru/SB</a></li>
+								</ul>
+							</div>
+							<a href="#" onclick="return false;" data-hide="Свернуть список" data-show="Показать весь список" class="show-list btn-show hide">Показать весь список<div class="icon-arrow-down"></div></a>				
 						</div>
 
 						<div class="b-marketplace-case">
 							<h2 class="b-title">Электронные торговые площадки<br>для малого предпринимательства</h2>
-							<ul>
-								<li>Портал поставщиков Сверхмаркет B2B<span class="icon-loupe"></span><a href="#">sverhmarket-b2b.ru</a></li>
-								<li>Корпоративный интернет-магазин (КИМ)<span class="icon-loupe"></span><a href="#">roseltorg.ru/kim</a></li>
-								<li><ul class="marketplace-small">
-									<li>Закупки Росатом до 1 млн. рублей<span class="icon-loupe"></span><a href="#">roseltorg.ru/kim/atom</a></li>
-									<li>Закупки Интер РАО до 500 тыс. рублей<span class="icon-loupe"></span><a href="#">roseltorg.ru/kim/interrao</a></li>
-								</ul></li>
-								<li>Электронный магазин РТС-МАРКЕТ<span class="icon-loupe"></span><a href="#">zmo-mall.rts-tender.ru</a></li>
-								<li>Каталог товаров и услуги B2B-Center<span class="icon-loupe"></span><a href="#">b2b-center.ru/catalog</a></li>
-
-
-	 
-
-							</ul>
-							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+							<div class="extend-text-wrap">
+								<ul class="extend-text">
+									<li>Портал поставщиков Сверхмаркет B2B<span class="icon-loupe"></span><a href="#">sverhmarket-b2b.ru</a></li>
+									<li>Корпоративный интернет-магазин (КИМ)<span class="icon-loupe"></span><a href="#">roseltorg.ru/kim</a></li>
+									<li><ul class="marketplace-small">
+										<li>Закупки Росатом до 1 млн. рублей<span class="icon-loupe"></span><a href="#">roseltorg.ru/kim/atom</a></li>
+										<li>Закупки Интер РАО до 500 тыс. рублей<span class="icon-loupe"></span><a href="#">roseltorg.ru/kim/interrao</a></li>
+									</ul></li>
+									<li>Электронный магазин РТС-МАРКЕТ<span class="icon-loupe"></span><a href="#">zmo-mall.rts-tender.ru</a></li>
+									<li>Каталог товаров и услуги B2B-Center<span class="icon-loupe"></span><a href="#">b2b-center.ru/catalog</a></li>
+								</ul>
+							</div>
+							<a href="#" onclick="return false;" data-hide="Свернуть список" data-show="Показать весь список" class="show-list btn-show hide">Показать весь список<div class="icon-arrow-down"></div></a>					
 						</div>
 
 						<div class="b-marketplace-case">
 							<h2 class="b-title">Электронные торговые площадки по аренде,<br>реализации имущества и банкротству (127-ФЗ)</h2>
-							<ul>
-								<li>Единый Федеральный реестр сведений о банкротстве<span class="icon-loupe"></span><a href="#">fedresurs.ru</a></li>
-								<li>Сбербанк-АСТ. Продажа имущества банкротов<span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru/Bankruptcy</a></li>
-								<li>Система электронных торгов имуществом ЕЭТП<span class="icon-loupe"></span><a href="#">sale.roseltorg.ru</a></li>
-								<li>Торги по приватизации, продаже и аренде имущества РТС-Тендер<span class="icon-loupe"></span><a href="#">i.rts-tender.ru</a></li>
-							</ul>
-							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+							<div class="extend-text-wrap">
+								<ul class="extend-text">
+									<li>Единый Федеральный реестр сведений о банкротстве<span class="icon-loupe"></span><a href="#">fedresurs.ru</a></li>
+									<li>Сбербанк-АСТ. Продажа имущества банкротов<span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru/Bankruptcy</a></li>
+									<li>Система электронных торгов имуществом ЕЭТП<span class="icon-loupe"></span><a href="#">sale.roseltorg.ru</a></li>
+									<li>Торги по приватизации, продаже и аренде имущества РТС-Тендер<span class="icon-loupe"></span><a href="#">i.rts-tender.ru</a></li>
+									<li>Единый Федеральный реестр сведений о банкротстве<span class="icon-loupe"></span><a href="#">fedresurs.ru</a></li>
+									<li>Сбербанк-АСТ. Продажа имущества банкротов<span class="icon-loupe"></span><a href="#">utp.sberbank-ast.ru/Bankruptcy</a></li>
+									<li>Система электронных торгов имуществом ЕЭТП<span class="icon-loupe"></span><a href="#">sale.roseltorg.ru</a></li>
+								</ul>
+							</div>
+							<a href="#" onclick="return false;" data-hide="Свернуть список" data-show="Показать весь список" class="show-list btn-show hide">Показать весь список<div class="icon-arrow-down"></div></a>				
 						</div>
 
 						<div class="b-marketplace-case">
 							<h2 class="b-title">Региональные электронные<br>торговые площадки</h2>
-							<ul>
-								<li>Портал поставщиков города Москвы<span class="icon-loupe"></span><a href="#">market.zakupki.mos.ru</a></li>
-								<li>Инвестиционный портал города Москвы<span class="icon-loupe"></span><a href="#">investmoscow.ru/tenders</a></li>
-								<li>Земельно-имущественные торги города Москвы<span class="icon-loupe"></span><a href="#">tender.mos.ru/directions-of-activities/investments</a></li>
-								<li>Департамент по конкурентной политике города Москвы<span class="icon-loupe"></span><a href="#">tender.mos.ru</a></li>
-							</ul>
-							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+							<div class="extend-text-wrap">
+								<ul class="extend-text">
+									<li>Портал поставщиков города Москвы<span class="icon-loupe"></span><a href="#">market.zakupki.mos.ru</a></li>
+									<li>Инвестиционный портал города Москвы<span class="icon-loupe"></span><a href="#">investmoscow.ru/tenders</a></li>
+									<li>Земельно-имущественные торги города Москвы<span class="icon-loupe"></span><a href="#">tender.mos.ru/directions-of-activities/investments</a></li>
+									<li>Департамент по конкурентной политике города Москвы<span class="icon-loupe"></span><a href="#">tender.mos.ru</a></li>
+									<li>Портал поставщиков города Москвы<span class="icon-loupe"></span><a href="#">market.zakupki.mos.ru</a></li>
+									<li>Инвестиционный портал города Москвы<span class="icon-loupe"></span><a href="#">investmoscow.ru/tenders</a></li>
+									<li>Земельно-имущественные торги города Москвы<span class="icon-loupe"></span><a href="#">tender.mos.ru/directions-of-activities/investments</a></li>
+								</ul>
+							</div>
+							<a href="#" onclick="return false;" data-hide="Свернуть список" data-show="Показать весь список" class="show-list btn-show hide">Показать весь список<div class="icon-arrow-down"></div></a>		
 						</div>
 
 						<div class="b-marketplace-case">
 							<h2 class="b-title">Электронные торговые<br>площадки стран СНГ</h2>
-							<ul>
-								<li>Официальный сайт госзакупок республики Беларусь<span class="icon-loupe"></span><a href="#">icetrade.by</a></li>
-								<li>Белорусская универсальная товарная биржа<span class="icon-loupe"></span><a href="#">butb.by</a></li>
-								<li>Госзакупки республики Беларусь<span class="icon-loupe"></span><a href="#">etp-micex.ru/procedure</a></li>
-								<li>B2B-Украина<span class="icon-loupe"></span><a href="#">b2b-center.ua</a></li>
-							</ul>
-							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+							<div class="extend-text-wrap">
+								<ul class="extend-text">
+									<li>Официальный сайт госзакупок республики Беларусь<span class="icon-loupe"></span><a href="#">icetrade.by</a></li>
+									<li>Белорусская универсальная товарная биржа<span class="icon-loupe"></span><a href="#">butb.by</a></li>
+									<!--<li>Госзакупки республики Беларусь<span class="icon-loupe"></span><a href="#">etp-micex.ru/procedure</a></li>
+									<li>B2B-Украина<span class="icon-loupe"></span><a href="#">b2b-center.ua</a></li>
+									<li>Официальный сайт госзакупок республики Беларусь<span class="icon-loupe"></span><a href="#">icetrade.by</a></li>
+									<li>Белорусская универсальная товарная биржа<span class="icon-loupe"></span><a href="#">butb.by</a></li>
+									<li>Госзакупки республики Беларусь<span class="icon-loupe"></span><a href="#">etp-micex.ru/procedure</a></li>-->
+								</ul>
+							</div>
+							<a href="#" onclick="return false;" data-hide="Свернуть список" data-show="Показать весь список" class="show-list btn-show hide">Показать весь список<div class="icon-arrow-down"></div></a>	
 						</div>
 
 						<div class="b-marketplace-case">
 							<h2 class="b-title">Международные закупки</h2>
-							<ul>
-								<li>B2B-marketplace Alibaba<span class="icon-loupe"></span><a href="#">alibaba.com</a></li>
-								<li>Тендеры правительства Индии<span class="icon-loupe"></span><a href="#">tenders.gov.in</a></li>
-								<li>Госзакупки США<span class="icon-loupe"></span><a href="#">gsa.gov</a></li>
-								<li>Госзакупки Швейцарии<span class="icon-loupe"></span><a href="#">simap.ch</a></li>
-							</ul>
-							<a href="#" onclick="return false;" class="show-list">Показать весь список<div class="icon-arrow-down"></div></a>				
+							<div class="extend-text-wrap">
+								<ul class="extend-text">
+									<li>B2B-marketplace Alibaba<span class="icon-loupe"></span><a href="#">alibaba.com</a></li>
+									<li>Тендеры правительства Индии<span class="icon-loupe"></span><a href="#">tenders.gov.in</a></li>
+									<li>Госзакупки США<span class="icon-loupe"></span><a href="#">gsa.gov</a></li>
+									<li>Госзакупки Швейцарии<span class="icon-loupe"></span><a href="#">simap.ch</a></li>
+									<li>B2B-marketplace Alibaba<span class="icon-loupe"></span><a href="#">alibaba.com</a></li>
+									<li>Тендеры правительства Индии<span class="icon-loupe"></span><a href="#">tenders.gov.in</a></li>
+									<li>Госзакупки США<span class="icon-loupe"></span><a href="#">gsa.gov</a></li>
+								</ul>
+							</div>
+							<a href="#" onclick="return false;" data-hide="Свернуть список" data-show="Показать весь список" class="show-list btn-show hide">Показать весь список<div class="icon-arrow-down"></div></a>	
 						</div>
 					</div>
 
