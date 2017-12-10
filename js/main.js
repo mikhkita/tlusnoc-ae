@@ -95,18 +95,6 @@ $(document).ready(function(){
         readMoreShow("b-marketplace-case");
     }
 
-    /*function readMoreShow(){
-        $('.b-reviews-item').each(function() {
-            var wrapHeight = $(this).find(".b-reviews-text-wrap").height();
-            var textHeight = $(this).find(".b-reviews-item-text").height();
-            if(wrapHeight < textHeight){
-                $(this).find(".expand-review").removeClass("hide");
-            }else{
-                $(this).find("br").remove();
-            }
-        });
-    }*/
-
     function readMoreShow(readMoreClass){
         $('.'+readMoreClass).each(function() {
             var wrapHeight = $(this).find(".extend-text-wrap").height();
@@ -211,6 +199,89 @@ $(document).ready(function(){
             $(".b-menu-overlay").hide();
         },100);
     });
+
+    $('.vacancy-info').each(function(){
+        $(this).slideUp(0);
+    });
+
+    $('.vacancy-link').on('click', function(){
+        $(this).siblings('.vacancy-info').slideToggle(300);
+    });
+
+    $('.choice-block a').on('click', function(){
+        toggleBlock($(this), "choice-block a");
+    });
+
+    $('.country-choise a').on('click', function(){
+        toggleBlock($(this), "country-choise a");
+    });
+
+    function toggleBlock($this, selector){
+        $('.'+selector).each(function(){
+            var block = $(this).attr("data-block");
+            $('.'+block).addClass("hide");
+            $(this).removeClass("active");
+        });
+        var block = $this.attr("data-block");
+        $('.'+block).removeClass("hide");
+        $this.addClass("active");
+    }
+
+    $(".chosen-select").chosen({
+        width: '100%',
+        disable_search_threshold: 10000
+    });
+
+    /*$('select').on('change', function(){
+       console.log("123456yu");
+    });*/
+
+    if($('#plupload-cont').length){
+        var uploader = new plupload.Uploader({
+            runtimes : 'html5,flash,silverlight,html4',
+            browse_button : 'pickfiles', // you can pass an id...
+            container: document.getElementById('plupload-cont'), // ... or DOM Element itself
+            url : $('#b-outsourcing-form').attr("data-file-action"),
+            multi_selection: false,
+            
+            filters : {
+                max_file_size : '10mb',
+                mime_types: [
+                    {title : "Image files", extensions : "jpg,jpeg,gif,png"},
+                    {title : "Documents", extensions : "doc,docx,pdf"},
+                    {title : "Zip files", extensions : "zip"},
+                ]
+            },
+
+            init: {
+                PostInit: function() {
+                    document.getElementById('filelist').innerHTML = '';
+                },
+                FilesAdded: function(up, files) {
+                    plupload.each(files, function(file) {
+                        document.getElementById('filelist').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
+                    });
+                    up.start();
+                },
+                UploadProgress: function(up, file) {
+                    document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
+                },
+                FileUploaded: function(up, file, res) {
+                    /*var json = JSON.parse(res.response);
+                    if(json.status){
+                        filePath.push(json.filePath);
+                        var files = filePath.join('~');
+                        $('.fileProxy').removeClass("error").val(files);
+                    }*/
+                },
+                Error: function(up, err) {
+                    /*document.getElementById('console').appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));
+                    console.log("\nError #" + err.code + ": " + err.message);*/
+                }
+            }
+        });
+        uploader.init();
+    }
 
     var dataSum = [
 [1,50000],
