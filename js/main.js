@@ -214,6 +214,7 @@ $(document).ready(function(){
 
     $('.country-choise a').on('click', function(){
         toggleBlock($(this), "country-choise a");
+        $('.vacancy-select').change();
     });
 
     function toggleBlock($this, selector){
@@ -232,9 +233,17 @@ $(document).ready(function(){
         disable_search_threshold: 10000
     });
 
-    /*$('select').on('change', function(){
-       console.log("123456yu");
-    });*/
+    $('.vacancy-select').on('change', function(){
+        var city = $(this).find('option:selected').attr("data-city");
+        var country = $(this).attr("data-country");
+        $('.'+country+' '+'.vacancy-city').each(function(){
+            $(this).find(".vacancy-info").each(function(){
+                $(this).slideUp(0);
+            });
+            $(this).addClass("hide");
+        });
+        $('.'+city).removeClass("hide");
+    });
 
     if($('#plupload-cont').length){
         var uploader = new plupload.Uploader({
