@@ -333,10 +333,10 @@
 									<div class="b-wrap-input">
 										<h3>Услуга</h3>
 										<div class="select-wrapper icon-arrow-down">
-											<select class="chosen-select">
-												<option value="1">Заказать ЭЦП 1</option>
-												<option value="2">Заказать ЭЦП 2</option>
-												<option value="3">Заказать ЭЦП 3</option>
+											<select class="chosen-select select-services">
+												<option value="order">Заказать ЭЦП</option>
+												<option value="accreditation">Аккредитация на ЭТП</option>
+												<option value="set">Настройка ПК для работы с ЭТП</option>
 											</select>
 										</div>
 									</div>
@@ -345,23 +345,25 @@
 										<input type="text" name="area" placeholder="Введите площадку">
 									</div>
 								</div>
-								<div class="clearfix input-margin">
-									<div class="b-wrap-input">
-										<input id="urgently-app" type="checkbox" name="urgently-app">
-										<label for="urgently-app">Срочный заказ</label>
+								<div class="b-marketplace-checkbox">
+									<div class="clearfix input-margin">
+										<div class="b-wrap-input">
+											<input id="urgently-app" type="checkbox" name="urgently-app">
+											<label for="urgently-app">Срочный заказ</label>
+										</div>
+										<div class="b-wrap-input">
+											<input id="need-install" type="checkbox" name="need-install">
+											<label for="need-install">Требуется настройка ПК</label>
+										</div>
 									</div>
-									<div class="b-wrap-input">
-										<input id="need-install" type="checkbox" name="need-install">
-										<label for="need-install">Требуется настройка ПК</label>
-									</div>
-								</div>
-								<div class="clearfix input-margin">
-									<div class="b-wrap-input b-wrap-input-2-3">
-										<input id="need-training" type="checkbox" name="need-training">
-										<label for="need-training">Требуется обучение пользователей<span class="dot-end hide">.</span></label>
-										<div class="training-block hide">
-											<span>Количество человек подлежащих обучению</span>
-											<input id="count-training" maxlength="3" type="text" name="count-training">
+									<div class="clearfix input-margin">
+										<div class="b-wrap-input b-wrap-input-2-3">
+											<input id="need-training" type="checkbox" name="need-training">
+											<label for="need-training">Требуется обучение пользователей<span class="dot-end hide">.</span></label>
+											<div class="training-block hide">
+												<span>Количество человек подлежащих обучению</span>
+												<input id="count-training" maxlength="3" type="text" name="count-training">
+											</div>
 										</div>
 									</div>
 								</div>
@@ -391,7 +393,7 @@
 							</form>
 						</div>
 
-						<div class="b b-marketplace-block b-marketplace-ref order-block">
+						<div class="b b-marketplace-ref order-block">
 							<h2 class="b-title">Справка</h2>
 							<p>Список документов, необходимый для подачи заявки на получение ЭЦП</p>
 

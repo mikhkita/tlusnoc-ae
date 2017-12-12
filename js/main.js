@@ -258,6 +258,18 @@ $(document).ready(function(){
         $('.'+city).removeClass("hide");
     });
 
+     $('.select-services').on('change', function(){
+        $('.b-marketplace-checkbox input[type="checkbox"]').each(function(){
+            $(this).prop("checked", false).change();
+            $(this).parent().removeClass("hide");
+        });
+        if($(this).val() === "accreditation"){
+            $('#urgently-app').parent().addClass("hide");
+        }else if($(this).val() === "set"){
+            $('#need-install').parent().addClass("hide");
+        }       
+    });
+
     if($('#plupload-cont').length){
         var uploader = new plupload.Uploader({
             runtimes : 'html5,flash,silverlight,html4',
