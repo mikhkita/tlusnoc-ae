@@ -303,7 +303,7 @@ h4{
 		    left: 1px;
 		}
 
-		/*ul.mark-img li{*/
+		ul.mark-img li,
 		.mark-img ul li{
 			background-image: url(../i/mark.png);
 			background-repeat: no-repeat;
@@ -313,7 +313,8 @@ h4{
 			padding-left: 22px;
 		}
 
-		/*.b-text ul.mark-img > li:before,
+		.b-text .mark-img ul > li:before,
+		.b-text ul.mark-img > li:before,
 		.b-text ul.mark-numbers > li:before,
 		.b-text ul.mark-numbers-blue > li:before{
 			display: none;
@@ -322,15 +323,7 @@ h4{
 		.b-text ul.mark-numbers > li,
 		.b-text ul.mark-numbers-blue > li{
 			padding-left: 0;
-		}*/
-
-		.mark-img ul > li:before{
-			display: none;
 		}
-
-		/*.mark-img ul > li{
-			padding-left: 0;
-		}*/
 
 	.b-text h4{
 		font-size: 14px;
@@ -551,7 +544,7 @@ ul.mark-numbers li{
 	margin-bottom: 10px;
 }
 
-	ul.mark-numbers li span,
+	ul.mark-numbers li > span,
 	.question-block .question-icon{
 		float: left;
 		display: inline-block;
@@ -567,7 +560,7 @@ ul.mark-numbers li{
 	    padding-left: 1px;
 	}
 
-	.b-slider-content ul.mark-numbers li span{
+	.b-slider-content ul.mark-numbers li > span{
 		margin-top: 3px;
 	}
 
@@ -579,7 +572,7 @@ ul.mark-numbers li{
 		margin-bottom: 0;
 	}
 
-	ul.mark-numbers-blue li span{
+	ul.mark-numbers-blue li > span{
 	    color: #1b82c7;
 		border: 1px solid #1b82c7;
 		vertical-align: top;
@@ -2219,7 +2212,7 @@ ul.vacancy-list{
 
 .b-white-block{
 	background-color: #FFF;
-	padding: 30px 40px;
+	padding: 30px 40px 40px;
 }
 
 	.b-white-block h2{
@@ -2274,6 +2267,10 @@ ul.vacancy-list{
 	.important-text{
 		padding-left: 12px;
 		border-left: 2px solid #1b82c7;
+	}
+
+	.b-marketplace-accreditation .procedure{
+		margin: 28px 0 17px 0;
 	}
 
 	.b-gray-block{
@@ -2654,9 +2651,7 @@ ul.vacancy-list{
 		background-image: url(../i/team-woman@2x.png);
 	}
 
-	/*.b-text ul.mark-img li{
-		background-image: url(../i/mark@2x.png);
-	}*/
+	.b-text ul.mark-img li,
 	.mark-img ul li{
 		background-image: url(../i/mark@2x.png);
 	}
