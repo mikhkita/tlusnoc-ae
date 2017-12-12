@@ -88,40 +88,46 @@ $(document).ready(function(){
 
     //скрывать кнопку "Развернуть отзыв"
     if($('.b-reviews').length){
-        readMoreShow();
+        readMoreShow("b-reviews-item");
     }
 
-    function readMoreShow(){
-        $('.b-reviews-item').each(function() {
-            var wrapHeight = $(this).find(".b-reviews-text-wrap").height();
-            var textHeight = $(this).find(".b-reviews-item-text").height();
-            if(wrapHeight < textHeight){
-                $(this).find(".expand-review").removeClass("hide");
-            }else{
-                $(this).find("br").remove();
-            }
-        });
+    if($('.b-marketplace-case').length){
+        readMoreShow("b-marketplace-case");
     }
 
-    /*function readMoreShow(readMoreClass){
+    function readMoreShow(readMoreClass){
         $('.'+readMoreClass).each(function() {
-            var wrapHeight = $(this).find(".read-text-wrap").height();
-            var textHeight = $(this).find(".read-text").height();
+            var wrapHeight = $(this).find(".extend-text-wrap").height();
+            var textHeight = $(this).find(".extend-text").height();
             if(wrapHeight < textHeight){
                 $(this).find(".btn-show").removeClass("hide");
             }else{
                 $(this).find("br").remove();
             }
         });
-    }*/
+    }
 
-    $('.expand-review').on('click', function(){
-        $target = $(this).siblings(".b-reviews-text-wrap");
+    $('.btn-show').on('click', function(){
+        $target = $(this).siblings(".extend-text-wrap");
         $target.toggleClass("height-none");
         if($target.hasClass("height-none")){
-            $(this).html("Свернуть отзыв"+"<div class=\"icon-arrow-down icon-arrow-down-rotate\"></div>");
+            $(this).html($(this).attr("data-hide")+"<div class=\"icon-arrow-down icon-arrow-down-rotate\"></div>");
         }else{
-            $(this).html("Развернуть отзыв"+"<div class=\"icon-arrow-down\"></div>");
+            $(this).html($(this).attr("data-show")+"<div class=\"icon-arrow-down\"></div>");
+        }
+    });
+
+    $('#full-escort').on('change', function(){
+        if($(this).prop('checked')){
+            $('#b-outsourcing-form input[type="checkbox"]').prop("checked", true);
+        }else{
+            $('#b-outsourcing-form input[type="checkbox"]').prop("checked", false);
+        }
+    });
+
+    $('#b-outsourcing-form input[type="checkbox"]').on('change', function(){
+        if(!$(this).prop('checked')){
+            $('#full-escort').prop("checked", false);
         }
     });
 
@@ -206,6 +212,98 @@ $(document).ready(function(){
             $(".b-menu-overlay").hide();
         },100);
     });
+
+    $('.vacancy-info').each(function(){
+        $(this).slideUp(0);
+    });
+
+    $('.vacancy-link').on('click', function(){
+        $(this).siblings('.vacancy-info').slideToggle(300);
+    });
+
+    $('.choice-block a').on('click', function(){
+        toggleBlock($(this), "choice-block a");
+    });
+
+    $('.country-choise a').on('click', function(){
+        toggleBlock($(this), "country-choise a");
+        $('.vacancy-select').change();
+    });
+
+    function toggleBlock($this, selector){
+        $('.'+selector).each(function(){
+            var block = $(this).attr("data-block");
+            $('.'+block).addClass("hide");
+            $(this).removeClass("active");
+        });
+        var block = $this.attr("data-block");
+        $('.'+block).removeClass("hide");
+        $this.addClass("active");
+    }
+
+    $(".chosen-select").chosen({
+        width: '100%',
+        disable_search_threshold: 10000
+    });
+
+    $('.vacancy-select').on('change', function(){
+        var city = $(this).find('option:selected').attr("data-city");
+        var country = $(this).attr("data-country");
+        $('.'+country+' '+'.vacancy-city').each(function(){
+            $(this).find(".vacancy-info").each(function(){
+                $(this).slideUp(0);
+            });
+            $(this).addClass("hide");
+        });
+        $('.'+city).removeClass("hide");
+    });
+
+    if($('#plupload-cont').length){
+        var uploader = new plupload.Uploader({
+            runtimes : 'html5,flash,silverlight,html4',
+            browse_button : 'pickfiles', // you can pass an id...
+            container: document.getElementById('plupload-cont'), // ... or DOM Element itself
+            url : $('#b-outsourcing-form').attr("data-file-action"),
+            multi_selection: false,
+            
+            filters : {
+                max_file_size : '10mb',
+                mime_types: [
+                    {title : "Image files", extensions : "jpg,jpeg,gif,png"},
+                    {title : "Documents", extensions : "doc,docx,pdf"},
+                    {title : "Zip files", extensions : "zip"},
+                ]
+            },
+
+            init: {
+                PostInit: function() {
+                    document.getElementById('filelist').innerHTML = '';
+                },
+                FilesAdded: function(up, files) {
+                    plupload.each(files, function(file) {
+                        document.getElementById('filelist').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
+                    });
+                    up.start();
+                },
+                UploadProgress: function(up, file) {
+                    document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
+                },
+                FileUploaded: function(up, file, res) {
+                    /*var json = JSON.parse(res.response);
+                    if(json.status){
+                        filePath.push(json.filePath);
+                        var files = filePath.join('~');
+                        $('.fileProxy').removeClass("error").val(files);
+                    }*/
+                },
+                Error: function(up, err) {
+                    /*document.getElementById('console').appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));
+                    console.log("\nError #" + err.code + ": " + err.message);*/
+                }
+            }
+        });
+        uploader.init();
+    }
 
     var dataSum = [
 [1,50000],
