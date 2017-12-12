@@ -99,7 +99,6 @@ $(document).ready(function(){
         $('.'+readMoreClass).each(function() {
             var wrapHeight = $(this).find(".extend-text-wrap").height();
             var textHeight = $(this).find(".extend-text").height();
-            console.log($(this).find(".extend-text-wrap"));
             if(wrapHeight < textHeight){
                 $(this).find(".btn-show").removeClass("hide");
             }else{
@@ -115,6 +114,20 @@ $(document).ready(function(){
             $(this).html($(this).attr("data-hide")+"<div class=\"icon-arrow-down icon-arrow-down-rotate\"></div>");
         }else{
             $(this).html($(this).attr("data-show")+"<div class=\"icon-arrow-down\"></div>");
+        }
+    });
+
+    $('#full-escort').on('change', function(){
+        if($(this).prop('checked')){
+            $('#b-outsourcing-form input[type="checkbox"]').prop("checked", true);
+        }else{
+            $('#b-outsourcing-form input[type="checkbox"]').prop("checked", false);
+        }
+    });
+
+    $('#b-outsourcing-form input[type="checkbox"]').on('change', function(){
+        if(!$(this).prop('checked')){
+            $('#full-escort').prop("checked", false);
         }
     });
 

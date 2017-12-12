@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="css/slick-theme.css" type="text/css">	
 	<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
 	<link rel="stylesheet" href="css/chartist.min.css" type="text/css">
+	<link rel="stylesheet" href="css/chosen.min.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 
 	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1179px)" href="css/layout-tablet.css">
@@ -160,7 +161,7 @@
 							</div>
 							<div class="b-federal-item">
 								<div class="federal-img"><img src="i/marketplace-6.png"></div>
-								<p>АО «Российский  аукционный дом»</p>
+								<p>АО «Российский аукционный дом»</p>
 							</div>
 						</div>
 					</div>
@@ -173,22 +174,22 @@
 							</div>
 							<p class="b-center">В рамках работы с электронными торговыми площадками<br>наша команда решает для вас следующие задачи</p>
 							<div class="choice-block choice-block-three">
-								<div class="choice-item choice-order active">
+								<a href="#" onclick="return false;" class="choice-item choice-order active" data-block="order-block">
 									<img src="i/marketplace-icon-2.png">
-									<a href="#">Заказ ЭЦП</a>
-								</div>
-								<div class="choice-item choice-accreditation">
+									<span>Заказ ЭЦП</span>
+								</a>
+								<a class="choice-item choice-accreditation" href="#" onclick="return false;" data-block="accreditation-block">
 									<img src="i/marketplace-icon-3.png">
-									<a href="#">Аккредитация на ЭТП</a>
-								</div>
-								<div class="choice-item choice-install">
+									<span>Аккредитация на ЭТП</span>
+								</a>
+								<a class="choice-item choice-install" href="#" onclick="return false;" data-block="set-block">
 									<img src="i/marketplace-icon-4.png">
-									<a href="#">Настройка ПК для работы с ЭТП</a>
-								</div>
+									<span>Настройка ПК для работы с ЭТП</span>
+								</a>
 							</div>
 						</div>
 
-						<div class="b b-work-marketplace-middle">
+						<div class="b b-marketplace-block b-marketplace-order order-block">
 							<h2 class="b-title">Заказ ЭЦП</h2>
 							<div class="b-text">
 								<p>Заказ электронно-цифровой подписи ― первый шаг на пути участия в электронных торговых процедурах.<br><b>ЭЦП используется практически во всех операциях на торговых площадках:</b> </p><br>
@@ -206,106 +207,217 @@
 								<div class="b-text important-text">
 									Цена выпуска ЭЦП зависит от количества торговых площадок, с которыми смогут работать ваши средства электронно-цифровой подписи. Заказывая услугу выпуска ЭЦП, заранее определите список площадок, с которыми вы хотите работать. Рекомендации по выбору площадок  вы можете получить у своего <a href="#">персонального менеджера</a>, <a href="#">пишите нам</a>!
 								</div>
-								<div class="b-gray-block clearfix">
-									<h2 class="b-title">Отправить заявку</h2>
-									<form id="b-send-app-form" class="b-send-app-form gray-inputs" method="post" action="action.php">
-										<div class="clearfix input-margin">
-											<div class="b-wrap-input">
-												<h3>Услуга</h3>
-												<div class="select-wrapper icon-arrow-down">
-													<select>
-														<option value="1">Заказать ЭЦП 1</option>
-														<option value="2">Заказать ЭЦП 2</option>
-														<option value="3">Заказать ЭЦП 3</option>
-													</select>
-												</div>
-											</div>
-											<div class="b-wrap-input">
-												<h3 class="left">Площадка</h3><a href="#" class="right">Нужна помощь?</a>
-												<input type="text" name="area" placeholder="Введите площадку">
-											</div>
-										</div>
-										<div class="clearfix input-margin">
-											<div class="b-wrap-input">
-												<input id="urgently-app" type="checkbox" name="urgently-app">
-												<label for="urgently-app">Срочный заказ</label>
-											</div>
-											<div class="b-wrap-input">
-												<input id="need-install" type="checkbox" name="need-install">
-												<label for="need-install">Требуется настройка ПК</label>
-											</div>
-										</div>
-										<div class="clearfix input-margin">
-											<div class="b-wrap-input b-wrap-input-2-3">
-												<input id="need-training" type="checkbox" name="need-training">
-												<label for="need-training">Требуется обучение пользователей<span class="dot-end hide">.</span></label>
-												<div class="training-block hide">
-													<span>Количество человек подлежащих обучению</span>
-													<input id="count-training" maxlength="3" type="text" name="count-training">
-												</div>
-											</div>
-										</div>
-
-										<div class="clearfix">
-											<div class="b-wrap-input">
-												<input type="text" name="company" placeholder="Компания*" required>
-											</div>
-											<div class="b-wrap-input">
-												<input type="text" name="fio" placeholder="ФИО контактного лица*" required>
-											</div>
-											<div class="b-wrap-input">
-												<input type="text" name="e-mail" placeholder="Электронная почта*"required>
-											</div>
-										</div>
-
-										<div class="clearfix input-margin">
-											<div class="b-wrap-input">
-												<input type="text" name="phone" placeholder="Телефон*" required>
-											</div>
-											<div class="b-wrap-input b-wrap-input-2-3">
-												<textarea name="comment" rows="1" placeholder="Комментарий"></textarea>
-											</div>
-										</div>
-
-										<a href="#" class="b-btn b-btn-blue ajax right" onclick="$('#b-send-app-form').submit(); return false;">Отправить</a>
-									</form>
-								</div>
 							</div>
+						</div>
 
-							<div class="b-work-marketplace-bottom">
-								<h2 class="b-title">Справка</h2>
-								<p>Список документов, необходимый для подачи заявки на получение ЭЦП</p>
+						<div class="b b-marketplace-block b-marketplace-accreditation accreditation-block hide">
+							<h2 class="b-title">Аккредитация на Этп</h2>
+							<div class="b-text">
+								<p><b>Аккредитация на электронной площадке –</b> следующий после получения электронной подписи шаг на пути к участию в государственных и коммерческих закупках.</p><br>
+								<div class="important-block">Важно!</div>
 
-								<div class="choice-block choice-block-three">
-									<div class="choice-item choice-legal active">
-										<a href="#">Для юридического лица</a>
-									</div>
-									<div class="choice-item choice-individual">
-										<a href="#">Для ИП</a>
-									</div>
-									<div class="choice-item choice-physical">
-										<a href="#">Для физического лица</a>
-									</div>
-								</div>
+								<p class="important-text">Аккредитация на электронных торговых площадках происходит в соответствии с <b>61 статьей 44-ФЗ.</b></p>
+
+								<p><b>Порядок действий для получения аккредитации следующий:   </b></p>
 
 								<ul class="mark-numbers mark-numbers-blue">
-									<li><span>1</span><p>Копия Свидетельства о государственной регистрации юридического лица</p></li>
-									<li><span>2</span><p>Копия Свидетельства о постановке на учет в налоговом органе</p></li>
-									<li><span>3</span><p>Если ЭЦП для торговых площадок изготавливается на имя руководителя организации: копию документа о назначении руководителя, заверенную подписью руководителя и печатью организации</p></li>
-									<li><span>4</span><p>Если получать ЭЦП для торгов будет не ее владелец, то на имя уполномоченного представителя организации нужна доверенность, подтверждающая полномочия владельца сертификата ключа ЭЦП, заверенная подписью руководителя и печатью организации</p></li>
-									<li><span>5</span><p>Копия паспорта гражданина Российской Федерации, на чье имя изготавливается ключ для участия в торгах (владелец сертификата)</p></li>
-									<li><span>6</span><p>Согласие на обработку персональных данных пользователя</p></li>
-									<li><span>7</span><p>СНИЛС (для торгов по 223-ФЗ и коммерческих закупок)</p></li>
+									<li><span>1</span><p><b>Настройка средств электронной подписи на площадке</b></p></li>
+									<li>
+										<span>2</span>
+										<p><b>Подготовка пакета документов:</b></p>
+										<ul>
+											<li>Оригинал выписки или ее нотариально заверенная копия из ЕГРЮЛ (для аккредитации юр. лиц) или ЕГРИП (для аккредитации ИП). Выписка с печатью налогового органа должна быть получена не ранее чем за 6 календарных месяцев до дня обращения на аккредитацию</li>
+											<li>Все страницы Устава организации (для юрлиц), скрепленный печатью и подписью. Устав должен быть прошит и пронумерован, на последней странице (ее тоже необходимо сканировать) иметь отметку налогового органа, а для индивидуальных предпринимателей и физических лиц — это просто ВСЕ листы паспорта;</li>
+											<li>Документ, подтверждающий полномочия руководителя (решение об избрании или назначении руководителя)</li>
+											<li>Решение об одобрении крупных сделок с обязательным указанием сведений о максимальной сумме сделки.</li>
+										</ul>
+										<div>
+											<p><b>Примечание:</b></p>
+											<p>Площадка сохраняет документы, поданные при аккредитации. В случае внесения изменений в документы, или в информацию, поданную при аккредитации необходимо отправить на площадку новые скан-копии документов или иную измененную информацию.<br>
+											Для шести федеральных электронных торговых площадок комплект документов одинаковый. Коммерческие площадки выдвигают свои требования к комплекту документов, значительно более широкие и детальные, чем федеральные площадки.<br>
+											В случае если компания на площадке представлена лицом, не являющимся ее руководителем, то в данном случае необходимо прикладывать документ, подтверждающий полномочия лица, представляющего компанию. Как правило, таким документом является доверенность, подписанная руководителем организации и заверенная печатью.<br>
+											В случае если начальная минимальная цена контракта превышает максимальную сумму крупной сделки, необходимо подготовить и выпустить отдельное решение о согласовании крупной сделки и загрузить его на площадку.<br>
+											<b>Допустимые форматы документов: .pdf, .doc, .docx, .txt, .rtf, .jpg, .gif, .png, .zip, .rar, .7z.</b></p>
+										</div><div class="after-text-link">
+											<a href="#" class="b-table">
+												<img class="b-table-cell-middle" src="i/cooperation-1.png" data-retina-src="i/cooperation-1@2x.png">
+												<p class="b-table-cell-middle">Образец документа о назначении руководителя</p>
+											</a>
+										</div>
+										<div class="after-text-link">
+											<a href="#" class="b-table">
+												<img class="b-table-cell-middle" src="i/cooperation-1.png" data-retina-src="i/cooperation-1@2x.png">
+												<p class="b-table-cell-middle">Образец решения для уполномоченного лица</p>
+											</a>
+										</div>
+										<div class="after-text-link">
+											<a href="#" class="b-table">
+												<img class="b-table-cell-middle" src="i/cooperation-1.png" data-retina-src="i/cooperation-1@2x.png">
+												<p class="b-table-cell-middle">Образец решения об одобрении сделок</p>
+											</a>
+										</div>
+										<div class="after-text-link">
+											<a href="#" class="b-table">
+												<img class="b-table-cell-middle" src="i/cooperation-1.png" data-retina-src="i/cooperation-1@2x.png">
+												<p class="b-table-cell-middle">Образец доверенности</p>
+											</a>
+										</div>
+									</li>
+									<li><b>Подача заявки с комплектом документов на ЭТП</b></li>
 								</ul>
+								<p><b>Рассмотрение заявки – в течении 5 рабочих дней.</b></p>
+								<p>Команда <b>EA Consult</b> подготовит для вас средства ЭЦП и проведет аккредитацию сроком на 3 года на любых торговых площадках за 5-7 рабочих дней. Обращайтесь, и мы превзойдем ваши ожидания!</p>
+							</div>
+						</div>
 
-								<div class="term-block">
-									<p>Срок изготовления ЭЦП — <b>от 1 дня.</b></p>
-									<p>Срочное изготовление <b>за 1 час!</b></p>
-									<a href="#">Отправить заявку</a>
+						<div class="b b-marketplace-block b-marketplace-set set-block hide">
+							<h2 class="b-title">Настройка рабочего места для работы<br>с электронными торговыми площадками</h2>
+							<div class="b-text">
+								<h4>Помощь и поддержка</h4>
+								<p>Итак, вы получили электронно-цифровую подпись, но прежде чем вы сможете пользоваться ее средствами для работы на электронных торговых площадках, в том числе и для прохождения аккредитации, вам необходимо настроить рабочее место пользователя, самостоятельно или с привлечением специалистов.<br>Процесс настройки рабочего места проходит в несколько этапов и, в целом, не должен вызывать затруднения у вашего системного администратора.</p>
+
+								<ul class="mark-numbers mark-numbers-blue">
+
+									<li>
+										<span>1</span>
+										<div class="text-block">
+											<h4>Установка средств криптографической защиты информации (СКЗИ)</h4>
+											<p>СКЗИ — программный комплекс, предназначенный для шифрования информации в документах, подписываемых с помощью электронной подписи. Компания EA Consult рекомендует использовать программный комплекс «Крипто ПРО CSP» (<a href="#">http://www.cryptopro.ru/</a>)</p>
+										</div>
+									</li>
+
+									<li>
+										<span>2</span>
+										<div class="text-block">
+											<h4>Установка дополнительного ПО</h4>
+											<ul>
+												<li>Установка библиотеки CAPICOM</li>
+												<li>Настройка защищенных носителей (eToken, Rutoken, JaCarta)</li>
+											</ul>
+										</div>
+									</li>
+
+									<li>
+										<span>3</span>
+										<div class="text-block">
+											<h4>Настройка работы с сертификатами</h4>
+											<ul>
+												<li>Настройка считывателей</li>
+												<li>Установка личного сертификата</li>
+												<li>Установка корневого сертификата удостоверяющего центра (УЦ)</li>
+												<li>Проверка сертификата</li>
+											</ul>
+										</div>
+									</li>
+
+									<li>
+										<span>4</span>
+										<div class="text-block">
+											<h4>Настройка браузера</h4>
+											<ul>
+												<li>Настройка доверенных узлов</li>
+												<li>Настройка компонентов ActiveX</li>
+												<li>Проверка настройки браузера</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+								<p>В случае если вам требуется помощь в настройке рабочего места для работы с торговыми площадками или необходимо обучить ваших специалистов — пожалуйста, <a href="#">пишите нам</a>, и наши менеджеры свяжутся с вами для уточнения деталей.</p>
+							</div>
+						</div>
+
+						<div class="b-gray-block clearfix">
+							<h2 class="b-title">Отправить заявку</h2>
+							<form id="b-send-app-form" class="b-send-app-form gray-inputs" method="post" action="action.php">
+								<div class="clearfix input-margin">
+									<div class="b-wrap-input">
+										<h3>Услуга</h3>
+										<div class="select-wrapper icon-arrow-down">
+											<select class="chosen-select">
+												<option value="1">Заказать ЭЦП 1</option>
+												<option value="2">Заказать ЭЦП 2</option>
+												<option value="3">Заказать ЭЦП 3</option>
+											</select>
+										</div>
+									</div>
+									<div class="b-wrap-input">
+										<h3 class="left">Площадка</h3><a href="#" class="right">Нужна помощь?</a>
+										<input type="text" name="area" placeholder="Введите площадку">
+									</div>
 								</div>
+								<div class="clearfix input-margin">
+									<div class="b-wrap-input">
+										<input id="urgently-app" type="checkbox" name="urgently-app">
+										<label for="urgently-app">Срочный заказ</label>
+									</div>
+									<div class="b-wrap-input">
+										<input id="need-install" type="checkbox" name="need-install">
+										<label for="need-install">Требуется настройка ПК</label>
+									</div>
+								</div>
+								<div class="clearfix input-margin">
+									<div class="b-wrap-input b-wrap-input-2-3">
+										<input id="need-training" type="checkbox" name="need-training">
+										<label for="need-training">Требуется обучение пользователей<span class="dot-end hide">.</span></label>
+										<div class="training-block hide">
+											<span>Количество человек подлежащих обучению</span>
+											<input id="count-training" maxlength="3" type="text" name="count-training">
+										</div>
+									</div>
+								</div>
+
+								<div class="clearfix">
+									<div class="b-wrap-input">
+										<input type="text" name="company" placeholder="Компания*" required>
+									</div>
+									<div class="b-wrap-input">
+										<input type="text" name="fio" placeholder="ФИО контактного лица*" required>
+									</div>
+									<div class="b-wrap-input">
+										<input type="text" name="e-mail" placeholder="Электронная почта*"required>
+									</div>
+								</div>
+
+								<div class="clearfix input-margin">
+									<div class="b-wrap-input">
+										<input type="text" name="phone" placeholder="Телефон*" required>
+									</div>
+									<div class="b-wrap-input b-wrap-input-2-3">
+										<textarea name="comment" rows="1" placeholder="Комментарий"></textarea>
+									</div>
+								</div>
+
+								<a href="#" class="b-btn b-btn-blue ajax right" onclick="$('#b-send-app-form').submit(); return false;">Отправить</a>
+							</form>
+						</div>
+
+						<div class="b b-marketplace-block b-marketplace-ref order-block">
+							<h2 class="b-title">Справка</h2>
+							<p>Список документов, необходимый для подачи заявки на получение ЭЦП</p>
+
+							<div class="choice-block choice-block-three">
+								<a href="#" onclick="return false;" class="choice-item choice-legal active"><span>Для юридического лица</span></a>
+								<a href="#" onclick="return false;" class="choice-item choice-individual"><span>Для ИП</span></a>
+								<a href="#" onclick="return false;" class="choice-item choice-physical"><span>Для физического лица</span></a>
 							</div>
 
+							<ul class="mark-numbers mark-numbers-blue">
+								<li><span>1</span><p>Копия Свидетельства о государственной регистрации юридического лица</p></li>
+								<li><span>2</span><p>Копия Свидетельства о постановке на учет в налоговом органе</p></li>
+								<li><span>3</span><p>Если ЭЦП для торговых площадок изготавливается на имя руководителя организации: копию документа о назначении руководителя, заверенную подписью руководителя и печатью организации</p></li>
+								<li><span>4</span><p>Если получать ЭЦП для торгов будет не ее владелец, то на имя уполномоченного представителя организации нужна доверенность, подтверждающая полномочия владельца сертификата ключа ЭЦП, заверенная подписью руководителя и печатью организации</p></li>
+								<li><span>5</span><p>Копия паспорта гражданина Российской Федерации, на чье имя изготавливается ключ для участия в торгах (владелец сертификата)</p></li>
+								<li><span>6</span><p>Согласие на обработку персональных данных пользователя</p></li>
+								<li><span>7</span><p>СНИЛС (для торгов по 223-ФЗ и коммерческих закупок)</p></li>
+							</ul>
+
+							<div class="term-block">
+								<p>Срок изготовления ЭЦП — <b>от 1 дня.</b></p>
+								<p>Срочное изготовление <b>за 1 час!</b></p>
+								<a href="#">Отправить заявку</a>
+							</div>
 						</div>
+
 					</div>
 
 					<div class="b-marketplace-case-list">
@@ -528,6 +640,7 @@
 	<script type="text/javascript" src="js/slideout.min.js"></script>
 	<script type="text/javascript" src="js/autosize.min.js"></script>
 	<script type="text/javascript" src="js/chartist.min.js"></script>
+	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

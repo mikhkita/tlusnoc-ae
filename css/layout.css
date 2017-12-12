@@ -288,21 +288,22 @@ h4{
 	}
 
 	.b-text ul {
+		position: relative;
 	    list-style: none;
 	    margin-bottom: 15px;
 	}
 
 		.b-text ul li{
-	    	padding-left: 6px;
+	    	padding-left: 25px;
 		}
 
 		.b-text ul li:before {
 		    content:  "—";
-		    position: relative;
-		    left:     -5px;
+		    position: absolute;
+		    left: 1px;
 		}
 
-		.b-text ul.mark-img li{
+		ul.mark-img li{
 			background-image: url(../i/mark.png);
 			background-repeat: no-repeat;
 			background-position: 0 2px;
@@ -311,8 +312,15 @@ h4{
 			padding-left: 22px;
 		}
 
-		.b-text ul.mark-img li:before{
+		.b-text ul.mark-img > li:before,
+		.b-text ul.mark-numbers > li:before,
+		.b-text ul.mark-numbers-blue > li:before{
 			display: none;
+		}
+
+		.b-text ul.mark-numbers > li,
+		.b-text ul.mark-numbers-blue > li{
+			padding-left: 0;
 		}
 
 	.b-text h4{
@@ -470,7 +478,7 @@ select{
 	content: "s";
 	font-size: 0px;
 	left: 0px;
-	top: 2px;
+	top: 1px;
 	border-radius: 0;
 	width: 12px;
 	height: 12px;
@@ -509,7 +517,7 @@ select{
 .b-wrap-input input[type="checkbox"]:checked + label:after{
 	content: '';
     position: absolute;
-    top: 3px;
+    top: 2px;
     left: 4px;
     width: 4px;
     height: 7px;
@@ -550,10 +558,13 @@ ul.mark-numbers li{
 	    padding-left: 1px;
 	}
 
-	ul.mark-numbers li p{
+	.b-slider-content ul.mark-numbers li span{
+		margin-top: 3px;
+	}
+
+	ul.mark-numbers li > p,
+	ul.mark-numbers li > a > p{
 		display: inline-block;
-		color: #FFF;
-		border-bottom: 1px solid #FFF;
 		margin-left: 10px;
 		font-size: 16px;
 		margin-bottom: 0;
@@ -566,7 +577,8 @@ ul.mark-numbers li{
     	margin-top: 1px;
 	}
 
-	ul.mark-numbers-blue li p{
+	ul.mark-numbers-blue li > p,
+	ul.mark-numbers-blue li > a > p{
 		color: #1b1b1b;
 		border-bottom: 0;
 		font-size: 14px;
@@ -990,7 +1002,7 @@ ul.mark-numbers li{
 			}
 
 			.b-case-item ul li{
-				padding-left: 0;
+
 			}
 
 			.b-case-item .read-more{
@@ -1229,6 +1241,10 @@ ul.mark-numbers li{
 
 				.b-client .slick-slide img {
 				    display: inline-block;
+				}
+
+				.b-client .slick-slide{
+					height: auto;
 				}
 
 	.b-client-arrows{
@@ -1657,6 +1673,7 @@ ul.b-breadcrumbs{
 				position: relative;
 				margin-left: 13px;
 				margin-bottom: 6px;
+				padding-left: 0;
 			}
 
 			.b-directions-item ul li:last-child{
@@ -1895,6 +1912,13 @@ ul.b-breadcrumbs{
 		margin-left: 30px;
 	}
 
+	.choice-block .choice-item span{
+		font-size: 16px;
+		text-transform: none;
+		vertical-align: top;
+		font-family: 'UbuntuMedium';
+	}
+
 	.choice-block .choice-item.active,
 	.choice-block.choice-block-three .choice-item.active{
 		border-bottom: 3px solid #1b82c7;
@@ -1921,10 +1945,9 @@ ul.b-breadcrumbs{
 	}
 
 	.choice-block.choice-block-three img{
+        margin-top: 1px;
 	    display: inline-block;
-	    margin-right: 5px;
-	    vertical-align: middle;
-   		margin-bottom: 4px;
+	    margin-right: 4px;
 	}
 
 .country-choise{
@@ -2187,7 +2210,7 @@ ul.vacancy-list{
 
 .b-white-block{
 	background-color: #FFF;
-	padding: 30px 40px;
+	padding: 40px;
 }
 
 	.b-white-block h2{
@@ -2208,7 +2231,7 @@ ul.vacancy-list{
 		margin: 12px 0 38px 0;
 	}
 
-	.b-work-marketplace-middle ul.mark-img{
+	.b-marketplace-order ul.mark-img{
 		margin-bottom: 34px;
 	}
 
@@ -2219,8 +2242,8 @@ ul.vacancy-list{
 		.question-block .question-icon{
 			color: #1b82c7;
 		    border: 1px solid #1b82c7;
-		    width: 20px;
-		    height: 20px;
+		    width: 19px;
+		    height: 19px;
 		    font-size: 13px;
 		    margin-right: 4px;
 		}
@@ -2242,7 +2265,6 @@ ul.vacancy-list{
 	.important-text{
 		padding-left: 12px;
 		border-left: 2px solid #1b82c7;
-		margin-bottom: 27px;
 	}
 
 	.b-gray-block{
@@ -2319,22 +2341,41 @@ ul.vacancy-list{
 			    margin-bottom: 0;
 			}
 
-	.b-work-marketplace-bottom .choice-block .choice-item a{
+	.b-marketplace-ref .choice-block .choice-item a{
 		font-size: 19px;
 		font-family: 'UbuntuMedium';
 	}
 
-	.b-work-marketplace-bottom ul.mark-numbers{
+	.b-marketplace-ref ul.mark-numbers{
 		margin-bottom: 25px;
 	}
 
-	.b-work-marketplace-bottom ul.mark-numbers li{
+	.b-marketplace-ref ul.mark-numbers li{
 		margin-bottom: 7px;
 	}
 
-	.b-work-marketplace-bottom ul.mark-numbers li p{
-		width: calc(100% - 28px);
+	ul.mark-numbers li p,
+	ul.mark-numbers li h4,
+	ul.mark-numbers li .text-block{
+		max-width: calc(100% - 28px);
 	}
+
+	ul.mark-numbers li .text-block{
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	.b-marketplace-set .b-text > h4{
+		font-size: 16px;
+	}
+
+	.b-marketplace-set ul.mark-numbers li{
+		margin-bottom: 0;
+	}
+
+.b-marketplace-block{
+	margin-bottom: 27px;
+}
 
 .b-marketplace-case{
 	margin-bottom: 24px;
@@ -2361,7 +2402,6 @@ ul.vacancy-list{
 	.term-block{
 		font-size: 16px;
 		line-height: 22px;
-		margin-bottom: 15px;
 	}
 
 		.term-block a{
@@ -2482,6 +2522,11 @@ ul.vacancy-list{
 		padding-bottom: 32px;
 	}
 
+	#b-send-app-form .chosen-container-single .chosen-single{
+		border-bottom: 3px solid #e0e0e0;
+		padding-bottom: 30px;
+	}
+
 		.chosen-container-single .chosen-single span {
 		    width: calc(100% - 18px);
 		}
@@ -2530,10 +2575,6 @@ ul.vacancy-list{
 
 .chosen-container .chosen-results li{
 	padding: 5px 30px;
-}
-
-.chosen-container-single .chosen-drop {
-    margin-top: 0;
 }
 
 /*-------Chartist.js--------*/
