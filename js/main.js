@@ -224,10 +224,9 @@ $(document).ready(function(){
     $('.choice-block a').on('click', function(){
         console.log("click");
         toggleBlock($(this), "choice-block a");
-        if(!$('.b-cooperation').hasClass("hide")){
+        if($('.b-cooperation').length && !$('.b-cooperation').hasClass("hide")){
             chartistInit();
         }
-        
     });
 
     $('.country-choise a').on('click', function(){

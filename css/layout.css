@@ -1611,15 +1611,20 @@ ul.b-breadcrumbs{
 		margin: 20px 0;
 	}
 
-	.document-link{
-		margin-bottom: 14px;
-	}
-
-		.document-link span{
-			font-size: 16px;
-			text-decoration: underline;
-			padding-left: 10px;
+		.document-link{
+			margin-top: 20px;
 		}
+
+			.document-link span{
+				font-size: 16px;
+				text-decoration: underline;
+				padding-left: 10px;
+			}
+
+		.document-link-cont .document-link{
+			margin-top: 0;
+			margin-bottom: 14px;
+		} 
 
 .b-scheme{
 	margin-bottom: 22px;
@@ -2557,6 +2562,7 @@ ul.vacancy-list{
 }
 
 	.chosen-container-single .chosen-single{
+		color: #1b1b1b;
 		border: none;
 		border-bottom: 3px solid #1b82c7;
 		border-radius: 0;
