@@ -303,7 +303,8 @@ h4{
 		    left: 1px;
 		}
 
-		ul.mark-img li{
+		ul.mark-img li,
+		.mark-img ul li{
 			background-image: url(../i/mark.png);
 			background-repeat: no-repeat;
 			background-position: 0 2px;
@@ -312,6 +313,7 @@ h4{
 			padding-left: 22px;
 		}
 
+		.b-text .mark-img ul > li:before,
 		.b-text ul.mark-img > li:before,
 		.b-text ul.mark-numbers > li:before,
 		.b-text ul.mark-numbers-blue > li:before{
@@ -542,7 +544,8 @@ ul.mark-numbers li{
 	margin-bottom: 10px;
 }
 
-	ul.mark-numbers li span,
+	ul.mark-numbers li > span,
+	ul.mark-numbers li > a > span,
 	.question-block .question-icon{
 		float: left;
 		display: inline-block;
@@ -558,7 +561,7 @@ ul.mark-numbers li{
 	    padding-left: 1px;
 	}
 
-	.b-slider-content ul.mark-numbers li span{
+	.b-slider-content ul.mark-numbers li > span{
 		margin-top: 3px;
 	}
 
@@ -570,7 +573,8 @@ ul.mark-numbers li{
 		margin-bottom: 0;
 	}
 
-	ul.mark-numbers-blue li span{
+	ul.mark-numbers-blue li > span,
+	ul.mark-numbers-blue li > a > span{
 	    color: #1b82c7;
 		border: 1px solid #1b82c7;
 		vertical-align: top;
@@ -1603,15 +1607,24 @@ ul.b-breadcrumbs{
 		margin-left: 35px;
 	}
 
-	.after-text-link{
-		margin-bottom: 14px;
+	.document-link-cont{
+		margin: 20px 0;
 	}
 
-		.after-text-link span{
-			font-size: 16px;
-			text-decoration: underline;
-			padding-left: 10px;
+		.document-link{
+			margin-top: 20px;
 		}
+
+			.document-link span{
+				font-size: 16px;
+				text-decoration: underline;
+				padding-left: 10px;
+			}
+
+		.document-link-cont .document-link{
+			margin-top: 0;
+			margin-bottom: 14px;
+		} 
 
 .b-scheme{
 	margin-bottom: 22px;
@@ -2210,7 +2223,7 @@ ul.vacancy-list{
 
 .b-white-block{
 	background-color: #FFF;
-	padding: 30px 40px;
+	padding: 30px 40px 40px;
 }
 
 	.b-white-block h2{
@@ -2236,16 +2249,16 @@ ul.vacancy-list{
 	}
 
 	.question-block{
-		margin-bottom: 34px;
+		margin-bottom: 8px;
 	}
 
 		.question-block .question-icon{
 			color: #1b82c7;
 		    border: 1px solid #1b82c7;
-		    width: 19px;
-		    height: 19px;
+		    width: 18px;
+		    height: 18px;
 		    font-size: 13px;
-		    margin-right: 4px;
+		    margin-right: 6px;
 		}
 
 	.important-block{
@@ -2254,7 +2267,7 @@ ul.vacancy-list{
 		display: inline-block;
 		padding: 8px 20px;
 		background-color: #1b82c7;
-		margin-bottom: 10px;
+		margin: 27px 0 10px 0;
 	}
 
 	.question-block .question-text{
@@ -2265,6 +2278,10 @@ ul.vacancy-list{
 	.important-text{
 		padding-left: 12px;
 		border-left: 2px solid #1b82c7;
+	}
+
+	.b-marketplace-accreditation .procedure{
+		margin: 28px 0 17px 0;
 	}
 
 	.b-gray-block{
@@ -2372,9 +2389,18 @@ ul.vacancy-list{
 		margin-bottom: 0;
 	}
 
+	.b-marketplace-set .help-text,
+	.b-marketplace-set .setup-text{
+		margin-bottom: 17px;
+	}
+
 .b-marketplace-block{
 	margin-bottom: 27px;
 }
+	
+	.b-marketplace-block h2.b-title{
+		margin-bottom: 23px;
+	}
 
 .b-marketplace-ref{
 	margin-top: 27px;
@@ -2430,6 +2456,26 @@ ul.vacancy-list{
 			.marketplace-small li a{
 				font-size: 12px;
 			}
+
+	.b-marketplace-accreditation .document-link{
+		margin-bottom: 7px;
+	}
+
+		.b-marketplace-accreditation .document-link a{
+			border-bottom: 0;
+		}
+
+		.b-marketplace-accreditation .document-link span{
+			font-size: 12px;
+		}
+
+		.b-marketplace-accreditation .document-link img{
+			height: 22px;
+		}
+
+		.b-marketplace-accreditation .b-text> ul{
+			margin-bottom: 33px;
+		}
 
 /*-------Аутсорсинг--------*/
 
@@ -2516,6 +2562,7 @@ ul.vacancy-list{
 }
 
 	.chosen-container-single .chosen-single{
+		color: #1b1b1b;
 		border: none;
 		border-bottom: 3px solid #1b82c7;
 		border-radius: 0;
@@ -2535,6 +2582,7 @@ ul.vacancy-list{
 		}
 
 		#b-send-app-form .chosen-container-single .chosen-single span{
+			font-size: 16px;
 			line-height: 20px;
 		}
 
@@ -2645,11 +2693,12 @@ ul.vacancy-list{
 		background-image: url(../i/team-woman@2x.png);
 	}
 
-	.b-text ul.mark-img li{
+	.b-text ul.mark-img li,
+	.mark-img ul li{
 		background-image: url(../i/mark@2x.png);
 	}
 
-	.after-text-link img{
+	.document-link img{
 		max-width: 28px;
 		max-height: 40px;
 	}

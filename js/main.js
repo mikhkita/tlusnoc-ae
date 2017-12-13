@@ -222,7 +222,11 @@ $(document).ready(function(){
     });
 
     $('.choice-block a').on('click', function(){
+        console.log("click");
         toggleBlock($(this), "choice-block a");
+        if($('.b-cooperation').length && !$('.b-cooperation').hasClass("hide")){
+            chartistInit();
+        }
     });
 
     $('.country-choise a').on('click', function(){
@@ -269,6 +273,18 @@ $(document).ready(function(){
             $('#need-install').parent().addClass("hide");
         }       
     });
+
+    var hash = window.location.hash;
+    if(!!hash){
+        if(hash === "#career"){
+            var scrollTop = $('.choice-block').offset().top - 15;
+            $(document).scrollTop(scrollTop);
+            $('.choice-career').click();
+        }
+        if(hash === "#cooperation"){
+            
+        }
+    }
 
     if($('#plupload-cont').length){
         var uploader = new plupload.Uploader({
@@ -588,8 +604,7 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
         }
     });
 
-    if($('.ct-chart').length){
-        //Посещения
+    function chartistInit(){
         new Chartist.Line('.ct-chart-visits', {
             labels: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
             series: [
@@ -618,6 +633,10 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
                 fillHoles: false
             })
         });
+    }
+
+    if($('.ct-chart').length){
+        chartistInit()
     }
 
     $('.chart-buttons a').on('click', function(event){
