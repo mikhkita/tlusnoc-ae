@@ -545,6 +545,7 @@ ul.mark-numbers li{
 }
 
 	ul.mark-numbers li > span,
+	ul.mark-numbers li > a > span,
 	.question-block .question-icon{
 		float: left;
 		display: inline-block;
@@ -572,7 +573,8 @@ ul.mark-numbers li{
 		margin-bottom: 0;
 	}
 
-	ul.mark-numbers-blue li > span{
+	ul.mark-numbers-blue li > span,
+	ul.mark-numbers-blue li > a > span{
 	    color: #1b82c7;
 		border: 1px solid #1b82c7;
 		vertical-align: top;
@@ -1605,11 +1607,15 @@ ul.b-breadcrumbs{
 		margin-left: 35px;
 	}
 
-	.after-text-link{
+	.document-link-cont{
+		margin: 20px 0;
+	}
+
+	.document-link{
 		margin-bottom: 14px;
 	}
 
-		.after-text-link span{
+		.document-link span{
 			font-size: 16px;
 			text-decoration: underline;
 			padding-left: 10px;
@@ -2378,9 +2384,18 @@ ul.vacancy-list{
 		margin-bottom: 0;
 	}
 
+	.b-marketplace-set .help-text,
+	.b-marketplace-set .setup-text{
+		margin-bottom: 17px;
+	}
+
 .b-marketplace-block{
 	margin-bottom: 27px;
 }
+	
+	.b-marketplace-block h2.b-title{
+		margin-bottom: 23px;
+	}
 
 .b-marketplace-ref{
 	margin-top: 27px;
@@ -2436,6 +2451,26 @@ ul.vacancy-list{
 			.marketplace-small li a{
 				font-size: 12px;
 			}
+
+	.b-marketplace-accreditation .document-link{
+		margin-bottom: 7px;
+	}
+
+		.b-marketplace-accreditation .document-link a{
+			border-bottom: 0;
+		}
+
+		.b-marketplace-accreditation .document-link span{
+			font-size: 12px;
+		}
+
+		.b-marketplace-accreditation .document-link img{
+			height: 22px;
+		}
+
+		.b-marketplace-accreditation .b-text> ul{
+			margin-bottom: 33px;
+		}
 
 /*-------Аутсорсинг--------*/
 
@@ -2541,6 +2576,7 @@ ul.vacancy-list{
 		}
 
 		#b-send-app-form .chosen-container-single .chosen-single span{
+			font-size: 16px;
 			line-height: 20px;
 		}
 
@@ -2656,7 +2692,7 @@ ul.vacancy-list{
 		background-image: url(../i/mark@2x.png);
 	}
 
-	.after-text-link img{
+	.document-link img{
 		max-width: 28px;
 		max-height: 40px;
 	}
