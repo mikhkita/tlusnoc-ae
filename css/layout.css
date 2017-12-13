@@ -2685,6 +2685,10 @@ ul.vacancy-list{
 		max-height: 32px;
 	}
 
+	.arrow-next img{
+		max-width: 32px; 
+	}
+
 	.man-photo{
 		background-image: url(../i/team-man@2x.png);
 	}
@@ -2704,7 +2708,7 @@ ul.vacancy-list{
 	}
 
 	.b-scheme-img img{
-		max-width: 40px;
+		max-width: 34px;
 		max-height: 40px;
 	}
 }	
@@ -2714,3 +2718,4 @@ ul.vacancy-list{
 @media screen and (max-width: 1020px){
 
 }
+
