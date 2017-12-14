@@ -119,13 +119,13 @@ $(document).ready(function(){
 
     $('#full-escort').on('change', function(){
         if($(this).prop('checked')){
-            $('#b-outsourcing-form input[type="checkbox"]').prop("checked", true);
+            $('#b-outsourcing-form input[type="checkbox"]:not(#personal)').prop("checked", true);
         }else{
-            $('#b-outsourcing-form input[type="checkbox"]').prop("checked", false);
+            $('#b-outsourcing-form input[type="checkbox"]:not(#personal)').prop("checked", false);
         }
     });
 
-    $('#b-outsourcing-form input[type="checkbox"]').on('change', function(){
+    $('#b-outsourcing-form input[type="checkbox"]:not(#personal)').on('change', function(){
         if(!$(this).prop('checked')){
             $('#full-escort').prop("checked", false);
         }

@@ -287,6 +287,11 @@ h4{
 		border-bottom: 1px solid #1b82c7;
 	}
 
+		.b-text a:hover{
+			border-bottom: 0;
+			text-decoration: none;
+		}
+
 	.b-text ul {
 		position: relative;
 	    list-style: none;
@@ -382,7 +387,7 @@ h4{
 }
 
 .icon-loupe:before{
-	content: '\e906';
+	content: '\e90a';
 	font-size: 10px;
 }
 
@@ -1801,16 +1806,21 @@ ul.b-breadcrumbs{
 		}
 
 		.b-reviews .look-original{
+			position: relative;
+    		padding-left: 24px;
 			display: inline-block;
 			margin-top: 10px;
 			text-decoration: underline;
 		}
 
 		.icon-doc:before{
-			content: "\e902";
+		    content: "\e906";
+			position: absolute;
+		    top: 0;
+		    left: 0;
 		    font-size: 16px;
 		    color: #1b1b1b;
-		    line-height: 28px;
+		    line-height: 20px;
 		    margin-right: 5px;
 		}
 
@@ -2249,10 +2259,16 @@ ul.vacancy-list{
 	}
 
 	.question-block{
-		margin-bottom: 8px;
+    	position: relative;
+    	display: inline-block;
+    	margin-bottom: 8px;
+		border-bottom: 0 !important;
 	}
 
 		.question-block .question-icon{
+			position: absolute;
+			top: 0;
+			left: 0;
 			color: #1b82c7;
 		    border: 1px solid #1b82c7;
 		    width: 18px;
@@ -2271,6 +2287,7 @@ ul.vacancy-list{
 	}
 
 	.question-block .question-text{
+		padding-left: 24px;
 		color: #1b82c7;
 		text-decoration: underline;
 	}
@@ -2294,6 +2311,15 @@ ul.vacancy-list{
 		}
 			.b-send-app-form h3{
 				margin-bottom: 18px;
+			}
+
+			.b-send-app-form .b-wrap-input.icon-loupe:before{
+				position: absolute;
+		    	top: 41px;
+		    	right: 0;
+		    	font-size: 19px;
+			    color: #7f7f7f;
+			    pointer-events: none;
 			}
 
 			.gray-inputs input::-webkit-input-placeholder,
@@ -2427,6 +2453,10 @@ ul.vacancy-list{
 			margin: 0 3px 0 10px;
 			color: #1b82c7;
 		}
+
+			.b-marketplace-case ul li .icon-loupe:before{
+				font-weight: 700;
+			}
 
 	.term-block{
 		font-size: 16px;
