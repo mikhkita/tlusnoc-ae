@@ -40,6 +40,20 @@ body {
 	.b-client-item{
 		margin: 0 15px;
 	}
+
+	.b-case-list.b-services-items .b-case-item{
+		float: none;
+		display: inline-block;
+		width: calc(100%/2 - 18px);
+	}
+
+	.b-case-list.b-services-items .b-case-item:nth-child(2n){
+		margin-right: 0;
+	}
+
+	.b-about-inner .b-text > img{
+		width: 50%;
+	}
 }
 
 @media screen and (max-width: 1000px){
@@ -70,23 +84,30 @@ body {
 
 @media screen and (max-width: 945px){
 
-	.b-services-list{
+	.b-case{
 		text-align: center;
 	}
 
-	.b-services-item{
-		width: calc(100%/2 - 16px);
+	.b-case-item{
+		float: none;
+		display: inline-block;
+		width: calc(100%/2 - 20px);
     	margin-right: 25px;
     	margin-bottom: 20px;
     	text-align: left;
 	}
 
-	.b-services-item:nth-child(2){
+	.b-case-item:nth-child(2){
 		margin-right: 0;
 	}
 
-	.b-services-item:last-child{
+	.b-case-item:last-child{
 		margin-bottom: 0;
+	}
+
+	.b-services-app{
+		left: 0;
+		right: auto;
 	}
 
 	.period-items a{
@@ -96,6 +117,21 @@ body {
 	.b-calc .b-btn{
 		width: 100%;
 		min-width: auto;
+	}
+
+	.b-sub-form .b-btn{
+		min-width: auto;
+		width: 100%;
+	}
+
+	.b-case-list.b-services-items .b-case-item{
+		padding-bottom: 55px;
+    	margin-right: 20px;
+    	margin-bottom: 20px;
+	}
+
+	.b-case-list.b-services-items .b-case-item:nth-child(2n){
+		margin-right: 0;
 	}
 
 }

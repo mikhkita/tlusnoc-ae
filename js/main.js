@@ -286,6 +286,14 @@ $(document).ready(function(){
         }
     }
 
+    $('.marketplace-anchor li').on('click', function(){
+        var block = $(this).children("a").attr("data-block");
+        $('.'+block).click();
+        var scrollTop =  $('.'+block).offset().top;
+        $(document).scrollTop(scrollTop);
+    });
+   
+
     if($('#plupload-cont').length){
         var uploader = new plupload.Uploader({
             runtimes : 'html5,flash,silverlight,html4',

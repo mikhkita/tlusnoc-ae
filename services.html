@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="css/slick-theme.css" type="text/css">	
 	<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
 	<link rel="stylesheet" href="css/chartist.min.css" type="text/css">
+	<link rel="stylesheet" href="css/chosen.min.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 
 	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1179px)" href="css/layout-tablet.css">
@@ -29,7 +30,7 @@
 		<ul>
 			<h2 class="b-title">Меню</h2>
 			<li><a href="index.html">Главная</a></li>
-			<li><a href="services.html">Услуги и продукты</a></li>
+			<li><a href="services.html" class="active">Услуги и продукты</a></li>
 			<li><a href="about.html">О компании</a></li>
 			<li><a href="cooperation.html">Сотрудничество</a></li>
 			<li><a href="documents.html">Документация</a></li>
@@ -89,7 +90,7 @@
 						</a>
 					</div>
 					<ul class="b-menu-items">
-						<li><a href="services.html">Услуги и продукты</a></li>
+						<li><a href="services.html" class="active">Услуги и продукты</a></li>
 						<li><a href="about.html">О компании</a></li>
 						<li><a href="cooperation.html">Сотрудничество</a></li>
 						<li><a href="documents.html">Документация</a></li>
@@ -128,7 +129,7 @@
 					<div class="b-services-block">
 						<div class="b b-page-services-list">
 							<h2 class="b-title">Тендерное сопровождение</h2>
-							<div class="b-case b-services-items b-text clearfix">
+							<div class="b-case-list b-services-items b-text clearfix">
 								<div class="b-case-item mark-img">
 									<h3 class="b-title">Аутсорсинг тендерного отдела под ключ</h3>
 									<p>Комплексная услуга по сопровождению компании в закупочных процедурах любого типа с неограниченным составом работ...</p>
@@ -138,7 +139,7 @@
 										<li>Настройка рабочих мест и обучение пользователей</li>
 									</ul>
 									<a href="#" class="read-more">Узнать больше</a>
-									<div class="b-services-app"><a href="#">Оформить заявку</a></div>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
 								<div class="b-case-item mark-img">
 									<h3 class="b-title">Работа с ЭТП</h3>
@@ -149,7 +150,7 @@
 										<li>Сопровождение конкурсных процедур</li>
 									</ul>
 									<a href="#" class="read-more">Узнать больше</a>
-									<div class="b-services-app"><a href="#">Оформить заявку</a></div>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
 								<div class="b-case-item mark-img">
 									<h3 class="b-title">Анализ и обработка информации о закупках</h3>
@@ -160,7 +161,7 @@
 										<li>Разработка стратегии и операционных планов тендерного отдела</li>
 									</ul>
 									<a href="#" class="read-more">Узнать больше</a>
-									<div class="b-services-app"><a href="#">Оформить заявку</a></div>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
 								<div class="b-case-item mark-img">
 									<h3 class="b-title">Сопровождение конкурсных процедур</h3>
@@ -171,14 +172,14 @@
 										<li>Иные сопутствующие услуги финансово-юридического характера</li>
 									</ul>
 									<a href="#" class="read-more">Узнать больше</a>
-									<div class="b-services-app"><a href="#">Оформить заявку</a></div>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
 							</div>
 						</div>
 
 						<div class="b b-page-services-list">
 							<h2 class="b-title">Банковские гарантии и тендерное кредитование</h2>
-							<div class=" b-case b-services-items b-text clearfix">
+							<div class="b-case-list b-services-items b-text clearfix">
 								<div class="b-case-item mark-img">
 									<h3 class="b-title">Тендерное кредитование</h3>
 									<p>Недостаточно средств для участия в тендере?<br>Не проблема!</p>
@@ -188,7 +189,7 @@
 										<li>Возможно получение средств без залога и поручительства!</li>
 									</ul>
 									<a href="#" class="read-more">Узнать больше</a>
-									<div class="b-services-app"><a href="#">Оформить заявку</a></div>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
 								<div class="b-case-item mark-img">
 									<h3 class="b-title">Все виды банковских гарантий</h3>
@@ -199,7 +200,7 @@
 										<li>Персональный менеджер</li>
 									</ul>
 									<a href="#" class="read-more">Узнать больше</a>
-									<div class="b-services-app"><a href="#">Оформить заявку</a></div>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
 								<div class="b-case-item mark-img">
 									<h3 class="b-title">Кредит на исполнение контракта</h3>
@@ -210,14 +211,14 @@
 										<li>Возможно получение кредита без залога и поручительства</li>
 									</ul>
 									<a href="#" class="read-more">Узнать больше</a>
-									<div class="b-services-app"><a href="#">Оформить заявку</a></div>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
 							</div>
 						</div>
 
 						<div class="b b-page-services-list">
 							<h2 class="b-title">Обучение, курсы и тренинги</h2>
-							<div class="b-case b-services-items b-text clearfix">
+							<div class="b-case-list b-services-items b-text clearfix">
 								<div class="b-case-item mark-img">
 									<h3 class="b-title">Курсы по 44-ФЗ, 223-ФЗ</h3>
 									<p>Семинары по 44-ФЗ и 223-ФЗ для поставщиков, курсы повышения квалификации по 44-ФЗ и 223-ФЗ с выдачей удостоверения</p>
@@ -227,7 +228,7 @@
 										<li>Правила работы на электронной торговой площадке</li>
 									</ul>
 									<a href="#" class="read-more">Узнать больше</a>
-									<div class="b-services-app"><a href="#">Оформить заявку</a></div>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
 								<div class="b-case-item mark-img">
 									<h3 class="b-title">Вебинары</h3>
@@ -238,7 +239,7 @@
 										<li>Грамотно составленное коммерческое предложение</li>
 									</ul>
 									<a href="#" class="read-more">Узнать больше</a>
-									<div class="b-services-app"><a href="#">Оформить заявку</a></div>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
 							</div>
 						</div>
@@ -363,6 +364,7 @@
 	<script type="text/javascript" src="js/slideout.min.js"></script>
 	<script type="text/javascript" src="js/autosize.min.js"></script>
 	<script type="text/javascript" src="js/chartist.min.js"></script>
+	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

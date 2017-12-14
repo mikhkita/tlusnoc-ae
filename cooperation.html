@@ -32,7 +32,7 @@
 			<li><a href="index.html">Главная</a></li>
 			<li><a href="services.html">Услуги и продукты</a></li>
 			<li><a href="about.html">О компании</a></li>
-			<li><a href="cooperation.html">Сотрудничество</a></li>
+			<li><a href="cooperation.html" class="active">Сотрудничество</a></li>
 			<li><a href="documents.html">Документация</a></li>
 			<li><a href="contacts.html" class="contact-info">Контакты</a></li>
 		</ul>
@@ -92,7 +92,7 @@
 					<ul class="b-menu-items">
 						<li><a href="services.html">Услуги и продукты</a></li>
 						<li><a href="about.html">О компании</a></li>
-						<li><a href="cooperation.html">Сотрудничество</a></li>
+						<li><a href="cooperation.html" class="active">Сотрудничество</a></li>
 						<li><a href="documents.html">Документация</a></li>
 					</ul>
 					<div id="burger-menu" class="burger-menu icon-menu">
@@ -165,9 +165,15 @@
 							<h3 class="b-title">Оформить заявку</h3>
 							<form id="b-app-form" class="b-app-form" method="post" action="action.php">
 								<div class="inputs-block clearfix">
-									<input type="text" name="bank" placeholder="Банк" required>
-									<input type="text" name="fio" placeholder="ФИО контактного лица" required>
-									<input type="text" name="phone" placeholder="Телефон" required>
+									<div class="b-wrap-input">
+										<input type="text" name="bank" placeholder="Банк" required>
+									</div>
+									<div class="b-wrap-input">
+										<input type="text" name="fio" placeholder="ФИО контактного лица" required>
+									</div>
+									<div class="b-wrap-input">
+										<input type="text" name="phone" placeholder="Телефон" required>
+									</div>
 								</div>
 								<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-app-form').submit(); return false;">Отправить</a>
 							</form>

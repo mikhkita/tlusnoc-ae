@@ -5,7 +5,7 @@ body {
 	position: relative;
 }
 body {
-	min-width: 370px;
+	min-width: 345px;
 	font-size: 14px;
 	text-align: left;
 	font-family: 'UbuntuRegular', Sans-Serif;
@@ -22,7 +22,7 @@ body {
 }
 
 .b-wide-block{
-	min-width: 370px;
+	min-width: 345px;
 }
 
 /*------------------*/
@@ -30,6 +30,11 @@ body {
 /*.b-slider{
 	background-position: 35% 50%;
 }*/
+
+h1.b-title{
+	font-size: 40px;
+	line-height: 44px;
+}
 
 ul.b-top-content li:nth-child(1),
 ul.b-top-content li:nth-child(2){
@@ -56,9 +61,8 @@ ul.b-top-content li:nth-child(2){
     text-align: center;
 }
 
-	.b-services-item {
-	    width: calc(100%/2 - 16px);
-	    margin-right: 25px;
+	.b-case-item {
+		width: 100%;
 	    margin-bottom: 20px;
 	    text-align: left;
 	}
@@ -71,9 +75,10 @@ ul.b-top-content li:nth-child(2){
 		margin-bottom: 0;
 	}
 
-.b-services-item {
-    width: 100%;
-}
+	.b-case-list.b-services-items .b-case-item{
+		float: none;
+		width: 100%;
+	}
 
 .before-input, .b-calc-item{
 	width: calc(100%/2 - 16px);
@@ -124,6 +129,35 @@ ul.b-top-content li:nth-child(2){
 	display: none;
 }
 
+.b-sub-form-cont{
+	width: calc(100%/2 - 18px);
+}
+
+.b-sub-form-cont:nth-child(2n){
+    margin-right: 0;
+}
+
+	.b-sub-form-cont:nth-child(2) h4 {
+	    width: 100%;
+	}
+
+.b-sub-form-cont:last-child{
+	float: right;
+}
+
+.b-sub-form-cont:last-child{
+	margin-top: 30px;
+}
+
+.b-sub-form-cont > .b-btn{
+	min-width: auto;
+	width: 100%;
+}
+
+.b-directions-item{
+	min-height: auto;
+}
+
 @media screen and (max-width: 540px){
 
 	.before-input, .b-calc-item{
@@ -156,6 +190,45 @@ ul.b-top-content li:nth-child(2){
 	    margin-bottom: 0;
 	}
 
+	.b-sub-form-cont{
+		margin-top: 30px;
+		width: 100%;
+		margin-right: 0;
+		float: none;
+	}
+
+	.b-sub-form-cont:first-child{
+		margin-top: 0;
+	}
+
+}
+
+@media screen and (max-width: 470px){
+
+	.b-slider-inner .b-slider-content{
+		padding-top: 50px;
+	}
+
+	.b-slider-inner h1.b-title{
+		font-size: 32px;
+		line-height: 40px;
+		margin-bottom: 15px;
+	}
+
+	.b-slider-content ul.mark-numbers li > p,
+	.b-slider-content ul.mark-numbers li > a > p{
+		font-size: 14px;
+	}
+
+	.b-services-app{
+		left: 0;
+		right: auto;
+	}
+
+	.b-case-list.b-services-items .b-case-item{
+		padding-bottom: 55px;
+	}
+
 }
 
 @media screen and (max-width: 385px){
@@ -166,9 +239,5 @@ ul.b-top-content li:nth-child(2){
 
 	.b-logo img{
 		width: 200px;
-	}
-
-	.burger-menu{
-		margin: 34px 0 0 30px;
 	}
 }

@@ -875,6 +875,18 @@ ul.mark-numbers li{
     		font-family: 'UbuntuMedium';
 		}
 
+		.mobile-menu ul li a{
+			color: #1b1b1b;
+		}
+
+		.mobile-menu ul li a.active{
+			color: #136aa4;
+		}
+
+		.mobile-menu ul li:hover a{
+			color: #136aa4;
+		}
+
 		.mobile-menu .social-icons a{
 			text-align: left;
 			margin-right: 16px;
@@ -892,10 +904,6 @@ ul.mark-numbers li{
 		.mobile-menu .icon-vk:before{
 			font-size: 24px;
 		}
-
-	.mobile-menu ul li:hover a{
-		color: #1b1b1b;
-	}
 
 	ul.b-menu-items{
 		float: right;
@@ -917,6 +925,10 @@ ul.mark-numbers li{
 
 			ul.b-menu-items li:last-child a{
 				padding-right: 0;
+			}
+
+			ul.b-menu-items li a.active{
+				color: #136aa4;
 			}
 
 			ul.b-menu-items li:hover > a{
@@ -1026,14 +1038,14 @@ ul.mark-numbers li{
 			margin-right: 0;
 		}
 
-.b-case.b-services-items .b-case-item{
+.b-case-list.b-services-items .b-case-item{
 	float: left;
 	width: calc(100%/2 - 15px);
 	margin-right: 30px;
 	margin-bottom: 30px;
 }
 
-.b-case.b-services-items .b-case-item:last-child{
+.b-case-list.b-services-items .b-case-item:last-child{
 	margin-right: 0;
 }
 
@@ -1891,8 +1903,12 @@ ul.b-breadcrumbs{
 	}
 
 		.b-services-app a{
+			position: relative;
+			display: inline-block;
 			color: #013c6e;
-			border-bottom: 1px solid #013c6e;
+			border-bottom: 0;
+			padding-left: 24px;
+    		text-decoration: underline;
 		}
 
 	.b-services-items .b-case-item:nth-child(2n){
@@ -2133,15 +2149,8 @@ ul.vacancy-list{
 	}
 
 	.b-application input{
-		float: left;
-		width: calc(100%/3 - 20px);
-		margin-right: 30px;
 		color: #FFF;
 		border-bottom: 1px solid #FFF;
-	}
-
-	.b-application input:last-child{
-		margin-right: 0;
 	}
 
 	.b-application .b-btn{
@@ -2188,7 +2197,16 @@ ul.vacancy-list{
 .b-slider-content ul.mark-numbers li p{
 	text-transform: uppercase;
 	font-family: 'UbuntuBold', Sans-Serif;
-	line-height: 22px;
+	line-height: 20px;
+	border-bottom: 1px solid #FFF;
+}
+
+.b-slider-content ul.mark-numbers li:hover p{
+	border-bottom: 1px solid transparent;
+}
+
+.b-slider-content ul.mark-numbers li span{
+	margin-top: 2px;
 }
 
 .b-federal{
