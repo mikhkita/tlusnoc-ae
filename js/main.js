@@ -223,19 +223,19 @@ $(document).ready(function(){
 
     $('.choice-block a').on('click', function(){
         console.log("click");
-        toggleBlock($(this), "choice-block a");
+        toggleBlock($(this));
         if($('.b-cooperation').length && !$('.b-cooperation').hasClass("hide")){
             chartistInit();
         }
     });
 
     $('.country-choise a').on('click', function(){
-        toggleBlock($(this), "country-choise a");
+        toggleBlock($(this));
         $('.vacancy-select').change();
     });
 
-    function toggleBlock($this, selector){
-        $('.'+selector).each(function(){
+    function toggleBlock($this){
+        $this.siblings(".choice-item").each(function(){
             var block = $(this).attr("data-block");
             $('.'+block).addClass("hide");
             $(this).removeClass("active");

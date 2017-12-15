@@ -288,7 +288,7 @@ h4{
 	}
 
 		.b-text a:hover{
-			border-bottom: 0;
+			border-bottom: 1px solid transparent;
 			text-decoration: none;
 		}
 
@@ -1906,7 +1906,7 @@ ul.b-breadcrumbs{
 			position: relative;
 			display: inline-block;
 			color: #013c6e;
-			border-bottom: 0;
+			border-bottom: 1px solid transparent;
 			padding-left: 24px;
     		text-decoration: underline;
 		}
@@ -2118,6 +2118,10 @@ ul.vacancy-list{
 			color: #1b1b1b;
 			font-family: 'UbuntuMedium', Sans-Serif;
 			font-size: 16px;
+		}
+
+		.chart-buttons a:hover{
+			color: #1b82c7;
 		}
 
 			.chart-buttons a:last-child{

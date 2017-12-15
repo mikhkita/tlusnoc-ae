@@ -158,6 +158,99 @@ ul.b-top-content li:nth-child(2){
 	min-height: auto;
 }
 
+.b-team-item {
+    display: inline-block;
+    float: none;
+    width: calc(100%/3 - 16px);
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+.b-team-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.b-team-item:nth-child(4n) {
+    float: none;
+    margin-right: 20px;
+}
+
+	.b-team-item h3{
+		font-size: 16px;
+	}
+
+.b-team-item-photo{
+	height: 24vw;
+}
+
+.b-app-form .b-wrap-input{
+    width: calc(100%/3 - 16px);
+    margin-right: 20px;
+}
+
+.b-app-form .b-wrap-input:last-child{
+	margin-right: 0
+}
+
+.choice-block .choice-item{
+	width: calc(100%/2 - 18px);
+}
+
+.b-career .b-wrap-input{
+	width: 50%;
+}
+
+@media screen and (max-width: 630px){
+
+	.b-team-item {
+	    width: calc(100%/2 - 12px);
+	    margin-right: 20px;
+	}
+
+	.b-team-item:nth-child(3n) {
+	    margin-right: 20px;
+	}
+
+	.b-team-item:nth-child(2n) {
+	    margin-right: 0;
+	}
+
+	.b-team-item-photo{
+		height: 34vw;
+	}
+
+	.b-reviews-item{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.b-reviews-item:last-child{
+	    margin-bottom: 0;
+	}
+
+	.b-app-form .b-wrap-input{
+	    width: 100%;
+	    margin-right: 0;
+	    margin-bottom: 25px;
+	}
+
+	.b-app-form .b-wrap-input:last-child{
+	    margin-bottom: 0;
+	}
+
+	.choice-block .choice-item{
+		width: 100%;
+		margin-bottom: 25px;
+	}
+
+	.choice-block .choice-item:last-child {
+	    margin-left: 0;
+	    margin-bottom: 0;
+	}
+
+}
+
 @media screen and (max-width: 540px){
 
 	.before-input, .b-calc-item{
@@ -201,6 +294,18 @@ ul.b-top-content li:nth-child(2){
 		margin-top: 0;
 	}
 
+	.ct-label.ct-horizontal.ct-end{
+		writing-mode: vertical-lr;
+	}
+
+	.b-chart-block{
+		padding: 20px 0;
+	}
+
+	.b-career .b-wrap-input{
+		width: 100%;
+	}
+
 }
 
 @media screen and (max-width: 470px){
@@ -229,6 +334,11 @@ ul.b-top-content li:nth-child(2){
 		padding-bottom: 55px;
 	}
 
+	.b-app-form .b-btn{
+		min-width: auto;
+		width: 100%;
+	}
+
 }
 
 @media screen and (max-width: 385px){
@@ -239,5 +349,19 @@ ul.b-top-content li:nth-child(2){
 
 	.b-logo img{
 		width: 200px;
+	}
+
+	.b-team-item {
+		padding: 30px;
+	    width: 100%;
+	    margin-right: 0;
+	}
+
+	.b-team-item:nth-child(2n) {
+	    margin-right: 0;
+	}
+
+	.b-team-item-photo{
+		height: 62vw;
 	}
 }

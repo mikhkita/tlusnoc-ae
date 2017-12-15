@@ -401,12 +401,12 @@
 							<p>Список документов, необходимый для подачи заявки на получение ЭЦП</p>
 
 							<div class="choice-block choice-block-three">
-								<a href="#" onclick="return false;" class="choice-item choice-legal active"><span>Для юридического лица</span></a>
-								<a href="#" onclick="return false;" class="choice-item choice-individual"><span>Для ИП</span></a>
-								<a href="#" onclick="return false;" class="choice-item choice-physical"><span>Для физического лица</span></a>
+								<a href="#" onclick="return false;" data-block="legal-block" class="choice-item choice-legal active"><span>Для юридического лица</span></a>
+								<a href="#" onclick="return false;" data-block="individual-block" class="choice-item choice-individual"><span>Для ИП</span></a>
+								<a href="#" onclick="return false;" data-block="physical-block" class="choice-item choice-physical"><span>Для физического лица</span></a>
 							</div>
 
-							<ul class="mark-numbers mark-numbers-blue">
+							<ul class="legal-block mark-numbers mark-numbers-blue">
 								<li><span>1</span><p>Копия Свидетельства о государственной регистрации юридического лица</p></li>
 								<li><span>2</span><p>Копия Свидетельства о постановке на учет в налоговом органе</p></li>
 								<li><span>3</span><p>Если ЭЦП для торговых площадок изготавливается на имя руководителя организации: копию документа о назначении руководителя, заверенную подписью руководителя и печатью организации</p></li>
@@ -414,6 +414,19 @@
 								<li><span>5</span><p>Копия паспорта гражданина Российской Федерации, на чье имя изготавливается ключ для участия в торгах (владелец сертификата)</p></li>
 								<li><span>6</span><p>Согласие на обработку персональных данных пользователя</p></li>
 								<li><span>7</span><p>СНИЛС (для торгов по 223-ФЗ и коммерческих закупок)</p></li>
+							</ul>
+
+							<ul class="individual-block mark-numbers mark-numbers-blue hide">
+								<li><span>1</span><p>Копия Свидетельства о государственной регистрации юридического лица</p></li>
+								<li><span>2</span><p>Копия Свидетельства о постановке на учет в налоговом органе</p></li>
+								<li><span>3</span><p>Если ЭЦП для торговых площадок изготавливается на имя руководителя организации: копию документа о назначении руководителя, заверенную подписью руководителя и печатью организации</p></li>
+							</ul>
+
+							<ul class="physical-block mark-numbers mark-numbers-blue hide">
+								<li><span>1</span><p>Копия Свидетельства о государственной регистрации юридического лица</p></li>
+								<li><span>2</span><p>Копия Свидетельства о постановке на учет в налоговом органе</p></li>
+								<li><span>3</span><p>Если ЭЦП для торговых площадок изготавливается на имя руководителя организации: копию документа о назначении руководителя, заверенную подписью руководителя и печатью организации</p></li>
+								<li><span>4</span><p>Если получать ЭЦП для торгов будет не ее владелец, то на имя уполномоченного представителя организации нужна доверенность, подтверждающая полномочия владельца сертификата ключа ЭЦП, заверенная подписью руководителя и печатью организации</p></li>
 							</ul>
 
 							<div class="term-block">

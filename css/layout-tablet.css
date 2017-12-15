@@ -54,6 +54,23 @@ body {
 	.b-about-inner .b-text > img{
 		width: 50%;
 	}
+
+	.b-team-item-photo{
+		height: 18vw;
+	}
+
+	.b-team-item {
+	    display: inline-block;
+	    float: none;
+	    width: calc(100%/4 - 18px);
+	    margin-right: 20px;
+	    vertical-align: top;
+	}
+
+	.b-team-item:nth-child(4n){
+		margin-right: 0;
+    	float: none;
+	}
 }
 
 @media screen and (max-width: 1000px){
@@ -132,6 +149,19 @@ body {
 
 	.b-case-list.b-services-items .b-case-item:nth-child(2n){
 		margin-right: 0;
+	}
+
+}
+
+@media screen and (max-width: 900px){
+
+	.b-team-item h3{
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.choice-block .choice-item{
+		width: 40%;
 	}
 
 }
