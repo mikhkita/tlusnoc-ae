@@ -1644,7 +1644,7 @@ ul.b-breadcrumbs{
 		} 
 
 .b-scheme{
-	margin-bottom: 22px;
+	margin-bottom: 12px;
 }
 
 	.b-scheme-list{
@@ -1652,9 +1652,14 @@ ul.b-breadcrumbs{
 	}
 
 		.b-scheme-item{
-			float: left;
+			vertical-align: top;
 			display: inline-block;
-			width: 20%;
+			width: calc(100%/4 - 53px);
+			margin-bottom: 15px;
+		}
+
+		.b-scheme.b-scheme-cooperation .b-scheme-item{
+			margin-bottom: 0;
 		}
 
 			.b-scheme-img{
@@ -1670,7 +1675,7 @@ ul.b-breadcrumbs{
 			}
 
 		.arrow-next{
-			float: left;
+			vertical-align: top;
 			margin-right: 30px;
 			display: inline-block;
 		}

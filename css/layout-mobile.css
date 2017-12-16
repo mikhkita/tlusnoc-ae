@@ -200,6 +200,73 @@ ul.b-top-content li:nth-child(2){
 	width: 50%;
 }
 
+.b-scheme .b-scheme-text{
+	margin-left: 6px;
+}
+
+.b-scheme.b-scheme-cooperation .b-scheme-text h3.b-title{
+	font-size: 14px;
+}
+
+.arrow-next{
+    margin-right: 10px;
+}
+
+.b-scheme-item {
+    width: 40%;
+}
+
+.b-scheme .arrow-next.arrow-rotate{
+	width: 100%;
+	display: block;
+	margin: 12px 0 25px 0;
+}
+
+.arrow-rotate img{
+	float: right;
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-right: 22%;
+}
+
+.arrow-next{
+	text-align: center;
+	width: 18%;
+	margin-right: 0;
+}
+
+.b-scheme.b-scheme-cooperation .arrow-last{
+	margin-right: 12px;
+}
+
+.arrow-last{
+	float: right;
+}
+
+.arrow-last img{
+	-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.b-scheme-item-right{
+	margin-right: 8px;
+	float: right;
+}
+
+.b-scheme.b-scheme-cooperation .b-scheme-item-right{
+	margin-right: 0;
+}
+
+.b-scheme.b-scheme-cooperation .arrow-last{
+	margin-right: 6px;
+}
+
 @media screen and (max-width: 630px){
 
 	.b-team-item {
@@ -337,6 +404,42 @@ ul.b-top-content li:nth-child(2){
 	.b-app-form .b-btn{
 		min-width: auto;
 		width: 100%;
+	}
+
+	.b-scheme-item {
+	    float: none;
+	    width: 100%;
+	    margin-right: 0 !important;
+	    margin-bottom: 0;
+	}
+
+	.arrow-next,
+	.b-scheme .arrow-next.arrow-rotate{
+	    width: 100%;
+	    margin-right: 0;
+	    margin: 25px 0 20px 0;
+	}
+
+	.arrow-next img{
+		float: none;
+		margin-right: 0;
+	    -webkit-transform: rotate(90deg);
+    	-moz-transform: rotate(90deg);
+    	-ms-transform: rotate(90deg);
+   		-o-transform: rotate(90deg);
+    	transform: rotate(90deg);
+	}
+
+	.b-scheme-list{
+		margin-bottom: 20px;
+	}
+
+	.b-scheme.b-scheme-cooperation .arrow-last {
+	    margin-right: 0;
+	}
+
+	.b-scheme.b-scheme-cooperation .arrow-next{
+		margin-top: 20px;
 	}
 
 }
