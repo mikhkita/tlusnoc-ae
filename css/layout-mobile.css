@@ -267,6 +267,36 @@ ul.b-top-content li:nth-child(2){
 	margin-right: 6px;
 }
 
+.b-federal-item{
+	width: calc(100%/3 - 15px);
+	margin-bottom: 25px;
+}
+
+.b-federal-item:nth-child(3n){
+	margin-right: 0;
+}
+
+.b-federal{
+	margin-bottom: 30px;
+}
+
+.choice-block.choice-block-three .choice-item {
+    width: calc(100%/3 - 17px);
+    margin-right: 20px;
+}
+
+.choice-block.choice-block-three .choice-item span{
+    font-size: 14px;
+}
+
+.choice-block.choice-block-three img{
+	margin-right: 0;
+}
+
+.b-work-marketplace-about{
+	width: 100%;
+}
+
 @media screen and (max-width: 630px){
 
 	.b-team-item {
@@ -314,6 +344,39 @@ ul.b-top-content li:nth-child(2){
 	.choice-block .choice-item:last-child {
 	    margin-left: 0;
 	    margin-bottom: 0;
+	}
+
+}
+
+@media screen and (max-width: 580px){
+
+	.b-federal-item{
+		width: calc(100%/2 - 12px);
+	}
+
+	.b-federal-item:nth-child(3n){
+		margin-right: 20px;
+	}
+
+	.b-federal-item:nth-child(2n){
+		margin-right: 0;
+	}
+
+	.choice-block.choice-block-three .choice-item {
+	    width: 100%;
+	    margin-right: 0;
+	}
+
+	.choice-block.choice-block-three .choice-item span{
+	    font-size: 16px;
+	}
+
+	.choice-block.choice-block-three img{
+		margin-right: 0;
+	}
+
+	.b-white-block {
+	    padding: 25px;
 	}
 
 }
@@ -440,6 +503,15 @@ ul.b-top-content li:nth-child(2){
 
 	.b-scheme.b-scheme-cooperation .arrow-next{
 		margin-top: 20px;
+	}
+
+	.b-federal-item{
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.b-federal-item .federal-img{
+		height: auto;
 	}
 
 }

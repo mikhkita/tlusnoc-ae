@@ -88,6 +88,37 @@ body {
 	    margin-right: 10px;
 	}
 
+	.b-federal-item{
+		width: calc(100%/3 - 15px);
+    	margin-bottom: 25px;
+	}
+
+	.b-federal-item:nth-child(3n){
+		margin-right: 0;
+	}
+
+	.b-federal{
+		margin-bottom: 30px;
+	}
+
+	.choice-block.choice-block-three .choice-item {
+	    width: calc(100%/3 - 17px);
+	    margin-right: 20px;
+	    border-bottom: 3px solid #b7b7b7;
+	}
+
+	.choice-block.choice-block-three .choice-item span{
+	    font-size: 14px;
+	}
+
+	.choice-block.choice-block-three img{
+		margin-right: 0;
+	}
+
+	.b-work-marketplace-about{
+		width: 65%;
+	}
+
 }
 
 @media screen and (max-width: 1000px){

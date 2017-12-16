@@ -2267,6 +2267,12 @@ ul.vacancy-list{
 		padding-top: 0;
 	}
 
+	.b-work-marketplace-about{
+		width: 45%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
 	.b-work-marketplace img{
 		display: inline-block;
 		margin-right: 5px;
