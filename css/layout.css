@@ -366,6 +366,10 @@ h4{
     border-bottom: 0;
 }
 
+	.underline-list li a:hover{
+		text-decoration: none;
+	}
+
 .icon-arrow-down:after{
 	content: '\e907';
     display: block;
@@ -1650,6 +1654,10 @@ ul.b-breadcrumbs{
 				padding-left: 10px;
 			}
 
+			.document-link:hover span{
+				text-decoration: none;
+			}
+
 		.document-link-cont .document-link{
 			margin-top: 0;
 			margin-bottom: 14px;
@@ -2496,6 +2504,10 @@ ul.vacancy-list{
 			text-decoration: underline;
 		}
 
+		.b-marketplace-case ul li a:hover{
+			text-decoration: none;
+		}
+
 		.b-marketplace-case ul li .icon-loupe{
 			margin: 0 3px 0 10px;
 			color: #1b82c7;
@@ -2509,10 +2521,6 @@ ul.vacancy-list{
 		font-size: 16px;
 		line-height: 22px;
 	}
-
-		.term-block a{
-			text-decoration: underline;
-		}
 
 	.show-list{
 		display: inline-block;
@@ -2772,6 +2780,16 @@ ul.vacancy-list{
 		opacity: 1;
 		visibility: visible;
 	}
+
+/*--------ui-datepicker--------*/
+
+.ui-datepicker .ui-datepicker-month{
+	border-bottom: 2px solid #9c9c9c;
+    padding-bottom: 0px;
+    -webkit-appearance: menulist;
+    -moz-appearance: menulist;
+    appearance: menulist;
+}
 
 /*------------------------------*/
 
