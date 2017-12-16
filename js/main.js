@@ -119,13 +119,13 @@ $(document).ready(function(){
 
     $('#full-escort').on('change', function(){
         if($(this).prop('checked')){
-            $('#b-outsourcing-form input[type="checkbox"]').prop("checked", true);
+            $('#b-outsourcing-form input[type="checkbox"]:not(#personal)').prop("checked", true);
         }else{
-            $('#b-outsourcing-form input[type="checkbox"]').prop("checked", false);
+            $('#b-outsourcing-form input[type="checkbox"]:not(#personal)').prop("checked", false);
         }
     });
 
-    $('#b-outsourcing-form input[type="checkbox"]').on('change', function(){
+    $('#b-outsourcing-form input[type="checkbox"]:not(#personal)').on('change', function(){
         if(!$(this).prop('checked')){
             $('#full-escort').prop("checked", false);
         }
@@ -223,19 +223,19 @@ $(document).ready(function(){
 
     $('.choice-block a').on('click', function(){
         console.log("click");
-        toggleBlock($(this), "choice-block a");
+        toggleBlock($(this));
         if($('.b-cooperation').length && !$('.b-cooperation').hasClass("hide")){
             chartistInit();
         }
     });
 
     $('.country-choise a').on('click', function(){
-        toggleBlock($(this), "country-choise a");
+        toggleBlock($(this));
         $('.vacancy-select').change();
     });
 
-    function toggleBlock($this, selector){
-        $('.'+selector).each(function(){
+    function toggleBlock($this){
+        $this.siblings(".choice-item").each(function(){
             var block = $(this).attr("data-block");
             $('.'+block).addClass("hide");
             $(this).removeClass("active");
@@ -285,6 +285,14 @@ $(document).ready(function(){
             
         }
     }
+
+    $('.marketplace-anchor li').on('click', function(){
+        var block = $(this).children("a").attr("data-block");
+        $('.'+block).click();
+        var scrollTop =  $('.'+block).offset().top;
+        $(document).scrollTop(scrollTop);
+    });
+   
 
     if($('#plupload-cont').length){
         var uploader = new plupload.Uploader({

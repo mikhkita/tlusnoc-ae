@@ -31,7 +31,7 @@
 			<h2 class="b-title">Меню</h2>
 			<li><a href="index.html">Главная</a></li>
 			<li><a href="services.html">Услуги и продукты</a></li>
-			<li><a href="about.html">О компании</a></li>
+			<li><a href="about.html" class="active">О компании</a></li>
 			<li><a href="cooperation.html">Сотрудничество</a></li>
 			<li><a href="documents.html">Документация</a></li>
 			<li><a href="contacts.html" class="contact-info">Контакты</a></li>
@@ -68,7 +68,7 @@
 								<div class="cabinet-bubble-wrap">
 									<h3 class="b-title">Войти</h3>
 									<form id="b-login-form" class="b-login-form" method="post" action="action.php">
-										<input type="text" name="e-mail" placeholder="E-mail" required>
+										<input type="text" name="email" placeholder="E-mail" required>
 										<input type="password" name="password" placeholder="Пароль" required>
 										<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-login-form').submit(); return false;">Войти</a>
 									</form>
@@ -91,7 +91,7 @@
 					</div>
 					<ul class="b-menu-items">
 						<li><a href="services.html">Услуги и продукты</a></li>
-						<li><a href="about.html">О компании</a></li>
+						<li><a href="about.html" class="active">О компании</a></li>
 						<li><a href="cooperation.html">Сотрудничество</a></li>
 						<li><a href="documents.html">Документация</a></li>
 					</ul>
@@ -188,10 +188,10 @@
 									<p>Уточним необходимые детали и сформируем предложение</p>
 								</div>
 							</div>
-							<div class="arrow-next">
+							<div class="arrow-next arrow-rotate clearfix">
 								<img src="i/arrow-next.png" data-retina-src="i/arrow-next@2x.png">
 							</div>
-							<div class="b-scheme-item">
+							<div class="b-scheme-item b-scheme-item-right">
 								<div class="b-scheme-img">
 									<img src="i/about-icon-3.png" data-retina-src="i/about-icon-3@2x.png">
 								</div>
@@ -200,7 +200,7 @@
 									<p>Подпишем <a href="#">договор</a> и исполним все предусмотренные договором обязательства</p>
 								</div>
 							</div>
-							<div class="arrow-next">
+							<div class="arrow-next arrow-last">
 								<img src="i/arrow-next.png" data-retina-src="i/arrow-next@2x.png">
 							</div>
 							<div class="b-scheme-item">
@@ -325,9 +325,10 @@
 									<img src="i/client-2.png">
 								</div>
 								<div class="extend-text-wrap">
-									<div class="extend-text">Нам очень был нужен займ для участия в тендере. Компанию EA Consult знаем не по наслышке, удалось достаточно времени поработать, ребята доказали, что являются профессионалами своего дела. Трудность заключалась в следующем - у нас был заблокирован счет в обслуживающем банке, ребята договорились с кредитующей организацией о получении одобрения по заявке.</div>
+									<div class="extend-text">Нам очень был нужен займ для участия в тендере. Компанию EA Consult знаем не по наслышке, удалось достаточно времени поработать, ребята доказали, что являются профессионалами своего дела. Трудность заключалась в следующем - у нас был заблокирован счет в обслуживающем банке, ребята договорились с кредитующей организацией о получении одобрения по заявке.
+									</div>
 								</div>
-								<a href="#" onclick="return: false;" data-hide="Свернуть отзыв" data-show="Развернуть отзыв" class="btn-show expand-review hide">Развернуть отзыв<div class="icon-arrow-down"></div></a><br>
+								<a href="#" onclick="return false;" data-hide="Свернуть отзыв" data-show="Развернуть отзыв" class="btn-show expand-review hide">Развернуть отзыв<div class="icon-arrow-down"></div></a><br>
 								<a href="i/original-1.jpg" class="fancy-img look-original icon-doc">Смотреть оригинал</a>
 							</div>
 						</div>
@@ -428,14 +429,14 @@
 			</form>
 		</div>
 		<div class="b-thanks b-popup" id="b-popup-success">
-			<h3>Спасибо!</h3>
+			<h2 class="b-title">Спасибо!</h2>
 			<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в течение часа.</h4>
-			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			<a href="#" class="b-btn b-btn-blue" onclick="$.fancybox.close(); return false;">Закрыть</a>
 		</div>
 		<div class="b-thanks b-popup" id="b-popup-error">
-			<h3>Ошибка отправки!</h3>
+			<h2 class="b-title">Ошибка отправки!</h2>
 			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
-			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			<a href="#" class="b-btn b-btn-blue" onclick="$.fancybox.close(); return false;">Закрыть</a>
 		</div>
 
 		<div class="b-popup" id="b-popup-app">
