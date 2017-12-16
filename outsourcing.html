@@ -151,19 +151,19 @@
 
 						<div class="example-contract">
 							<div class="document-link">
-								<a href="#" class="b-table">
+								<a href="i/original-1.jpg" class="b-table fancy-img">
 									<img class="b-table-cell-middle" src="i/cooperation-1.png" data-retina-src="i/cooperation-1@2x.png">
 									<span class="b-table-cell-middle">Пример договора 1</span>
 								</a>
 							</div>
 							<div class="document-link">
-								<a href="#" class="b-table">
+								<a href="i/original-1.jpg" class="b-table fancy-img">
 									<img class="b-table-cell-middle" src="i/cooperation-1.png" data-retina-src="i/cooperation-1@2x.png">
 									<span class="b-table-cell-middle">Пример договора 2</span>
 								</a>
 							</div>
 							<div class="document-link">
-								<a href="#" class="b-table">
+								<a href="i/original-1.jpg" class="b-table fancy-img">
 									<img class="b-table-cell-middle" src="i/cooperation-1.png" data-retina-src="i/cooperation-1@2x.png">
 									<span class="b-table-cell-middle">Пример договора 3</span>
 								</a>
@@ -179,9 +179,9 @@
 										<label for="full-escort">Полное тендерное сопровождение</label>
 									</div>
 								</div>
-								<div class="clearfix">
 
-									<h3 class="b-title">Работа с ЭЦП</h3>
+								<h3 class="b-title">Работа с ЭЦП</h3>
+								<div class="clearfix">
 									<div class="b-wrap-input b-checkbox">
 										<input id="get-signature" type="checkbox" name="get-signature">
 										<label for="get-signature">Получение ЭЦП</label>
@@ -196,9 +196,8 @@
 									</div>
 								</div>
 
+								<h3 class="b-title">Мониторинг, обработка и анализ информации о государственных,<br>муниципальных и коммерческих закупках</h3>
 								<div class="clearfix">
-
-									<h3 class="b-title">Мониторинг, обработка и анализ информации о государственных,<br>муниципальных и коммерческих закупках</h3>
 									<div class="b-wrap-input b-checkbox">
 										<input id="individual" type="checkbox" name="individual">
 										<label for="individual">Индивидуальный подбор тендеров по заданным критериям</label>
@@ -216,9 +215,9 @@
 										<label for="develop">Разработка операционных планов тендерного отдела (на месяц/квартал/год)</label>
 									</div>
 								</div>
-								<div class="clearfix">
 
-									<h3 class="b-title">Сопровождение конкурсных процедур</h3>
+								<h3 class="b-title">Сопровождение конкурсных процедур</h3>
+								<div class="clearfix">
 									<div class="b-wrap-input b-checkbox">
 										<input id="package-formation" type="checkbox" name="package-formation">
 										<label for="package-formation">Формирование пакета документов для участия в тендерах</label>
@@ -258,7 +257,7 @@
 										<input type="text" name="fio" placeholder="Направление деятельности*" required>
 									</div>
 									<div class="b-wrap-input">
-										<input type="text" name="email" placeholder="ФИО контактного лица*"required>
+										<input type="text" name="name" placeholder="ФИО контактного лица*"required>
 									</div>
 								</div>
 
@@ -300,32 +299,32 @@
 					<div class="b b-block-item b-info-partners">
 						<h2 class="b-title">Информационно-аналитические партнеры</h2>
 						<div class="b-info-partners-list">
-							<div class="b-info-partners-item">
+							<a href="#" target="_blank" class="b-info-partners-item">
 								<img src="i/outsourcing-partners-1.png">
 								<p>Закупки360</p>
-							</div>
-							<div class="b-info-partners-item">
+							</a>
+							<a href="#" target="_blank" class="b-info-partners-item">
 								<img src="i/outsourcing-partners-2.png">
 								<p>Спарк-Интерфакс</p>
-							</div>
-							<div class="b-info-partners-item">
+							</a>
+							<a href="#" target="_blank" class="b-info-partners-item">
 								<img src="i/outsourcing-partners-3.png">
 								<p>Контур. Закупки</p>
-							</div>
-							<div class="b-info-partners-item">
+							</a>
+							<a href="#" target="_blank" class="b-info-partners-item">
 								<img src="i/outsourcing-partners-4.png">
 								<p>Консультант</p>
-							</div>
+							</a>
 						</div>
 					</div>
 
 					<div class="b b-block-item b-crypto">
 						<h2 class="b-title">Криптография и удостоверяющие центры</h2>
-						<div class="b-crypto-item">
+						<a href="#" target="_blank" class="b-crypto-item">
 							<img src="i/outsourcing-crypto-1.png">
-						</div>
+						</a>
 						<p><b>Развитие взаимоотношений с клиентами и партнерами вместе с </b>
-							<img src="i/outsourcing-crypto-2.png">
+							<a href="#" target="_blank"><img src="i/outsourcing-crypto-2.png"></a>
 						</p>
 					</div>
 
@@ -421,14 +420,14 @@
 			</form>
 		</div>
 		<div class="b-thanks b-popup" id="b-popup-success">
-			<h3>Спасибо!</h3>
+			<h2 class="b-title">Спасибо!</h2>
 			<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в течение часа.</h4>
-			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			<a href="#" class="b-btn b-btn-blue" onclick="$.fancybox.close(); return false;">Закрыть</a>
 		</div>
 		<div class="b-thanks b-popup" id="b-popup-error">
-			<h3>Ошибка отправки!</h3>
+			<h2 class="b-title">Ошибка отправки!</h2>
 			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
-			<input type="submit" class="b-orange-butt" onclick="$.fancybox.close(); return false;" value="Закрыть">
+			<a href="#" class="b-btn b-btn-blue" onclick="$.fancybox.close(); return false;">Закрыть</a>
 		</div>
 
 		<div class="b-popup" id="b-popup-app">

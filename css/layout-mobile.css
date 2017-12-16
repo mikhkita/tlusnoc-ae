@@ -289,12 +289,62 @@ ul.b-top-content li:nth-child(2){
     font-size: 14px;
 }
 
+.b-marketplace-ref .choice-block.choice-block-three .choice-item span{
+	font-size: 16px;
+}
+
 .choice-block.choice-block-three img{
 	margin-right: 0;
 }
 
 .b-work-marketplace-about{
 	width: 100%;
+}
+
+.b-send-app-form .b-wrap-input,
+.b-send-app-form .b-wrap-input-2-3{
+	width: 100%;
+}
+
+.training-block{
+	float: none;
+}
+
+.b-wrap-input-area{
+	margin-top: 20px;
+}
+
+.b-about-inner .b-text > img {
+	width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+
+.b-outsourcing-form .b-wrap-input.b-checkbox{
+	float: none;
+	display: inline-block;
+	vertical-align: top;
+	width: calc(100%/2 - 18px);
+	margin-right: 30px;
+}
+
+.b-outsourcing-form .b-wrap-input.b-checkbox:nth-child(2n){
+    margin-right: 0;
+}
+
+.b-outsourcing-form .b-wrap-input,
+.b-outsourcing-form .b-wrap-input-2-3{
+	width: 100%;
+}
+
+.b-info-partners-item{
+    width: calc(100%/2 - 18px);
+    margin-bottom: 20px;
+}
+
+.b-info-partners-item:nth-child(2n){
+	margin-right: 0;
 }
 
 @media screen and (max-width: 630px){
@@ -379,6 +429,10 @@ ul.b-top-content li:nth-child(2){
 	    padding: 25px;
 	}
 
+	.b-gray-block{
+		padding: 20px;
+	}
+
 }
 
 @media screen and (max-width: 540px){
@@ -434,6 +488,34 @@ ul.b-top-content li:nth-child(2){
 
 	.b-career .b-wrap-input{
 		width: 100%;
+	}
+
+	.b-send-app-form .b-btn,
+	.b-outsourcing-form .b-btn.b-btn-blue{
+		width: 100%;
+		min-width: auto;
+	}
+
+	#count-training{
+		width: 100%;
+		margin-left: 0;
+		margin-top: 10px;
+		text-align: left;
+	}
+
+	.b-outsourcing-form .b-wrap-input.b-checkbox{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.b-info-partners-item{
+	    width: 100%;
+	    margin-right: 0;
+	}
+
+	.b-info-partners.b-block-item{
+		margin-bottom: 0;
 	}
 
 }

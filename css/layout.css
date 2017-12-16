@@ -1428,6 +1428,18 @@ input.period-finish:-moz-placeholder
 		background-color: transparent;
 	}
 
+.b-thanks{
+
+}
+	
+	.b-thanks h2{
+		margin-bottom: 10px;
+	}
+
+	.b-thanks .b-btn{
+	    margin-top: 20px;
+	}
+
 /*-----------Slick------------*/
 
 .slick-slide img{
@@ -2246,6 +2258,7 @@ ul.vacancy-list{
 
 		.b-federal-item:hover p{
 			color: #1b82c7;
+			text-decoration: none;
 		}
 
 			.b-federal-item .federal-img{
@@ -2255,6 +2268,7 @@ ul.vacancy-list{
 			}
 
 			.b-federal-item p{
+				color: #1b1b1b;
 				text-decoration: underline;
 			}
 
@@ -2412,7 +2426,7 @@ ul.vacancy-list{
 			    font-family: 'UbuntuMedium';
 			    padding-bottom: 6px;
 			    line-height: 18px;
-			    margin-left: 10px;
+			    margin-left: 5px;
 			    margin-bottom: 0;
 			}
 
@@ -2589,11 +2603,30 @@ ul.vacancy-list{
 			margin-bottom: 10px;
 		}
 
+		.b-info-partners-item p{
+			color: #1b1b1b;
+			text-decoration: underline;
+		}
+
+		.b-info-partners-item:hover{
+			cursor: pointer;
+		}
+
+		.b-info-partners-item:hover .federal-img{
+
+		}
+
+		.b-info-partners-item:hover p{
+			color: #1b82c7;
+			text-decoration: none;
+		}
+
 	.b-info-partners-item:last-child{
 		margin-right: 0;
 	}
 
 .b-crypto-item{
+	display: inline-block;
 	padding-top: 10px;
 	margin-bottom: 15px;
 }

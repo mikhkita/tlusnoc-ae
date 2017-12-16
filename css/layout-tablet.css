@@ -27,6 +27,10 @@ body {
 
 /*------------------*/
 
+.training-block{
+	float: none;
+}
+
 @media screen and (max-width: 1100px){
 	ul.b-menu-items {
 	    margin-top: 45px;
@@ -111,12 +115,20 @@ body {
 	    font-size: 14px;
 	}
 
+	.b-marketplace-ref .choice-block.choice-block-three .choice-item span{
+		font-size: 16px;
+	}
+
 	.choice-block.choice-block-three img{
 		margin-right: 0;
 	}
 
 	.b-work-marketplace-about{
 		width: 65%;
+	}
+
+	.b-info-partners-item img{
+		max-width: 215px;
 	}
 
 }
@@ -199,6 +211,19 @@ body {
 		margin-right: 0;
 	}
 
+	.b-info-partners-item{
+	    width: calc(100%/2 - 18px);
+	    margin-bottom: 20px;
+	}
+
+	.b-info-partners-item:nth-child(2n){
+		margin-right: 0;
+	}
+
+	.b-info-partners-item img{
+		max-width: none;
+	}
+
 }
 
 @media screen and (max-width: 900px){
@@ -261,6 +286,10 @@ body {
 
 	.b-scheme.b-scheme-cooperation .b-scheme-item-right{
 		margin-right: 0;
+	}
+
+	.b-wrap-input-area{
+		width: calc(100%/3*2 - 12px);
 	}
 
 }
