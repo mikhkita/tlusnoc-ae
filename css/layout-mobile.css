@@ -354,6 +354,11 @@ ul.b-top-content li:nth-child(2){
 	margin-right: 0;
 }
 
+.b-marketplace-case ul li {
+    margin-bottom: 0;
+    line-height: 22px;
+}
+
 @media screen and (max-width: 630px){
 
 	.b-team-item {
@@ -606,6 +611,10 @@ ul.b-top-content li:nth-child(2){
 
 	.b-federal-item .federal-img{
 		height: auto;
+	}
+
+	.marketplace-small{
+		margin: 5px 0;
 	}
 
 }

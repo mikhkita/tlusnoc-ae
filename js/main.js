@@ -98,20 +98,25 @@ $(document).ready(function(){
 
     function readMoreShow(readMoreClass){
         $('.'+readMoreClass).each(function() {
+            $btn = $(this).find(".btn-show");
             var wrapHeight = $(this).find(".extend-text-wrap").height();
             var textHeight = $(this).find(".extend-text").height();
+            //console.log(wrapHeight, textHeight);
+            if($(this).find(".extend-text-wrap").hasClass("open-block")){
+                $btn.click();
+            }
             if(wrapHeight < textHeight){
-                $(this).find(".btn-show").removeClass("hide");
+                $btn.removeClass("hide");
             }else{
-                $(this).find(".btn-show").addClass("hide");
+                $btn.addClass("hide");
             }
         });
     }
 
     $('.btn-show').on('click', function(){
         $target = $(this).parent().siblings(".extend-text-wrap");
-        $target.toggleClass("height-none");
-        if($target.hasClass("height-none")){
+        $target.toggleClass("open-block");
+        if($target.hasClass("open-block")){
             $(this).html($(this).attr("data-hide")+"<div class=\"icon-arrow-down icon-arrow-down-rotate\"></div>");
         }else{
             $(this).html($(this).attr("data-show")+"<div class=\"icon-arrow-down\"></div>");
@@ -245,6 +250,14 @@ $(document).ready(function(){
         var block = $this.attr("data-block");
         $('.'+block).removeClass("hide");
         $this.addClass("active");
+        if(!!$this.attr("id") && $this.attr("data-hash") === "true"){
+            if(history.pushState) {
+                history.pushState(null, null, "#"+$this.attr("id"));
+            }else{
+                location.hash = "#"+$this.attr("id");
+            } 
+        }
+        
     }
 
     $(".chosen-select").chosen({
@@ -278,14 +291,10 @@ $(document).ready(function(){
 
     var hash = window.location.hash;
     if(!!hash){
-        if(hash === "#career"){
-            var scrollTop = $('.choice-block').offset().top - 15;
-            $(document).scrollTop(scrollTop);
-            $('.choice-career').click();
-        }
-        if(hash === "#cooperation"){
-            
-        }
+        var scrollTop = $('.choice-block').offset().top - 10;
+        $(document).scrollTop(scrollTop);
+        var target = $(hash).attr("data-block");
+        $('.'+target).click();
     }
 
     $('.marketplace-anchor li').on('click', function(){

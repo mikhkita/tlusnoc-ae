@@ -449,7 +449,7 @@ select{
 	max-height: 110px;
 	overflow: hidden;
 }
-.extend-text-wrap.height-none{
+.extend-text-wrap.open-block{
 	max-height: none;
 }
 .btn-show .icon-arrow-down-rotate{
