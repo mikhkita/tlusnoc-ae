@@ -2605,6 +2605,10 @@ ul.vacancy-list{
 		float: left;
 	}
 
+	.outsourcing-inputs .b-wrap-input:nth-child(3n){
+		margin-right: 0;
+	}
+
 	.b-outsourcing-form .b-wrap-input.b-checkbox{
 		width: calc(100%/4 - 24px);
 	}
