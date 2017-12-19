@@ -863,13 +863,21 @@ ul.mark-numbers li{
 	}
 
 	.mobile-menu{
-		padding: 0 20px;
+		padding: 0 25px;
 		background-color: #FFF;
 		text-transform: uppercase;
 	}
 
+		.mobile-menu h2.b-title{
+		    padding: 20px 0;
+		    border-bottom: 3px solid #1b1b1b;
+		    margin-bottom: 12px;
+		}
+
 		.mobile-menu ul{
-			margin-bottom: 16px;
+			padding-bottom: 14px;
+    		margin-bottom: 25px;
+        	border-bottom: 3px solid #1b1b1b;
 		}
 
 		.mobile-menu ul li a, ul.mobile-menu .contact-info{
@@ -1638,6 +1646,7 @@ ul.b-breadcrumbs{
 	.b-about-inner .b-text > img{
 		float: right;
 		margin-left: 35px;
+		margin-bottom: 15px;
 	}
 
 	.document-link-cont{
@@ -2345,6 +2354,10 @@ ul.vacancy-list{
 		padding-left: 24px;
 		color: #1b82c7;
 		text-decoration: underline;
+	}
+
+	.question-block:hover .question-text{
+		text-decoration: none;
 	}
 
 	.important-text{

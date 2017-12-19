@@ -14,6 +14,15 @@ $(document).ready(function(){
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
         }
+
+        //скрывать кнопку "Развернуть отзыв"
+        if($('.b-reviews').length){
+            readMoreShow("b-reviews-item");
+        }
+
+        if($('.b-marketplace-case').length){
+            readMoreShow("b-marketplace-case");
+        }
     }
 
     function retina(){
@@ -86,14 +95,6 @@ $(document).ready(function(){
         });
     }
 
-    //скрывать кнопку "Развернуть отзыв"
-    if($('.b-reviews').length){
-        readMoreShow("b-reviews-item");
-    }
-
-    if($('.b-marketplace-case').length){
-        readMoreShow("b-marketplace-case");
-    }
 
     function readMoreShow(readMoreClass){
         $('.'+readMoreClass).each(function() {
@@ -102,13 +103,13 @@ $(document).ready(function(){
             if(wrapHeight < textHeight){
                 $(this).find(".btn-show").removeClass("hide");
             }else{
-                $(this).find("br").remove();
+                $(this).find(".btn-show").addClass("hide");
             }
         });
     }
 
     $('.btn-show').on('click', function(){
-        $target = $(this).siblings(".extend-text-wrap");
+        $target = $(this).parent().siblings(".extend-text-wrap");
         $target.toggleClass("height-none");
         if($target.hasClass("height-none")){
             $(this).html($(this).attr("data-hide")+"<div class=\"icon-arrow-down icon-arrow-down-rotate\"></div>");
@@ -183,6 +184,7 @@ $(document).ready(function(){
     var slideout = new Slideout({
         'panel': document.getElementById('panel-page'),
         'menu': document.getElementById('mobile-menu'),
+        'side': 'right',
         'padding': 256,
         'tolerance': 70
     });

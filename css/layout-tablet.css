@@ -224,14 +224,35 @@ body {
 		max-width: none;
 	}
 
+	.b-team-item {
+	    display: inline-block;
+	    float: none;
+	    width: calc(100%/3 - 16px);
+	    margin-right: 20px;
+	    vertical-align: top;
+	}
+
+	.b-team-item:nth-child(3n) {
+	    margin-right: 0;
+	}
+
+	.b-team-item:nth-child(4n) {
+	    float: none;
+	    margin-right: 20px;
+	}
+
+	.b-team-item-photo{
+		height: 26vw;
+	}
+
 }
 
 @media screen and (max-width: 900px){
 
-	.b-team-item h3{
+	/*.b-team-item h3{
 		font-size: 16px;
 		line-height: 18px;
-	}
+	}*/
 
 	.choice-block .choice-item{
 		width: 40%;
