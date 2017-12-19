@@ -25,16 +25,20 @@ body {
 	min-width: 345px;
 }
 
+h1.b-title{
+	font-size: 40px;
+	line-height: 44px;
+}
+
+h2.b-title{
+	font-size: 20px;
+}
+
 /*------------------*/
 
 /*.b-slider{
 	background-position: 35% 50%;
 }*/
-
-h1.b-title{
-	font-size: 40px;
-	line-height: 44px;
-}
 
 ul.b-top-content li:nth-child(1),
 ul.b-top-content li:nth-child(2){
@@ -301,6 +305,10 @@ ul.b-top-content li:nth-child(2){
 	width: 100%;
 }
 
+.b-work-marketplace h2{
+	vertical-align: top;
+}
+
 .b-send-app-form .b-wrap-input,
 .b-send-app-form .b-wrap-input-2-3{
 	width: 100%;
@@ -318,7 +326,6 @@ ul.b-top-content li:nth-child(2){
 	width: 100%;
     float: none;
     margin-left: 0;
-    margin-bottom: 15px;
 }
 
 .b-outsourcing-form .b-wrap-input.b-checkbox{
@@ -345,6 +352,11 @@ ul.b-top-content li:nth-child(2){
 
 .b-info-partners-item:nth-child(2n){
 	margin-right: 0;
+}
+
+.b-marketplace-case ul li {
+    margin-bottom: 0;
+    line-height: 22px;
 }
 
 @media screen and (max-width: 630px){
@@ -512,6 +524,11 @@ ul.b-top-content li:nth-child(2){
 	.b-info-partners-item{
 	    width: 100%;
 	    margin-right: 0;
+	    margin-bottom: 35px;
+	}
+
+	.b-info-partners-item img{
+		margin-bottom: 5px;
 	}
 
 	.b-info-partners.b-block-item{
@@ -594,6 +611,10 @@ ul.b-top-content li:nth-child(2){
 
 	.b-federal-item .federal-img{
 		height: auto;
+	}
+
+	.marketplace-small{
+		margin: 5px 0;
 	}
 
 }
