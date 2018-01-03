@@ -2894,6 +2894,102 @@ ul.vacancy-list{
 	margin-bottom: 0;
 }
 
+/*-------Тендерное кредитование------*/
+
+.b-questions-list{
+
+}
+
+	.b-questions-item{
+		display: block;
+	}
+		.b-questions-link{
+			display: block;
+			background-color: #FFF;
+			overflow: hidden;
+			margin-bottom: 15px;
+		}
+		.b-questions-item-left{
+			padding: 12px 12px 8px;
+   			display: inline-block;
+		}
+			.b-questions-item h4{
+				padding-left: 15px;
+				color: #1b1b1b;
+				font-family: 'UbuntuBold';
+			}
+
+			.b-questions-arrow{
+				float: right;
+				padding: 20px 17px;
+				background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(223, 223, 223)),color-stop(1, rgb(208, 208, 208)));
+			    background-image: -webkit-repeating-linear-gradient(bottom,rgb(223, 223, 223) 0%,rgb(208, 208, 208) 100%);
+			    background-image: repeating-linear-gradient(to top,rgb(223, 223, 223) 0%,rgb(208, 208, 208) 100%);
+			    background-image: -ms-repeating-linear-gradient(bottom,rgb(223, 223, 223) 0%,rgb(208, 208, 208) 100%);
+			}
+
+			.b-questions-link:hover .b-questions-arrow:not(.open){
+				background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(18, 103, 147)),color-stop(1, rgb(2, 66, 117)));
+			    background-image: -webkit-repeating-linear-gradient(bottom,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
+			    background-image: repeating-linear-gradient(to top,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
+			    background-image: -ms-repeating-linear-gradient(bottom,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
+				opacity: 0.7;
+			}
+			.b-questions-item .b-questions-arrow.open{
+				background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(18, 103, 147)),color-stop(1, rgb(2, 66, 117)));
+			    background-image: -webkit-repeating-linear-gradient(bottom,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
+			    background-image: repeating-linear-gradient(to top,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
+			    background-image: -ms-repeating-linear-gradient(bottom,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
+			}
+			.b-questions-arrow.icon-arrow-down:after{
+				position: static;
+				color: #FFF;
+			}
+
+	.b-questions-item-info {
+		margin: 0 0 15px 19px;
+	    padding: 20px;
+	    background-color: #FFF;
+	}
+
+	.b-questions-before{
+		position: absolute;
+		top: -14px;
+		left: 0;
+		border: 14px solid transparent;
+		border-bottom: 14px solid #FFF;
+		border-left: 14px solid #FFF;
+	}
+
+/*------Банковские гарантии-------*/
+
+.federal-law-link{
+	display: inline-block;
+}
+
+	.federal-law-link a{
+		position: relative;
+	}
+
+.bubble-app{
+	position: absolute;
+
+	background-color: #FFF;
+	padding: 16px;
+	visibility: hidden;
+    opacity: 0;
+	-webkit-transition: visibility 250ms ease-out, opacity 250ms ease-out;
+    -moz-transition: visibility 250ms ease-out, opacity 250ms ease-out;
+    -ms-transition: visibility 250ms ease-out, opacity 250ms ease-out;
+    -o-transition: visibility 250ms ease-out, opacity 250ms ease-out;
+    transition: visibility 250ms ease-out, opacity 250ms ease-out;
+}
+
+.federal-law-link:hover .bubble-app{
+	visibility: visible;
+    opacity: 1;
+}
+
 /*-------chosen.js--------*/
 
 .chosen-container{

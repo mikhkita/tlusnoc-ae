@@ -220,12 +220,22 @@ $(document).ready(function(){
         },100);
     });
 
-    $('.vacancy-info').each(function(){
+    $('.vacancy-info, .b-questions-item-info').each(function(){
         $(this).slideUp(0);
     });
 
     $('.vacancy-link').on('click', function(){
         $(this).siblings('.vacancy-info').slideToggle(300);
+    });
+
+    $('.b-questions-link').on('click', function(){
+        $(this).siblings('.b-questions-item-info').slideToggle(300);
+        $arrow = $(this).children(".b-questions-arrow");
+        if($arrow.hasClass("open")){
+            $arrow.removeClass("open icon-arrow-down-rotate");
+        }else{
+            $arrow.addClass("open icon-arrow-down-rotate");
+        }
     });
 
     $('.choice-block a').on('click', function(){

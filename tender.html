@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="keywords" content=''>
+	<meta name="description" content=''>
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
+	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
+	<link rel="stylesheet" href="css/slick.css" type="text/css">
+	<link rel="stylesheet" href="css/slick-theme.css" type="text/css">	
+	<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+	<link rel="stylesheet" href="css/chartist.min.css" type="text/css">
+	<link rel="stylesheet" href="css/chosen.min.css" type="text/css">
+	<link rel="stylesheet" href="css/layout.css" type="text/css">
+
+	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1179px)" href="css/layout-tablet.css">
+	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+</head>
+<body>
+
+	<div id="mobile-menu" class="mobile-menu hide">
+		<ul>
+			<h2 class="b-title">Меню</h2>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="services.html" class="active">Услуги и продукты</a></li>
+			<li><a href="about.html">О компании</a></li>
+			<li><a href="cooperation.html">Сотрудничество</a></li>
+			<li><a href="documents.html">Документация</a></li>
+			<li><a href="contacts.html" class="contact-info">Контакты</a></li>
+		</ul>
+		<div class="social-icons">
+			<a href="#" class="icon-facebook"></a>
+			<a href="#" class="icon-vk"></a>
+			<a href="#" class="icon-instagram"></a>
+		</div>
+	</div>
+
+	<div id="panel-page">
+
+		<div class="b b-top">
+			<div class="b-wide-block">
+				<div class="b-block clearfix">
+					<ul class="b-top-content">
+						<li>
+							<a href="#" class="contact-info">Контактная информация</a>
+						</li>
+						<li>
+							<div class="social-icons">
+								<a href="#" class="icon-facebook"></a>
+								<a href="#" class="icon-vk"></a>
+								<a href="#" class="icon-instagram"></a>
+							</div>
+						</li>
+						<li>
+							<a href="tel:+74991100046" class="phone">+7 499 110 00 46</a>
+						</li>
+						<li class="cabinet-cont">
+							<a href="#" class="cabinet"><span class="icon-cabinet"></span>Кабинет</a>
+							<div class="cabinet-bubble">
+								<div class="cabinet-bubble-wrap">
+									<h3 class="b-title">Войти</h3>
+									<form id="b-login-form" class="b-login-form" method="post" action="action.php">
+										<input type="text" name="email" placeholder="E-mail" required>
+										<input type="password" name="password" placeholder="Пароль" required>
+										<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-login-form').submit(); return false;">Войти</a>
+									</form>
+									<a href="#" class="b-btn b-btn-transparent">Регистрация</a>
+									<a href="#" class="restore-password">Восстановить пароль</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="b b-menu">
+			<div class="b-wide-block">
+				<div class="b-block clearfix">
+					<div class="b-logo">
+						<a href="index.html">
+							<img src="i/logo.png" data-retina-src="i/logo@2x.png">
+						</a>
+					</div>
+					<ul class="b-menu-items">
+						<li><a href="services.html" class="active">Услуги и продукты</a></li>
+						<li><a href="about.html">О компании</a></li>
+						<li><a href="cooperation.html">Сотрудничество</a></li>
+						<li><a href="documents.html">Документация</a></li>
+					</ul>
+					<div id="burger-menu" class="burger-menu icon-menu">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="b b-slider-wrap b-page-credit">
+			<div class="b-slider-back"></div>			
+			<div class="b-slider-inner" style="background-image: url(i/inner-tender.jpg);">
+				<div class="b-wide-block">
+					<div class="b-block">
+						<div class="b-slider-content">
+							<h1 class="b-title">Тендерное кредитование</h1>
+							<p>Недостаточно собственных средств для размещения обеспечения? Компания EA Consult подберет для вас оптимальный вариант тендерного кредита в одном из наших банков-партнеров! </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-inner">
+			<div class="b-wide-block">
+				<div class="b-block">
+
+					<ul class="b-breadcrumbs">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="services.html">Услуги и продукты</a></li>
+						<li><span>Банковские гарантии</span></li>
+					</ul>
+
+					<h2 class="b-title">Тендерные кредиты с EA Consult</h2>
+					<div class="b-text">
+						<ul class="mark-img">
+							<li>Максимальная сумма кредита до 100&nbsp;000&nbsp;000 руб</li>
+							<li>Ставки по кредитам от 16% годовых</li>
+							<li>Предварительный анализ за 1 час, оформление за 1 день</li>
+							<li>Большинство сделок без залогов, депозитов и поручительств</li>
+							<li>Персональный менеджер ведет ваши сделки под ключ</li>
+							<li>Работаем на всех торговых площадках</li>
+							<li>Работаем с закрытыми аукционами и торгами не в электронной форме</li>
+						</ul>
+					</div>
+
+					<div class="b-case-number-list b-text">
+						<div class="b-case-number-item">
+							<div class="b-case-number-header b-table">
+								<img class="b-table-cell-middle" src="i/credit-1.png" data-retina-src="i/credit-1@2x.png">
+								<h4 class="b-table-cell-middle">Подача заявки и структурирование сделки</h4>
+							</div>
+							<div class="b-case-number-text">
+								<ul class="mark-numbers mark-numbers-blue">
+									<li><span>1</span><p>Анализируем потребности и документацию клиентов</p></li>
+									<li><span>2</span><p>Определяем банки и наиболее выгодными ожидаемыми предложениями</p></li>
+									<li><span>3</span><p>Формируем пакет документов и подаем в выбранные банки</p></li>
+								</ul>
+							</div>
+							<div class="b-case-number-number">1</div>
+						</div>
+						<div class="b-case-number-item">
+							<div class="b-case-number-header b-table">
+								<img class="b-table-cell-middle" src="i/credit-2.png" data-retina-src="i/credit-2@2x.png">
+								<h4 class="b-table-cell-middle">Решение о предоставлении кредита</h4>
+							</div>
+							<div class="b-case-number-text">
+								<p>Сопровождаем клиента, содействуем получению наиболее выгодного предложения от банков-партнеров, а наш опыт и экспертиза здорово нам в этом помогают</p>
+							</div>
+							<div class="b-case-number-number">2</div>
+						</div>
+						<div class="b-case-number-item">
+							<div class="b-case-number-header b-table">
+								<img class="b-table-cell-middle" src="i/credit-3.png" data-retina-src="i/credit-3@2x.png">
+								<h4 class="b-table-cell-middle">Сопровождение и координация сделок</h4>
+							</div>
+							<div class="b-case-number-text">
+								<p>Работаем через ЭДО, удаленно, координируем все этапы сделки и экономим ваши трудовые и временные ресурсы. <a href="#">Узнайте подробнее о нашем предложении по полному тендерному сопровождению</a></p>
+							</div>
+							<div class="b-case-number-number">3</div>
+						</div>
+					</div>
+
+					<h2 class="b-title">Часто задаваемые вопросы</h2>
+
+					<div class="b-questions-list">
+						<div class="b-questions-item">
+							<a href="#" onclick="return false;" class="b-questions-link">
+								<div class="b-questions-item-left">
+									<div class="b-table">
+										<img class="b-table-cell-middle" src="i/tender-1.png" data-retina-src="i/tender-1@2x.png">
+										<h4 class="b-table-cell-middle">Какие документы требуются для выдачи кредита?</h4>
+									</div>
+								</div>
+								<div class="b b-questions-arrow icon-arrow-down"></div>
+							</a>
+							<div class="b b-questions-item-info b-text">
+								<div class="b-questions-before"></div>
+								<p>Для предварительной оценки потребуется только бухгалтерская отчетность по форме 1 и форме 2.</p> 
+								<p>Полный список документов для получения кредита:</p>
+								<br>
+								<ul>
+									<li>Заявление установленной формы</li>
+									<li>Выписка из ЕГРЮЛ</li>
+									<li>Конкурсная документация</li>
+									<li>Копии лицензий в случае, если деятельность лицензируема</li>
+									<li>Копии балансов, копии отчетов о прибылях и убытках за последние 4 квартала с отметкой налоговых органов</li>
+									<li>Справка об отсутствии задолженности перед бюджетами</li>
+									<li>Справка об отсутствии задолженности по заработной плате</li>
+									<li>Сведения о рублевых счетах и наличии ссудной задолженности</li>
+								</ul>
+							</div>
+						</div>
+						<div class="b-questions-item">
+							<a href="#" onclick="return false;" class="b-questions-link">
+								<div class="b-questions-item-left">
+									<div class="b-table">
+										<img class="b-table-cell-middle" src="i/tender-1.png" data-retina-src="i/tender-1@2x.png">
+										<h4 class="b-table-cell-middle">Можно ли подать документы удаленно, без посещения банка?</h4>
+									</div>
+								</div>
+								<div class="b b-questions-arrow icon-arrow-down"></div>
+							</a>
+							<div class="b b-questions-item-info b-text">
+								<div class="b-questions-before"></div>
+								<p>Для предварительной оценки потребуется только бухгалтерская отчетность по форме 1 и форме 2.</p> 
+								<p>Полный список документов для получения кредита:</p>
+								<br>
+								<ul>
+									<li>Заявление установленной формы</li>
+									<li>Выписка из ЕГРЮЛ</li>
+									<li>Конкурсная документация</li>
+								</ul>
+							</div>
+						</div>
+						<div class="b-questions-item">
+							<a href="#" onclick="return false;" class="b-questions-link">
+								<div class="b-questions-item-left">
+									<div class="b-table">
+										<img class="b-table-cell-middle" src="i/tender-1.png" data-retina-src="i/tender-1@2x.png">
+										<h4 class="b-table-cell-middle">На какой максимальный срок и сумму можно взять кредит?</h4>
+									</div>
+								</div>
+								<div class="b b-questions-arrow icon-arrow-down"></div>
+							</a>
+							<div class="b b-questions-item-info b-text">
+								<div class="b-questions-before"></div>
+								<p>Для предварительной оценки потребуется только бухгалтерская отчетность по форме 1 и форме 2.</p> 
+								<p>Полный список документов для получения кредита:</p>
+								<br>
+								<ul>
+									<li>Заявление установленной формы</li>
+									<li>Выписка из ЕГРЮЛ</li>
+									<li>Конкурсная документация</li>
+								</ul>
+							</div>
+						</div>
+						<div class="b-questions-item">
+							<a href="#" onclick="return false;" class="b-questions-link">
+								<div class="b-questions-item-left">
+									<div class="b-table">
+										<img class="b-table-cell-middle" src="i/tender-1.png" data-retina-src="i/tender-1@2x.png">
+										<h4 class="b-table-cell-middle">Какое обеспечение, залог, поручительство необходимо для получения кредита?</h4>
+									</div>
+								</div>
+								<div class="b b-questions-arrow icon-arrow-down"></div>
+							</a>
+							<div class="b b-questions-item-info b-text">
+								<div class="b-questions-before"></div>
+								<p>Для предварительной оценки потребуется только бухгалтерская отчетность по форме 1 и форме 2.</p> 
+								<p>Полный список документов для получения кредита:</p>
+								<br>
+								<ul>
+									<li>Заявление установленной формы</li>
+									<li>Выписка из ЕГРЮЛ</li>
+									<li>Конкурсная документация</li>
+								</ul>
+							</div>
+						</div>
+						<div class="b-questions-item">
+							<a href="#" onclick="return false;" class="b-questions-link">
+								<div class="b-questions-item-left">
+									<div class="b-table">
+										<img class="b-table-cell-middle" src="i/tender-1.png" data-retina-src="i/tender-1@2x.png">
+										<h4 class="b-table-cell-middle">Моя компания создана менее чем 6 месяцев назад. Могу ли я получить тендерный кредит?</h4>
+									</div>
+								</div>
+								<div class="b b-questions-arrow icon-arrow-down"></div>
+							</a>
+							<div class="b b-questions-item-info b-text">
+								<div class="b-questions-before"></div>
+								<p>Для предварительной оценки потребуется только бухгалтерская отчетность по форме 1 и форме 2.</p> 
+								<p>Полный список документов для получения кредита:</p>
+								<br>
+								<ul>
+									<li>Заявление установленной формы</li>
+									<li>Выписка из ЕГРЮЛ</li>
+									<li>Конкурсная документация</li>
+								</ul>
+							</div>
+						</div>
+						<div class="b-questions-item">
+							<a href="#" onclick="return false;" class="b-questions-link">
+								<div class="b-questions-item-left">
+									<div class="b-table">
+										<img class="b-table-cell-middle" src="i/tender-1.png" data-retina-src="i/tender-1@2x.png">
+										<h4 class="b-table-cell-middle">Требуется ли опыт исполнения аналогичных контрактов\обязательств?</h4>
+									</div>
+								</div>
+								<div class="b b-questions-arrow icon-arrow-down"></div>
+							</a>
+							<div class="b b-questions-item-info b-text">
+								<div class="b-questions-before"></div>
+								<p>Для предварительной оценки потребуется только бухгалтерская отчетность по форме 1 и форме 2.</p> 
+								<p>Полный список документов для получения кредита:</p>
+								<br>
+								<ul>
+									<li>Заявление установленной формы</li>
+									<li>Выписка из ЕГРЮЛ</li>
+									<li>Конкурсная документация</li>
+								</ul>
+							</div>
+						</div>
+						<div class="b-questions-item">
+							<a href="#" onclick="return false;" class="b-questions-link">
+								<div class="b-questions-item-left">
+									<div class="b-table">
+										<img class="b-table-cell-middle" src="i/tender-1.png" data-retina-src="i/tender-1@2x.png">
+										<h4 class="b-table-cell-middle">Какие ограничения по деятельности или географическому размещению компании? </h4>
+									</div>
+								</div>
+								<div class="b b-questions-arrow icon-arrow-down"></div>
+							</a>
+							<div class="b b-questions-item-info b-text">
+								<div class="b-questions-before"></div>
+								<p>Для предварительной оценки потребуется только бухгалтерская отчетность по форме 1 и форме 2.</p> 
+								<p>Полный список документов для получения кредита:</p>
+								<br>
+								<ul>
+									<li>Заявление установленной формы</li>
+									<li>Выписка из ЕГРЮЛ</li>
+									<li>Конкурсная документация</li>
+								</ul>
+							</div>
+						</div>
+						<div class="b-questions-item">
+							<a href="#" onclick="return false;" class="b-questions-link">
+								<div class="b-questions-item-left">
+									<div class="b-table">
+										<img class="b-table-cell-middle" src="i/tender-1.png" data-retina-src="i/tender-1@2x.png">
+										<h4 class="b-table-cell-middle">Надежны ли ваши банки-партнеры? </h4>
+									</div>
+								</div>
+								<div class="b b-questions-arrow icon-arrow-down"></div>
+							</a>
+							<div class="b b-questions-item-info b-text">
+								<div class="b-questions-before"></div>
+								<p>Для предварительной оценки потребуется только бухгалтерская отчетность по форме 1 и форме 2.</p> 
+								<p>Полный список документов для получения кредита:</p>
+								<br>
+								<ul>
+									<li>Заявление установленной формы</li>
+									<li>Выписка из ЕГРЮЛ</li>
+									<li>Конкурсная документация</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="b-credit-gray">
+						<div class="b-credit-send">
+							<form id="b-credit-send-form" class="b-credit-send-form" method="post" action="action.php">
+								<h2 class="b-title">Отправить заявку</h2>
+								<div class="federal-law clearfix">
+									<div class="b-wrap-input">
+										<input id="44f" type="radio" name="federal-law">
+										<label for="44f">44-ФЗ</label>
+									</div>
+									<div class="b-wrap-input">
+										<input id="223f" type="radio" name="federal-law">
+										<label for="223f">223-ФЗ</label>
+									</div>
+									<div class="b-wrap-input">
+										<input id="185f" type="radio" name="federal-law">
+										<label for="185f">185-ФЗ</label>
+									</div>
+									<div class="b-wrap-input">
+										<input id="615p" type="radio" name="federal-law">
+										<label for="615p">615-ПП</label>
+									</div>
+								</div>
+
+								<div class="clearfix actions">
+									<div class="b-wrap-input">
+										<input id="contract" type="radio" name="action">
+										<label for="contract">Исполнение контракта</label>
+									</div>
+									<div class="b-wrap-input">
+										<input id="participate" type="radio" name="action">
+										<label for="participate">Участие</label>
+									</div>
+									<div class="b-wrap-input">
+										<input id="bargaining" type="radio" name="action">
+										<label for="bargaining">Займ на участие в торгах</label>
+									</div>
+								</div>
+
+								<div>
+									<div class="before-input b-wrap-input b-wrap-input-1-2" data-placeholder="Сумма гарантии*">
+										<input type="text" name="sum" oninput="this.value = this.value.replace(/\D/g, '')">
+									</div>
+									<div class="before-input b-wrap-input b-wrap-input-1-2" data-placeholder="Срок гарантии (дни)*">
+										<input type="text" name="term" oninput="this.value = this.value.replace(/\D/g, '')">
+									</div>
+								</div>
+
+								<div>
+									<div class="b-wrap-input">
+										<input id="dates" type="checkbox" name="dates">
+										<label for="dates">Расчет по датам</label>
+									</div>
+								</div>
+
+								<div>
+									<div class="before-input b-wrap-input b-wrap-input-1-2" data-placeholder="Дата с">
+										<input type="text" name="date-from" oninput="this.value = this.value.replace(/\D/g, '')">
+									</div>
+									<div class="before-input b-wrap-input b-wrap-input-1-2" data-placeholder="Дата по">
+										<input type="text" name="date-to" oninput="this.value = this.value.replace(/\D/g, '')">
+									</div>
+								</div>
+
+								<div class="b-center">
+									<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-credit-send-form').submit(); return false;">Расчитать стоимость гарантии</a>
+								</div>
+
+							</form>
+						</div>
+					</div>
+
+					<div class="b-client">
+						<h2 class="b-title">Наши партнеры</h2>
+						<div class="b-client-list b-client-slider">
+							<div class="b-client-item"><img src="i/client-1.png"></div>
+							<div class="b-client-item"><img src="i/client-2.png"></div>
+							<div class="b-client-item"><img src="i/client-3.png"></div>
+							<div class="b-client-item"><img src="i/client-4.png"></div>
+							<div class="b-client-item"><img src="i/client-5.png"></div>
+							<div class="b-client-item"><img src="i/client-6.png"></div>
+							<div class="b-client-item"><img src="i/client-7.png"></div>
+						</div>
+					</div>
+
+					<div class="b b-reviews">
+						<h2 class="b-title">Отзывы клиентов</h2>
+						<div class="b-reviews-list clearfix">
+							<div class="b-reviews-item">
+								<div class="b-reviews-img">
+									<img src="i/client-1.png">
+								</div>
+								<div class="extend-text-wrap">
+									<div class="extend-text">Выражаю слова благодарности команде EA Consult. Необходимая была гарантия на выполнения контракта с определенными требованиями к банкам-гарантам. В итоге гарантию получили, более того, был открыт лимит по Банковским Гарантиям в этом же Банке. Заказчик гарантию принял без каких-либо колебаний. Спасибо за качественный сервис. Выражаю слова благодарности команде EA Consult. Необходимая была гарантия на выполнения контракта с определенными требованиями к банкам-гарантам. В итоге гарантию получили, более того, был открыт лимит по Банковским Гарантиям в этом же Банке. Заказчик гарантию принял без каких-либо колебаний. Спасибо за качественный сервис.</div>
+								</div>
+								<div><a href="#" onclick="return false;" data-hide="Свернуть отзыв" data-show="Развернуть отзыв" class="btn-show expand-review hide">Развернуть отзыв<div class="icon-arrow-down"></div></a></div>
+								<a href="i/original-1.jpg" class="fancy-img look-original icon-doc">Смотреть оригинал</a>
+							</div>
+							<div class="b-reviews-item">
+								<div class="b-reviews-img">
+									<img src="i/client-2.png">
+								</div>
+								<div class="extend-text-wrap">
+									<div class="extend-text">Нам очень был нужен займ для участия в тендере. Компанию EA Consult знаем не по наслышке, удалось достаточно времени поработать, ребята доказали, что являются профессионалами своего дела. Трудность заключалась в следующем - у нас был заблокирован счет в обслуживающем банке, ребята договорились с кредитующей организацией о получении одобрения по заявке.
+									</div>
+								</div>
+								<div><a href="#" onclick="return false;" data-hide="Свернуть отзыв" data-show="Развернуть отзыв" class="btn-show expand-review hide">Развернуть отзыв<div class="icon-arrow-down"></div></a></div>
+								<a href="i/original-1.jpg" class="fancy-img look-original icon-doc">Смотреть оригинал</a>
+							</div>
+						</div>
+
+						<div class="b-center-content">
+							<a href="#" class="b-btn b-btn-transparent">Ещё отзывы</a>
+						</div>
+					</div>
+
+					<div class="b-footer b-footer-border clearfix">
+						<div class="b-footer-column">
+							<ul class="underline-list">
+								<li><a href="about.html">О компании</a></li>
+								<li><a href="cooperation.html">Сотрудничество</a></li>
+								<li><a href="cooperation.html#career">Карьера</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-column">
+							<ul class="underline-list">
+								<li><a href="#">Тендерное сопровождение</a></li>
+								<li><a href="#">Банковские гарантии и тендерный кредит</a></li>
+								<li><a href="#">Обучение и сертификация</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-column">
+							<ul class="underline-list">
+								<li><a href="#">44-ФЗ</a></li>
+								<li><a href="#">223-ФЗ</a></li>
+								<li><a href="#">Список электронных торговых&nbsp;площадок</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-column">
+							<a href="tel:+74991100046" class="phone">+7 499 110 00 46</a>
+							<p>Москва, Боткинский 1-й проезд, офис А 224 </p>
+							<p><a href="mailto:***@mail.ru">eaconsult@.ru</a></p>
+						</div>
+					</div>
+
+					<div class="b-bottom">
+						<h4>© 2012 — 2017 «EA CONSULT»</h4>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="b-menu-overlay" id="b-menu-overlay" style="display: none;"></div>
+
+	</div>
+	
+	<div style="display:none;">
+		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
+		<div class="b-popup" id="b-popup-1">
+			<h3>Оставьте заявку</h3>
+			<h4>и наши специалисты<br>свяжутся с Вами в ближайшее время</h4>
+			<form action="kitsend.php" data-goal="CALLBACK" method="POST" id="b-form-1">
+				<div class="b-popup-form">
+					<label for="name">Введите Ваше имя</label>
+					<input type="text" id="name" name="name" required/>
+					<label for="tel">Введите Ваш номер телефона</label>
+					<input type="text" id="tel" name="phone" required/>
+					<label for="tel">Введите Ваш E-mail</label>
+					<input type="text" id="tel" name="email" required/>
+					<input type="hidden" name="subject" value="Заказ"/>
+					<input type="submit" style="display:none;">
+					<a href="#" class="b-btn b-blue-btn ajax">Заказать</a>
+					<a href="#b-popup-success" class="b-thanks-link fancy" style="display:none;"></a>
+				</div>
+			</form>
+		</div>
+		<div class="b-thanks b-popup" id="b-popup-success">
+			<h2 class="b-title">Спасибо!</h2>
+			<h4>Ваша заявка успешно отправлена.<br/>Наш менеджер свяжется с Вами в течение часа.</h4>
+			<a href="#" class="b-btn b-btn-blue" onclick="$.fancybox.close(); return false;">Закрыть</a>
+		</div>
+		<div class="b-thanks b-popup" id="b-popup-error">
+			<h2 class="b-title">Ошибка отправки!</h2>
+			<h4>Приносим свои извинения. Пожалуйста, попробуйте отправить Вашу заявку позже.</h4>
+			<a href="#" class="b-btn b-btn-blue" onclick="$.fancybox.close(); return false;">Закрыть</a>
+		</div>
+
+		<div class="b-popup" id="b-popup-app">
+			<h2 class="b-title">Отправить заявку</h2>
+			<form id="b-popup-app-form" class="b-popup-app-form" method="post" action="kitsend.php">
+				<input type="text" name="name" placeholder="Ваше имя" required>
+				<input type="text" name="e-mail" placeholder="Ваш E-mail" required>
+				<textarea name="message" required rows="1" placeholder="Ваше сообщение"></textarea>
+				<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-popup-app-form').submit(); return false;">Отправить</a>
+			</form>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+	<!--<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script>-->
+	<script type="text/javascript" src="js/jssor.js"></script>
+	<script type="text/javascript" src="js/jssor.slider.js"></script>
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/swipe.js"></script>
+	<script type="text/javascript" src="js/carousel.lite.js"></script>
+	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/KitProgress.js"></script>
+	<script type="text/javascript" src="js/KitAnimate.js"></script>
+	<script type="text/javascript" src="js/device.js"></script>
+	<script type="text/javascript" src="js/KitSend.js"></script>
+	<script type="text/javascript" src="js/slick.js"></script>
+	<script type="text/javascript" src="js/slideout.min.js"></script>
+	<script type="text/javascript" src="js/autosize.min.js"></script>
+	<script type="text/javascript" src="js/chartist.min.js"></script>
+	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
