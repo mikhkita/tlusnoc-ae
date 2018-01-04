@@ -220,7 +220,7 @@ $(document).ready(function(){
         },100);
     });
 
-    $('.vacancy-info, .b-questions-item-info').each(function(){
+    $('.vacancy-info, .b-questions-item-wrap').each(function(){
         $(this).slideUp(0);
     });
 
@@ -229,7 +229,7 @@ $(document).ready(function(){
     });
 
     $('.b-questions-link').on('click', function(){
-        $(this).siblings('.b-questions-item-info').slideToggle(300);
+        $(this).siblings('.b-questions-item-wrap').slideToggle(300);
         $arrow = $(this).children(".b-questions-arrow");
         if($arrow.hasClass("open")){
             $arrow.removeClass("open icon-arrow-down-rotate");
@@ -681,6 +681,12 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
         var legend = $(this).attr("data-legend");
         $('.chart-legend span').text(legend);
     });
+
+    /*$( ".period-start" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      minDate: 0
+    })*/
 
     /*bindCloseMenu("menu");
     bindCloseMenu("b-menu-overlay");

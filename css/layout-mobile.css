@@ -555,10 +555,6 @@ ul.b-top-content li:nth-child(2){
 
 @media screen and (max-width: 470px){
 
-	.b-slider-inner .b-slider-content{
-		padding-top: 50px;
-	}
-
 	.b-slider-inner h1.b-title{
 		font-size: 32px;
 		line-height: 40px;

@@ -1016,19 +1016,26 @@ ul.mark-numbers li:last-child{
 	background-repeat: no-repeat;
 }
 
+	.b-slider .b-slider-content{
+		padding-top: 96px;
+	}
+
+		.b-slider .b-slider-content p{
+			margin-bottom: 54px;
+		}
+
 		.b-slider-content{
 			max-width: 475px;
     		width: 100%;
 			background-color: transparent;
-			padding-top: 96px;
 		}
 
 			.b-slider-content p{
 				font-family: 'SFUIDisplayRegular';
 				font-size: 16px;
+				max-width: 520px;
 				color: #FFF;
 				line-height: 26px;
-				margin-bottom: 54px;
 			}
 
 .bg{
@@ -1441,7 +1448,7 @@ ul.mark-numbers li:last-child{
 
 .period-finish{
 	margin-left: -.36em;
-	padding-left: 18px;
+	padding-left: 16px;
 	box-sizing: content-box;
 }
 
@@ -1634,6 +1641,11 @@ input.period-finish:-moz-placeholder
 	    background-repeat: no-repeat;
 	}
 
+		.b-slider-inner .b-wide-block,
+		.b-slider-inner .b-block{
+			height: 100%;
+		}
+
 	.b-slider-back{
 		width: 100%;
 		position: absolute;
@@ -1650,18 +1662,17 @@ input.period-finish:-moz-placeholder
 			max-width: 520px;
 	    	width: 100%;
 			background-color: transparent;
-			padding-top: 73px;
 		}
 
-	.b-page-services .b-slider-inner .b-slider-content,
+	/*.b-page-services .b-slider-inner .b-slider-content,
 	.b-page-marketplace .b-slider-inner .b-slider-content,
 	.b-page-credit .b-slider-inner .b-slider-content{
 		padding-top: 59px;
-	}
+	}*/
 
-	.b-page-credit .b-slider-inner .b-slider-content{
+	/*.b-page-credit .b-slider-inner .b-slider-content{
 		max-width: 620px;
-	}
+	}*/
 
 /*------Цепочка навигации------*/
 
@@ -2795,47 +2806,65 @@ ul.vacancy-list{
     	padding-top: 9px;
 	}
 
-.b-credit-gray{
+.b-services-gray{
 	background-color: #dcdcdc;
 	padding: 38px 0;
 	margin-bottom: 32px;
 }
 
-	.b-credit-send{
+	.b-services-send{
 		background-color: #FFF;
 		width: 712px;
 		margin: 0 auto;
 		padding: 28px 28px 38px;
 	}
-		.b-credit-send h2{
+		.b-services-send h2{
 			padding-top: 0;
 		}
 
-		.b-credit-send .federal-law{
+		.b-services-send .federal-law{
 			padding-top: 7px;
 			margin-bottom: 40px;
 		}
 
-		.b-credit-send .actions{
+		.b-services-send .actions{
 			margin-bottom: 25px;
 		}
 		
-			.b-credit-send .federal-law .b-wrap-input{
+			.b-services-send .federal-law .b-wrap-input{
 				width: calc(100%/4 - 26px);
 			}
 
-	.b-credit-send input{
+	.b-services-send input{
 		font-family: 'UbuntuMedium';
 		font-size: 16px;
 	    border-bottom: 3px solid #e0e0e0;
 	    padding-bottom: 6px;
 	}
 
-	.b-credit-send .before-input:before{
+	.b-services-send .before-input:before{
 		font-size: 14px;
 		top: -27px;
 		color: #828282;
 	}
+
+.b-services-send .period-datepicker input{
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+}
+
+.b-services-send input.period-start::-webkit-input-placeholder,
+.b-services-send input.period-finish::-webkit-input-placeholder
+{
+	font-size: 16px;
+}
+.b-services-send input.period-start:-moz-placeholder,
+.b-services-send input.period-finish:-moz-placeholder
+{
+	font-size: 16px;
+}
 
 /*-------Сопровождение-------*/
 
@@ -2902,12 +2931,12 @@ ul.vacancy-list{
 
 	.b-questions-item{
 		display: block;
+		margin-bottom: 15px;
 	}
 		.b-questions-link{
 			display: block;
 			background-color: #FFF;
 			overflow: hidden;
-			margin-bottom: 15px;
 		}
 		.b-questions-item-left{
 			padding: 12px 12px 8px;
@@ -2922,6 +2951,7 @@ ul.vacancy-list{
 			.b-questions-arrow{
 				float: right;
 				padding: 20px 17px;
+				background-color: rgb(223, 223, 223);
 				background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(223, 223, 223)),color-stop(1, rgb(208, 208, 208)));
 			    background-image: -webkit-repeating-linear-gradient(bottom,rgb(223, 223, 223) 0%,rgb(208, 208, 208) 100%);
 			    background-image: repeating-linear-gradient(to top,rgb(223, 223, 223) 0%,rgb(208, 208, 208) 100%);
@@ -2929,6 +2959,7 @@ ul.vacancy-list{
 			}
 
 			.b-questions-link:hover .b-questions-arrow:not(.open){
+				background-color: rgb(18, 103, 147);
 				background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(18, 103, 147)),color-stop(1, rgb(2, 66, 117)));
 			    background-image: -webkit-repeating-linear-gradient(bottom,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
 			    background-image: repeating-linear-gradient(to top,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
@@ -2936,6 +2967,7 @@ ul.vacancy-list{
 				opacity: 0.7;
 			}
 			.b-questions-item .b-questions-arrow.open{
+				background-color: rgb(18, 103, 147);
 				background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(18, 103, 147)),color-stop(1, rgb(2, 66, 117)));
 			    background-image: -webkit-repeating-linear-gradient(bottom,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
 			    background-image: repeating-linear-gradient(to top,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
@@ -2947,7 +2979,7 @@ ul.vacancy-list{
 			}
 
 	.b-questions-item-info {
-		margin: 0 0 15px 19px;
+		margin: 15px 0 15px 19px;
 	    padding: 20px;
 	    background-color: #FFF;
 	}
@@ -2971,6 +3003,43 @@ ul.vacancy-list{
 		position: relative;
 	}
 
+	.bubble-app{
+		text-align: center;
+	}
+
+	.bubble-app-btn{
+		padding: 8px 22px;
+		margin-bottom: 15px;
+	    background-color: #c6c6c6;
+	    z-index: 5;
+	    background-image: -webkit-gradient(linear, 100% 0%, 0% 0%,color-stop(0, rgb(225, 225, 225)),color-stop(1, rgb(185, 185, 185)));
+	    background-image: -webkit-repeating-linear-gradient(right,rgb(225, 225, 225) 0%,rgb(185, 185, 185) 100%);
+	    background-image: repeating-linear-gradient(to left,rgb(225, 225, 225) 0%,rgb(185, 185, 185) 100%);
+	    background-image: -ms-repeating-linear-gradient(right,rgb(225, 225, 225) 0%,rgb(185, 185, 185) 100%);
+	}
+
+		.bubble-app a{
+			border-bottom: 0;
+			text-decoration: underline;
+			padding-top: 1px;
+		}
+
+		.bubble-app-btn a{
+			padding-left: 24px;
+		}
+
+.icon-arrow-download{
+	padding-left: 24px;
+}
+
+.icon-arrow-download:before{
+	content: '\e907';
+	position: absolute;
+	top: 0;
+	left: 0;
+    font-size: 14px;
+}
+
 .bubble-app{
 	position: absolute;
 
@@ -2989,6 +3058,38 @@ ul.vacancy-list{
 	visibility: visible;
     opacity: 1;
 }
+
+.cost-guarantee{
+	width: 100%;
+	font-family: 'UbuntuBold';
+    border-bottom: 3px solid #e0e0e0;
+    padding-bottom: 6px;
+}
+
+	.cost-guarantee-text{
+		display: inline-block;
+    	float: left;
+    	font-size: 16px;
+    	padding-top: 5px;
+    	vertical-align: middle;
+	}
+
+	.cost-guarantee-result{
+		float: right;
+		color: #1b82c7;
+		font-size: 24px;
+	}
+
+		.cost-guarantee-result p{
+			vertical-align: middle;
+	    	display: inline-block;
+		}
+
+		.cost-guarantee-result .icon-rub:before {
+		    vertical-align: middle;
+		    font-size: 17px;
+		    color: #1b82c7;
+		}
 
 /*-------chosen.js--------*/
 

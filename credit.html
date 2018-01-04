@@ -106,8 +106,8 @@
 			<div class="b-slider-back"></div>			
 			<div class="b-slider-inner" style="background-image: url(i/inner-credit.jpg);">
 				<div class="b-wide-block">
-					<div class="b-block">
-						<div class="b-slider-content">
+					<div class="b-block b-table">
+						<div class="b-slider-content b-table-cell-middle">
 							<h1 class="b-title">Кредит на исполнение<br>контракта</h1>
 							<p>Нехватка оборотных средств для исполнения контракта?<br>Оптимальное решение ― банковский кредит на исполнение </p>
 						</div>
@@ -130,7 +130,7 @@
 						<div class="b-text b-text-page-credit">
 							<p><b>Команда EA Consult</b> подберет, поможет согласовать и оформить кредит на исполнение контракта в одном из наших банков-партнеров, проведя предварительный анализ документации <b>за 1 час.</b></p>
 
-							<ul class="mark-img">
+							<ul class="b-services-gray">
 								<li>Максимальное финансирование – до 90% от суммы контракта</li>
 								<li>Ставки от 16% годовых</li>
 								<li>Персональный менеджер</li>
@@ -178,8 +178,8 @@
 						</div>
 
 						<div class="b-credit-gray">
-							<div class="b-credit-send">
-								<form id="b-credit-send-form" class="b-credit-send-form" method="post" action="action.php">
+							<div class="b-services-send">
+								<form id="b-services-send-form" class="b-services-send-form" method="post" action="action.php">
 									<h2 class="b-title">Отправить заявку</h2>
 									<div class="federal-law clearfix">
 										<div class="b-wrap-input">
@@ -231,17 +231,17 @@
 										</div>
 									</div>
 
-									<div>
+									<div class="period-datepicker">
 										<div class="before-input b-wrap-input b-wrap-input-1-2" data-placeholder="Дата с">
-											<input type="text" name="date-from" oninput="this.value = this.value.replace(/\D/g, '')">
+											<input type="text" class="period-start" pattern="[0-9]*" placeholder="xx.xx.20xx" name="date-from">
 										</div>
 										<div class="before-input b-wrap-input b-wrap-input-1-2" data-placeholder="Дата по">
-											<input type="text" name="date-to" oninput="this.value = this.value.replace(/\D/g, '')">
+											<input type="text" class="period-finish" pattern="[0-9]*" placeholder="xx.xx.20xx" name="date-to">
 										</div>
 									</div>
 
 									<div class="b-center">
-										<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-credit-send-form').submit(); return false;">Расчитать стоимость гарантии</a>
+										<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-services-send-form').submit(); return false;">Расчитать стоимость гарантии</a>
 									</div>
 
 								</form>
