@@ -340,7 +340,18 @@ ul.b-top-content li:nth-child(2){
     margin-right: 0;
 }
 
-.b-outsourcing-form .b-wrap-input,
+.outsourcing-inputs .b-wrap-input:nth-child(3n){
+	margin-right: 30px;
+}
+
+.b-outsourcing-form .b-wrap-input{
+	width: calc(100%/2 - 16px);
+}
+
+.b-outsourcing-form .b-wrap-input:nth-child(2n){
+	margin-right: 0;
+}
+
 .b-outsourcing-form .b-wrap-input-2-3{
 	width: 100%;
 }
@@ -445,6 +456,11 @@ ul.b-top-content li:nth-child(2){
 		padding: 20px;
 	}
 
+	.b-outsourcing-form .b-wrap-input{
+		width: 100%;
+		margin-right: 0;
+	}
+
 }
 
 @media screen and (max-width: 540px){
@@ -538,10 +554,6 @@ ul.b-top-content li:nth-child(2){
 }
 
 @media screen and (max-width: 470px){
-
-	.b-slider-inner .b-slider-content{
-		padding-top: 50px;
-	}
 
 	.b-slider-inner h1.b-title{
 		font-size: 32px;
