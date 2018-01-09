@@ -98,7 +98,8 @@ span.error{
 input.error,textarea.error{
 	border-bottom: 3px solid #F00 !important;
 }
-.b-app-form input.error, .b-app-form textarea.error{
+.b-app-form input.error, .b-app-form textarea.error,
+.b-sub-form input.error, .b-sub-form textarea.error{
 	border-bottom: 1px solid #F00 !important;
 }
 .ps-lines{
@@ -1716,8 +1717,12 @@ ul.b-breadcrumbs{
 	margin-bottom: 26px;
 }
 
-.b-content-padding{
-	padding: 36px 0 70px;
+.b-content-padding-top{
+	padding-top: 36px;
+}
+
+.b-content-padding-bottom{
+	padding-bottom: 70px;
 }
 
 /*-------О команде-------*/
@@ -2758,18 +2763,22 @@ ul.vacancy-list{
 
 /*--------Кредит на исполнение-------*/
 
-.b-text-page-credit p{
+/*.b-text-page-credit p{
 	margin-bottom: 17px;
 }
 
 .b-text-page-credit ul{
 	margin-bottom: 45px;
-}
+}*/
 
 .b-case-number-list{
 	padding-left: 18px;
 	margin-top: 45px;
 	margin-bottom: 70px;
+}
+
+.b-case-number-margin{
+	margin-bottom: 34px;
 }
 
 	.b-case-number-item{
@@ -2799,6 +2808,10 @@ ul.vacancy-list{
 			.b-case-number-text ul{
 				margin-bottom: 0;
 			}
+
+		.b-case-number-item img{
+			max-height: 36px;
+		}
 	.b-case-number-number{
 		position: absolute;
 		top: -18px;
@@ -2878,7 +2891,9 @@ ul.vacancy-list{
 	font-size: 16px;
 }
 
-.b-services-send .
+.b-services-send .b-btn-calc{
+	padding: 14px 42px;
+}
 
 /*-------Сопровождение-------*/
 
@@ -3016,6 +3031,10 @@ ul.vacancy-list{
 
 /*------Банковские гарантии-------*/
 
+.b-text-bank-guarantees{
+	margin-bottom: 70px;
+}
+
 .federal-law-link{
 	display: inline-block;
 }
@@ -3111,6 +3130,10 @@ ul.vacancy-list{
 		    font-size: 17px;
 		    color: #1b82c7;
 		}
+
+.b-services-send-info{
+	margin-top: 25px;
+}
 
 /*-------chosen.js--------*/
 
