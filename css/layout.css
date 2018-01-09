@@ -1634,10 +1634,10 @@ input.period-finish:-moz-placeholder
 
 /*--------Изображения в хедере--------*/
 
-.b-slider-wrap{
+.b-slider-inner{
 	height: 295px;
 }
-	.b-slider-inner{
+	.b-slider-photo{
 		width: 100%;
 		position: absolute;
 		top: 0;
@@ -1659,7 +1659,7 @@ input.period-finish:-moz-placeholder
 		top: 0;
 		left: 0;
 		height: 295px;
-		/*background-image: url(../i/bg2.png);*/
+		background-image: url(../i/bg-header.png);
 		background-position: 50% 0;
 	    background-size: cover;
 	    background-repeat: no-repeat;
@@ -1952,7 +1952,7 @@ ul.b-breadcrumbs{
 		}
 
 		.icon-doc:before{
-		    content: "\e906";
+		    content: "\e90d";
 			position: absolute;
 		    top: 0;
 		    left: 0;
@@ -3073,7 +3073,7 @@ ul.vacancy-list{
 }
 
 .icon-arrow-download:before{
-	content: '\e907';
+	content: '\e910';
 	position: absolute;
 	top: 0;
 	left: 0;
