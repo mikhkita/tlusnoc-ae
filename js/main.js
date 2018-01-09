@@ -233,8 +233,10 @@ $(document).ready(function(){
         $arrow = $(this).children(".b-questions-arrow");
         if($arrow.hasClass("open")){
             $arrow.removeClass("open icon-arrow-down-rotate");
+            $(this).find("h4").removeClass("bold");
         }else{
             $arrow.addClass("open icon-arrow-down-rotate");
+            $(this).find("h4").addClass("bold");
         }
     });
 
