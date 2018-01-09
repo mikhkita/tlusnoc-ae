@@ -96,7 +96,10 @@ span.error{
 	display: none !important;
 }
 input.error,textarea.error{
-	border-bottom: 2px solid #F00 !important;
+	border-bottom: 3px solid #F00 !important;
+}
+.b-app-form input.error, .b-app-form textarea.error{
+	border-bottom: 1px solid #F00 !important;
 }
 .ps-lines{
 
@@ -125,6 +128,9 @@ input.error,textarea.error{
 }
 .bold{
 	font-family: 'UbuntuBold';
+}
+.medium{
+	font-family: 'UbuntuMedium';
 }
 .underline{
 	text-decoration: underline;
@@ -288,7 +294,7 @@ h4{
 	}
 
 		.b-text a:hover{
-			border-bottom: 1px solid transparent;
+			border-bottom: 0;
 			text-decoration: none;
 		}
 
@@ -2021,7 +2027,7 @@ ul.b-breadcrumbs{
 			position: relative;
 			display: inline-block;
 			color: #013c6e;
-			border-bottom: 1px solid transparent;
+			border-bottom: 0;
 			padding-left: 24px;
     		text-decoration: underline;
 		}
@@ -2762,6 +2768,7 @@ ul.vacancy-list{
 
 .b-case-number-list{
 	padding-left: 18px;
+	margin-top: 45px;
 	margin-bottom: 70px;
 }
 
@@ -2777,7 +2784,7 @@ ul.vacancy-list{
 	}
 		.b-case-number-header{
 			background-color: #1b82c7;
-			padding: 14px 20px;
+			padding: 16px 22px;
 		}
 		.b-case-number-text{
 			background-color: #FFF;
@@ -2807,14 +2814,19 @@ ul.vacancy-list{
 	}
 
 .b-services-gray{
-	background-color: #dcdcdc;
 	padding: 38px 0;
 	margin-bottom: 32px;
+	background-color: #dfdfdf;
+    background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(230, 230, 230)),color-stop(1, rgb(215, 215, 215)));
+    background-image: -webkit-repeating-linear-gradient(bottom,rgb(230, 230, 230) 0%,rgb(215, 215, 215) 100%);
+    background-image: repeating-linear-gradient(to top,rgb(230, 230, 230) 0%,rgb(215, 215, 215) 100%);
+    background-image: -ms-repeating-linear-gradient(bottom,rgb(230, 230, 230) 0%,rgb(215, 215, 215) 100%);
+	
 }
 
 	.b-services-send{
 		background-color: #FFF;
-		width: 712px;
+		width: 722px;
 		margin: 0 auto;
 		padding: 28px 28px 38px;
 	}
@@ -2865,6 +2877,8 @@ ul.vacancy-list{
 {
 	font-size: 16px;
 }
+
+.b-services-send .
 
 /*-------Сопровождение-------*/
 
@@ -2925,14 +2939,22 @@ ul.vacancy-list{
 
 /*-------Тендерное кредитование------*/
 
-.b-questions-list{
+.b-text-tender{
+	margin-bottom: 52px;
+}
 
+.b-questions-list{
+	margin-bottom: 76px;
 }
 
 	.b-questions-item{
 		display: block;
-		margin-bottom: 15px;
+		margin-bottom: 13px;
 	}
+	.b-questions-item:last-child{
+		margin-bottom: 0;
+	}
+
 		.b-questions-link{
 			display: block;
 			background-color: #FFF;
@@ -2945,7 +2967,6 @@ ul.vacancy-list{
 			.b-questions-item h4{
 				padding-left: 15px;
 				color: #1b1b1b;
-				font-family: 'UbuntuBold';
 			}
 
 			.b-questions-arrow{
