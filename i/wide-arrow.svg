@@ -1,19 +1,13 @@
-<svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="24px" height="13px">
-<defs>
-<filter id="Filter_0">
-    <feFlood flood-color="rgb(255, 255, 255)" flood-opacity="1" result="floodOut" />
-    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
-    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
-</filter>
-
-</defs>
-<g filter="url(#Filter_0)">
-<path fill-rule="evenodd"  stroke="rgb(27, 27, 27)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
- d="M20.698,11.000 L11.739,3.576 L2.273,11.000 "/>
-</g>
-<path fill="none" stroke="rgb(27, 27, 27)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter"
- d="M20.698,11.000 L11.739,3.576 L2.273,11.000 "/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="10px" viewBox="0 0 21 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>wide-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="wide-arrow" transform="translate(1.000000, 1.000000)" fill="#1B1B1B" fill-rule="nonzero">
+            <polygon id="Shape" points="9.72172745 1.86041081 0.890123789 8.78686608 -0.344123789 7.21313392 9.75627255 -0.708410808 19.3360601 7.23001343 18.0599399 8.76998657"></polygon>
+            <polygon id="Shape" points="9.72172745 1.86041081 0.890123789 8.78686608 -0.344123789 7.21313392 9.75627255 -0.708410808 19.3360601 7.23001343 18.0599399 8.76998657"></polygon>
+        </g>
+    </g>
 </svg>
