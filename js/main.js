@@ -231,11 +231,13 @@ $(document).ready(function(){
     $('.b-questions-link').on('click', function(){
         $(this).siblings('.b-questions-item-wrap').slideToggle(300);
         $arrow = $(this).children(".b-questions-arrow");
-        if($arrow.hasClass("open")){
-            $arrow.removeClass("open icon-arrow-down-rotate");
+        if($(this).hasClass("open")){
+            $(this).removeClass("open");
+            $arrow.removeClass("icon-arrow-down-rotate");
             $(this).find("h4").removeClass("bold");
         }else{
-            $arrow.addClass("open icon-arrow-down-rotate");
+            $(this).addClass("open");
+            $arrow.addClass("icon-arrow-down-rotate");
             $(this).find("h4").addClass("bold");
         }
     });

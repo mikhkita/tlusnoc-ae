@@ -1937,6 +1937,14 @@ ul.b-breadcrumbs{
 				vertical-align: top;
 			}
 
+			.b-reviews-item .icon-doc:before{
+				color: #1b1b1b;
+			}
+
+			.b-reviews-item .icon-doc:hover{
+				text-decoration: none;
+			}
+
 		.b-reviews .expand-review{
 			display: inline-block;
 			margin-top: 5px;
@@ -1945,10 +1953,14 @@ ul.b-breadcrumbs{
 
 		.b-reviews .look-original{
 			position: relative;
-    		padding-left: 24px;
+    		padding-left: 22px;
 			display: inline-block;
 			margin-top: 10px;
 			text-decoration: underline;
+		}
+
+		.icon-doc{
+		    color: #013c6e;
 		}
 
 		.icon-doc:before{
@@ -1957,7 +1969,6 @@ ul.b-breadcrumbs{
 		    top: 0;
 		    left: 0;
 		    font-size: 16px;
-		    color: #1b1b1b;
 		    line-height: 20px;
 		    margin-right: 5px;
 		}
@@ -2984,6 +2995,25 @@ ul.vacancy-list{
 				color: #1b1b1b;
 			}
 
+			.b-questions-item-left img{
+			    -webkit-filter: grayscale(1);
+			    filter: gray;
+			    filter: grayscale(1);
+			    opacity: 0.5;
+			    max-height: 25px;
+			}
+
+			.b-questions-link:hover .b-questions-item-left img{
+    			-webkit-filter: grayscale(0);
+				filter: none;
+			}
+
+			.b-questions-link.open .b-questions-item-left img{
+    			-webkit-filter: grayscale(0);
+				filter: none;
+				opacity: 1;
+			}
+
 			.b-questions-arrow{
 				float: right;
 				padding: 20px 17px;
@@ -2994,7 +3024,7 @@ ul.vacancy-list{
 			    background-image: -ms-repeating-linear-gradient(bottom,rgb(223, 223, 223) 0%,rgb(208, 208, 208) 100%);
 			}
 
-			.b-questions-link:hover .b-questions-arrow:not(.open){
+			.b-questions-link:not(.open):hover .b-questions-arrow{
 				background-color: rgb(18, 103, 147);
 				background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(18, 103, 147)),color-stop(1, rgb(2, 66, 117)));
 			    background-image: -webkit-repeating-linear-gradient(bottom,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
@@ -3002,7 +3032,7 @@ ul.vacancy-list{
 			    background-image: -ms-repeating-linear-gradient(bottom,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
 				opacity: 0.7;
 			}
-			.b-questions-item .b-questions-arrow.open{
+			.b-questions-link.open .b-questions-arrow{
 				background-color: rgb(18, 103, 147);
 				background-image: -webkit-gradient(linear, 0% 100%, 0% 0%,color-stop(0, rgb(18, 103, 147)),color-stop(1, rgb(2, 66, 117)));
 			    background-image: -webkit-repeating-linear-gradient(bottom,rgb(18, 103, 147) 0%,rgb(2, 66, 117) 100%);
@@ -3073,10 +3103,11 @@ ul.vacancy-list{
 }
 
 .icon-arrow-download:before{
-	content: '\e910';
+	content: '\e90e';
 	position: absolute;
 	top: 0;
 	left: 0;
+	padding-top: 3px;
     font-size: 14px;
 }
 
