@@ -3193,6 +3193,84 @@ ul.vacancy-list{
 	margin-bottom: 0;
 }
 
+/*---------*/
+
+.b-work-monitoring img,
+.b-work-monitoring h2{
+	display: inline-block;
+	vertical-align: top;
+}
+.b-work-monitoring img{
+	margin-right: 5px;
+	max-height: 33px;
+}
+
+.b-work-monitoring h2{
+	padding-top: 1px;
+}
+
+	.b-work-monitoring .choice-block{
+		margin-top: 0;
+	}
+
+.b-work-monitoring .choice-block {
+    margin-bottom: 38px;
+}
+
+.b-monitoring-block h2.b-title {
+    margin-bottom: 23px;
+}
+
+.b-monitoring-body{
+	margin-top: 60px;
+}
+
+	.b-monitoring-body .b-gray-block{
+		margin-top: 30px;
+	}
+
+	.b-monitoring-analysis-list{
+		margin-top: 30px;
+	}
+
+		.b-monitoring-analysis-item{
+			display: inline-block;
+			width: calc(100%/3 - 83px);
+			margin: 0 40px;
+			text-align: center;
+			vertical-align: top;
+		}
+
+		.b-monitoring-analysis-item img{
+			display: inline-block;
+			margin-bottom: 10px;
+			max-height: 42px;
+		}
+		.b-monitoring-analysis-item h4{
+			min-height: 36px;
+			font-size: 16px;
+		}
+
+	.b-monitoring-deep-list{
+		margin-top: 25px;
+	}
+
+		.b-monitoring-deep-list h4{
+			margin-bottom: 15px;
+		}
+
+		.b-monitoring-deep-list ul.mark-img li{
+			font-family: 'UbuntuMedium';
+			vertical-align: top;
+			display: inline-block;
+		    width: calc(100%/4 - 26px);
+		    margin-right: 30px;
+		}
+
+		.b-monitoring-deep-list ul.mark-img li:last-child{
+			margin-right: 0;
+		}
+
 /*-------chosen.js--------*/
 
 .chosen-container{
