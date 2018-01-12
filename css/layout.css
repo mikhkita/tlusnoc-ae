@@ -2096,13 +2096,16 @@ ul.b-breadcrumbs{
 	}
 
 	.choice-block .choice-item.active,
-	.choice-block.choice-block-three .choice-item.active{
+	.choice-block.choice-block-three .choice-item.active,
+	.choice-block.choice-block-four .choice-item.active{
 		border-bottom: 3px solid #1b82c7;
 	}
 
 	.choice-block .choice-item.active{
 		color: #1b82c7;
 	}
+
+	/*---x3---*/
 
 	.choice-block.choice-block-three .choice-item{
 		width: calc(100%/3 - 37px);
@@ -2124,6 +2127,24 @@ ul.b-breadcrumbs{
         margin-top: 1px;
 	    display: inline-block;
 	    margin-right: 4px;
+	}
+
+	/*---x4---*/
+
+	.choice-block.choice-block-four .choice-item{
+		width: calc(100%/4 - 26px);
+		margin-right: 30px;
+		border-bottom: 3px solid #b7b7b7;
+	}
+
+	.choice-block.choice-block-four .choice-item:last-child{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.choice-block.choice-block-four .choice-item a{
+		text-transform: none;
+		font-size: 16px;
 	}
 
 .country-choise{
@@ -2951,7 +2972,7 @@ ul.vacancy-list{
 			padding-left: 15px;
 		}
 
-.b-escort-send-form .additional-info{
+.additional-info{
 	margin: 10px 0 16px;
 }
 
@@ -2999,7 +3020,7 @@ ul.vacancy-list{
 			    -webkit-filter: grayscale(1);
 			    filter: gray;
 			    filter: grayscale(1);
-			    opacity: 0.5;
+			    opacity: 0.7;
 			    max-height: 25px;
 			}
 
@@ -3135,6 +3156,7 @@ ul.vacancy-list{
 	font-family: 'UbuntuBold';
     border-bottom: 3px solid #e0e0e0;
     padding-bottom: 6px;
+    margin: 26px 0;
 }
 
 	.cost-guarantee-text{
@@ -3148,10 +3170,10 @@ ul.vacancy-list{
 	.cost-guarantee-result{
 		float: right;
 		color: #1b82c7;
-		font-size: 24px;
 	}
 
-		.cost-guarantee-result p{
+		.cost-guarantee-result .cost-result{
+			font-size: 24px;
 			vertical-align: middle;
 	    	display: inline-block;
 		}
@@ -3164,6 +3186,11 @@ ul.vacancy-list{
 
 .b-services-send-info{
 	margin-top: 25px;
+}
+
+.b-services-send-form .period-datepicker .before-input,
+.b-services-send-form .b-wrap-input input[type="checkbox"] + label{
+	margin-bottom: 0;
 }
 
 /*-------chosen.js--------*/
@@ -3299,10 +3326,15 @@ ul.vacancy-list{
 
 .ui-datepicker .ui-datepicker-month{
 	border-bottom: 2px solid #9c9c9c;
-    padding-bottom: 0px;
+    padding-bottom: 1px;
+    border-radius: 0px;
     -webkit-appearance: menulist;
     -moz-appearance: menulist;
     appearance: menulist;
+}
+
+.ui-datepicker .ui-datepicker-title select{
+	margin: 2px 0;
 }
 
 /*------------------------------*/

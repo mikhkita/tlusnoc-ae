@@ -403,7 +403,7 @@ $(document).ready(function(){
 [14000001,15000000],
 [15000001,600000000]];
 
-var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],[210,239],[240,269],[270,299],[300,329],[330,366],[367,389],[390,419],[420,449],[450,479],[480,509],[510,539],[540,569],[570,599],[600,629],[630,659],[660,689],[690,720]];
+var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],[210,239],[240,269],[270,299],[300,329],[330,366],[367,389],[390,419],[420,449],[450,479],[480,509],[510,539],[540,569],[570,599],[600,629],[630,659],[660,689],[690,720]];
 
     var data = [[3000,3000,3000,3000,3000,3000,3000,3000,3500,4000,4500,4700,5000,9000,9000,9000,9000,9000,9000,9000,9000,9000,9000,9000],
 [6500,6500,6500,6500,6500,6500,6500,6500,6500,6500,6500,6500,6500,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000,10000],
@@ -635,6 +635,38 @@ var dataPeriod = [[0,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
      
           return date;
         }
+    });
+
+    $('input[name="dates"]').on('change input', function(){
+        //рассчет по датам
+        if($(this).prop('checked')){
+            $('.period-datepicker').removeClass("hide");
+            $('input[name="period"]').parent().addClass("hide");
+            $('.period-start').val("");
+            $('.period-finish').val("");
+            $('.cost-result').text(0);
+        }else{// по количеству дней
+            $('.period-datepicker').addClass("hide");
+            $('input[name="period"]').val(30).parent().removeClass("hide");
+            $('.period-start').val("");
+            $('.period-finish').val("");
+            calcDays(30);
+            calcPrice();
+        }
+    });
+
+    $('.b-services-send-form input[name="sum"]').on('change input', function(){
+        calcPrice();
+    });
+
+    $('.b-services-send-form input[name="period"]').on('change input', function(){
+        var value = parseInt($(this).val());
+        calcDays(value);
+        calcPrice();
+    });
+
+    $('.b-services-send-form .b-btn-calc').on('click', function(event){
+        $('.b-services-send-info').toggleClass("hide");
     });
 
     function chartistInit(){
