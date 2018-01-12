@@ -102,15 +102,15 @@
 			</div>
 		</div>
 		
-		<div class="b b-slider-wrap b-page-credit">
-			<div class="b-slider-back"></div>			
-			<div class="b-slider-inner" style="background-image: url(i/inner-credit.jpg);">
-				<div class="b-wide-block">
-					<div class="b-block b-table">
-						<div class="b-slider-content b-table-cell-middle">
-							<h1 class="b-title">Кредит на исполнение<br>контракта</h1>
-							<p>Нехватка оборотных средств для исполнения контракта?<br>Оптимальное решение ― банковский кредит на исполнение </p>
-						</div>
+		<div class="b b-slider-inner">
+			<div class="b-slider-photo" style="background-image: url(i/inner-credit.jpg);">
+				<div class="b-slider-back"></div>
+			</div>
+			<div class="b-wide-block">
+				<div class="b-block b-table">
+					<div class="b-slider-content b-table-cell-middle">
+						<h1 class="b-title">Кредит на исполнение<br>контракта</h1>
+						<p>Нехватка оборотных средств для исполнения контракта?<br>Оптимальное решение ― банковский кредит на исполнение </p>
 					</div>
 				</div>
 			</div>
@@ -126,11 +126,11 @@
 						<li><span>Кредит на исполнение контракта</span></li>
 					</ul>
 
-					<div class="b-content-padding">
+					<div class="b-content-padding-top b-content-padding-bottom">
 						<div class="b-text b-text-page-credit">
 							<p><b>Команда EA Consult</b> подберет, поможет согласовать и оформить кредит на исполнение контракта в одном из наших банков-партнеров, проведя предварительный анализ документации <b>за 1 час.</b></p>
-
-							<ul class="b-services-gray">
+							<br>
+							<ul class="mark-img">
 								<li>Максимальное финансирование – до 90% от суммы контракта</li>
 								<li>Ставки от 16% годовых</li>
 								<li>Персональный менеджер</li>
@@ -177,7 +177,7 @@
 							</div>
 						</div>
 
-						<div class="b-credit-gray">
+						<div class="b-services-gray">
 							<div class="b-services-send">
 								<form id="b-services-send-form" class="b-services-send-form" method="post" action="action.php">
 									<h2 class="b-title">Отправить заявку</h2>
@@ -220,7 +220,7 @@
 											<input type="text" name="sum" oninput="this.value = this.value.replace(/\D/g, '')">
 										</div>
 										<div class="before-input b-wrap-input b-wrap-input-1-2" data-placeholder="Срок гарантии (дни)*">
-											<input type="text" name="term" oninput="this.value = this.value.replace(/\D/g, '')">
+											<input type="text" name="period" oninput="this.value = this.value.replace(/\D/g, '')">
 										</div>
 									</div>
 
@@ -231,7 +231,7 @@
 										</div>
 									</div>
 
-									<div class="period-datepicker">
+									<div class="period-datepicker hide">
 										<div class="before-input b-wrap-input b-wrap-input-1-2" data-placeholder="Дата с">
 											<input type="text" class="period-start" pattern="[0-9]*" placeholder="xx.xx.20xx" name="date-from">
 										</div>
@@ -240,8 +240,46 @@
 										</div>
 									</div>
 
+									<div class="cost-guarantee input-margin clearfix">
+										<p class="cost-guarantee-text">СТОИМОСТЬ ГАРАНТИИ</p>
+										<div class="cost-guarantee-result">
+											<p>14 535</p>
+											<div class="icon-rub"></div>
+										</div>
+									</div>
+
 									<div class="b-center">
-										<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-services-send-form').submit(); return false;">Расчитать стоимость гарантии</a>
+										<a href="#" class="b-btn b-btn-blue b-btn-calc">Рассчитать стоимость гарантии</a>
+									</div>
+
+									<div class="b-services-send-info">
+										<div class="before-input b-wrap-input b-wrap-input-full" data-placeholder="Номер закупки*">
+											<input type="text" name="number" oninput="this.value = this.value.replace(/\D/g, '')" required>
+										</div>
+
+										<div class="before-input b-wrap-input b-wrap-input-full" data-placeholder="ИНН*">
+											<input type="text" name="INN" oninput="this.value = this.value.replace(/\D/g, '')" required>
+										</div>
+
+										<div class="before-input b-wrap-input b-wrap-input-full" data-placeholder="ФИО*">
+											<input type="text" name="fio" oninput="this.value = this.value.replace(/\D/g, '')" required>
+										</div>
+
+										<div>
+											<div class="before-input b-wrap-input b-wrap-input-1-2" data-placeholder="Телефон*">
+												<input type="text" name="phone" oninput="this.value = this.value.replace(/\D/g, '')" required>
+											</div>
+											<div class="before-input b-wrap-input b-wrap-input-1-2" data-placeholder="Электронная почта*">
+												<input type="text" name="email" oninput="this.value = this.value.replace(/\D/g, '')" required>
+											</div>
+										</div>
+
+										<div class="b-wrap-input b-wrap-input-1-2">
+											<input id="agree" type="checkbox" name="agree" required>
+											<label for="agree">Я согласен с условиями передачи информации</label>
+										</div>
+
+										<a href="#" class="b-btn b-btn-blue ajax right" onclick="$('#b-services-send-form').submit(); return false;">Отправить</a>
 									</div>
 
 								</form>
