@@ -931,7 +931,7 @@ ul.mark-numbers li:last-child{
 	}
 
 	.mobile-menu{
-		padding: 0 25px;
+		/*padding: 0 25px;*/
 		background-color: #FFF;
 		text-transform: uppercase;
 	}
