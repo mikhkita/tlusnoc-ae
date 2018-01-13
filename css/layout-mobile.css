@@ -405,6 +405,64 @@ ul.b-top-content li:nth-child(2){
 	min-width: 200px;
 }
 
+.b-services-send .actions .b-wrap-input{
+	width: calc(100%/2 - 18px);
+	margin-bottom: 10px;
+}
+
+.b-services-send .actions .b-wrap-input:nth-child(2n){
+	margin-right: 0;
+}
+
+.b-case-reject-list {
+    margin-top: 24px;
+}
+
+.b-case-reject-item{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+
+.b-case-reject-item:last-child{
+    margin-bottom: 0;
+}
+
+.choice-block.choice-block-four .choice-item {
+    width: calc(100%/2 - 20px);
+}
+
+.choice-block.choice-block-four .choice-item:nth-child(2n){
+    margin-right: 0;
+}
+
+.b-monitoring-analysis-item img{
+	margin-bottom: 0;
+}
+
+.b-monitoring-analysis-item {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.b-monitoring-analysis-item:last-child{
+    margin-bottom: 0;
+}
+
+.b-monitoring-analysis-item h4 {
+    min-height: 0;
+}
+
+.b-monitoring-deep-list ul.mark-img li {
+    width: calc(100%/2 - 26px);
+    margin-right: 20px;
+}
+
+.b-monitoring-deep-list ul.mark-img li:nth-child(2n){
+    margin-right: 0;
+}
+
 @media screen and (max-width: 630px){
 
 	.b-team-item {
@@ -498,6 +556,11 @@ ul.b-top-content li:nth-child(2){
 	.b-outsourcing-form .b-wrap-input{
 		width: 100%;
 		margin-right: 0;
+	}
+
+	.choice-block.choice-block-four .choice-item {
+	    width: 100%;
+	    margin-right: 0;
 	}
 
 }
@@ -604,6 +667,26 @@ ul.b-top-content li:nth-child(2){
 
 	.b-services-send .b-btn-calc {
 	    padding: 14px 14px;
+	}
+
+	.b-services-send .actions .b-wrap-input{
+		width: 100%;
+		margin-bottom: 10px;
+		margin-right: 0;
+	}
+
+	.b-services-send .federal-law .b-wrap-input{
+		width: calc(100%/2 - 18px);
+		margin-bottom: 10px;
+	}
+
+	.b-services-send .federal-law .b-wrap-input:nth-child(2n){
+		margin-right: 0;
+	}
+
+	.b-monitoring-deep-list ul.mark-img li {
+	    width: 100%;
+	    margin-right: 0;
 	}
 
 }
@@ -735,5 +818,14 @@ ul.b-top-content li:nth-child(2){
 
 	.b-team-item-photo{
 		height: 62vw;
+	}
+
+	.b-services-send {
+	    width: calc(100% - 32px);
+	    padding: 14px 18px 22px;
+	}
+
+	.b-services-gray {
+	    padding: 16px 0;
 	}
 }
