@@ -23,6 +23,20 @@ $(document).ready(function(){
         if($('.b-marketplace-case').length){
             readMoreShow("b-marketplace-case");
         }
+
+        if($('.b-escort-scheme').length){
+            var heightLine,
+                top;
+            top = $('.b-escort-scheme-header').outerHeight() / 2;
+            heightLine = $('.b-escort-scheme-list').outerHeight() - top - $('.b-escort-scheme-item:last-child').outerHeight() / 2;
+            $('.main-line').css({
+                "top" : top,
+                "height" : heightLine,
+            });
+            $('.main-line-inner').css({
+                "height" : heightLine
+            });
+        }
     }
 
     function retina(){

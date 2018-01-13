@@ -2961,8 +2961,91 @@ ul.vacancy-list{
 }
 
 .b-escort-scheme{
+	background-color: #FFF;
+	padding: 37px 32px;
 	margin: 22px 0;
 }
+	.b-escort-scheme-list{
+		position: relative;
+	}	
+		.main-line{
+			position: absolute;
+			top: 10px;
+			left: 0;
+			display: inline-block;
+			width: 15px;
+			overflow: hidden;
+		}
+			.main-line-inner{
+				position: absolute;
+				width: 40px;
+				border-radius: 100px;
+				border: 1px solid #999;
+			}
+		.b-escort-scheme-header{
+			color: #FFF;
+			font-family: 'UbuntuMedium';
+			background-color: #1b82c7;
+			font-size: 16px;
+			border-radius: 5px;
+			padding: 15px;
+			margin-left: 15px;
+			margin-bottom: 10px;
+		}
+
+			.b-escort-scheme-header .item-text{
+				padding-left: 10px;
+			}
+		.b-escort-scheme-item{
+			position: relative;
+			margin-bottom: 10px;
+		}
+		.b-escort-scheme-item:last-child{
+			margin-bottom: 0;
+		}
+
+		.b-escort-scheme-item .item-line{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			width: 15px;
+			height: 50%;
+			overflow: hidden;
+		}
+		.b-escort-scheme-item:last-child .item-line{
+			display: none;
+		}
+
+			.b-escort-scheme-item .item-line .item-line-inner{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 40px;
+				height: 200%;
+				border-radius: 100px;
+				border: 1px solid #999;
+			}
+
+		.b-escort-scheme-item .item-text-cont{
+			margin-left: 15px;
+			background-color: #eaeaea;
+			border-radius: 5px;
+			padding: 10px;
+		}
+
+		.b-escort-scheme-header img{
+			max-height: 24px;
+		}
+
+		.b-escort-scheme-item .item-text-cont img{
+			max-width: 24px;
+			max-height: 22px;
+		}
+
+		.b-escort-scheme-item .item-text{
+			padding-left: 10px;
+		}
 
 .b-case-reject-list{
 	margin-bottom: 34px;
