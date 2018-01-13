@@ -19,10 +19,12 @@ body {
 	width: 100%;
 	max-width: calc(100% - 48px);
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 
 .b-wide-block{
 	min-width: 330px;
+	overflow-x: hidden;
 }
 
 h1.b-title{
@@ -35,6 +37,11 @@ h2.b-title{
 }
 
 /*------------------*/
+
+.b-top .b-block,
+.b-top .b-wide-block{
+	overflow: visible;
+}
 
 /*.b-slider{
 	background-position: 35% 50%;
@@ -593,6 +600,10 @@ ul.b-top-content li:nth-child(2){
 
 	.b-services-send-form .b-btn-send{
 		margin-top: 20px;
+	}
+
+	.b-services-send .b-btn-calc {
+	    padding: 14px 14px;
 	}
 
 }
