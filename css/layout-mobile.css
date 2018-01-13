@@ -19,12 +19,10 @@ body {
 	width: 100%;
 	max-width: calc(100% - 48px);
 	margin: 0 auto;
-	overflow-x: hidden;
 }
 
 .b-wide-block{
 	min-width: 330px;
-	overflow-x: hidden;
 }
 
 h1.b-title{
@@ -67,11 +65,26 @@ ul.b-top-content li:nth-child(2){
     text-align: center;
 }
 
-	.b-case-item {
+	.b-case-item{
 		width: 100%;
 	    margin-bottom: 20px;
 	    margin-right: 0;
 	    text-align: left;
+	}
+
+	.b-case-number-item{
+		width: 100%;
+	    margin-bottom: 30px;
+	    margin-right: 0;
+	    text-align: left;
+	}
+
+	.b-case-number-item:last-child{
+		margin-bottom: 0;
+	}
+
+	.b-case-number-text{
+		min-height: 90px;
 	}
 
 	.b-services-item:nth-child(2){
@@ -88,7 +101,7 @@ ul.b-top-content li:nth-child(2){
 	}
 
 .before-input, .b-calc-item{
-	width: calc(100%/2 - 16px);
+	width: calc(100%/2 - 18px);
 }
 
 	.before-input:nth-of-type(3n), .b-calc-item:nth-of-type(3n){
@@ -373,6 +386,18 @@ ul.b-top-content li:nth-child(2){
     line-height: 22px;
 }
 
+.b-services-send{
+	width: calc(100% - 48px);
+}
+
+.b-services-gray{
+	padding: 24px 0;
+}
+
+.b-services-send .b-btn{
+	min-width: 200px;
+}
+
 @media screen and (max-width: 630px){
 
 	.b-team-item {
@@ -422,6 +447,10 @@ ul.b-top-content li:nth-child(2){
 	    margin-bottom: 0;
 	}
 
+	.b-services-send .b-btn{
+		min-width: 160px;
+	}
+
 }
 
 @media screen and (max-width: 580px){
@@ -467,6 +496,10 @@ ul.b-top-content li:nth-child(2){
 }
 
 @media screen and (max-width: 540px){
+
+	.b-wrap-input{
+		width: 100%;
+	}
 
 	.before-input, .b-calc-item{
 		width: 100%;
@@ -554,6 +587,14 @@ ul.b-top-content li:nth-child(2){
 		margin-bottom: 0;
 	}
 
+	.b-services-send-form .b-btn{
+		width: 100%;
+	}
+
+	.b-services-send-form .b-btn-send{
+		margin-top: 20px;
+	}
+
 }
 
 @media screen and (max-width: 470px){
@@ -632,9 +673,27 @@ ul.b-top-content li:nth-child(2){
 		margin: 5px 0;
 	}
 
+	.cost-guarantee-text{
+		float: none;
+	}
+
+	.cost-guarantee-result{
+		margin-top: 8px;
+		float: none;
+	}
+
 }
 
 @media screen and (max-width: 385px){
+
+	.cabinet-bubble{
+		width: 270px
+	}
+
+	.cabinet-bubble .b-btn{
+		min-width: 0;
+		width: 100%;
+	}
 
 	.b-slider-content h2.b-title-head{
 		font-size: 40px;
