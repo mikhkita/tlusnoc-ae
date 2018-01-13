@@ -3032,6 +3032,7 @@ ul.vacancy-list{
 			background-color: #eaeaea;
 			border-radius: 5px;
 			padding: 10px;
+			max-width: 640px;
 		}
 
 		.b-escort-scheme-header img{
@@ -3044,6 +3045,7 @@ ul.vacancy-list{
 		}
 
 		.b-escort-scheme-item .item-text{
+			width: 100%;
 			padding-left: 10px;
 		}
 

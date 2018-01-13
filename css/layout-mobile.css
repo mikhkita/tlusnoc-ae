@@ -776,6 +776,10 @@ ul.b-top-content li:nth-child(2){
 		float: none;
 	}
 
+	form .b-btn{
+		min-width: 200px;
+	}
+
 }
 
 @media screen and (max-width: 385px){
@@ -827,5 +831,9 @@ ul.b-top-content li:nth-child(2){
 
 	.b-services-gray {
 	    padding: 16px 0;
+	}
+
+	.b-escort-scheme{
+		padding: 24px;
 	}
 }
