@@ -325,17 +325,22 @@ h4{
 			padding-left: 22px;
 		}
 
-		.b-text .mark-img ul > li:before,
+		/*.b-text .mark-img ul > li:before,
 		.b-text ul.mark-img > li:before,
 		.b-text ul.mark-numbers > li:before,
 		.b-text ul.mark-numbers-blue > li:before{
 			display: none;
+		}*/
+
+		.b-text .mark-img ul > li:before,
+		.b-text ul.mark-img > li:before{
+			display: none;
 		}
 
-		.b-text ul.mark-numbers > li,
+		/*.b-text ul.mark-numbers > li,
 		.b-text ul.mark-numbers-blue > li{
 			padding-left: 0;
-		}
+		}*/
 
 	.b-text h4{
 		font-size: 14px;
@@ -613,7 +618,7 @@ select{
 
 /*--------------------*/
 
-ul.mark-numbers li{
+/*ul.mark-numbers li{
 	margin-bottom: 10px;
 }
 
@@ -663,7 +668,7 @@ ul.mark-numbers li:last-child{
 		color: #1b1b1b;
 		border-bottom: 0;
 		font-size: 14px;
-	}
+	}*/
 
 ol{
 	counter-reset: customCounter;
@@ -717,6 +722,21 @@ ol.numbers-blue > li > a > p{
 ol.vacancy-list > li:hover:before{
     background-color: #1b82c7;
     color: #FFF;
+}
+
+.question-block .question-icon{
+	float: left;
+	display: inline-block;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    font-size: 8px;
+    line-height: 16px;
+    vertical-align: middle;
+    padding-left: 1px;
 }
 
 /*--------Главная--------*/
@@ -2644,7 +2664,7 @@ ul.vacancy-list{
 		font-family: 'UbuntuMedium';
 	}
 
-	.b-marketplace-ref ul.mark-numbers{
+	/*.b-marketplace-ref ul.mark-numbers{
 		margin-bottom: 25px;
 	}
 
@@ -2661,15 +2681,15 @@ ul.vacancy-list{
 	ul.mark-numbers li .text-block{
 		display: inline-block;
 		margin-left: 10px;
-	}
+	}*/
 
 	.b-marketplace-set .b-text > h4{
 		font-size: 16px;
 	}
 
-	.b-marketplace-set ul.mark-numbers li{
+	/*.b-marketplace-set ul.mark-numbers li{
 		margin-bottom: 0;
-	}
+	}*/
 
 	.b-marketplace-set .help-text,
 	.b-marketplace-set .setup-text{
