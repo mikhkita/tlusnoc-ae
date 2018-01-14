@@ -136,6 +136,14 @@ body {
 		max-width: 215px;
 	}
 
+	.choice-block.choice-block-four .choice-item {
+	    width: calc(100%/2 - 20px);
+	}
+
+	.choice-block.choice-block-four .choice-item:nth-child(2n){
+	    margin-right: 0;
+	}
+
 }
 
 @media screen and (max-width: 1000px){
@@ -258,6 +266,20 @@ body {
 
 	.b-team-item-photo{
 		height: 26vw;
+	}
+
+	.b-monitoring-analysis-item {
+	    width: calc(100%/3 - 44px);
+	    margin: 0 20px;
+	}
+
+	.b-monitoring-deep-list ul.mark-img li {
+	    width: calc(100%/2 - 26px);
+	    margin-right: 20px;
+	}
+
+	.b-monitoring-deep-list ul.mark-img li:nth-child(2n){
+	    margin-right: 0;
 	}
 
 }

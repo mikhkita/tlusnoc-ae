@@ -148,11 +148,11 @@
 									<h4 class="b-table-cell-middle">Подача заявки и структурирование сделки</h4>
 								</div>
 								<div class="b-case-number-text">
-									<ul class="mark-numbers mark-numbers-blue">
-										<li><span>1</span><p>Анализируем потребности и документацию клиентов</p></li>
-										<li><span>2</span><p>Определяем банки и наиболее выгодными ожидаемыми предложениями</p></li>
-										<li><span>3</span><p>Формируем пакет документов и подаем в выбранные банки</p></li>
-									</ul>
+									<ol class="numbers-blue">
+										<li><p>Анализируем потребности и документацию клиентов</p></li>
+										<li><p>Определяем банки и наиболее выгодными ожидаемыми предложениями</p></li>
+										<li><p>Формируем пакет документов и подаем в выбранные банки</p></li>
+									</ol>
 								</div>
 								<div class="b-case-number-number">1</div>
 							</div>
@@ -416,7 +416,7 @@
 						</div>
 
 						<div class="b-services-gray">
-							<div class="b-services-send">
+							<div class="b-services-send clearfix">
 								<form id="b-services-send-form" class="b-services-send-form" method="post" action="action.php">
 									<h2 class="b-title">Отправить заявку</h2>
 									<div class="federal-law clearfix">
@@ -463,7 +463,7 @@
 									</div>
 
 									<div>
-										<div class="b-wrap-input b-wrap-input-1-2">
+										<div class="b-wrap-input b-wrap-input-full">
 											<input id="dates" type="checkbox" name="dates">
 											<label for="dates">Расчет по датам</label>
 										</div>
@@ -481,7 +481,7 @@
 									<div class="cost-guarantee clearfix">
 										<p class="cost-guarantee-text">СТОИМОСТЬ ГАРАНТИИ</p>
 										<div class="cost-guarantee-result">
-											<p class="cost-result">14 535</p>
+											<p class="cost-result">0</p>
 											<div class="icon-rub"></div>
 										</div>
 									</div>
@@ -517,7 +517,7 @@
 											<label for="agree">Я согласен с условиями передачи информации</label>
 										</div>
 
-										<a href="#" class="b-btn b-btn-blue ajax right" onclick="$('#b-services-send-form').submit(); return false;">Отправить</a>
+										<a href="#" class="b-btn b-btn-blue b-btn-send ajax right" onclick="$('#b-services-send-form').submit(); return false;">Отправить</a>
 									</div>
 
 								</form>
