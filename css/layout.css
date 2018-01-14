@@ -638,7 +638,7 @@ ul.mark-numbers li:last-child{
 	    padding-left: 1px;
 	}
 
-	.b-slider-content ul.mark-numbers li > span{
+	.b-slider-content ol > li > span{
 		margin-top: 3px;
 	}
 
@@ -665,7 +665,59 @@ ul.mark-numbers li:last-child{
 		font-size: 14px;
 	}
 
+ol{
+	counter-reset: customCounter;
+}
+	ol > li{
+		position: relative;
+		list-style: none;
+		margin-bottom: 10px;
+	}
+		ol > li:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			counter-increment: customCounter;
+			content:counter(customCounter);
+			box-sizing: border-box;
+	    	margin-top: 1px;
+		    text-align: center;
+		    width: 16px;
+		    height: 16px;
+		    border-radius: 100px;
+		    border: 1px solid #FFF;
+		    color: #FFF;
+		    font-size: 8px;
+		    line-height: 16px;
+		    vertical-align: top;
+		    padding-left: 1px;
+		}
+		ol > li > p,
+		ol > li a > p,
+		ol > li > span,
+		ol > li > div.text-block{
+			display: inline-block;
+			margin-left: 26px;
+		}
 
+ol.numbers-blue > li:before{
+    color: #1b82c7;
+	border: 1px solid #1b82c7;
+	vertical-align: top;
+	margin-top: 1px;
+}
+
+ol.numbers-blue > li > p,
+ol.numbers-blue > li > a > p{
+	color: #1b1b1b;
+	border-bottom: 0;
+	font-size: 14px;
+}
+
+ol.vacancy-list > li:hover:before{
+    background-color: #1b82c7;
+    color: #FFF;
+}
 
 /*--------Главная--------*/
 
@@ -2363,19 +2415,23 @@ ul.vacancy-list{
 	margin-top: 32px;
 }
 
-.b-slider-content ul.mark-numbers li p{
+.b-slider-content ol > li p{
 	text-transform: uppercase;
 	font-family: 'UbuntuBold', Sans-Serif;
 	line-height: 20px;
 	border-bottom: 1px solid #FFF;
 }
 
-.b-slider-content ul.mark-numbers li:hover p{
+.b-slider-content ol > li > a:hover p{
 	border-bottom: 1px solid transparent;
 }
 
-.b-slider-content ul.mark-numbers li span{
+.b-slider-content ol > li span{
 	margin-top: 2px;
+}
+
+.b-slider-content ol > li:before{
+	margin-top: 3px;
 }
 
 .b-federal{
