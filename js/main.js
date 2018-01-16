@@ -137,6 +137,12 @@ $(document).ready(function(){
         }
     });
 
+    $('.b-reviews-item:gt(1)').addClass("hide");
+
+    $('.b-btn-more-reviews').click(function() {
+        $('.b-reviews-item').removeClass("hide");
+    });
+
     $('#full-escort').on('change', function(){
         if($(this).prop('checked')){
             $('#b-outsourcing-form input[type="checkbox"]:not(#personal)').prop("checked", true);
@@ -205,7 +211,7 @@ $(document).ready(function(){
         'menu': document.getElementById('mobile-menu'),
         'side': 'right',
         'padding': 256,
-        'tolerance': 70
+        'touch': false
     });
 
     $('.mobile-menu').removeClass("hide")
@@ -232,6 +238,14 @@ $(document).ready(function(){
             $("body").unbind("touchmove");
             $(".b-menu-overlay").hide();
         },100);
+    });
+
+    var e = $('body, .b-menu-overlay, .mobile-menu');
+
+    e.touch();
+
+    e.on('swipeRight', function(event) {
+        slideout.close();
     });
 
     $('.vacancy-info, .b-questions-item-wrap').each(function(){
