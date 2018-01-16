@@ -5,7 +5,7 @@ body {
 	position: relative;
 }
 body {
-	min-width: 330px;
+	min-width: 320px;
 	font-size: 14px;
 	text-align: left;
 	font-family: 'UbuntuRegular', Sans-Serif;
@@ -23,7 +23,7 @@ body {
 }
 
 .b-wide-block{
-	min-width: 330px;
+	min-width: 320px;
 	overflow-x: hidden;
 }
 
@@ -780,6 +780,18 @@ ul.b-top-content li:nth-child(2){
 		min-width: 200px;
 	}
 
+	.b-slider{
+		background-position: 55% 50%;
+	}
+
+	.b-top-content{
+		float: none;
+	}
+
+	ul.b-top-content li.cabinet-cont{
+		float: right;
+	}
+
 }
 
 @media screen and (max-width: 385px){
@@ -798,12 +810,12 @@ ul.b-top-content li:nth-child(2){
 	}
 
 	.b-logo {
-	    width: 224px;
+	    width: 208px;
 	    float: left;
 	}
 
 	.burger-menu {
-	    margin-top: 38px;
+	    margin-top: 35px;
 	}
 
 	.b-logo img{
