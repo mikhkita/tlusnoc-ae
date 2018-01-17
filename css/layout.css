@@ -3345,10 +3345,6 @@ ul.vacancy-list{
 		position: relative;
 	}
 
-	li .federal-law-link:last-child .bubble-app{
-		left: -90px;
-	}
-
 	.bubble-app-btn{
 		padding: 8px 22px;
 		margin-bottom: 15px;

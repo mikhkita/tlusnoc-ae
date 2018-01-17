@@ -828,6 +828,10 @@ ul.b-top-content li:nth-child(2){
 		padding: 10px;
 	}
 
+	.federal-law-link:last-child .bubble-app{
+		left: -90px;
+	}
+
 }
 
 @media screen and (max-width: 385px){
