@@ -98,6 +98,10 @@ span.error{
 input.error,textarea.error{
 	border-bottom: 3px solid #F00 !important;
 }
+.cabinet-bubble input.error, .cabinet-bubble textarea.error,
+.b-popup input.error, .b-popup textarea.error{
+	border-bottom: 2px solid #F00 !important;
+}
 .b-app-form input.error, .b-app-form textarea.error,
 .b-sub-form input.error, .b-sub-form textarea.error{
 	border-bottom: 1px solid #F00 !important;
@@ -1628,11 +1632,18 @@ input.period-finish:-moz-placeholder
     bottom: 0;
     width: 100%;
 }
-
+.ui-slider .ui-slider-handle{
+	width: 18px;
+    height: 22px;
+}
 .input-slider .ui-slider-range{ 
 	border-bottom: 3px solid #1b82c7;
 }
+.ui-slider-horizontal .ui-slider-handle{
+	top: 0;
+}
 .input-slider .ui-slider-handle{
+	display: inline-block;
 	position: relative;
 	border: 1px solid transparent;
     background: transparent;
@@ -1646,7 +1657,7 @@ input.period-finish:-moz-placeholder
     width: 0px;
     height: 0px;
     left: 0;
-    top: 9px;
+    top: 5px;
     border-top: 0px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 14px solid #1b82c7;
@@ -3127,6 +3138,70 @@ ul.vacancy-list{
 			padding-left: 10px;
 		}
 
+/*-----Большая схема-----*/
+
+.b-head-scheme{
+	padding: 20px 15px;
+	background-color: #FFF;
+	margin-bottom: 20px;
+}
+
+	.b-head-scheme .b-escort-scheme-list{
+		display: inline-block;
+		vertical-align: top;
+		width: calc(100%/3 - 30px);
+		margin-right: 30px;
+	}
+
+	.b-head-scheme .b-escort-scheme-list:last-child{
+		margin-right: 10px;
+	}
+
+	.b-head-scheme .b-escort-scheme-header{
+		padding: 12px 30px;
+	}
+
+	.b-head-scheme-header .item-text{
+		padding-left: 0;
+	}
+
+	.b-head-scheme-block{
+		position: relative;
+		height: 90px;
+		text-align: center;
+	}
+		.b-head-scheme-header{
+			display: inline-block;
+			background-color: #013c6e;
+			margin: 0;
+			z-index: 2;
+    		position: absolute;
+    		left: calc(50% - 141px);
+		}
+
+		.b-head-scheme-block .left-line{
+			position: absolute;
+			top: 21px;
+			left: 100px;
+			width: calc(100%/2 - 104px);
+			height: 70px;
+			border-top: 1px solid #999;
+			border-left: 1px solid #999;
+			border-right: 1px solid #999;
+			border-top-left-radius: 100px; 
+		}
+
+		.b-head-scheme-block .right-line{
+			position: absolute;
+			top: 21px;
+			right: 20%;
+			width: calc(100%/2 - 104px);
+			height: 70px;
+			border-top: 1px solid #999;
+			border-right: 1px solid #999;
+			border-top-right-radius: 100px; 
+		}
+
 .b-case-reject-list{
 	margin-bottom: 34px;
 }
@@ -3349,6 +3424,7 @@ ul.vacancy-list{
 
 		.cost-guarantee-result .cost-result{
 			font-size: 24px;
+			line-height: 25px;
 			vertical-align: middle;
 	    	display: inline-block;
 		}

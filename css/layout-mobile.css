@@ -463,6 +463,31 @@ ul.b-top-content li:nth-child(2){
     margin-right: 0;
 }
 
+.b-head-scheme .b-escort-scheme-list {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+}
+
+.b-head-scheme-block .left-line,
+.b-head-scheme-block .right-line{
+	display: none;
+}
+
+.b-head-scheme-header{
+	position: static;
+}
+
+.b-head-scheme-block{
+	height: auto;
+	margin-bottom: 30px;
+	text-align: left;
+}
+
+.b-escort-scheme-list:last-child{
+	margin-bottom: 10px;
+}
+
 @media screen and (max-width: 630px){
 
 	.b-team-item {
