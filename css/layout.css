@@ -1141,11 +1141,9 @@ ol.vacancy-list > li:hover:before{
 .b-case{
 
 }
-
 	.b-case-list{
 
 	}
-
 		.b-case-item{
 			position: relative;
 			display: inline-block;
@@ -1202,6 +1200,10 @@ ol.vacancy-list > li:hover:before{
 
 		.b-case-item:last-child{
 			margin-right: 0;
+		}
+
+		.b-case-item a{
+			text-decoration: none;
 		}
 
 .b-case-list.b-services-items .b-case-item{
@@ -2681,7 +2683,8 @@ ul.vacancy-list{
 			    margin-bottom: 0;
 			}
 
-	.b-marketplace-ref .choice-block .choice-item a{
+	.b-marketplace-ref .choice-block .choice-item{
+		text-decoration: none;
 		font-size: 19px;
 		font-family: 'UbuntuMedium';
 	}
