@@ -365,4 +365,25 @@ body {
 	.b-footer-column:nth-child(3){
 		display: none;
 	}
+
+	.b-head-scheme{
+		padding: 20px 0;
+	}
+
+	.b-head-scheme .b-escort-scheme-header{
+		padding: 10px;
+	}
+
+	.b-head-scheme .b-head-scheme-header{
+		padding: 12px 20px;
+	}
+
+	.b-head-scheme .b-escort-scheme-list {
+	    width: calc(100%/3 - 10px);
+	    margin-right: 10px;
+	}
+
+	.b-head-scheme .b-escort-scheme-list:last-child{
+	    margin-right: 0;
+	}
 }

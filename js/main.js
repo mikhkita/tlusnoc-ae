@@ -24,19 +24,19 @@ $(document).ready(function(){
             readMoreShow("b-marketplace-case");
         }
 
-        if($('.b-escort-scheme').length){
+        $('.b-escort-scheme-list').each(function(){
             var heightLine,
                 top;
-            top = $('.b-escort-scheme-header').outerHeight() / 2;
-            heightLine = $('.b-escort-scheme-list').outerHeight() - top - $('.b-escort-scheme-item:last-child').outerHeight() / 2;
-            $('.main-line').css({
+            top = $(this).children(".b-escort-scheme-header").outerHeight() / 2;
+            heightLine = $(this).outerHeight() - top - $(this).children(".b-escort-scheme-item:last-child").outerHeight() / 2;
+             $(this).find('.main-line').css({
                 "top" : top,
                 "height" : heightLine,
             });
-            $('.main-line-inner').css({
+             $(this).find('.main-line-inner').css({
                 "height" : heightLine
             });
-        }
+        });
     }
 
     function retina(){
@@ -141,6 +141,7 @@ $(document).ready(function(){
 
     $('.b-btn-more-reviews').click(function() {
         $('.b-reviews-item').removeClass("hide");
+        $(this).remove();
     });
 
     $('#full-escort').on('change', function(){
@@ -240,7 +241,7 @@ $(document).ready(function(){
         },100);
     });
 
-    var e = $('body, .b-menu-overlay, .mobile-menu');
+    var e = $('.b-menu-overlay, .mobile-menu');
 
     e.touch();
 
@@ -394,6 +395,11 @@ $(document).ready(function(){
         uploader.init();
     }
 
+    $('.fl-click').on('click', function(event){
+        $('#'+$(this).attr("data-fl")).click();
+        $('html, body').animate({ scrollTop: $('.b-services-gray').offset().top }, 500);
+    });
+
     var dataSum = [
 [1,50000],
 [50000,100000],
@@ -497,8 +503,9 @@ var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
             else
                 res = data[row][column];
         }
-        console.log(res);
-        $('.cost-result').text(res.toFixed(0));
+        //console.log(res);
+        res = String(parseInt(res).toFixed(0)).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+        $('.cost-result').text(res);
     }
 
     function calcDays (value) {
@@ -534,6 +541,10 @@ var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
             calcPrice();
           },
         });
+
+
+
+    //$slideSum.draggable();
 
         $('input[name="sum"]').on('change input', function(){
             $slideSum.slider("value", $(this).val());
@@ -683,8 +694,18 @@ var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
         }
     });
 
+    periodInDays = 30;
+
     $('.b-services-send-form input[name="sum"]').on('change input', function(){
+        /*console.log("++"+periodInDays);
+        var str = $(this).val();
+        str = str.replace(/\s+/g, '');
+        $(this).val(str);*/
+
         calcPrice();
+
+        /*var res = String(parseInt(str).toFixed(0)).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+        $(this).val(res);*/
     });
 
     $('.b-services-send-form input[name="period"]').on('change input', function(){
