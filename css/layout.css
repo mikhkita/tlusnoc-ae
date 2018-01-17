@@ -2485,8 +2485,16 @@ ul.vacancy-list{
 			cursor: pointer;
 		}
 
-		.b-federal-item:hover .federal-img{
+		.b-federal-item .federal-img img{
+			-webkit-filter: grayscale(1);
+		    filter: gray;
+		    filter: grayscale(1);
+		}
 
+		.b-federal-item:hover .federal-img img{
+			-webkit-filter: grayscale(0);
+		    filter: gray;
+		    filter: grayscale(0);
 		}
 
 		.b-federal-item:hover p{
@@ -3258,7 +3266,7 @@ ul.vacancy-list{
 		}
 		.b-questions-item-left{
 			max-width: calc(100% - 52px);
-			padding: 12px 12px 8px;
+			padding: 12px 12px 4px;
    			display: inline-block;
 		}
 			.b-questions-item h4{
