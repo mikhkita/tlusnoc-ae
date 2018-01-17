@@ -3337,6 +3337,7 @@ ul.vacancy-list{
 }
 
 .federal-law-link{
+	position: relative;
 	display: inline-block;
 }
 
@@ -3344,8 +3345,8 @@ ul.vacancy-list{
 		position: relative;
 	}
 
-	.bubble-app{
-		text-align: center;
+	li .federal-law-link:last-child .bubble-app{
+		left: -90px;
 	}
 
 	.bubble-app-btn{
@@ -3384,7 +3385,10 @@ ul.vacancy-list{
 
 .bubble-app{
 	position: absolute;
-
+	left: -24px;
+	min-width: 218px;
+	z-index: 2;
+	text-align: center;
 	background-color: #FFF;
 	padding: 16px;
 	visibility: hidden;

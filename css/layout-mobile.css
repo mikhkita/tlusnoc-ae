@@ -11,7 +11,7 @@ body {
 	font-family: 'UbuntuRegular', Sans-Serif;
 	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
-	color: #000;
+	color: #1b1b1b;
 	line-height: 18px;
 }
 
@@ -19,12 +19,10 @@ body {
 	width: 100%;
 	max-width: calc(100% - 48px);
 	margin: 0 auto;
-	overflow-x: hidden;
 }
 
 .b-wide-block{
 	min-width: 320px;
-	overflow-x: hidden;
 }
 
 h1.b-title{
@@ -38,14 +36,14 @@ h2.b-title{
 
 /*------------------*/
 
-.b-top .b-block,
+/*.b-top .b-block,
 .b-top .b-wide-block{
 	overflow: visible;
-}
-
-/*.b-slider{
-	background-position: 35% 50%;
 }*/
+
+.bg-inner{
+	overflow-x: hidden;
+}
 
 ul.b-top-content li:nth-child(1),
 ul.b-top-content li:nth-child(2){
@@ -815,6 +813,19 @@ ul.b-top-content li:nth-child(2){
 
 	ul.b-top-content li.cabinet-cont{
 		float: right;
+	}
+
+	ul.b-top-content li{
+		margin-right: 0;
+	}
+
+	.bubble-app-btn{
+		padding: 8px 12px;
+	}
+
+	.bubble-app{
+		min-width: 192px;
+		padding: 10px;
 	}
 
 }
