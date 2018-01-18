@@ -1923,9 +1923,11 @@ ul.b-breadcrumbs{
 
 }
 
-	.b-directions-item{
+	.b-case-item.b-directions-item{
+		text-align: left;
 		padding: 25px 30px;
 		min-height: 298px;
+		width: calc(100%/2 - 15px);
 	}
 
 		.b-directions-item p{
