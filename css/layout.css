@@ -295,11 +295,10 @@ h4{
 
 }
 	.b-text a{
-		border-bottom: 1px solid #1b82c7;
+		text-decoration: underline;
 	}
 
 		.b-text a:hover{
-			border-bottom: 0;
 			text-decoration: none;
 		}
 
@@ -891,6 +890,10 @@ ol.vacancy-list > li:hover:before{
     				margin-top: 5px;
 				}
 
+				.restore-password:hover{
+					border-bottom: 1px solid transparent;
+				}
+
 					.cabinet-bubble:after {
 					    position: absolute;
 					    content: "s";
@@ -1138,11 +1141,9 @@ ol.vacancy-list > li:hover:before{
 .b-case{
 
 }
-
 	.b-case-list{
 
 	}
-
 		.b-case-item{
 			position: relative;
 			display: inline-block;
@@ -1199,6 +1200,10 @@ ol.vacancy-list > li:hover:before{
 
 		.b-case-item:last-child{
 			margin-right: 0;
+		}
+
+		.b-case-item a{
+			text-decoration: none;
 		}
 
 .b-case-list.b-services-items .b-case-item{
@@ -2485,8 +2490,18 @@ ul.vacancy-list{
 			cursor: pointer;
 		}
 
-		.b-federal-item:hover .federal-img{
+		.b-federal-item .federal-img img,
+		.b-info-partners-item img{
+			-webkit-filter: grayscale(1);
+		    filter: gray;
+		    filter: grayscale(1);
+		}
 
+		.b-federal-item:hover .federal-img img,
+		.b-info-partners-item:hover img{
+			-webkit-filter: grayscale(0);
+		    filter: gray;
+		    filter: grayscale(0);
 		}
 
 		.b-federal-item:hover p{
@@ -2668,7 +2683,8 @@ ul.vacancy-list{
 			    margin-bottom: 0;
 			}
 
-	.b-marketplace-ref .choice-block .choice-item a{
+	.b-marketplace-ref .choice-block .choice-item{
+		text-decoration: none;
 		font-size: 19px;
 		font-family: 'UbuntuMedium';
 	}
@@ -3258,7 +3274,7 @@ ul.vacancy-list{
 		}
 		.b-questions-item-left{
 			max-width: calc(100% - 52px);
-			padding: 12px 12px 8px;
+			padding: 12px 12px 4px;
    			display: inline-block;
 		}
 			.b-questions-item h4{
@@ -3337,15 +3353,12 @@ ul.vacancy-list{
 }
 
 .federal-law-link{
+	position: relative;
 	display: inline-block;
 }
 
 	.federal-law-link a{
 		position: relative;
-	}
-
-	.bubble-app{
-		text-align: center;
 	}
 
 	.bubble-app-btn{
@@ -3384,7 +3397,10 @@ ul.vacancy-list{
 
 .bubble-app{
 	position: absolute;
-
+	left: -24px;
+	min-width: 218px;
+	z-index: 2;
+	text-align: center;
 	background-color: #FFF;
 	padding: 16px;
 	visibility: hidden;
@@ -3700,11 +3716,5 @@ ul.vacancy-list{
 		max-width: 34px;
 		max-height: 40px;
 	}
-}	
-@media screen and (max-width: 1250px){
-	
-}
-@media screen and (max-width: 1020px){
-
 }
 
