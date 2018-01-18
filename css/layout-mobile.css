@@ -179,8 +179,9 @@ ul.b-top-content li:nth-child(2){
 	width: 100%;
 }
 
-.b-directions-item{
+.b-case-item.b-directions-item{
 	min-height: auto;
+	width: 100%;
 }
 
 .b-team-item {
