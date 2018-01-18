@@ -345,6 +345,25 @@ h4{
 			padding-left: 0;
 		}*/
 
+	.b-text h2{
+		text-transform: uppercase;
+		font-size: 24px;
+		font-family: "UbuntuBold", Sans-Serif;
+		margin-bottom: 16px;
+		color: #1b1b1b;
+		letter-spacing: 1.15px;
+		line-height: 30px;
+	}
+
+	.b-text h3{
+		font-size: 20px;
+		font-family: "UbuntuMedium", Sans-Serif;
+		margin-bottom: 14px;
+		color: #1b1b1b;
+		line-height: 20px;
+		letter-spacing: 0.5px;
+	}
+
 	.b-text h4{
 		font-size: 14px;
 		font-family: 'UbuntuBold';
