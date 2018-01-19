@@ -266,12 +266,13 @@ $(document).ready(function(){
             $arrow.removeClass("icon-arrow-down-rotate");
             $(this).find("h4").removeClass("bold");
         }else{
+            
             $deltetEl = $('.b-questions-link.open');
             $deltetEl.siblings('.b-questions-item-wrap').slideUp(300);
             $deltetEl.removeClass("open");
             $deltetEl.children(".b-questions-arrow").removeClass("icon-arrow-down-rotate");
             $deltetEl.find("h4").removeClass("bold");
-            
+
             $(this).addClass("open");
             $arrow.addClass("icon-arrow-down-rotate");
             $(this).find("h4").addClass("bold");
