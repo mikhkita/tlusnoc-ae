@@ -512,10 +512,6 @@ ul.b-top-content li:nth-child(2){
 		margin-bottom: 20px;
 	}
 
-	.b-reviews-item:last-child{
-	    margin-bottom: 0;
-	}
-
 	.b-app-form .b-wrap-input{
 	    width: 100%;
 	    margin-right: 0;
