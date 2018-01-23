@@ -192,7 +192,15 @@ ul.b-breadcrumbs li:after{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+.b-document-list{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.b-document-item{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100%/4 - 15px);
+}
 .b-btn{
 	text-align: center;
 	padding: 14px 20px;
