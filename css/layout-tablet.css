@@ -358,7 +358,7 @@ body {
 
 @media screen and (max-width: 840px){
 	.b-document-item{
-   		width: calc(100%/3 - 15px);
+   		width: calc(100%/3 - 20px);
 	}
 	.b-footer-column{
 		width: 50%;
