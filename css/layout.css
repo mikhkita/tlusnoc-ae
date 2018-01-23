@@ -197,9 +197,10 @@ ul.b-breadcrumbs li:after{
 	padding-bottom: 30px;
 }
 .b-document-item{
+    margin-right: 16px;
     display: inline-block;
     vertical-align: top;
-    width: calc(100%/4 - 15px);
+    width: calc(100%/4 - 20px);
 }
 .b-btn{
 	text-align: center;
