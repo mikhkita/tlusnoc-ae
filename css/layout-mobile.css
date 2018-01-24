@@ -486,9 +486,13 @@ ul.b-top-content li:nth-child(2){
 .b-escort-scheme-list:last-child{
 	margin-bottom: 10px;
 }
-
+.b-document-item{
+   		width: calc(100%/2 - 20px);
+	}
 @media screen and (max-width: 630px){
-
+	.b-document-item{
+   		width: calc(100%/2);
+	}
 	.b-team-item {
 	    width: calc(100%/2 - 12px);
 	    margin-right: 20px;
@@ -712,6 +716,9 @@ ul.b-top-content li:nth-child(2){
 }
 
 @media screen and (max-width: 470px){
+	.b-document-item{
+   		width: calc(100%);
+	}
 
 	.b-slider-inner h1.b-title{
 		font-size: 32px;
