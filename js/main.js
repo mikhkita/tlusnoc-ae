@@ -37,6 +37,8 @@ $(document).ready(function(){
                 "height" : heightLine
             });
         });
+
+        footerToBottom();
     }
 
     function retina(){
@@ -109,13 +111,26 @@ $(document).ready(function(){
         });
     }
 
+    if($('.b-reviews-item').length < 3){
+        $('.b-btn-more-reviews').parent().remove();
+    }
+
+    function footerToBottom() {
+        var browserHeight = $(window).height(),
+        footerOuterHeight = !!$('.b-footer').outerHeight() ? $('.b-footer').outerHeight(true) : 0,
+        headerHeight = !!$('.b-header').outerHeight() ? $('.b-header').outerHeight(true) : 0,
+        breadcrumbsHeight = !!$('.b-breadcrumbs').outerHeight() ? $('.b-breadcrumbs').outerHeight(true) : 0;
+        console.log(footerOuterHeight, headerHeight, breadcrumbsHeight);
+        $('.b-content').css({
+            'min-height': browserHeight - footerOuterHeight - headerHeight - breadcrumbsHeight,
+        });
+    };
 
     function readMoreShow(readMoreClass){
         $('.'+readMoreClass).each(function() {
             $btn = $(this).find(".btn-show");
             var wrapHeight = $(this).find(".extend-text-wrap").height();
             var textHeight = $(this).find(".extend-text").height();
-            //console.log(wrapHeight, textHeight);
             if($(this).find(".extend-text-wrap").hasClass("open-block")){
                 $btn.click();
             }
@@ -280,10 +295,15 @@ $(document).ready(function(){
     });
 
     $('.choice-block a').on('click', function(){
-        console.log("click");
         toggleBlock($(this));
         if($('.b-cooperation').length && !$('.b-cooperation').hasClass("hide")){
             chartistInit();
+        }
+        var $this = $(this);
+        if($('.b-work-marketplace').length){
+            console.log($this.attr("data-select"));
+            $('.b-send-app-form .select-services').val($this.attr("data-select")).trigger("chosen:updated");
+
         }
     });
 
@@ -354,7 +374,6 @@ $(document).ready(function(){
         var scrollTop =  $('.'+block).offset().top;
         $(document).scrollTop(scrollTop);
     });
-   
 
     if($('#plupload-cont').length){
         var uploader = new plupload.Uploader({
@@ -511,7 +530,6 @@ var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
             else
                 res = data[row][column];
         }
-        //console.log(res);
         res = String(parseInt(res).toFixed(0)).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
         $('.cost-result').text(res);
     }
@@ -524,7 +542,6 @@ var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
         }else{
             periodInDays = value;
         }
-        console.log(periodInDays);
     }
 
     $(function() {
@@ -537,7 +554,6 @@ var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
           slide: function(e, ui){
             $('input[name="sum"]').val(ui.value);
 
-            console.log($slideSum.slider("value"));
             if($slideSum.slider("value") >= 10000000){
                 $slideSum.slider("option", "step", 500000);
             }else{
@@ -653,7 +669,7 @@ var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
               }
               calcDays(dayInterval);
               calcPrice();
-              console.log("periodInDays = "+periodInDays, "dayInterval = "+dayInterval, "dayStart = "+dayStart, "dayFinish = "+dayFinish);
+              //console.log("periodInDays = "+periodInDays, "dayInterval = "+dayInterval, "dayStart = "+dayStart, "dayFinish = "+dayFinish);
             });
           to = $( ".period-finish" ).datepicker({
             defaultDate: "+1w",
@@ -669,7 +685,7 @@ var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
             }
             calcDays(dayInterval);
             calcPrice();
-            console.log("periodInDays = "+periodInDays,"dayInterval = "+dayInterval, "dayStart = "+dayStart, "dayFinish = "+dayFinish);
+            //console.log("periodInDays = "+periodInDays,"dayInterval = "+dayInterval, "dayStart = "+dayStart, "dayFinish = "+dayFinish);
           });
      
         function getDate( element ) {
