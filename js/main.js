@@ -116,7 +116,7 @@ $(document).ready(function(){
     }
 
     function footerToBottom() {
-        var browserHeight = $(window).height(),
+        var browserHeight = window.innerHeight,
         footerOuterHeight = !!$('.b-footer').outerHeight() ? $('.b-footer').outerHeight(true) : 0,
         headerHeight = !!$('.b-header').outerHeight() ? $('.b-header').outerHeight(true) : 0,
         breadcrumbsHeight = !!$('.b-breadcrumbs').outerHeight() ? $('.b-breadcrumbs').outerHeight(true) : 0;
