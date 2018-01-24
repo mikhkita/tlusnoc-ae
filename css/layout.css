@@ -1500,8 +1500,11 @@ ol.vacancy-list > li:hover:before{
 
 .b-footer{
 	padding-top: 35px;
-	margin-bottom: 18px;
 }
+
+	.b-footer-top{
+		margin-bottom: 18px;
+	}
 
 .b-footer-border{
 	border-top: 3px solid #e0e0e0;
@@ -1538,8 +1541,8 @@ ol.vacancy-list > li:hover:before{
 		float: right;
 	}
 
-.b-bottom{
-	margin-bottom: 34px;
+.b-footer-bottom{
+	padding-bottom: 34px;
 }
 
 .period-start{
