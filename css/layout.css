@@ -461,7 +461,7 @@ h4{
     display: inline-block;
 }   
 
-input, textarea{
+form input,form textarea{
 	border: none;
 	width: 100%;
 	color: #1b1b1b;
