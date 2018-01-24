@@ -146,6 +146,9 @@ a.right:hover{
 .underline{
 	text-decoration: underline;
 }
+.underline:hover{
+	text-decoration: none;
+}
 .white{
 	color: #FFF;
 }
