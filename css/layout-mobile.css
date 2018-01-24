@@ -490,9 +490,6 @@ ul.b-top-content li:nth-child(2){
    		width: calc(100%/2 - 20px);
 	}
 @media screen and (max-width: 630px){
-	.b-document-item{
-   		width: calc(100%/2);
-	}
 	.b-team-item {
 	    width: calc(100%/2 - 12px);
 	    margin-right: 20px;
