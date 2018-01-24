@@ -1281,6 +1281,7 @@ ol.vacancy-list > li:hover:before{
 		.before-input{
 			position: relative;
 			display: inline-block;
+			vertical-align: top;
 			width: calc(100%/3 - 20px);
     		margin: 44px 25px 36px 0;
 		}
