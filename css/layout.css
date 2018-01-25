@@ -499,6 +499,10 @@ select{
     appearance: none;
 }
 
+select::-ms-expand {
+    display: none;
+}
+
 .select-wrapper{
 	position: relative;
 }
