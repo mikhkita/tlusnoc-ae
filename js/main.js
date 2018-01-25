@@ -183,6 +183,19 @@ $(document).ready(function(){
         }
     });
 
+    $('.b-slider').slick({
+        dots: false,
+        arrows: true,
+        nextArrow: '<div class="b-block"><div class="icon-arrow-right b-slider-arrows" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block"><div class="icon-arrow-left b-slider-arrows" aria-hidden="true"></div></div>',
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 600,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    });
+
      $('.b-client-slider').slick({
         dots: false,
         arrows: true,
