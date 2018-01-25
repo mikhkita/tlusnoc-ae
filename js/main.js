@@ -183,6 +183,19 @@ $(document).ready(function(){
         }
     });
 
+    $('.b-slider').slick({
+        dots: false,
+        arrows: true,
+        nextArrow: '<div class="b-block"><div class="icon-arrow-right b-slider-arrows" aria-hidden="true"></div></div>',
+        prevArrow: '<div class="b-block"><div class="icon-arrow-left b-slider-arrows" aria-hidden="true"></div></div>',
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 600,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    });
+
      $('.b-client-slider').slick({
         dots: false,
         arrows: true,
@@ -655,7 +668,6 @@ var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
         var dateFormat = "dd.mm.yy";
           from = $( ".period-start" )
             .datepicker({
-              defaultDate: "+1w",
               changeMonth: true,
               minDate: 0
             })
@@ -672,8 +684,8 @@ var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
               //console.log("periodInDays = "+periodInDays, "dayInterval = "+dayInterval, "dayStart = "+dayStart, "dayFinish = "+dayFinish);
             });
           to = $( ".period-finish" ).datepicker({
-            defaultDate: "+1w",
-            changeMonth: true
+            changeMonth: true,
+            minDate: 0
           })
           .on( "change", function() {
             from.datepicker( "option", "maxDate", getDate( this ) );
