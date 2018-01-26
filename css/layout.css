@@ -499,6 +499,10 @@ select{
     appearance: none;
 }
 
+-select::-ms-expand {
+ -    display: none;
+ -}
+
 .select-wrapper{
 	position: relative;
 }
@@ -722,6 +726,9 @@ ol{
 		list-style: none;
 		margin-bottom: 10px;
 	}
+	ol > li:last-child{
+ 		margin-bottom: 0;
+  	}
 		ol > li:before {
 			position: absolute;
 			top: 0;
@@ -1136,20 +1143,30 @@ ol.vacancy-list > li:hover:before{
 			}
 
 .b-slider{
-	height: 505px;
-	background-image: url(../i/header-back.jpg);
-	background-position: 50% 0;
-	background-size: cover;
-	background-repeat: no-repeat;
+
 }
+	.b-slider-item{
+ 		height: 350px;
+ 		background-position: 0% 0%;
+ 		background-size: cover;
+ 		background-repeat: no-repeat;
+ 	}
+ 
+ 		.b-slider-item .b-block,
+ 		.b-slider-item .b-wide-block{
+ 			height: 100%;
+ 		}
 
 	.b-slider .b-slider-content{
-		padding-top: 96px;
+		
 	}
 
 		.b-slider .b-slider-content p{
-			margin-bottom: 54px;
+			margin-bottom: 25px;
 		}
+		.b-slider .b-slider-content h1{
+ 			max-width: 620px;
+ 		}
 
 		.b-slider-content{
 			max-width: 475px;
@@ -1519,6 +1536,43 @@ ol.vacancy-list > li:hover:before{
 		.b-client-arrows.icon-arrow-left:before{
 			font-size: 18px;
 		}
+
+	.b-slider-arrows{
+ 		padding: 10px;
+ 	}
+ 
+ 	.b-slider-arrows.icon-arrow-right{
+ 		position: absolute;
+ 	    right: -50px;
+ 	    top: -196px;
+ 	    cursor: pointer;
+ 	    z-index: 1;
+ 	    color: #FFF;
+ 	    opacity: 0.75;
+ 	}
+ 
+ 		.b-slider-arrows.icon-arrow-right:before{
+ 			font-size: 18px;
+ 		}
+ 
+ 	.b-slider-arrows.icon-arrow-left{
+ 		position: absolute;
+ 	    left: -50px;
+ 	    top: 155px;
+ 	    cursor: pointer;
+ 	    z-index: 1;
+ 	    color: #FFF;
+ 	    opacity: 0.75;
+ 	}
+ 
+ 		.b-slider-arrows.icon-arrow-left:before{
+ 			font-size: 18px;
+ 		}
+ 
+ 	.b-slider-arrows:hover.icon-arrow-right,
+ 	.b-slider-arrows:hover.icon-arrow-left{
+ 		opacity: 1;
+ 	}
 
 .b-footer{
 	padding-top: 35px;
@@ -3768,5 +3822,16 @@ ul.vacancy-list{
 		max-width: 34px;
 		max-height: 40px;
 	}
+}
+
+@media screen and (max-width: 1210px){
+
+	.b-slider-arrows.icon-arrow-left {
+	    left: -38px;
+	}
+	.b-slider-arrows.icon-arrow-right {
+	    right: -38px;
+	}
+
 }
 
