@@ -109,6 +109,9 @@ input.error,textarea.error{
 .b-services-send-info a.right{
 	text-decoration: none;
 }
+form a.right{
+	text-decoration: none;
+}
 a.right{
 	text-decoration: underline;
 }
