@@ -80,7 +80,7 @@ body {
 	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
 	color: #1b1b1b;
-	line-height: 22px;
+	line-height: 18px;
 }
 a{
 	text-decoration: none;
@@ -313,10 +313,14 @@ h4{
 }
 
 .b-text{
-
+	line-height: 22px;
 }
 	.b-text a{
 		text-decoration: underline;
+	}
+
+	.b-text p{
+		line-height: 22px;
 	}
 
 		.b-text a:hover{
@@ -3049,7 +3053,7 @@ ul.vacancy-list{
 		.b-case-number-text{
 			background-color: #FFF;
 			padding: 14px 20px 20px;
-			min-height: 180px;
+			min-height: 208px;
 		}
 			.b-case-number-header h4{
 				width: 100%;
