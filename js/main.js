@@ -426,9 +426,8 @@ $(document).ready(function(){
                         $('.fileProxy').removeClass("error").val(files);
                     }*/
                     console.log("FileUploaded");
-                    console.log(res);
-                    console.log(file);
-                    $(".add-file").val(res);
+                    console.log(res.response);
+                    $(".add-file").val(res.response);
                 },
                 Error: function(up, err) {
                     /*document.getElementById('console').appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));
