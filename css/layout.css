@@ -1197,6 +1197,7 @@ ol.vacancy-list > li:hover:before{
 	background-position: 50% 0;
 	background-size: cover;
 	background-repeat: no-repeat;
+	overflow-x: hidden;
 }
 
 .bg-inner{
@@ -1204,6 +1205,7 @@ ol.vacancy-list > li:hover:before{
 	background-position: 50% 0;
 	background-size: cover;
 	background-repeat: no-repeat;
+	overflow-x: hidden;
 }
 
 .b-case{
