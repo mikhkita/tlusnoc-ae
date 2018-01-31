@@ -474,6 +474,7 @@ h4{
 
 form input,form textarea{
 	border: none;
+	border-radius: 0;
 	width: 100%;
 	color: #1b1b1b;
 	font-family: 'UbuntuRegular';
@@ -490,6 +491,7 @@ textarea{
 
 select{
 	border: none;
+	border-radius: 0;
 	width: 100%;
 	color: #1b1b1b;
 	font-family: 'UbuntuMedium';

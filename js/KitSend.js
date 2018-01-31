@@ -186,6 +186,11 @@ $(document).ready(function(){
 						$link = $(".b-error-link");
 					}
 
+					if($this.hasClass(".b-outsourcing-form")){
+						console.log(msg);
+						$this.find(".add-file").val(msg);
+					}
+
 					if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
 						customHandlers[$this.attr("data-afterAjax")]($this);
 					}
