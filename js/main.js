@@ -425,6 +425,10 @@ $(document).ready(function(){
                         var files = filePath.join('~');
                         $('.fileProxy').removeClass("error").val(files);
                     }*/
+                    console.log("FileUploaded");
+                    console.log(res);
+                    console.log(file);
+                    $(".add-file").val(res);
                 },
                 Error: function(up, err) {
                     /*document.getElementById('console').appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));

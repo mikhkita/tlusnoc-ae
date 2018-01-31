@@ -186,29 +186,20 @@ $(document).ready(function(){
 						$link = $(".b-error-link");
 					}
 
-					if($this.hasClass(".b-outsourcing-form")){
-						console.log(msg);
-						$this.find(".add-file").val(msg);
-					}
-
 					if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
 						customHandlers[$this.attr("data-afterAjax")]($this);
 					}
 
 					$.fancybox.close();
 					$link.click();
-
-					console.log("success! msg = " + msg);
 				},
 				error: function(){
 					$.fancybox.close();
 					$(".b-error-link").click();
-					console.log("error");
 				},
 				complete: function(){
 					$this.find(".ajax").removeAttr("onclick");
 					$this.find("input[type=text],textarea").val("");
-					console.log("complete");
 				}
 			});
   		}else{
