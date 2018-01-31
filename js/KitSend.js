@@ -197,14 +197,18 @@ $(document).ready(function(){
 
 					$.fancybox.close();
 					$link.click();
+
+					console.log("success! msg = " + msg);
 				},
 				error: function(){
 					$.fancybox.close();
 					$(".b-error-link").click();
+					console.log("error");
 				},
 				complete: function(){
 					$this.find(".ajax").removeAttr("onclick");
 					$this.find("input[type=text],textarea").val("");
+					console.log("complete");
 				}
 			});
   		}else{
