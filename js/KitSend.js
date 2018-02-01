@@ -102,6 +102,7 @@ $(document).ready(function(){
 				if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
 					customHandlers[$this.attr("data-beforeShow")]($this);
 				}
+				$popup.find("form").attr("data-goal", $this.attr("data-goal"));
 			},
 			afterShow: function(){
 				$(".fancybox-wrap").removeClass("beforeShow");
