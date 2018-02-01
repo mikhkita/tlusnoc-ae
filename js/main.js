@@ -86,6 +86,11 @@ $(document).ready(function(){
         $('.cabinet-bubble').toggleClass("bubble-active");
         event.stopPropagation();
     });
+    $('.fancy').on('click', function(){
+        if($(this).attr("data-goal")){
+            $('#b-popup-app').find("form").attr("data-goal", $(this).attr("data-goal"));
+        }
+    });
 
     $(document).on('click', function(event){
         var container = $('.cabinet-bubble');

@@ -82,6 +82,7 @@ $(document).ready(function(){
 	whenScroll();
 
 	$(".fancy").each(function(){
+
 		var $popup = $($(this).attr("data-block")),
 			$this = $(this);
 		$this.fancybox({
@@ -102,10 +103,7 @@ $(document).ready(function(){
 				if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
 					customHandlers[$this.attr("data-beforeShow")]($this);
 				}
-				if($this.attr("data-goal")){
-					$('#b-popup-app').find("form").attr("data-goal", $this.attr("data-goal"));
-					console.log($this.attr("data-goal"));
-				}
+				
 			},
 			afterShow: function(){
 				$(".fancybox-wrap").removeClass("beforeShow");
@@ -121,6 +119,9 @@ $(document).ready(function(){
 				if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
 					customHandlers[$this.attr("data-beforeClose")]($this);
 				}
+				if($('#b-popup-app').find("form").attr("data-goal")){
+		            $('#b-popup-app').find("form").removeAttr("data-goal");
+		        }
 			},
 			afterClose: function(){
 				$(".fancybox-wrap").removeClass("beforeClose");
