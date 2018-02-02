@@ -113,7 +113,6 @@ $(document).ready(function(){
 				$popup.find("input[type='text'],input[type='number'],textarea").eq(0).focus();
 			},
 			beforeClose: function(){
-				console.log("!!!");
 				$(".fancybox-wrap").removeClass("afterShow");
 				$(".fancybox-wrap").addClass("beforeClose");
 				if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
