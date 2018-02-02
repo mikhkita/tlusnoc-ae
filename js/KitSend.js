@@ -102,10 +102,6 @@ $(document).ready(function(){
 				if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
 					customHandlers[$this.attr("data-beforeShow")]($this);
 				}
-				if($this.attr("data-goal")){
-					$('#b-popup-app').find("form").attr("data-goal", $this.attr("data-goal"));
-					console.log($this.attr("data-goal"));
-				}
 			},
 			afterShow: function(){
 				$(".fancybox-wrap").removeClass("beforeShow");
@@ -116,6 +112,7 @@ $(document).ready(function(){
 				$popup.find("input[type='text'],input[type='number'],textarea").eq(0).focus();
 			},
 			beforeClose: function(){
+				console.log("!!!");
 				$(".fancybox-wrap").removeClass("afterShow");
 				$(".fancybox-wrap").addClass("beforeClose");
 				if( $this.attr("data-beforeClose") && customHandlers[$this.attr("data-beforeClose")] ){
