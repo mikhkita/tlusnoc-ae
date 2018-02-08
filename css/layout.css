@@ -2621,7 +2621,7 @@ ul.vacancy-list{
 
 		.b-federal-item:hover .federal-img img,
 		.b-info-partners-item:hover img,
-		.b-client-item img{
+		.b-client-item:hover img{
 			-webkit-filter: grayscale(0);
 		    filter: gray;
 		    filter: grayscale(0);
