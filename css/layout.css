@@ -803,6 +803,11 @@ ol.vacancy-list > li:hover:before{
 
 .b-top{
 	background-color: #e1e1e1;
+	width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 	.b-top .b-wide-block {
@@ -1028,7 +1033,7 @@ ol.vacancy-list > li:hover:before{
 	}
 
 .b-menu{
-
+	padding-top: 40px;
 }
 
 	.b-logo{
