@@ -57,11 +57,13 @@ $(document).ready(function(){
 
         footerToBottom();
 
-        if(!isMobile){
-            alignHeight();
-        }else{
-            $(".b-case-item").css("min-height", 0);
-        }
+        if($('.b-services-block').length){
+            if(!isMobile){
+                alignHeight();
+            }else{
+                $(".b-case-item").css("min-height", 0);
+            }
+        }  
     }
 
     function retina(){
