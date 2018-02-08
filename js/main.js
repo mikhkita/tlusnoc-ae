@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
-    var isRetina = retina();
+    var isDesktop = false,
+        isTablet = false,
+        isMobile = false,
+        isRetina = retina();
 
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
@@ -13,6 +16,20 @@ $(document).ready(function(){
         } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
+        }
+
+        if( myWidth > 1179 ){
+            isDesktop = true;
+            isTablet = false;
+            isMobile = false;
+        }else if( myWidth > 767 && myWidth < 1180 ){
+            isDesktop = false;
+            isTablet = true;
+            isMobile = false;
+        }else{
+            isDesktop = false;
+            isTablet = false;
+            isMobile = true;
         }
 
         //скрывать кнопку "Развернуть отзыв"
@@ -39,6 +56,12 @@ $(document).ready(function(){
         });
 
         footerToBottom();
+
+        if(!isMobile){
+            alignHeight();
+        }else{
+            $(".b-case-item").css("min-height", 0);
+        }
     }
 
     function retina(){
@@ -447,6 +470,32 @@ $(document).ready(function(){
         $('#'+$(this).attr("data-fl")).click();
         $('html, body').animate({ scrollTop: $('.b-services-gray').offset().top }, 500);
     });
+
+    function alignHeight () {
+        var line = $(".b-case-item");
+        var times = 0, rows = Array(), max = 0;
+        line.each(function() {
+            if (times == 2) {                
+                for (var i = 0; i < rows.length; i++) {
+                    rows[i].css("min-height", max);
+                }
+                max = 0;
+                times = 0;
+                rows = [];
+            }
+            if (max < $(this).outerHeight()) {
+               max = $(this).outerHeight();
+            }
+            rows[times] = $(this);
+            times += 1;
+        });
+        
+        if (times != 0) {       
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].css("min-height", max);
+            }          
+        }
+    }
 
     var dataSum = [
 [1,50000],
