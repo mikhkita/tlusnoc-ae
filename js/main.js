@@ -714,7 +714,8 @@ var dataPeriod = [[1,29],[30,59],[60,89],[90,119],[120,149],[150,179],[180,209],
             dayNames: ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'], // set days names
             dayNamesShort: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'], // set short day names
             dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'], // set more short days names
-            dateFormat: 'dd.mm.yy' // set format date
+            dateFormat: 'dd.mm.yy', // set format date
+            firstDay: 1
         };        
     $.datepicker.setDefaults($.datepicker.regional["ru"]);
 
