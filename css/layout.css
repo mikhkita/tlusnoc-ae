@@ -3794,6 +3794,11 @@ ul.vacancy-list{
 
 /*--------ui-datepicker--------*/
 
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next{
+	box-sizing: content-box;
+}
+
 .ui-datepicker .ui-datepicker-month{
 	border-bottom: 2px solid #9c9c9c;
     padding-bottom: 1px;
