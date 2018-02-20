@@ -405,10 +405,17 @@ $(document).ready(function(){
 
     var hash = window.location.hash;
     if(!!hash){
-        var scrollTop = $('.choice-block').offset().top - 10;
-        $(document).scrollTop(scrollTop);
-        var target = $(hash).attr("data-block");
-        $('.'+target).click();
+        if(hash === "#form"){
+            $form = $('form:visible:not(.b-login-form)');
+            var scrollTop = $form.offset().top - 28;
+            $(document).scrollTop(scrollTop);
+            $form.find("input[type='text']").eq(0).focus();
+        }else{
+            var scrollTop = $('.choice-block').offset().top - 10;
+            $(document).scrollTop(scrollTop);
+            var target = $(hash).attr("data-block");
+            $('.'+target).click();
+        }
     }
 
     $('.marketplace-anchor li').on('click', function(){
