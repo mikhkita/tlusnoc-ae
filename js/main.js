@@ -406,7 +406,7 @@ $(document).ready(function(){
     var hash = window.location.hash;
     if(!!hash){
         if(hash === "#form"){
-            $form = $('form:visible:not(.b-login-form)');
+            $form = $('form:visible:not(.b-login-form)').eq(0);
             var scrollTop = $form.offset().top - 28;
             $(document).scrollTop(scrollTop);
             $form.find("input[type='text']").eq(0).focus();
