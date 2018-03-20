@@ -109,9 +109,6 @@ input.error,textarea.error{
 .b-services-send-info a.right{
 	text-decoration: none;
 }
-form a.right{
-	text-decoration: none;
-}
 a.right{
 	text-decoration: underline;
 }
@@ -120,6 +117,30 @@ a.right:hover{
 }
 .ps-lines{
 
+}
+div.b-text.b-content-padding-top.b-content-padding-bottom p{
+	font-size: 16px;
+}
+.read-more{
+	text-decoration: underline;
+}
+.contact-info.telegram{
+	position: relative;
+}
+img.telegram{
+    position: absolute;
+    left: -38%;
+    top: 0%;
+}
+.b-reviews-item img{
+	-webkit-filter: grayscale(1);
+	filter: gray; 
+	filter: grayscale(1);
+}
+.b-client .slick-slide img{
+	-webkit-filter: grayscale(1);
+	filter: gray; 
+	filter: grayscale(1);
 }
 	.ps-lines li.v{
 		position: fixed;
@@ -277,10 +298,10 @@ ul.b-breadcrumbs li:after{
 
 h1.b-title{
 	text-transform: uppercase;
-	font-size: 46px;
+	font-size: 40px;
 	font-family: "UbuntuMedium", Sans-Serif;
 	margin-bottom: 25px;
-	line-height: 50px;
+	line-height: 45px;
 	color: #FFF;
 	letter-spacing: 0.6px;
 }
@@ -313,10 +334,119 @@ h4{
 .b-center{
 	text-align: center;
 }
+.blog img{
+    max-width: 100%;
+    height: auto;
+	display: block;
+	margin:auto; 
+}
+.blog iframe{
+    margin: auto;
+	display: block;
+}
+.preview-blog-img{
+    float: left;
+    width: calc(30% - 18px);
+    margin-right: 18px;
+}
+.detail-blog-img{
+	width: 30%;
+}
+.blog-item{
+	position: relative;
+	display: inline-block;
+	padding: 30px;
+	width: 100%;
+	margin-bottom: 30px;
+	background-color: #FFF;
+	vertical-align: top;
+}
 
+	.blog-item:before{
+		content: "s";
+		font-size: 0px;
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: 15px solid transparent;
+		border-left: 15px solid #013c6e;
+		border-top: 15px solid #013c6e;
+
+	}
+
+	.blog-item:after{
+		content: "s";
+		font-size: 0px;
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		border: 15px solid transparent;
+		border-right: 15px solid #dcdcdc;
+		border-bottom: 15px solid #dcdcdc;
+	}
+
+	.blog-item:hover:after{
+		border-right: 15px solid #013c6e;
+		border-bottom: 15px solid #013c6e;
+	}
+
+	.blog-item ul li{
+
+	}
+
+	.blog-item .read-more{
+		text-decoration: underline;
+		display: inline-block;
+		position: relative;
+		font-size: 16px;
+		color: #013c6e;
+		border-bottom: none;
+	}
+
+.blog-item:last-child{
+	margin-right: 0;
+}
+
+.blog-item a{
+	text-decoration: none;
+}
+.b-case-list.b-services-items .b-case-item.blog-item{
+	width: 100%;
+}														
+.b-text .ul-blog{
+	font-size: 16px;
+}
 .b-text{
 	line-height: 22px;
 }
+	.b-text blockquote{
+	    font-size: 16px;
+		background-color: #f3f3f3;
+		padding: 30px;
+	}
+	.b-text tr{
+	    background-color: #FFF;
+        border-bottom: 1px solid #f1f1f1;
+	}
+	.b-text tr:hover{
+	    background-color: #f5f5f5;
+	}
+	.b-text td{
+	    font-size: 14px;
+        padding: 7px 14px;
+	}
+	.b-text th{
+		font-weight: 300;
+	    text-align: left;
+	    font-size: 12px;
+	    text-transform: uppercase;
+	    color: rgba(133, 145, 165, 0.72);
+        padding: 10px 14px;
+	}
 	.b-text a{
 		text-decoration: underline;
 	}
@@ -508,9 +638,9 @@ select{
     appearance: none;
 }
 
-select::-ms-expand {
-	display: none;
-}
+-select::-ms-expand {
+ -    display: none;
+ -}
 
 .select-wrapper{
 	position: relative;
@@ -804,10 +934,10 @@ ol.vacancy-list > li:hover:before{
 .b-top{
 	background-color: #e1e1e1;
 	width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
 }
 
 	.b-top .b-wide-block {
@@ -875,6 +1005,13 @@ ol.vacancy-list > li:hover:before{
 				    line-height: 28px;
 				}
 
+				.icon-twitter:before {
+				    content: "\e90f";
+				    font-size: 21px;
+				    color: #9b9b9b;
+				    line-height: 27px;	
+				}
+
 				.icon-cabinet{
 					float: left;
 				}
@@ -889,7 +1026,8 @@ ol.vacancy-list > li:hover:before{
 
 				.icon-facebook:hover:before,
 				.icon-vk:hover:before,
-				.icon-instagram:hover:before{
+				.icon-instagram:hover:before,
+				.icon-twitter:hover:before{
 					color: #08579a;
 				}
 
@@ -1032,8 +1170,8 @@ ol.vacancy-list > li:hover:before{
 	    transform: translateY(20px);
 	}
 
-.b-menu{
-	padding-top: 40px;
+.b-menu {
+    padding-top: 40px;
 }
 
 	.b-logo{
@@ -1266,6 +1404,7 @@ ol.vacancy-list > li:hover:before{
 			}
 
 			.b-case-item .read-more{
+				text-decoration: underline;
 				display: inline-block;
 				position: relative;
 				font-size: 16px;
@@ -1305,6 +1444,7 @@ ol.vacancy-list > li:hover:before{
 				}
 
 					.read-more:after {
+						position: absolute;
 						font-size: 18px;
 					    text-decoration: none;
 					    content: "→";
@@ -1495,9 +1635,11 @@ ol.vacancy-list > li:hover:before{
 		}
 
 			.b-client-item{
+				float:none;
 				line-height: 50px;
-				display: inline-block;
+				display: inline-block !important;
 				text-align: center;
+				vertical-align: middle;
 			}
 
 				.b-client-item img{
@@ -1531,7 +1673,8 @@ ol.vacancy-list > li:hover:before{
 	.b-client-arrows.icon-arrow-right{
 		position: absolute;
 	    right: -43px;
-	    top: 7px;
+	    top: 50%;
+	    margin-top: -19px;
 	    cursor: pointer;
 	    z-index: 1;
 	    color: #adadad;
@@ -1544,7 +1687,8 @@ ol.vacancy-list > li:hover:before{
 	.b-client-arrows.icon-arrow-left{
 		position: absolute;
 	    left: -43px;
-	    top: 7px;
+	    top: 50%;
+	    margin-top: -19px;
 	    cursor: pointer;
 	    z-index: 1;
 	    color: #adadad;
@@ -2004,9 +2148,6 @@ ul.b-breadcrumbs{
 				display: inline-block;
 				width: calc(100% - 42px);
 				margin-left: 8px;
-			}
-			.b-scheme-text a:hover {
-				text-decoration: underline;
 			}
 
 		.arrow-next{
@@ -2612,16 +2753,14 @@ ul.vacancy-list{
 		}
 
 		.b-federal-item .federal-img img,
-		.b-info-partners-item img,
-		.b-client-item img{
+		.b-info-partners-item img{
 			-webkit-filter: grayscale(1);
 		    filter: gray;
 		    filter: grayscale(1);
 		}
 
 		.b-federal-item:hover .federal-img img,
-		.b-info-partners-item:hover img,
-		.b-client-item:hover img{
+		.b-info-partners-item:hover img{
 			-webkit-filter: grayscale(0);
 		    filter: gray;
 		    filter: grayscale(0);
@@ -3794,11 +3933,6 @@ ul.vacancy-list{
 
 /*--------ui-datepicker--------*/
 
-.ui-datepicker .ui-datepicker-prev,
-.ui-datepicker .ui-datepicker-next{
-	box-sizing: content-box;
-}
-
 .ui-datepicker .ui-datepicker-month{
 	border-bottom: 2px solid #9c9c9c;
     padding-bottom: 1px;
@@ -3858,4 +3992,3 @@ ul.vacancy-list{
 	}
 
 }
-

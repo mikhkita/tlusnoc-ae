@@ -45,68 +45,66 @@
 
 	<div id="panel-page">
 
-		<div class="b-header">
-			<div class="b b-top">
-				<div class="b-wide-block">
-					<div class="b-block clearfix">
-						<ul class="b-top-content">
-							<li>
-								<a href="#" class="contact-info">Контактная информация</a>
-							</li>
-							<li>
-								<div class="social-icons">
-									<a href="#" class="icon-facebook"></a>
-									<a href="#" class="icon-vk"></a>
-									<a href="#" class="icon-instagram"></a>
+		<div class="b b-top">
+			<div class="b-wide-block">
+				<div class="b-block clearfix">
+					<ul class="b-top-content">
+						<li>
+							<a href="#" class="contact-info">Контактная информация</a>
+						</li>
+						<li>
+							<div class="social-icons">
+								<a href="#" class="icon-facebook"></a>
+								<a href="#" class="icon-vk"></a>
+								<a href="#" class="icon-instagram"></a>
+							</div>
+						</li>
+						<li>
+							<a href="tel:+74991100046" class="phone">+7 499 110 00 46</a>
+						</li>
+						<li class="cabinet-cont">
+							<a href="#" class="cabinet"><span class="icon-cabinet"></span>Кабинет</a>
+							<div class="cabinet-bubble">
+								<div class="cabinet-bubble-wrap">
+									<h3 class="b-title">Войти</h3>
+									<form id="b-login-form" class="b-login-form" method="post" action="action.php">
+										<input type="text" name="e-mail" placeholder="E-mail" required>
+										<input type="password" name="password" placeholder="Пароль" required>
+										<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-login-form').submit(); return false;">Войти</a>
+									</form>
+									<a href="#" class="b-btn b-btn-transparent">Регистрация</a>
+									<a href="#" class="restore-password">Восстановить пароль</a>
 								</div>
-							</li>
-							<li>
-								<a href="tel:+74991100046" class="phone">+7 499 110 00 46</a>
-							</li>
-							<li class="cabinet-cont">
-								<a href="#" class="cabinet"><span class="icon-cabinet"></span>Кабинет</a>
-								<div class="cabinet-bubble">
-									<div class="cabinet-bubble-wrap">
-										<h3 class="b-title">Войти</h3>
-										<form id="b-login-form" class="b-login-form" method="post" action="action.php">
-											<input type="text" name="email" placeholder="E-mail" required>
-											<input type="password" name="password" placeholder="Пароль" required>
-											<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-login-form').submit(); return false;">Войти</a>
-										</form>
-										<a href="#" class="b-btn b-btn-transparent">Регистрация</a>
-										<a href="#" class="restore-password">Восстановить пароль</a>
-									</div>
-								</div>
-							</li>
-						</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="b b-menu">
+			<div class="b-wide-block">
+				<div class="b-block clearfix">
+					<div class="b-logo">
+						<a href="index.html">
+							<img src="i/logo.png" data-retina-src="i/logo@2x.png">
+						</a>
+					</div>
+					<ul class="b-menu-items">
+						<li><a href="services.html" class="active">Услуги и продукты</a></li>
+						<li><a href="about.html">О компании</a></li>
+						<li><a href="cooperation.html">Сотрудничество</a></li>
+						<li><a href="documents.html">Документация</a></li>
+					</ul>
+					<div id="burger-menu" class="burger-menu icon-menu">
+						
 					</div>
 				</div>
 			</div>
-			<div class="b b-menu">
-				<div class="b-wide-block">
-					<div class="b-block clearfix">
-						<div class="b-logo">
-							<a href="index.html">
-								<img src="i/logo.png" data-retina-src="i/logo@2x.png">
-							</a>
-						</div>
-						<ul class="b-menu-items">
-							<li><a href="services.html" class="active">Услуги и продукты</a></li>
-							<li><a href="about.html">О компании</a></li>
-							<li><a href="cooperation.html">Сотрудничество</a></li>
-							<li><a href="documents.html">Документация</a></li>
-						</ul>
-						<div id="burger-menu" class="burger-menu icon-menu">
-							
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="b b-slider-inner">
-				<div class="b-slider-photo" style="background-image: url(i/inner-services.jpg);">
-					<div class="b-slider-back"></div>
-				</div>
+		</div>
+		
+		<div class="b b-slider-wrap b-page-services">
+			<div class="b-slider-back"></div>			
+			<div class="b-slider-inner" style="background-image: url(i/inner-services.jpg);">
 				<div class="b-wide-block">
 					<div class="b-block b-table">
 						<div class="b-slider-content b-table-cell-middle">
@@ -118,6 +116,7 @@
 			</div>
 		</div>
 
+
 		<div class="bg-inner">
 			<div class="b-wide-block">
 				<div class="b-block">
@@ -127,182 +126,175 @@
 						<li><span>Услуги и продукты</span></li>
 					</ul>
 
-					<div class="b-content">	
-						<div class="b-services-block">
-							<div class="b b-page-services-list">
-								<h2 class="b-title">Тендерное сопровождение</h2>
-								<div class="b-case-list b-services-items b-text clearfix">
-									<div class="b-case-item mark-img">
-										<h3 class="b-title">Аутсорсинг тендерного отдела под ключ</h3>
-										<p>Комплексная услуга по сопровождению компании в закупочных процедурах любого типа с неограниченным составом работ...</p>
-										<ul>
-											<li>Заказ и обслуживание средств электронно-цифровой подписи</li>
-											<li>Аккредитация компании на площадках</li>
-											<li>Настройка рабочих мест и обучение пользователей</li>
-											<li>Заказ и обслуживание средств электронно-цифровой подписи</li>
-											<li>Аккредитация компании на площадках</li>
-											<li>Настройка рабочих мест и обучение пользователей</li>
-										</ul>
-										<a href="outsourcing.html" class="read-more">Узнать больше</a>
-										<div class="b-services-app"><a href="#b-popup-app" class="icon-doc fancy">Оформить заявку</a></div>
-									</div>
-									<div class="b-case-item mark-img">
-										<h3 class="b-title">Работа с ЭТП</h3>
-										<p>Все вопросы, связанные с электронными торговыми<br>площадками:</p>
-										<ul>
-											<li>Электронная подпись, работа с ЭТП, настройка рабочих мест</li>
-											<li>Обработка и анализ информации о закупках</li>
-											<li>Сопровождение конкурсных процедур</li>
-										</ul>
-										<a href="marketplace.html" class="read-more">Узнать больше</a>
-										<div class="b-services-app"><a href="#b-popup-app" class="icon-doc fancy">Оформить заявку</a></div>
-									</div>
-									<div class="b-case-item mark-img">
-										<h3 class="b-title">Анализ и обработка информации о закупках</h3>
-										<p><a href="#">Data Mining</a>, глубокая аналитика,<br>персонализированные отчеты.</p>
-										<ul>
-											<li>Индивидуальный подбор тендеров</li>
-											<li>Экспертиза тендерной документации</li>
-											<li>Разработка стратегии и операционных планов тендерного отдела</li>
-										</ul>
-										<a href="monitoring.html" class="read-more">Узнать больше</a>
-										<div class="b-services-app"><a href="#b-popup-app" class="icon-doc fancy">Оформить заявку</a></div>
-									</div>
-									<div class="b-case-item mark-img">
-										<h3 class="b-title">Сопровождение конкурсных процедур</h3>
-										<p>Возьмем на себя всю рутину вашего тендерного отдела.<br>Качество и конфиденциальность гарантируем.</p>
-										<ul>
-											<li>Заявки, жалобы, запросы на разъяснения</li>
-											<li>Представительство в ФАС и иных органах</li>
-											<li>Иные сопутствующие услуги финансово-юридического характера</li>
-										</ul>
-										<a href="escort.html" class="read-more">Узнать больше</a>
-										<div class="b-services-app"><a href="#b-popup-app" class="icon-doc fancy">Оформить заявку</a></div>
-									</div>
+					<div class="b-services-block">
+						<div class="b b-page-services-list">
+							<h2 class="b-title">Тендерное сопровождение</h2>
+							<div class="b-case-list b-services-items b-text clearfix">
+								<div class="b-case-item mark-img">
+									<h3 class="b-title">Аутсорсинг тендерного отдела под ключ</h3>
+									<p>Комплексная услуга по сопровождению компании в закупочных процедурах любого типа с неограниченным составом работ...</p>
+									<ul>
+										<li>Заказ и обслуживание средств электронно-цифровой подписи</li>
+										<li>Аккредитация компании на площадках</li>
+										<li>Настройка рабочих мест и обучение пользователей</li>
+									</ul>
+									<a href="outsourcing.html" class="read-more">Узнать больше</a>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
-							</div>
-
-							<div class="b b-page-services-list">
-								<h2 class="b-title">Банковские гарантии и тендерное кредитование</h2>
-								<div class="b-case-list b-services-items b-text clearfix">
-									<div class="b-case-item mark-img">
-										<h3 class="b-title">Тендерное кредитование</h3>
-										<p>Недостаточно средств для участия в тендере?<br>Не проблема!</p>
-										<ul>
-											<li>Максимальная сумма до 100&nbsp;000&nbsp;000 руб.</li>
-											<li>Ставки от 16% годовых!</li>
-											<li>Возможно получение средств без залога и поручительства!</li>
-											<li>Ставки от 16% годовых!</li>
-											<li>Возможно получение средств без залога и поручительства!</li>
-										</ul>
-										<a href="tender.html" class="read-more">Узнать больше</a>
-										<div class="b-services-app"><a href="#b-popup-app" class="icon-doc fancy">Оформить заявку</a></div>
-									</div>
-									<div class="b-case-item mark-img">
-										<h3 class="b-title">Все виды банковских гарантий</h3>
-										<p>Только «белые» гарантии!<br>Оперативно, надежно. </p>
-										<ul>
-											<li>44-ФЗ, <a href="#">223-ФЗ</a>, <a href="#">185-ФЗ</a>; <a href="#">615-ПП</a></li>
-											<li>Предварительный анализ за 1 час! </li>
-											<li>Персональный менеджер</li>
-										</ul>
-										<a href="bank-guarantees.html" class="read-more">Узнать больше</a>
-										<div class="b-services-app"><a href="#b-popup-app" class="icon-doc fancy">Оформить заявку</a></div>
-									</div>
-									<div class="b-case-item mark-img">
-										<h3 class="b-title">Кредит на исполнение контракта</h3>
-										<p>Обеспечим оптимальные условия кредитования<br>под ваши контракты.</p>
-										<ul>
-											<li>Максимальная сумма - до 90% суммы контракта</li>
-											<li>Индивидуальные условия погашения</li>
-											<li>Возможно получение кредита без залога и поручительства</li>
-										</ul>
-										<a href="credit.html" class="read-more">Узнать больше</a>
-										<div class="b-services-app"><a href="#b-popup-app" class="icon-doc fancy">Оформить заявку</a></div>
-									</div>
+								<div class="b-case-item mark-img">
+									<h3 class="b-title">Работа с ЭТП</h3>
+									<p>Все вопросы, связанные с электронными торговыми<br>площадками:</p>
+									<ul>
+										<li>Электронная подпись, работа с ЭТП, настройка рабочих мест</li>
+										<li>Обработка и анализ информации о закупках</li>
+										<li>Сопровождение конкурсных процедур</li>
+									</ul>
+									<a href="marketplace.html" class="read-more">Узнать больше</a>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
-							</div>
-
-							<div class="b b-page-services-list">
-								<h2 class="b-title">Обучение, курсы и тренинги</h2>
-								<div class="b-case-list b-services-items b-text clearfix">
-									<div class="b-case-item mark-img">
-										<h3 class="b-title">Курсы по 44-ФЗ, 223-ФЗ</h3>
-										<p>Семинары по 44-ФЗ и 223-ФЗ для поставщиков, курсы повышения квалификации по 44-ФЗ и 223-ФЗ с выдачей удостоверения</p>
-										<ul>
-											<li>Особенности заключения и расторжения контрактов</li>
-											<li>Произошедшие и планируемые изменения законодательства</li>
-											<li>Правила работы на электронной торговой площадке</li>
-										</ul>
-										<a href="#" class="read-more">Узнать больше</a>
-										<div class="b-services-app"><a href="#b-popup-app" class="icon-doc fancy">Оформить заявку</a></div>
-									</div>
-									<div class="b-case-item mark-img">
-										<h3 class="b-title">Вебинары</h3>
-										<p>Программы дистанционного обучения по тендерному сопровождению и банковским гарантиям...</p>
-										<ul>
-											<li>Грамотное участвие в процессе закупок</li>
-											<li>Положительный результат от торгов</li>
-											<li>Грамотно составленное коммерческое предложение</li>
-										</ul>
-										<a href="#" class="read-more">Узнать больше</a>
-										<div class="b-services-app"><a href="#b-popup-app" class="icon-doc fancy">Оформить заявку</a></div>
-									</div>
+								<div class="b-case-item mark-img">
+									<h3 class="b-title">Анализ и обработка информации о закупках</h3>
+									<p><a href="#">Data Mining</a>, глубокая аналитика,<br>персонализированные отчеты.</p>
+									<ul>
+										<li>Индивидуальный подбор тендеров</li>
+										<li>Экспертиза тендерной документации</li>
+										<li>Разработка стратегии и операционных планов тендерного отдела</li>
+									</ul>
+									<a href="#" class="read-more">Узнать больше</a>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
+								</div>
+								<div class="b-case-item mark-img">
+									<h3 class="b-title">Сопровождение конкурсных процедур</h3>
+									<p>Возьмем на себя всю рутину вашего тендерного отдела.<br>Качество и конфиденциальность гарантируем.</p>
+									<ul>
+										<li>Заявки, жалобы, запросы на разъяснения</li>
+										<li>Представительство в ФАС и иных органах</li>
+										<li>Иные сопутствующие услуги финансово-юридического характера</li>
+									</ul>
+									<a href="escort.html" class="read-more">Узнать больше</a>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
 							</div>
 						</div>
 
-						<div class="b b-sub clearfix">
-							<form id="b-sub-form" class="b-sub-form" method="post" action="action.php">
-								<div class="b-sub-form-cont">
-									<h3 class="b-title">Подписаться на рассылку</h3>
-									<input type="text" name="sub-name" placeholder="Ваше имя" required>
+						<div class="b b-page-services-list">
+							<h2 class="b-title">Банковские гарантии и тендерное кредитование</h2>
+							<div class="b-case-list b-services-items b-text clearfix">
+								<div class="b-case-item mark-img">
+									<h3 class="b-title">Тендерное кредитование</h3>
+									<p>Недостаточно средств для участия в тендере?<br>Не проблема!</p>
+									<ul>
+										<li>Максимальная сумма до 100&nbsp;000&nbsp;000 руб.</li>
+										<li>Ставки от 16% годовых!</li>
+										<li>Возможно получение средств без залога и поручительства!</li>
+									</ul>
+									<a href="tender.html" class="read-more">Узнать больше</a>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
-								<div class="b-sub-form-cont">
-									<h4>Будь в курсе новостей и выгодных приложений</h4>
-									<input type="text" name="email" placeholder="Ваш e-mail" required>
+								<div class="b-case-item mark-img">
+									<h3 class="b-title">Все виды банковских гарантий</h3>
+									<p>Только «белые» гарантии!<br>Оперативно, надежно. </p>
+									<ul>
+										<li>44-ФЗ, <a href="#">223-ФЗ</a>, <a href="#">185-ФЗ</a>; <a href="#">615-ПП</a></li>
+										<li>Предварительный анализ за 1 час! </li>
+										<li>Персональный менеджер</li>
+									</ul>
+									<a href="bank-guarantees.html" class="read-more">Узнать больше</a>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
-								<div class="b-sub-form-cont">
-									<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-sub-form').submit(); return false;">Подписаться</a>
+								<div class="b-case-item mark-img">
+									<h3 class="b-title">Кредит на исполнение контракта</h3>
+									<p>Обеспечим оптимальные условия кредитования<br>под ваши контракты.</p>
+									<ul>
+										<li>Максимальная сумма - до 90% суммы контракта</li>
+										<li>Индивидуальные условия погашения</li>
+										<li>Возможно получение кредита без залога и поручительства</li>
+									</ul>
+									<a href="credit.html" class="read-more">Узнать больше</a>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
 								</div>
-							</form>
+							</div>
+						</div>
+
+						<div class="b b-page-services-list">
+							<h2 class="b-title">Обучение, курсы и тренинги</h2>
+							<div class="b-case-list b-services-items b-text clearfix">
+								<div class="b-case-item mark-img">
+									<h3 class="b-title">Курсы по 44-ФЗ, 223-ФЗ</h3>
+									<p>Семинары по 44-ФЗ и 223-ФЗ для поставщиков, курсы повышения квалификации по 44-ФЗ и 223-ФЗ с выдачей удостоверения</p>
+									<ul>
+										<li>Особенности заключения и расторжения контрактов</li>
+										<li>Произошедшие и планируемые изменения законодательства</li>
+										<li>Правила работы на электронной торговой площадке</li>
+									</ul>
+									<a href="#" class="read-more">Узнать больше</a>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
+								</div>
+								<div class="b-case-item mark-img">
+									<h3 class="b-title">Вебинары</h3>
+									<p>Программы дистанционного обучения по тендерному сопровождению и банковским гарантиям...</p>
+									<ul>
+										<li>Грамотное участвие в процессе закупок</li>
+										<li>Положительный результат от торгов</li>
+										<li>Грамотно составленное коммерческое предложение</li>
+									</ul>
+									<a href="#" class="read-more">Узнать больше</a>
+									<div class="b-services-app"><a href="#" class="icon-doc">Оформить заявку</a></div>
+								</div>
+							</div>
 						</div>
 					</div>
 
-					<div class="b-footer">
-						<div class="b-footer-top clearfix">
-							<div class="b-footer-column">
-								<ul class="underline-list">
-									<li><a href="about.html">О компании</a></li>
-									<li><a href="cooperation.html">Сотрудничество</a></li>
-									<li><a href="cooperation.html#career">Карьера</a></li>
-								</ul>
+					<div class="b b-sub clearfix">
+						<form id="b-sub-form" class="b-sub-form" method="post" action="action.php">
+							<div class="b-sub-form-cont">
+								<h3 class="b-title">Подписаться на рассылку</h3>
+								<input type="text" name="sub-name" placeholder="Ваше имя" required>
 							</div>
-							<div class="b-footer-column">
-								<ul class="underline-list">
-									<li><a href="#">Тендерное сопровождение</a></li>
-									<li><a href="#">Банковские гарантии и тендерный кредит</a></li>
-									<li><a href="#">Обучение и сертификация</a></li>
-								</ul>
+							<div class="b-sub-form-cont">
+								<h4>Будь в курсе новостей и выгодных приложений</h4>
+								<input type="text" name="email" placeholder="Ваш e-mail" required>
 							</div>
-							<div class="b-footer-column">
-								<ul class="underline-list">
-									<li><a href="#">44-ФЗ</a></li>
-									<li><a href="#">223-ФЗ</a></li>
-									<li><a href="#">Список электронных торговых&nbsp;площадок</a></li>
-								</ul>
+							<div class="b-sub-form-cont">
+								<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-sub-form').submit(); return false;">Подписаться</a>
 							</div>
-							<div class="b-footer-column">
-								<a href="tel:+74991100046" class="phone">+7 499 110 00 46</a>
-								<p>Москва, Боткинский 1-й проезд, офис А 224 </p>
-								<p><a href="mailto:***@mail.ru">eaconsult@.ru</a></p>
-							</div>
-						</div>
+						</form>
+					</div>
 
-						<div class="b-footer-bottom">
-							<h4>© 2012 — 2017 «EA CONSULT»</h4>
+					<div class="b-footer clearfix">
+						<div class="b-footer-column">
+							<ul class="underline-list">
+								<li><a href="about.html">О компании</a></li>
+								<li><a href="cooperation.html">Сотрудничество</a></li>
+								<li><a href="cooperation.html#career">Карьера</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-column">
+							<ul class="underline-list">
+								<li><a href="#">Тендерное сопровождение</a></li>
+								<li><a href="#">Банковские гарантии и тендерный кредит</a></li>
+								<li><a href="#">Обучение и сертификация</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-column">
+							<ul class="underline-list">
+								<li><a href="#">44-ФЗ</a></li>
+								<li><a href="#">223-ФЗ</a></li>
+								<li><a href="#">Список электронных торговых&nbspплощадок</a></li>
+							</ul>
+						</div>
+						<div class="b-footer-column">
+							<a href="tel:+74991100046" class="phone">+7 499 110 00 46</a>
+							<p>Москва, Боткинский 1-й проезд, офис А 224 </p>
+							<p><a href="mailto:***@mail.ru">eaconsult@.ru</a></p>
 						</div>
 					</div>
+
+					<div class="b-bottom">
+						<h4>© 2012 — 2017 «EA CONSULT»</h4>
+					</div>
+
+					<div class="clearfix"></div>
 				</div>
 			</div>
 		</div>
@@ -345,7 +337,7 @@
 			<h2 class="b-title">Отправить заявку</h2>
 			<form id="b-popup-app-form" class="b-popup-app-form" method="post" action="kitsend.php">
 				<input type="text" name="name" placeholder="Ваше имя" required>
-				<input type="text" name="email" placeholder="Ваш E-mail" required>
+				<input type="text" name="e-mail" placeholder="Ваш E-mail" required>
 				<textarea name="message" required rows="1" placeholder="Ваше сообщение"></textarea>
 				<a href="#" class="b-btn b-btn-blue ajax" onclick="$('#b-popup-app-form').submit(); return false;">Отправить</a>
 			</form>
@@ -354,7 +346,6 @@
 	</div>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
 	<!--<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false&key=AIzaSyD6Sy5r7sWQAelSn-4mu2JtVptFkEQ03YI"></script>-->
 	<script type="text/javascript" src="js/jssor.js"></script>
@@ -374,7 +365,6 @@
 	<script type="text/javascript" src="js/autosize.min.js"></script>
 	<script type="text/javascript" src="js/chartist.min.js"></script>
 	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.touch.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

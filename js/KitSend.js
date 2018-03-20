@@ -103,6 +103,7 @@ $(document).ready(function(){
 				if( $this.attr("data-beforeShow") && customHandlers[$this.attr("data-beforeShow")] ){
 					customHandlers[$this.attr("data-beforeShow")]($this);
 				}
+				
 			},
 			afterShow: function(){
 				$(".fancybox-wrap").removeClass("beforeShow");
